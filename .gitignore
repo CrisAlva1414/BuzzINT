@@ -1,0 +1,10 @@
+#Archivos de documentacion
+AGENTS.md
+
+#Archivos sensibles
+.env
+
+#Data de prueba
+*.csv
+*.xlsx
+*.json

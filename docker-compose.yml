@@ -36,8 +36,8 @@ services:
       API_HOST: 0.0.0.0
       API_PORT: 8000
       DEBUG: ${DEBUG:-false}
-    ports:
-      - "${API_PORT:-8000}:8000"
+    expose:
+      - "8000"
     volumes:
       - ./data:/app/data
     depends_on:

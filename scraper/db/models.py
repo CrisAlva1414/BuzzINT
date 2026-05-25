@@ -1,6 +1,6 @@
 """Database models using SQLAlchemy ORM."""
-from sqlalchemy import Column, String, DateTime, Integer, Text, UUID
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, String, DateTime, Integer, Text, UUID, JSON
+from sqlalchemy.orm import declarative_base
 from sqlalchemy.sql import func
 import uuid
 
@@ -32,7 +32,7 @@ class DocumentoRaw(Base):
     url = Column(Text, nullable=False)
     hash_contenido = Column(String(64), nullable=False, index=True)
     contenido = Column(Text, nullable=False)
-    meta_info = Column(Text)
+    meta_info = Column(JSON, nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
 
@@ -45,7 +45,7 @@ class DatoNormalizado(Base):
     rbd = Column(String(10), nullable=False, index=True)
     fuente = Column(String(50), nullable=False)
     tipo_dato = Column(String(100), nullable=False)
-    contenido_json = Column(Text, nullable=False)
+    contenido_json = Column(JSON, nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
 

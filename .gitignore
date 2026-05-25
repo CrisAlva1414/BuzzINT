@@ -67,7 +67,6 @@ data/
 # Database & Migrations
 postgres/data/
 !postgres/init.sql
-alembic/versions/
 
 # Temporary files
 *.tmp

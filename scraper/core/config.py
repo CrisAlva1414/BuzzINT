@@ -1,6 +1,7 @@
 """Core configuration module."""
 from pydantic_settings import BaseSettings
 from typing import Optional
+from pathlib import Path
 
 
 class Settings(BaseSettings):
@@ -20,6 +21,9 @@ class Settings(BaseSettings):
     
     # Security
     fernet_key: str
+    
+    # Data paths
+    data_raw_path: str = "data_raw"
     
     # Playwright
     playwright_headless: bool = True

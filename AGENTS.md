@@ -73,10 +73,6 @@ mineduc-intelligence/
 │   │   └── hashing.py         # SHA-256 helpers para deduplicación
 │   ├── requirements.txt
 │   └── requirements-dev.txt
-├── tests/
-│   ├── conftest.py            # Fixtures compartidos (DB test, httpx mock)
-│   ├── unit/                  # Sin DB, sin red
-│   └── integration/           # Requieren postgres activo
 ├── postgres/
 │   └── init.sql
 ├── docker-compose.yml
@@ -174,49 +170,6 @@ Todo normalizer debe resolver su columna de establecimiento a `establecimientos.
 
 ---
 
-## Testing
-
-### Reglas generales
-
-- **Unit tests** (`tests/unit/`): sin base de datos, sin red, sin playwright. Usar mocks.
-- **Integration tests** (`tests/integration/`): requieren postgres local activo.
-- Marcar tests con `@pytest.mark.unit` o `@pytest.mark.integration`.
-- Cobertura mínima esperada: **70%** en módulos `extractors/` y `normalizers/`.
-
-### Correr tests
-
-```bash
-# Todos
-pytest
-
-# Solo unitarios (sin DB)
-pytest -m unit
-
-# Solo integración
-pytest -m integration
-
-# Con cobertura
-pytest --cov=scraper --cov-report=term-missing
-```
-
-### Fixtures disponibles (conftest.py)
-
-```python
-# DB de prueba (SQLite in-memory para unit, postgres test para integration)
-@pytest.fixture
-async def db_session(): ...
-
-# Cliente httpx mockeado
-@pytest.fixture
-def mock_httpx_client(): ...
-
-# Credenciales de prueba cifradas
-@pytest.fixture
-def sample_credentials(): ...
-```
-
----
-
 ## Variables de entorno
 
 **Nunca hardcodear credenciales o URLs en el código.**
@@ -262,9 +215,8 @@ Antes de generar código para una nueva funcionalidad:
 1. Identificar en qué módulo vive (`extractors/` | `normalizers/` | `api/` | `scheduler/`)
 2. Verificar si existe una clase base que heredar
 3. Generar el módulo con type hints completos
-4. Generar el test unitario correspondiente en `tests/unit/`
-5. Si toca DB: generar la migración Alembic necesaria
-6. Actualizar `requirements.txt` si se agrega una dependencia nueva
+4. Si toca DB: generar la migración Alembic necesaria
+5. Actualizar `requirements.txt` si se agrega una dependencia nueva
 
 ---
 

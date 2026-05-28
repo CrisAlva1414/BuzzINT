@@ -7,7 +7,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-import requests
+import httpx
 
 BASE_URL      = "https://informacionestadistica.agenciaeducacion.cl"
 LIST_URL      = BASE_URL + "/rest/archivo/getAllByCategoriaVistaPublica/{cat_id}/0"
@@ -59,7 +59,7 @@ def sha256_file(path: Path) -> str:
     return h.hexdigest()
 
 
-def fetch_categoria(session: requests.Session, cat_id: int) -> list:
+def fetch_categoria(session: httpx.Client, cat_id: int) -> list:
     try:
         r = session.get(LIST_URL.format(cat_id=cat_id), timeout=TIMEOUT)
         if r.status_code != 200:
@@ -77,7 +77,7 @@ def fetch_categoria(session: requests.Session, cat_id: int) -> list:
         return []
 
 
-def resolve_download(session: requests.Session, uuid: str):
+def resolve_download(session: httpx.Client, uuid: str):
     for pattern in DOWNLOAD_PATTERNS:
         url = pattern.format(uuid=uuid)
         try:
@@ -184,7 +184,7 @@ def verify_manifest(output_dir: Path):
 def run(cat_min, cat_max, output_dir, dry_run, only_rar):
     output_dir.mkdir(parents=True, exist_ok=True)
     manifest = load_manifest(output_dir)
-    session = requests.Session()
+    session = httpx.Client()
     session.headers.update(HEADERS)
 
     stats = {"discovered": 0, "ok": 0, "skip": 0, "fail": 0, "empty": 0}

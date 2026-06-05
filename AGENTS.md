@@ -1,15 +1,25 @@
-# AGENTS.md — Copilot Agent Instructions
+# AGENTS.md — Contrato del agente de código
 
-> Instrucciones persistentes para el agente de GitHub Copilot en este repositorio.
+> Instrucciones persistentes para sesiones agénticas en este repositorio.
 > Leer completo antes de generar cualquier código o modificar cualquier archivo.
+> Este archivo se actualiza al final de cada sesión significativa.
 
 ---
 
-## Contexto del proyecto
+## Estado actual del proyecto
 
-Sistema de scraping, normalización y análisis de datos educativos públicos chilenos (MINEDUC).
-Pipeline Python puro organizado en 3 capas de datos (Bronze/Silver/Gold).
-Stack: `httpx` + `playwright` + `FastAPI` + `SQLAlchemy` + `APScheduler` + `PostgreSQL`.
+<!-- Actualizar al cierre de cada sesión agéntica -->
+
+| Componente | Estado |
+|---|---|
+| Scaffold base (FastAPI + SQLAlchemy + Alembic) | ✅ completo |
+| `simce_downloader.py` | ✅ funcional |
+| `sige_downloader.py` | ✅ funcional |
+| Extractores integrados al pipeline (Bronze) | 🔲 pendiente |
+| Normalizers (Silver) | 🔲 pendiente |
+| Capa Gold + resolución RBD | 🔲 pendiente |
+| APScheduler jobs | 🔲 pendiente |
+| FastAPI panel director | 🔲 pendiente |
 
 ---
 
@@ -17,28 +27,15 @@ Stack: `httpx` + `playwright` + `FastAPI` + `SQLAlchemy` + `APScheduler` + `Post
 
 ### Regla fundamental: local ≠ Docker
 
-| Modo | Cuándo se usa | Cómo se levanta |
-|------|--------------|-----------------|
+| Modo | Cuándo | Cómo |
+|---|---|---|
 | **Local** | Desarrollo, debugging, tests | `uvicorn` directo + postgres standalone |
 | **Docker** | Solo producción / deploy a NAS | `docker compose up --build` |
 
-**Nunca generes instrucciones de `docker compose up` para tareas de desarrollo.**
-**Nunca generes código que asuma que está corriendo dentro de un contenedor en modo dev.**
-
-### Setup del entorno virtual
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r scraper/requirements.txt
-pip install -r scraper/requirements-dev.txt
-```
-
-El venv **siempre** se llama `.venv` y vive en la raíz del repositorio.
-El archivo `.venv/` está en `.gitignore` — nunca lo incluyas en commits.
-
-Cuando el agente necesite correr código Python, siempre asumir que el venv está activado.
-Si hay dudas, verificar con `which python` que apunte a `.venv/bin/python`.
+- Nunca generar instrucciones de `docker compose up` para tareas de desarrollo.
+- Nunca asumir que el código corre dentro de un contenedor en modo dev.
+- El venv siempre se llama `.venv` y vive en la raíz del repositorio.
+- Cuando el agente corra código Python: asumir venv activado. Verificar con `which python` si hay dudas.
 
 ---
 
@@ -48,184 +45,121 @@ Si hay dudas, verificar con `which python` que apunte a `.venv/bin/python`.
 mineduc-intelligence/
 ├── scraper/
 │   ├── api/
-│   │   ├── main.py            # Entry point FastAPI
+│   │   ├── main.py
 │   │   ├── routers/           # Un archivo por dominio (director, sources, jobs)
-│   │   └── schemas/           # Pydantic schemas de request/response
-│   ├── extractors/            # Un módulo por fuente
-│   │   ├── base.py            # Clase base abstracta para todos los extractors
+│   │   └── schemas/
+│   ├── extractors/
+│   │   ├── base.py            # Clase base abstracta
 │   │   ├── datos_abiertos.py
 │   │   ├── simce.py
 │   │   ├── sige.py
 │   │   └── trayectorias.py
-│   ├── normalizers/           # Un módulo por familia de datos
+│   ├── normalizers/
 │   │   ├── base.py
 │   │   ├── csv_normalizer.py
 │   │   └── pdf_codebook.py
 │   ├── scheduler/
-│   │   └── jobs.py            # Definición de cron jobs APScheduler
+│   │   └── jobs.py
 │   ├── db/
-│   │   ├── models.py          # Todos los modelos SQLAlchemy
-│   │   ├── session.py         # Engine + SessionLocal + get_db
-│   │   └── migrations/        # Alembic (autogenerado, no editar a mano)
-│   ├── core/
-│   │   ├── config.py          # Settings via pydantic-settings + .env
-│   │   ├── crypto.py          # Fernet encrypt/decrypt para credenciales
-│   │   └── hashing.py         # SHA-256 helpers para deduplicación
-│   ├── requirements.txt
-│   └── requirements-dev.txt
+│   │   ├── models.py
+│   │   ├── session.py
+│   │   └── migrations/        # Alembic — no editar a mano
+│   └── core/
+│       ├── config.py
+│       ├── crypto.py
+│       └── hashing.py
 ├── postgres/
 │   └── init.sql
 ├── docker-compose.yml
-├── .env
-├── .env.example
-├── .gitignore
-├── AGENTS.md                  # Este archivo
+├── .env / .env.example
+├── AGENTS.md
 └── README.md
 ```
 
-**Respetar esta estructura siempre.** No crear archivos fuera de los módulos indicados sin justificación explícita.
+Respetar esta estructura. No crear archivos fuera de los módulos indicados sin justificación explícita.
 
 ---
 
 ## Convenciones de código
 
-### Python
-
-- **Python 3.11+** — usar type hints en todas las funciones y métodos
-- **async/await** para todo lo relacionado con I/O (httpx, SQLAlchemy async, playwright)
-- **Pydantic v2** para schemas de API y validación
-- **pydantic-settings** para configuración desde `.env`
-- No usar `requests` — solo `httpx`
-- No usar `selenium` — solo `playwright`
-- No usar `print()` para logging — usar `logging` estándar con nivel apropiado
-
-### Nombrado
+- **Python 3.11+** con type hints en todas las funciones y métodos
+- **async/await** para todo I/O (httpx, SQLAlchemy async, playwright)
+- **Pydantic v2** para schemas; **pydantic-settings** para config desde `.env`
+- Solo `httpx` (no `requests`), solo `playwright` (no `selenium`)
+- Solo `logging` estándar (no `print()`)
 
 ```python
-# Variables y funciones: snake_case
-async def fetch_documento(url: str) -> bytes: ...
-
-# Clases: PascalCase
-class DatosAbiertosExtractor(BaseExtractor): ...
-
-# Constantes: UPPER_SNAKE_CASE
-MAX_RETRIES = 3
-
-# Modelos SQLAlchemy: PascalCase, singular
-class Establecimiento(Base): ...
-
-# Tablas en DB: snake_case, plural
-__tablename__ = "establecimientos"
+# Nombrado
+async def fetch_documento(url: str) -> bytes: ...   # snake_case
+class DatosAbiertosExtractor(BaseExtractor): ...    # PascalCase
+MAX_RETRIES = 3                                      # UPPER_SNAKE_CASE
+class Establecimiento(Base): ...                     # modelos: singular
+__tablename__ = "establecimientos"                   # tablas: plural
 ```
 
-### Estructura de un extractor
+### Contrato de extractores
 
-Todos los extractors **deben** heredar de `BaseExtractor` y respetar este contrato:
+Todos heredan de `BaseExtractor`:
 
 ```python
 class BaseExtractor:
-    async def fetch(self, url: str) -> bytes: ...          # descarga raw
-    async def compute_hash(self, content: bytes) -> str: ...  # SHA-256
-    async def has_changed(self, url: str, hash: str) -> bool: ...  # vs DB
-    async def save_raw(self, content: bytes, meta: dict) -> UUID: ...  # → Bronze
+    async def fetch(self, url: str) -> bytes: ...
+    async def compute_hash(self, content: bytes) -> str: ...
+    async def has_changed(self, url: str, hash: str) -> bool: ...
+    async def save_raw(self, content: bytes, meta: dict) -> UUID: ...
 ```
+
+Los scripts standalone actuales (`simce_downloader.py`, `sige_downloader.py`) son prototipos funcionales. Al integrarlos al pipeline deben refactorizarse para heredar de `BaseExtractor`.
 
 ---
 
 ## Base de datos
 
-### Migraciones
-
-**Siempre usar Alembic.** Nunca modificar tablas manualmente en producción.
-
-```bash
-# Generar migración después de cambiar models.py
-alembic revision --autogenerate -m "descripcion_del_cambio"
-
-# Aplicar migraciones pendientes
-alembic upgrade head
-
-# Ver estado actual
-alembic current
-```
-
-### Sessions
-
-Usar siempre el patrón de dependency injection de FastAPI:
-
-```python
-from scraper.db.session import get_db
-from sqlalchemy.ext.asyncio import AsyncSession
-
-async def endpoint(db: AsyncSession = Depends(get_db)):
-    ...
-```
-
-Nunca crear sessions manualmente dentro de endpoints.
-
-### Identificador universal
-
-El campo `rbd` (TEXT) es el identificador natural que une todas las fuentes.
-Todo normalizer debe resolver su columna de establecimiento a `establecimientos.rbd` antes de escribir en staging.
+- **Siempre Alembic** para migraciones. Nunca modificar tablas manualmente.
+- Sessions siempre via dependency injection de FastAPI (`Depends(get_db)`).
+- El campo `rbd` (TEXT) es el identificador universal que une todas las fuentes. Todo normalizer debe resolver su columna de establecimiento a `establecimientos.rbd` antes de escribir en staging.
 
 ---
 
 ## Variables de entorno
 
-**Nunca hardcodear credenciales o URLs en el código.**
-Todo va en `.env` y se accede via `scraper.core.config.Settings`.
+Nunca hardcodear credenciales o URLs. Todo via `scraper.core.config.Settings`.
 
 ```python
 from scraper.core.config import settings
-
 settings.postgres_host   # ✓
-"localhost"              # ✗ hardcodeado
+"localhost"              # ✗
 ```
 
-El archivo `.env` **nunca** se commitea. Solo `.env.example` con valores vacíos o de ejemplo.
+`.env` nunca se commitea. Solo `.env.example` con valores vacíos.
 
 ---
 
 ## Seguridad
 
-- Las credenciales institucionales (ClaveÚnica) se **cifran con Fernet** antes de persistir en DB.
-- La `FERNET_KEY` se genera una vez y nunca se regenera (rompe todos los datos cifrados).
-- Playwright corre siempre en modo headless (`PLAYWRIGHT_HEADLESS=true`).
-- El panel director no tiene autenticación en MVP — está protegido por Tailscale a nivel de red.
+- Credenciales institucionales (SIGE/Trayectorias) se cifran con **Fernet** antes de persistir.
+- `FERNET_KEY` se genera una vez y nunca se regenera.
+- Playwright corre siempre headless en producción (`PLAYWRIGHT_HEADLESS=true`). Modo visible solo para resolver captcha en login SIGE (flujo documentado en `sige_downloader.py`).
+- Panel director sin autenticación en MVP — protegido por Tailscale a nivel de red.
 
 ---
 
-## Docker (solo producción)
+## Decisiones de diseño registradas
 
-El `docker-compose.yml` define:
-- `postgres` — imagen `postgres:16-alpine` (ARM64 compatible)
-- `scraper` — build desde `./scraper/Dockerfile`
-- Red interna: `ministerial_net` (bridge)
-- Volumen: `./data:/app/data` para PDFs y CSVs descargados
+<!-- Agregar entradas al cierre de sesiones donde se tome una decisión no trivial -->
 
-**No agregar** servicios a Docker Compose que no sean necesarios para producción.
-**No exponer** puertos directamente — Caddy maneja el ruteo externo.
-
----
-
-## Flujo de trabajo del agente
-
-Antes de generar código para una nueva funcionalidad:
-
-1. Identificar en qué módulo vive (`extractors/` | `normalizers/` | `api/` | `scheduler/`)
-2. Verificar si existe una clase base que heredar
-3. Generar el módulo con type hints completos
-4. Si toca DB: generar la migración Alembic necesaria
-5. Actualizar `requirements.txt` si se agrega una dependencia nueva
+| Fecha | Decisión | Razón |
+|---|---|---|
+| — | Login SIGE: browser visible para captcha → httpx para descarga | El captcha de SIGE no se puede resolver headless de forma confiable |
+| — | SIMCE: scraping via REST JSON (`/rest/archivo/`) sin autenticación | La API pública expone UUIDs descargables directamente |
 
 ---
 
 ## Lo que el agente NO debe hacer
 
-- Crear archivos `.py` fuera de la estructura definida sin preguntar
-- Usar `requests`, `selenium`, o `scrapy`
-- Usar `print()` en lugar de `logging`
+- Crear archivos `.py` fuera de la estructura sin preguntar
+- Usar `requests`, `selenium`, `scrapy` o `print()`
 - Modificar `alembic/versions/` manualmente
-- Hardcodear cualquier URL, credencial, o parámetro de conexión
-- Generar código con `docker compose` para flujos de desarrollo
-- Commitear `.env`, `.venv/`, `__pycache__/`, o archivos `*.pyc`
+- Hardcodear URLs, credenciales o parámetros de conexión
+- Commitear `.env`, `.venv/`, `__pycache__/`, archivos `*.pyc`
+- Generar instrucciones de `docker compose` para flujos de desarrollo

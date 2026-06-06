@@ -15,9 +15,6 @@ from charset_normalizer import from_bytes
 
 log = logging.getLogger(__name__)
 
-# ──────────────────────────────────────────────
-# Constantes
-# ──────────────────────────────────────────────
 SEPARATORS   = [";", ",", "\t", "|", "~"]
 SEP_LABELS   = {";": "semicolon", ",": "comma", "\t": "tab", "|": "pipe", "~": "tilde"}
 PREVIEW_ROWS = 5          # filas de preview en salida LLM (sobrescrito por --rows)
@@ -25,9 +22,6 @@ SAMPLE_BYTES = 131_072    # 128 KB para detección de encoding
 MIN_COLS     = 2          # mínimo de columnas para aceptar un separador
 
 
-# ──────────────────────────────────────────────
-# Detección de encoding — más robusta
-# ──────────────────────────────────────────────
 def detect_encoding(path: Path, sample: int = SAMPLE_BYTES) -> str:
     raw = path.read_bytes()[:sample]
 
@@ -57,23 +51,11 @@ def detect_encoding(path: Path, sample: int = SAMPLE_BYTES) -> str:
     return "latin1"
 
 
-# ──────────────────────────────────────────────
-# Sniff + lectura
-# ──────────────────────────────────────────────
 def sniff_and_read(
     path: Path,
     encoding: str,
     nrows: int,
 ) -> tuple[Optional[pd.DataFrame], str]:
-    """Prueba separadores en orden y devuelve el primero con ≥ MIN_COLS columnas.
-
-    Maneja explícitamente:
-    - CRLF (\\r\\n) en archivos Windows — frecuente en exports MINEDUC antiguos
-    - BOM UTF-8 (ef bb bf) combinado con CRLF que confunde al engine de pandas
-    - Campos con solo espacios en blanco → normalizados a NaN
-    """
-    # Abrir con newline='' para que Python no interprete \\r como fin de línea
-    # antes de que pandas vea el contenido; esto resuelve el CRLF+BOM combo.
     import io
     try:
         raw_text = path.read_bytes().decode(encoding, errors="replace")
@@ -126,9 +108,6 @@ def sniff_and_read(
 
 
 def count_rows(path: Path, encoding: str) -> int | str:
-    """Cuenta líneas del archivo sin cargarlo entero en memoria.
-    Maneja CRLF correctamente abriendo en modo universal newlines.
-    """
     try:
         with open(path, encoding=encoding, errors="replace", newline="") as fh:
             # Contar \\n y \\r\\n por igual usando splitlines
@@ -138,9 +117,6 @@ def count_rows(path: Path, encoding: str) -> int | str:
         return "?"
 
 
-# ──────────────────────────────────────────────
-# Extracción de RAR
-# ──────────────────────────────────────────────
 def extract_csvs_from_rar(rar_path: Path, dest: Path) -> list[Path]:
     out: list[Path] = []
     try:
@@ -154,11 +130,7 @@ def extract_csvs_from_rar(rar_path: Path, dest: Path) -> list[Path]:
     return out
 
 
-# ──────────────────────────────────────────────
-# Análisis de columnas para perfilado rápido
-# ──────────────────────────────────────────────
 def profile_columns(df: pd.DataFrame) -> list[dict]:
-    """Perfil compacto por columna: tipo inferido, nulos, cardinalidad, muestra."""
     profiles = []
     for col in df.columns:
         series = df[col].replace("", pd.NA)
@@ -194,9 +166,6 @@ def profile_columns(df: pd.DataFrame) -> list[dict]:
     return profiles
 
 
-# ──────────────────────────────────────────────
-# Formateo LLM-friendly de un archivo
-# ──────────────────────────────────────────────
 def format_file_block(
     idx: int,
     total: int,
@@ -246,9 +215,6 @@ def format_file_block(
     return "\n".join(lines)
 
 
-# ──────────────────────────────────────────────
-# Inspector principal
-# ──────────────────────────────────────────────
 def inspect(
     source_dir: Path,
     nrows: int,
@@ -316,18 +282,15 @@ def inspect(
         print(footer)
 
 
-# ──────────────────────────────────────────────
-# CLI
-# ──────────────────────────────────────────────
 def main() -> None:
     p = argparse.ArgumentParser(
         description="Inspecciona CSVs/RARs de MINEDUC/SEP. Salida LLM-optimizada.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
-Ejemplos:
-  python inspect_sep_csvs.py --input data/mineduc/raw/cargos
-  python inspect_sep_csvs.py --input data/ --rows 10 --output report.md
-  python inspect_sep_csvs.py --input data/ --no-rar --output reports/sep_inspect.md
+            Ejemplos:
+            python inspect_sep_csvs.py --input data/mineduc/raw/cargos
+            python inspect_sep_csvs.py --input data/ --rows 10 --output report.md
+            python inspect_sep_csvs.py --input data/ --no-rar --output reports/sep_inspect.md
         """,
     )
     p.add_argument(

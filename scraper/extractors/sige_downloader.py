@@ -153,7 +153,6 @@ def verify_manifest(output_dir: Path):
 
 
 def browser_login(user: str, pwd: str) -> dict:
-    """Abre browser visible, rellena credenciales, espera login y retorna cookies."""
     raw_user = user.split("-")
     rut = raw_user[0]
     dv  = raw_user[1] if len(raw_user) > 1 else ""

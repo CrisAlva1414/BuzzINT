@@ -166,9 +166,8 @@ El identificador que une todo es el **RBD**. Cada fuente lo llama distinto (`RBD
 | ORM / Migraciones | `SQLAlchemy` + `Alembic` |
 | Base de datos | `PostgreSQL 16` |
 | Cifrado credenciales | `cryptography` (Fernet) |
-| Acceso remoto | Tailscale |
-| Reverse proxy | Caddy |
 | Modelo estadístico | `statsmodels` (Panel FE) + `scikit-learn` (regularización) |
+| Descompresion | `unrar + rarfile` |
 
 ---
 

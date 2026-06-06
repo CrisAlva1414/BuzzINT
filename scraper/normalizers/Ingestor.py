@@ -1,19 +1,3 @@
-"""
-normalizers/ingestor.py
-=======================
-Capa de ingesta universal. Responsabilidad única: convertir cualquier archivo crudo
-en una lista de DataFrames con metadatos de origen.
-
-Formatos soportados (basado en inventario real de Bronze):
-  - .csv (con autodetección de encoding y separador)
-  - .xlsx / .xls  (multi-hoja, con skip de portadas y detección de encabezado)
-  - .zip  (con soporte de subcarpetas anidadas y ZIP dentro de ZIP)
-  - .rar  (incluyendo .rar.rar — doble extensión)
-  - .pdf  (extracción de tablas vía pdfplumber — opt-in, skip_pdf=True por defecto)
-
-NO toca la semántica de los datos — eso es trabajo del normalizer de cada fuente.
-"""
-
 from __future__ import annotations
 
 import io
@@ -28,9 +12,6 @@ import pandas as pd
 
 logger = logging.getLogger(__name__)
 
-# ---------------------------------------------------------------------------
-# Constantes
-# ---------------------------------------------------------------------------
 
 _TABULAR_EXTENSIONS  = {".csv", ".xlsx", ".xls"}
 _ARCHIVE_EXTENSIONS  = {".zip", ".rar"}
@@ -56,14 +37,8 @@ _CODEBOOK_FILE_RE = re.compile(
 )
 
 
-# ---------------------------------------------------------------------------
-# Dataclass de resultado
-# ---------------------------------------------------------------------------
-
 @dataclass
 class IngestedFile:
-    """Un DataFrame extraído de un archivo crudo, con su linaje completo."""
-
     df:             pd.DataFrame
     source_path:    Path         # Archivo original en Bronze
     inner_path:     str | None   # Ruta dentro del ZIP/RAR
@@ -84,23 +59,7 @@ class IngestedFile:
         return " > ".join(parts)
 
 
-# ---------------------------------------------------------------------------
-# Ingestor principal
-# ---------------------------------------------------------------------------
-
 class Ingestor:
-    """
-    Lee un archivo Bronze y devuelve todos los DataFrames que contiene.
-
-    Parámetros:
-        skip_pdf        — Si True (default), ignora PDFs dentro de archivos.
-                          Los PDFs de SIGE son actas por curso; necesitan
-                          SigePdfExtractor, no el ingestor genérico.
-        skip_codebooks  — Si True (default), marca como is_codebook=True y
-                          excluye del resultado los archivos de libro de códigos.
-        min_rows        — DataFrames con menos filas se descartan.
-    """
-
     def __init__(
         self,
         skip_pdf:       bool = True,
@@ -111,14 +70,8 @@ class Ingestor:
         self.skip_codebooks = skip_codebooks
         self.min_rows       = min_rows
 
-    # ------------------------------------------------------------------
-    # Punto de entrada público
-    # ------------------------------------------------------------------
 
     def ingest(self, path: Path) -> list[IngestedFile]:
-        """
-        Ingesta un archivo y retorna DataFrames. Nunca lanza — errores se loguean.
-        """
         path   = Path(path)
         # Resolver doble extensión .rar.rar antes de inferir el tipo
         suffix = _resolve_suffix(path)
@@ -157,9 +110,6 @@ class Ingestor:
         logger.info("Ingestado %s → %d DataFrame(s)", path.name, len(filtered))
         return filtered
 
-    # ------------------------------------------------------------------
-    # Archivos contenedores
-    # ------------------------------------------------------------------
 
     def _ingest_zip(self, zip_path: Path) -> Iterator[IngestedFile]:
         with zipfile.ZipFile(zip_path, "r") as zf:
@@ -206,7 +156,6 @@ class Ingestor:
     def _ingest_zip_bytes(
         self, raw: bytes, source_path: Path, prefix: str
     ) -> Iterator[IngestedFile]:
-        """ZIP anidado en memoria."""
         try:
             with zipfile.ZipFile(io.BytesIO(raw)) as inner_zf:
                 for member in inner_zf.namelist():
@@ -267,7 +216,6 @@ class Ingestor:
     def _ingest_rar_bytes(
         self, raw: bytes, source_path: Path, inner_path: str
     ) -> Iterator[IngestedFile]:
-        """RAR dentro de ZIP — extraer a /tmp y procesar."""
         import tempfile, os
         try:
             import rarfile
@@ -298,9 +246,6 @@ class Ingestor:
             if tmp_path and tmp_path.exists():
                 tmp_path.unlink()
 
-    # ------------------------------------------------------------------
-    # Archivos tabulares directos
-    # ------------------------------------------------------------------
 
     def _ingest_tabular(self, path: Path, inner_path: str | None) -> IngestedFile | None:
         suffix = _resolve_suffix(path)
@@ -324,9 +269,6 @@ class Ingestor:
         elif suffix in (".xlsx", ".xls"):
             yield from self._read_excel(raw, suffix, source_path, inner_path)
 
-    # ------------------------------------------------------------------
-    # CSV
-    # ------------------------------------------------------------------
 
     def _read_csv(
         self, raw: bytes, source_path: Path, inner_path: str | None
@@ -385,9 +327,6 @@ class Ingestor:
             warnings=warnings,
         )
 
-    # ------------------------------------------------------------------
-    # Excel
-    # ------------------------------------------------------------------
 
     def _read_excel(
         self, raw: bytes, suffix: str, source_path: Path, inner_path: str | None
@@ -426,9 +365,6 @@ class Ingestor:
                 is_codebook=is_cb, warnings=warnings,
             )
 
-    # ------------------------------------------------------------------
-    # PDF
-    # ------------------------------------------------------------------
 
     def _ingest_pdf(self, path: Path, inner_path: str | None) -> Iterator[IngestedFile]:
         yield from self._ingest_pdf_bytes(path.read_bytes(), path, inner_path)
@@ -467,15 +403,7 @@ class Ingestor:
                          _label(source_path, inner_path), exc)
 
 
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
-
 def _resolve_suffix(path: Path) -> str:
-    """
-    Resuelve la extensión real de un archivo.
-    Maneja .rar.rar (doble extensión) → ".rar"
-    """
     name = path.name.lower()
     if name.endswith(".rar.rar"):
         return ".rar"
@@ -483,18 +411,12 @@ def _resolve_suffix(path: Path) -> str:
 
 
 def _unwrap_double_rar(path: Path) -> Path:
-    """
-    Para archivos .rar.rar: si el path tiene doble extensión,
-    retorna una ruta con una sola extensión (sin mover el archivo).
-    rarfile puede abrirlo igual por el path real en disco.
-    """
     # rarfile abre por path — simplemente pasar el path original funciona
     # siempre que el archivo en disco sea un RAR válido.
     return path
 
 
 def _is_codebook_path(path_str: str) -> bool:
-    """Detecta si un nombre de archivo corresponde a un libro de códigos."""
     return bool(_CODEBOOK_FILE_RE.search(path_str))
 
 
@@ -506,7 +428,6 @@ def _label(source_path: Path, inner_path: str | None) -> str:
 
 
 def _clean_df(df: pd.DataFrame) -> pd.DataFrame:
-    """Limpieza mínima estructural — sin tocar semántica."""
     # Nombres de columna: lowercase, strip, espacios → _
     df.columns = [
         re.sub(r"\s+", "_", str(c).strip().lower())
@@ -523,10 +444,6 @@ def _clean_df(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def _detect_header(df: pd.DataFrame, threshold: float = 0.5) -> tuple[pd.DataFrame, int]:
-    """
-    Detecta y promueve el encabezado real en Excel del MINEDUC,
-    que frecuentemente tiene filas de título antes de los datos.
-    """
     for i, row in df.iterrows():
         if row.notna().mean() >= threshold:
             new_header = [

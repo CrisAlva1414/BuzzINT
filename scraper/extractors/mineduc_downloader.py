@@ -25,10 +25,6 @@ from pathlib import Path
 import httpx
 from playwright.sync_api import sync_playwright
 
-# ---------------------------------------------------------------------------
-# Constantes
-# ---------------------------------------------------------------------------
-
 REQUEST_DELAY: float = 1.0          # segundos entre requests de descarga
 FETCH_TIMEOUT: int   = 60           # timeout httpx (segundos)
 MIN_FILE_BYTES: int  = 512          # archivos menores se tratan como error
@@ -60,10 +56,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-# ---------------------------------------------------------------------------
 # Funciones base (patrón uniforme del proyecto)
-# ---------------------------------------------------------------------------
-
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
@@ -117,16 +110,8 @@ def safe_filename(name: str, fallback: str, ext: str) -> str:
     return f"{name}.{ext}"
 
 
-# ---------------------------------------------------------------------------
 # Catálogo: descubre todos los enlaces dentro del acordeón
-# ---------------------------------------------------------------------------
-
 def fetch_catalog(source_url: str) -> list[dict]:
-    """
-    Abre la página con Playwright, expande todos los paneles del acordeón
-    y extrae los href de descarga.
-    Retorna lista de dicts: {url, filename, year, title}
-    """
     logger.info("Fetching catalog: %s", source_url)
     items: list[dict] = []
 
@@ -189,10 +174,7 @@ def fetch_catalog(source_url: str) -> list[dict]:
     return items
 
 
-# ---------------------------------------------------------------------------
 # Descarga individual
-# ---------------------------------------------------------------------------
-
 def download_item(
     item: dict,
     output_dir: Path,
@@ -200,15 +182,11 @@ def download_item(
     client: httpx.Client,
     dry_run: bool,
 ) -> str:
-    """
-    Descarga un archivo y actualiza el manifest.
-    Retorna: "ok" | "skip" | "fail"
-    """
     url: str      = item["url"]
     filename: str = item["filename"]
     filepath: Path = output_dir / filename
 
-    # --- Deduplicación ---
+    # Deduplicación 
     entry = manifest["files"].get(url, {})
     if entry.get("hash") and filepath.exists():
         if sha256_file(filepath) == entry["hash"]:
@@ -216,7 +194,7 @@ def download_item(
             return "skip"
         logger.info("  hash mismatch → re-descargando  %s", filename)
 
-    # --- Registro pre-descarga (dry-run o punto de partida en caso de fallo) ---
+    # Registro pre-descarga (dry-run o punto de partida en caso de fallo) 
     manifest["files"][url] = {
         "url": url,
         "filename": filename,
@@ -230,7 +208,7 @@ def download_item(
         logger.info("  dry-run  %s", filename)
         return "ok"
 
-    # --- Descarga en streaming ---
+    # Descarga en streaming 
     try:
         with client.stream("GET", url, timeout=FETCH_TIMEOUT) as resp:
             resp.raise_for_status()
@@ -243,7 +221,7 @@ def download_item(
         logger.warning("  FAIL  %s  →  %s", filename, exc)
         return "fail"
 
-    # --- Validar tamaño mínimo ---
+    # Validar tamaño mínimo 
     size = filepath.stat().st_size
     if size < MIN_FILE_BYTES:
         manifest["files"][url]["error"] = f"respuesta demasiado pequeña ({size} bytes)"
@@ -251,7 +229,7 @@ def download_item(
         logger.warning("  FAIL  %s  →  tamaño sospechoso %d bytes", filename, size)
         return "fail"
 
-    # --- Registro post-descarga exitoso ---
+    # Registro post-descarga exitoso 
     file_hash = sha256_file(filepath)
     manifest["files"][url].update(
         {
@@ -267,10 +245,7 @@ def download_item(
     return "ok"
 
 
-# ---------------------------------------------------------------------------
 # Runner por fuente
-# ---------------------------------------------------------------------------
-
 def run_source(
     key: str,
     source_url: str,
@@ -316,10 +291,7 @@ def run_source(
     return stats
 
 
-# ---------------------------------------------------------------------------
 # Entrypoint CLI
-# ---------------------------------------------------------------------------
-
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Descarga datasets de datosabiertos.mineduc.cl"

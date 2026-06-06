@@ -133,13 +133,6 @@ Todo lo que no está arriba queda fuera. Su señal está capturada por las varia
   4. Cargos Docentes (~2010)
 - **Script:** `scraper/extractors/datos_abiertos.py` (pendiente)
 
-### Trayectorias Estudiantiles *(pendiente de evaluación)*
-
-- **URL:** `https://trayectorias.mineduc.gob.cl`
-- **Acceso:** autenticado (ClaveÚnica)
-- **Rol potencial:** validar el rezago temporal del modelo.
-- **Script:** `scraper/extractors/trayectorias.py` (pendiente)
-
 ---
 
 ## Pipeline de datos
@@ -162,31 +155,6 @@ El identificador que une todo es el **RBD**. Cada fuente lo llama distinto (`RBD
 
 ---
 
-## Deduplicación
-
-Cada archivo descargado se verifica con SHA-256 contra el manifest local. Si el hash coincide con la descarga anterior, el archivo se saltea.
-
----
-
-## Scheduling
-
-Los datos públicos (SIMCE, Datos Abiertos) se actualizan vía cron automático.  
-Los datos autenticados (SIGE, Trayectorias) se disparan manualmente desde el panel director o vía API.
-
----
-
-## Panel director
-
-Interfaz mínima para:
-- Registrar y gestionar credenciales institucionales (almacenadas cifradas)
-- Disparar descargas manualmente por fuente o establecimiento
-- Ver estado de los últimos jobs
-- Visualizar diagnóstico causal, efecto docente y benchmarking territorial
-
-Accesible únicamente dentro de la red Tailscale.
-
----
-
 ## Stack técnico
 
 | Capa | Tecnología |
@@ -201,29 +169,6 @@ Accesible únicamente dentro de la red Tailscale.
 | Acceso remoto | Tailscale |
 | Reverse proxy | Caddy |
 | Modelo estadístico | `statsmodels` (Panel FE) + `scikit-learn` (regularización) |
-
----
-
-## Roadmap
-
-- [x] Scaffold Docker + PostgreSQL + modelos SQLAlchemy
-- [x] `simce_downloader` — descarga pública Agencia de Calidad
-- [x] `sige_downloader` — descarga autenticada actas históricas
-- [ ] Integrar downloaders al pipeline Bronze (heredar `BaseExtractor`)
-- [ ] `datos_abiertos.py` — scraper unificado (SEP + Directorio + Evaluación Docente + Cargos Docentes)
-- [ ] Normalizers Silver
-  - [ ] Parser notas SIGE → granularidad alumno × asignatura × semestre × docente
-  - [ ] Construcción de rezagos temporales (t-1 a t-4) en capa Gold
-  - [ ] Cálculo de variables derivadas: continuidad docente, tasa retención, valor agregado μ
-- [ ] Capa Gold + resolución canónica de RBD
-- [ ] Submodelo efecto docente (Teacher Value-Added)
-- [ ] Modelo Panel FE con variables endógenas rezagadas + 4 exógenas
-- [ ] Benchmarking territorial por anillos (residuos del modelo)
-- [ ] APScheduler + cron datos macro
-- [ ] FastAPI panel director
-- [ ] Dashboard / visualización
-- [ ] Pipeline RAG
-- [ ] Clustering no supervisado (variables excluidas del modelo v1)
 
 ---
 

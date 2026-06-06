@@ -1,103 +1,56 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import logging
 import re
 import tempfile
 from pathlib import Path
-from typing import Optional
+from typing import Generator, Optional, Tuple
 
 import pandas as pd
 import rarfile
-from charset_normalizer import from_bytes  # incluido vía httpx
+from charset_normalizer import from_bytes
 
 log = logging.getLogger(__name__)
 
 
 class BaseNormalizer:
-
-    def normalize(self, source_dir: Path, **kwargs) -> pd.DataFrame:
+    def normalize(self, source_dir: Path, **kwargs) -> None:
         raise NotImplementedError
 
 
-# Tamaño de chunk para leer CSVs grandes (filas por chunk).
-# A ~150 bytes/fila promedio: 100_000 filas ≈ 15 MB de RAM por chunk.
-# Ajustar si el host tiene poca RAM disponible.
-CHUNK_SIZE = 100_000
+CHUNK_SIZE = 20_000
 
-# Mapa variante_en_csv → nombre_canónico.
-# Agregar aquí cualquier alias nuevo que aparezca en versiones futuras.
 COLUMN_ALIASES: dict[str, str] = {
-    # ── Año ───────────────────────────────────────────────────────────────────
-    "agno":                 "agno",
-    "anio":                 "agno",
-    "año":                  "agno",
-    "year":                 "agno",
-    # ── MRUN ─────────────────────────────────────────────────────────────────
-    "mrun":                 "mrun",
-    "cod_mrun":             "mrun",
-    # ── Establecimiento ───────────────────────────────────────────────────────
-    "rbd":                  "rbd",
-    "cod_rbd":              "rbd",
-    "dgv_rbd":              "dgv_rbd",
-    "nom_rbd":              "nom_rbd",
-    "nombre_rbd":           "nom_rbd",
-    # Legacy 2008-2009
-    "let_rbd":              "let_rbd",
-    "num_rbd":              "num_rbd",
-    # ── Alumno ────────────────────────────────────────────────────────────────
-    "gen_alu":              "gen_alu",
-    "cod_gen_alu":          "gen_alu",
-    "sexo":                 "gen_alu",
-    "fec_nac_alu":          "fec_nac_alu",
-    "fec_defun_alu":        "fec_defun_alu",          # nuevo en 2024
-    # ── Condición SEP ─────────────────────────────────────────────────────────
-    "criterio_sep":         "criterio_sep",
-    "cod_sep":              "criterio_sep",
-    "condicion_sep":        "criterio_sep",
-    "condicion":            "criterio_sep",
-    "prioritario_alu":      "prioritario_alu",
-    "preferente_alu":       "preferente_alu",
-    "ben_sep":              "ben_sep",
-    # ── Establecimiento SEP ───────────────────────────────────────────────────
-    "convenio_sep":         "convenio_sep",
-    "año_ingreso_sep":      "año_ingreso_sep",
-    "clasificacion_sep":    "clasificacion_sep",
-    "ee_gratuito":          "ee_gratuito",
-    "estado_estab":         "estado_estab",
-    "grado_sep":            "grado_sep",
-    # ── Geografía ─────────────────────────────────────────────────────────────
-    "cod_reg_rbd":          "cod_reg_rbd",
-    "cod_region":           "cod_reg_rbd",
-    "region":               "cod_reg_rbd",
-    "nom_reg_rbd_a":        "nom_reg_rbd_a",          # nuevo en 2024
-    "cod_pro_rbd":          "cod_pro_rbd",
-    "cod_provincia":        "cod_pro_rbd",
-    "cod_com_rbd":          "cod_com_rbd",
-    "cod_comuna_rbd":       "cod_com_rbd",
-    "nom_com_rbd":          "nom_com_rbd",
-    "cod_deprov_rbd":       "cod_deprov_rbd",
-    "nom_deprov_rbd":       "nom_deprov_rbd",
-    # ── Dependencia / Zona ────────────────────────────────────────────────────
-    "cod_depe":             "cod_depe",
-    "dependencia":          "cod_depe",
-    "cod_depe2":            "cod_depe2",
-    "rural_rbd":            "rural_rbd",
-    "cod_rural":            "rural_rbd",
-    "nombre_slep":          "nombre_slep",            # nuevo en 2024
-    # ── Enseñanza / Grado ─────────────────────────────────────────────────────
-    "cod_ense":             "cod_ense",
-    "cod_ense2":            "cod_ense2",
-    "cod_ense3":            "cod_ense3",
-    "cod_grado":            "cod_grado",
-    "grado":                "cod_grado",
-    "cod_grado2":           "cod_grado2",
-    "let_cur":              "let_cur",
-    "cod_jor":              "cod_jor",
+    "agno": "agno", "anio": "agno", "año": "agno", "year": "agno",
+    "mrun": "mrun", "cod_mrun": "mrun",
+    "rbd": "rbd", "cod_rbd": "rbd",
+    "dgv_rbd": "dgv_rbd", "nom_rbd": "nom_rbd", "nombre_rbd": "nom_rbd",
+    "let_rbd": "let_rbd", "num_rbd": "num_rbd",
+    "gen_alu": "gen_alu", "cod_gen_alu": "gen_alu", "sexo": "gen_alu",
+    "fec_nac_alu": "fec_nac_alu", "fec_defun_alu": "fec_defun_alu",
+    "criterio_sep": "criterio_sep", "cod_sep": "criterio_sep",
+    "condicion_sep": "criterio_sep", "condicion": "criterio_sep",
+    "prioritario_alu": "prioritario_alu", "preferente_alu": "preferente_alu",
+    "ben_sep": "ben_sep",
+    "convenio_sep": "convenio_sep", "año_ingreso_sep": "año_ingreso_sep",
+    "clasificacion_sep": "clasificacion_sep", "ee_gratuito": "ee_gratuito",
+    "estado_estab": "estado_estab", "grado_sep": "grado_sep",
+    "cod_reg_rbd": "cod_reg_rbd", "cod_region": "cod_reg_rbd", "region": "cod_reg_rbd",
+    "nom_reg_rbd_a": "nom_reg_rbd_a",
+    "cod_pro_rbd": "cod_pro_rbd", "cod_provincia": "cod_pro_rbd",
+    "cod_com_rbd": "cod_com_rbd", "cod_comuna_rbd": "cod_com_rbd",
+    "nom_com_rbd": "nom_com_rbd",
+    "cod_deprov_rbd": "cod_deprov_rbd", "nom_deprov_rbd": "nom_deprov_rbd",
+    "cod_depe": "cod_depe", "dependencia": "cod_depe",
+    "cod_depe2": "cod_depe2", "rural_rbd": "rural_rbd", "cod_rural": "rural_rbd",
+    "nombre_slep": "nombre_slep",
+    "cod_ense": "cod_ense", "cod_ense2": "cod_ense2", "cod_ense3": "cod_ense3",
+    "cod_grado": "cod_grado", "grado": "cod_grado", "cod_grado2": "cod_grado2",
+    "let_cur": "let_cur", "cod_jor": "cod_jor",
 }
 
-# Columnas en orden preferido para el CSV final.
-# Columnas no listadas se anexan al final (extensiones futuras).
 OUTPUT_COLUMN_ORDER: list[str] = [
     "agno", "mrun", "gen_alu", "fec_nac_alu", "fec_defun_alu",
     "criterio_sep", "prioritario_alu", "preferente_alu", "ben_sep",
@@ -108,21 +61,15 @@ OUTPUT_COLUMN_ORDER: list[str] = [
     "nombre_slep", "convenio_sep", "año_ingreso_sep", "clasificacion_sep", "ee_gratuito",
     "cod_ense", "cod_ense2", "cod_ense3",
     "cod_grado", "cod_grado2", "let_cur", "cod_jor", "grado_sep",
-    # Legacy (solo 2008-2009)
     "let_rbd", "num_rbd",
-    # Provenance
     "_source_file",
 ]
 
-# Separadores a probar en orden de prevalencia real en el dataset MINEDUC
 _SEPARATORS: list[str] = [",", ";", "\t", "|"]
-
-# Regex para inferir año desde nombre de archivo o carpeta
 _YEAR_RE = re.compile(r"(?<!\d)(20\d{2})(?!\d)")
 
 
 def _normalize_fec_nac(series: pd.Series) -> pd.Series:
-
     def _convert(val: str) -> str:
         v = str(val).strip()
         if len(v) == 8 and v.isdigit():
@@ -133,7 +80,52 @@ def _normalize_fec_nac(series: pd.Series) -> pd.Series:
     return series.astype(str).map(_convert)
 
 
+def _normalize_col(name: str) -> str:
+    clean = name.strip().lower().replace(" ", "_").replace("-", "_")
+    return COLUMN_ALIASES.get(clean, clean)
+
+
+def _infer_year(path: Path) -> Optional[str]:
+    for candidate in [path.stem, path.parent.name]:
+        m = _YEAR_RE.search(candidate)
+        if m:
+            return m.group(1)
+    return None
+
+
+def _detect_encoding(path: Path, sample_bytes: int = 131_072) -> str:
+    raw = path.read_bytes()[:sample_bytes]
+    last_nl = raw.rfind(b"\n")
+    if last_nl > 0:
+        raw = raw[:last_nl]
+    result = from_bytes(raw).best()
+    enc = str(result.encoding) if result else "latin-1"
+    log.debug("  encoding detectado: %s", enc)
+    return enc
+
+
+def _sniff(path: Path, forced_encoding: Optional[str] = None) -> Tuple[Optional[str], Optional[str]]:
+    base_encs: list[str] = (
+        [forced_encoding] if forced_encoding
+        else ["utf-8-sig", "utf-8", "latin-1", _detect_encoding(path)]
+    )
+    for enc in dict.fromkeys(base_encs + ["latin-1", "cp1252"]):
+        for sep in _SEPARATORS:
+            try:
+                df_head = pd.read_csv(
+                    path, sep=sep, encoding=enc, dtype=str,
+                    nrows=5, on_bad_lines="skip",
+                )
+                if df_head.shape[1] >= 2:
+                    log.debug("  sniff → enc=%s sep=%r cols=%d", enc, sep, df_head.shape[1])
+                    return enc, sep
+            except Exception:
+                pass
+    return None, None
+
+
 class SepAlumnosNormalizer(BaseNormalizer):
+
     def __init__(
         self,
         extract_dir: Optional[Path] = None,
@@ -141,93 +133,108 @@ class SepAlumnosNormalizer(BaseNormalizer):
         chunk_size: int = CHUNK_SIZE,
     ) -> None:
         self._extract_dir = extract_dir
-        self._forced_encoding = forced_encoding
+        self._forced_enc = forced_encoding
         self._chunk_size = chunk_size
         self._tmp_ctx: Optional[tempfile.TemporaryDirectory] = None  # type: ignore[type-arg]
 
 
-    def normalize(self, source_dir: Path, no_rar: bool = False) -> pd.DataFrame:
-        csv_files = self._collect_csvs(source_dir, no_rar=no_rar)
-        if not csv_files:
-            raise FileNotFoundError(f"No se encontraron CSVs en {source_dir}")
+    def cleanup(self) -> None:
+        if self._tmp_ctx:
+            self._tmp_ctx.cleanup()
+            self._tmp_ctx = None
 
-        # Umbral de filas antes de hacer un concat parcial y liberar memoria ~150 bytes/fila en string: 5 M filas ≈ 750 MB RAM máx por lote (esto no tiene logica)
-        PARTIAL_FLUSH_ROWS = 1_000_000
+    def __enter__(self) -> "SepAlumnosNormalizer":
+        return self
 
-        frames: list[pd.DataFrame] = []
-        skipped: list[Path] = []
-        accumulated_rows = 0
-        partial_results: list[pd.DataFrame] = []
+    def __exit__(self, *_) -> None:
+        self.cleanup()
 
-        for path in csv_files:
-            df = self._process_single(path)
-            if df is None:
-                skipped.append(path)
-                continue
 
-            frames.append(df)
-            accumulated_rows += len(df)
+    def normalize(
+        self,
+        source_dir: Path,
+        output_path: Path,
+        no_rar: bool = False,
+    ) -> dict:
+        output_path.parent.mkdir(parents=True, exist_ok=True)
 
-            if accumulated_rows >= PARTIAL_FLUSH_ROWS:
-                log.debug(
-                    "  flush parcial: %d filas acumuladas → consolidando lote",
-                    accumulated_rows,
-                )
-                partial_results.append(self._align_and_concat(frames))
-                frames.clear()
-                accumulated_rows = 0
+        # ── Fase 1: pre-scan de headers ───────────────────────────────────────
+        # Itera el generador una primera vez leyendo SOLO nrows=0 (header).
+        # Los CSVs temp se borran igual que en la fase 2.
+        log.info("Pre-scan de columnas (solo headers)...")
+        final_cols = self._prescan_columns(source_dir, no_rar)
+        if not final_cols:
+            raise FileNotFoundError(f"No se encontraron CSVs procesables en {source_dir}")
+        log.info("Columnas finales (%d): %s", len(final_cols), final_cols)
 
-        if frames:
-            partial_results.append(self._align_and_concat(frames))
-            frames.clear()
+        # ── Fase 2: procesamiento real ────────────────────────────────────────
+        total_rows = 0
+        skipped: list[str] = []
 
-        if not partial_results:
-            raise RuntimeError("Ningún CSV pudo procesarse correctamente.")
+        with open(output_path, "w", newline="", encoding="utf-8-sig") as out_fh:
+            writer = csv.DictWriter(
+                out_fh,
+                fieldnames=final_cols,
+                extrasaction="ignore",
+                lineterminator="\n",
+            )
+            writer.writeheader()
+
+            for csv_path, is_temp in self._iter_sources(source_dir, no_rar):
+                try:
+                    rows = self._stream_to_writer(csv_path, writer)
+                    if rows is None:
+                        skipped.append(csv_path.name)
+                    else:
+                        total_rows += rows
+                finally:
+                    # Borrar CSV extraído de RAR INMEDIATAMENTE.
+                    # Así el temp nunca tiene más de un CSV simultáneamente.
+                    if is_temp and csv_path.exists():
+                        csv_path.unlink()
+                        log.debug("  temp eliminado: %s", csv_path.name)
 
         if skipped:
-            log.warning("%d archivo(s) omitido(s):", len(skipped))
-            for p in skipped:
-                log.warning("  ✗ %s", p.name)
+            log.warning("%d archivo(s) omitido(s): %s", len(skipped), skipped)
 
-        log.info("Concat final de %d lote(s)...", len(partial_results))
-        unified = self._align_and_concat(partial_results)
-
-        if "agno" in unified.columns:
-            unified = unified.sort_values("agno", kind="stable").reset_index(drop=True)
-
-        log.info(
-            "Consolidación completada: %d filas × %d columnas | años: %s",
-            len(unified), len(unified.columns),
-            sorted(unified["agno"].dropna().unique().tolist()),
-        )
-        return unified
+        log.info("Completado: %d filas → %s", total_rows, output_path)
+        return {"total_rows": total_rows, "skipped": skipped, "output_columns": final_cols}
 
 
-    def to_csv(self, df: pd.DataFrame, output_path: Path) -> None:
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        df.to_csv(output_path, index=False, encoding="utf-8-sig")
-        log.info("CSV exportado → %s  (%d filas)", output_path, len(df))
-
-
-    def _collect_csvs(self, source_dir: Path, no_rar: bool) -> list[Path]:
+    def _iter_sources(
+        self, source_dir: Path, no_rar: bool
+    ) -> Generator[Tuple[Path, bool], None, None]:
         if no_rar:
-            files = sorted(source_dir.rglob("*.csv"))
-            log.info("Modo --no-rar: %d CSV(s) encontrados en %s", len(files), source_dir)
-            return files
+            for p in sorted(source_dir.rglob("*.csv")):
+                yield p, False
+            return
 
         rar_files = sorted(source_dir.rglob("*.rar"))
-        log.info("%d RAR(s) encontrados en %s", len(rar_files), source_dir)
-
+        log.info("%d RAR(s) en %s", len(rar_files), source_dir)
         extract_root = self._ensure_extract_dir()
-        csv_paths: list[Path] = []
+
         for rar_path in rar_files:
             log.info("Extrayendo: %s", rar_path.name)
-            extracted = self._extract_rar(rar_path, extract_root)
-            if not extracted:
-                log.warning("  Sin CSVs dentro de %s", rar_path.name)
-            csv_paths.extend(extracted)
-        return sorted(csv_paths)
-
+            try:
+                with rarfile.RarFile(rar_path) as rf:
+                    csv_members = [
+                        m for m in rf.infolist()
+                        if m.filename.lower().endswith(".csv")
+                    ]
+                    if not csv_members:
+                        log.warning("  Sin CSVs en %s", rar_path.name)
+                        continue
+                    for member in csv_members:
+                        # Extraer solo este member, ceder control, borrar, continuar
+                        rf.extract(member, extract_root)
+                        out_path = extract_root / member.filename
+                        log.debug("  → extraído: %s", member.filename)
+                        yield out_path, True
+                        # El finally del caller ya borró el archivo antes de
+                        # llegar aquí de vuelta — pero si no existe, unlink
+                        # tampoco falla (lo comprobamos en el caller)
+            except Exception as exc:
+                log.error("  Error con %s: %s", rar_path.name, exc)
 
     def _ensure_extract_dir(self) -> Path:
         if self._extract_dir:
@@ -237,198 +244,124 @@ class SepAlumnosNormalizer(BaseNormalizer):
         return Path(self._tmp_ctx.name)
 
 
-    def cleanup(self) -> None:
-        if self._tmp_ctx:
-            self._tmp_ctx.cleanup()
-            self._tmp_ctx = None
+    def _prescan_columns(self, source_dir: Path, no_rar: bool) -> list[str]:
 
-
-    def __enter__(self) -> "SepAlumnosNormalizer":
-        return self
-
-
-    def __exit__(self, *_) -> None:
-        self.cleanup()
-
-
-    @staticmethod
-    def _extract_rar(rar_path: Path, dest: Path) -> list[Path]:
-        extracted: list[Path] = []
-        try:
-            with rarfile.RarFile(rar_path) as rf:
-                for member in rf.infolist():
-                    if member.filename.lower().endswith(".csv"):
-                        rf.extract(member, dest)
-                        extracted.append(dest / member.filename)
-                        log.debug("  → %s", member.filename)
-        except Exception as exc:
-            log.error("  Error abriendo %s: %s", rar_path.name, exc)
-        return extracted
-
-
-    def _process_single(self, path: Path) -> Optional[pd.DataFrame]:
-        log.info("Leyendo: %s", path.name)
-
-        enc, sep = self._sniff(path)
-        if enc is None or sep is None:
-            log.warning("  ✗ No se pudo determinar encoding/separador: %s", path.name)
-            return None
-
-        df = self._read_chunked(path, enc, sep)
-
-        # Si falla el encoding detectado (p.ej. falso positivo utf-8 con chars multibyte en posición de corte de muestra), reintentamos con fallbacks para archivos mas viejos que matusalem
-        if df is None and enc not in ("latin-1", "cp1252"):
-            for fallback_enc in ("latin-1", "cp1252"):
-                log.info(
-                    "  Reintentando con encoding=%s para %s", fallback_enc, path.name
-                )
-                df = self._read_chunked(path, fallback_enc, sep)
-                if df is not None:
-                    enc = fallback_enc
-                    break
-
-        if df is None:
-            return None
-
-        # 1. Strip BOM de nombres de columna (issue real en archivo 2020)
-        df.columns = [c.lstrip("\ufeff") for c in df.columns]
-
-        # 2. Normalizar nombres de columna → aliases canónicos
-        df.columns = [self._normalize_col(c) for c in df.columns]
-
-        # 3. Inferir agno si no está en el CSV
-        if "agno" not in df.columns:
-            year = self._infer_year(path)
-            df["agno"] = year or "desconocido"
-            log.debug("  agno inferido: %s", df["agno"].iloc[0])
-
-        # 4. Normalizar FEC_NAC_ALU (YYYYMMDD vs YYYYMM)
-        if "fec_nac_alu" in df.columns:
-            df["fec_nac_alu"] = _normalize_fec_nac(df["fec_nac_alu"])
-
-        # 5. Provenance
-        df["_source_file"] = path.name
-
-        log.info("  ✓ %d filas × %d cols", len(df), len(df.columns))
-        return df
-
-
-    def _sniff(self, path: Path) -> tuple[Optional[str], Optional[str]]:
-        encodings = (
-            [self._forced_encoding]
-            if self._forced_encoding
-            else ["utf-8-sig", "utf-8", "latin-1", self._detect_encoding(path)]
-        )
-        encodings_with_fallback = list(encodings) + ["latin-1", "cp1252"]
-        for enc in dict.fromkeys(encodings_with_fallback):  # deduplica preservando orden
-            for sep in _SEPARATORS:
-                try:
-                    # Leer solo 5 filas para validar que el separador da ≥2 columnas
-                    df_head = pd.read_csv(
-                        path,
-                        sep=sep,
-                        encoding=enc,
-                        dtype=str,
-                        nrows=5,
-                        on_bad_lines="skip",
-                    )
-                    if df_head.shape[1] >= 2:
-                        log.debug("  sniff → enc=%s sep=%r cols=%d", enc, sep, df_head.shape[1])
-                        return enc, sep
-                except Exception as exc:
-                    log.debug("  sniff enc=%s sep=%r: %s", enc, sep, exc)
-
-        return None, None
-
-
-    def _read_chunked(
-        self, path: Path, enc: str, sep: str
-    ) -> Optional[pd.DataFrame]:
-        chunks: list[pd.DataFrame] = []
-        skipped_rows = 0
-
-        # Capturamos las advertencias de pandas para contarlas en lugar de imprimirlas una por una (pueden ser miles de líneas en stderr)
-        import warnings
-
-        try:
-            reader = pd.read_csv(
-                path,
-                sep=sep,
-                encoding=enc,
-                dtype=str,
-                on_bad_lines="skip",       # omite filas mal formadas en lugar de abortar
-                chunksize=self._chunk_size,
-                low_memory=False,
-            )
-            with warnings.catch_warnings(record=True) as caught:
-                warnings.simplefilter("always")
-                for chunk in reader:
-                    chunks.append(chunk)
-                # Contar cuántas filas se saltaron (cada warning = 1 fila)
-                skipped_rows = sum(
-                    1 for w in caught
-                    if issubclass(w.category, pd.errors.ParserWarning)
-                )
-
-        except Exception as exc:
-            log.error("  Error leyendo %s: %s", path.name, exc)
-            return None
-
-        if not chunks:
-            log.warning("  ✗ El archivo quedó vacío tras la lectura: %s", path.name)
-            return None
-
-        if skipped_rows > 0:
-            log.warning(
-                "  ⚠ %d fila(s) omitidas por formato incorrecto (comas sin quoting en texto)",
-                skipped_rows,
-            )
-
-        return pd.concat(chunks, ignore_index=True)
-
-    @staticmethod
-    def _align_and_concat(frames: list[pd.DataFrame]) -> pd.DataFrame:
-        # Unión ordenada de todas las columnas encontradas entre todos los años
         seen: set[str] = set()
-        all_cols: list[str] = []
-        for df in frames:
-            for c in df.columns:
-                if c not in seen:
-                    all_cols.append(c)
-                    seen.add(c)
+        extra: list[str] = []
 
-        # Columnas conocidas primero (en su orden preferido), extras al final
+        for csv_path, is_temp in self._iter_sources(source_dir, no_rar):
+            try:
+                enc, sep = _sniff(csv_path, self._forced_enc)
+                if enc is None:
+                    continue
+                header_df = pd.read_csv(
+                    csv_path, sep=sep, encoding=enc, dtype=str, nrows=0
+                )
+                for raw_col in header_df.columns:
+                    canonical = _normalize_col(raw_col.lstrip("\ufeff"))
+                    if canonical not in seen:
+                        seen.add(canonical)
+                        if canonical not in set(OUTPUT_COLUMN_ORDER):
+                            extra.append(canonical)
+            except Exception as exc:
+                log.debug("  pre-scan falló %s: %s", csv_path.name, exc)
+            finally:
+                # Pre-scan SIEMPRE borra los temp: para RARs, _iter_sources
+                # re-extrae frescos en la fase 2 porque itera el RAR de nuevo.
+                # Para no_rar, is_temp=False siempre → nunca borra originales.
+                if is_temp and csv_path.exists():
+                    csv_path.unlink()
+                    log.debug("  pre-scan temp eliminado: %s", csv_path.name)
+
         priority = [c for c in OUTPUT_COLUMN_ORDER if c in seen]
-        extra    = [c for c in all_cols if c not in set(OUTPUT_COLUMN_ORDER)]
-        final_cols = priority + extra
+        for mandatory in ("agno", "_source_file"):
+            if mandatory not in priority:
+                priority.append(mandatory)
+        return priority + [c for c in extra if c not in set(priority)]
 
-        aligned = [df.reindex(columns=final_cols) for df in frames]
-        return pd.concat(aligned, ignore_index=True, sort=False)
 
-    @staticmethod
-    def _normalize_col(name: str) -> str:
-        clean = name.strip().lower().replace(" ", "_").replace("-", "_")
-        return COLUMN_ALIASES.get(clean, clean)
+    def _stream_to_writer(
+        self,
+        path: Path,
+        writer: csv.DictWriter,
+    ) -> Optional[int]:
+        log.info("Procesando: %s", path.name)
 
-    @staticmethod
-    def _infer_year(path: Path) -> Optional[str]:
-        for candidate in [path.stem, path.parent.name]:
-            m = _YEAR_RE.search(candidate)
-            if m:
-                return m.group(1)
+        enc, sep = _sniff(path, self._forced_enc)
+        if enc is None or sep is None:
+            log.warning("  ✗ No se pudo determinar encoding/separador")
+            return None
+
+        year = _infer_year(path)
+        rows_written = 0
+
+        tried_encs = [enc] + ([] if enc in ("latin-1", "cp1252") else ["latin-1", "cp1252"])
+
+        for attempt_enc in tried_encs:
+            try:
+                # NOTA: dtype=str + sin low_memory evita que pandas
+                # haga un pre-scan completo del archivo para inferir tipos.
+                reader = pd.read_csv(
+                    path,
+                    sep=sep,
+                    encoding=attempt_enc,
+                    dtype=str,           # <- clave: sin inferencia de tipos
+                    on_bad_lines="skip",
+                    chunksize=self._chunk_size,
+                    # low_memory NO se pasa: con dtype=str es irrelevante
+                    # y omitirlo evita el flag que activaba el pre-scan
+                )
+                bad_lines = 0
+                import warnings
+                with warnings.catch_warnings(record=True) as caught:
+                    warnings.simplefilter("always")
+                    for chunk in reader:
+                        rows_written += self._write_chunk(chunk, writer, year, path.name)
+                    bad_lines = sum(
+                        1 for w in caught
+                        if issubclass(w.category, pd.errors.ParserWarning)
+                    )
+                if bad_lines:
+                    log.warning("  ⚠ %d fila(s) omitidas por formato incorrecto", bad_lines)
+                if attempt_enc != enc:
+                    log.info("  (fallback encoding: %s)", attempt_enc)
+                log.info("  ✓ %d filas escritas", rows_written)
+                return rows_written
+
+            except UnicodeDecodeError:
+                log.debug("  enc=%s falló, probando siguiente...", attempt_enc)
+                rows_written = 0  # resetear para el próximo intento
+                continue
+            except Exception as exc:
+                log.error("  Error leyendo %s: %s", path.name, exc)
+                return None
+
+        log.error("  ✗ Sin encoding válido: %s", path.name)
         return None
 
-    @staticmethod
-    def _detect_encoding(path: Path, sample_bytes: int = 131_072) -> str:
-        raw = path.read_bytes()[:sample_bytes]
-        # Truncar en el último \n para no cortar en medio de un char multibyte
-        last_nl = raw.rfind(b"\n")
-        if last_nl > 0:
-            raw = raw[:last_nl]
-        result = from_bytes(raw).best()
-        enc = str(result.encoding) if result else "latin-1"
-        log.debug("  encoding detectado: %s", enc)
-        return enc
+    def _write_chunk(
+        self,
+        chunk: pd.DataFrame,
+        writer: csv.DictWriter,
+        inferred_year: Optional[str],
+        source_name: str,
+    ) -> int:
+        chunk = chunk.copy()
+        chunk.columns = [_normalize_col(c.lstrip("\ufeff")) for c in chunk.columns]
+
+        if "agno" not in chunk.columns:
+            chunk["agno"] = inferred_year or "desconocido"
+
+        if "fec_nac_alu" in chunk.columns:
+            chunk["fec_nac_alu"] = _normalize_fec_nac(chunk["fec_nac_alu"])
+
+        chunk["_source_file"] = source_name
+
+        # reindex: columnas ausentes → cadena vacía (no NaN)
+        chunk = chunk.reindex(columns=writer.fieldnames, fill_value="")
+        chunk = chunk.fillna("")
+        writer.writerows(chunk.to_dict("records"))
+        return len(chunk)
 
 
 def _parse_args() -> argparse.Namespace:
@@ -439,7 +372,7 @@ def _parse_args() -> argparse.Namespace:
     p.add_argument("--output",      default="data/mineduc/processed/mineduc_alumnos.csv", metavar="FILE")
     p.add_argument("--extract-dir", default=None,                                          metavar="DIR")
     p.add_argument("--chunk-size",  default=CHUNK_SIZE, type=int,                         metavar="N",
-                   help=f"Filas por chunk al leer CSVs grandes (default: {CHUNK_SIZE:,})")
+                   help=f"Filas por chunk (default: {CHUNK_SIZE:,})")
     p.add_argument("--no-rar",   action="store_true")
     p.add_argument("--encoding", default=None, metavar="ENC")
     p.add_argument("--verbose",  action="store_true")
@@ -448,7 +381,6 @@ def _parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = _parse_args()
-
     logging.basicConfig(
         level=logging.DEBUG if args.verbose else logging.INFO,
         format="%(asctime)s  %(levelname)-7s  %(message)s",
@@ -464,17 +396,15 @@ def main() -> None:
         forced_encoding=args.encoding,
         chunk_size=args.chunk_size,
     ) as normalizer:
-        df = normalizer.normalize(input_dir, no_rar=args.no_rar)
-        normalizer.to_csv(df, output_path)
+        stats = normalizer.normalize(input_dir, output_path, no_rar=args.no_rar)
 
-        print("\n" + "═" * 58)
-        print(f"  Output : {output_path}")
-        print(f"  Filas  : {len(df):,}")
-        print(f"  Cols   : {len(df.columns)}")
-        print(f"  Orden  : {list(df.columns)}")
-        if "agno" in df.columns:
-            print(f"  Años   : {sorted(df['agno'].dropna().unique().tolist())}")
-        print("═" * 58)
+    print("\n" + "═" * 58)
+    print(f"  Output : {output_path}")
+    print(f"  Filas  : {stats['total_rows']:,}")
+    print(f"  Cols   : {len(stats['output_columns'])}")
+    if stats["skipped"]:
+        print(f"  Omitidos: {len(stats['skipped'])}")
+    print("═" * 58)
 
 
 if __name__ == "__main__":

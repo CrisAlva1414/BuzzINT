@@ -15,6 +15,7 @@
 | Scaffold base (FastAPI + SQLAlchemy + Alembic) | ✅ completo |
 | `simce_downloader.py` | ✅ funcional |
 | `sige_downloader.py` | ✅ funcional |
+| `datos_abiertos_downloader.py` | ✅ funcional |
 | Extractores integrados al pipeline (Bronze) | 🔲 pendiente |
 | Normalizers (Silver) | 🔲 pendiente |
 | Capa Gold + resolución RBD | 🔲 pendiente |
@@ -66,8 +67,15 @@ mineduc-intelligence/
 │   │   └── migrations/        # Alembic — no editar a mano
 │   └── core/
 │       ├── config.py
-│       ├── crypto.py
 │       └── hashing.py
+├── data/
+│   ├── simce/raw/             # salida simce_downloader.py
+│   ├── sige/raw/              # salida sige_downloader.py
+│   └── mineduc/raw/
+│       ├── alumnos/           # alumnos preferentes/prioritarios/SEP
+│       ├── establecimientos/  # directorio de establecimientos
+│       ├── evaluacion/        # evaluación docente
+│       └── cargos/            # cargos docentes
 ├── postgres/
 │   └── init.sql
 ├── docker-compose.yml
@@ -109,7 +117,7 @@ class BaseExtractor:
     async def save_raw(self, content: bytes, meta: dict) -> UUID: ...
 ```
 
-Los scripts standalone actuales (`simce_downloader.py`, `sige_downloader.py`) son prototipos funcionales. Al integrarlos al pipeline deben refactorizarse para heredar de `BaseExtractor`.
+Los scripts standalone actuales (`simce_downloader.py`, `sige_downloader.py`, `datos_abiertos_downloader.py`) son prototipos funcionales. Al integrarlos al pipeline deben refactorizarse para heredar de `BaseExtractor`.
 
 ---
 
@@ -137,8 +145,6 @@ settings.postgres_host   # ✓
 
 ## Seguridad
 
-- Credenciales institucionales (SIGE/Trayectorias) se cifran con **Fernet** antes de persistir.
-- `FERNET_KEY` se genera una vez y nunca se regenera.
 - Playwright corre siempre headless en producción (`PLAYWRIGHT_HEADLESS=true`). Modo visible solo para resolver captcha en login SIGE (flujo documentado en `sige_downloader.py`).
 - Panel director sin autenticación en MVP — protegido por Tailscale a nivel de red.
 
@@ -152,6 +158,7 @@ settings.postgres_host   # ✓
 |---|---|---|
 | — | Login SIGE: browser visible para captcha → httpx para descarga | El captcha de SIGE no se puede resolver headless de forma confiable |
 | — | SIMCE: scraping via REST JSON (`/rest/archivo/`) sin autenticación | La API pública expone UUIDs descargables directamente |
+| — | datosabiertos.mineduc.cl: Playwright headless para catálogo → httpx para descarga | HTML estático sin autenticación; playwright unifica el stack de scrapers |
 
 ---
 

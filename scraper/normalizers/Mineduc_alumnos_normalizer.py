@@ -1,40 +1,3 @@
-"""
-scraper/normalizers/csv_normalizer.py
-──────────────────────────────────────
-Normaliza y consolida los CSVs de Alumnos SEP (Prioritarios / Preferentes /
-Beneficiarios) desde una carpeta de RARs o CSVs ya extraídos hacia un único
-DataFrame / CSV unificado.
-
-Compatibilidad probada con datos reales 2008–2025 (18 archivos, ~30M filas):
-
-  Año    Cols  Issues conocidos
-  ────  ─────  ────────────────────────────────────────────────────────────────
-  2008     22  LET_RBD / NUM_RBD extras (legacy); sin PRIORITARIO/PREFERENTE
-  2009     22  ídem
-  2010     20  sin PRIORITARIO/PREFERENTE; sin LET_RBD/NUM_RBD
-  2011     20  sin PRIORITARIO/PREFERENTE
-  2013     20  sin PRIORITARIO/PREFERENTE
-  2014     24  sin PRIORITARIO/PREFERENTE; sin DEPROV/EE_GRATUITO
-  2015     29  sin PRIORITARIO/PREFERENTE; sin ESTADO_ESTAB
-  2016–23  33  esquema estable
-  2020     33  BOM (\\ufeff) en primera columna (AGNO) → stripeado automático
-  2024     36  3 columnas nuevas: FEC_DEFUN_ALU, NOM_REG_RBD_A, NOMBRE_SLEP
-  2025     34  NOMBRE_SLEP presente; FEC_DEFUN_ALU / NOM_REG_RBD_A ausentes
-
-  FEC_NAC_ALU:
-    2008–2013  →  YYYYMMDD  (8 dígitos)   →  normalizado a YYYY-MM-DD
-    2014+      →  YYYYMM    (6 dígitos)   →  normalizado a YYYY-MM (sin día)
-
-  NOM_RBD puede contener comas sin quoting RFC-4180 en algunos registros.
-  Esas filas se omiten con advertencia (típicamente < 20 filas en 3 M).
-
-Uso standalone:
-    python csv_normalizer.py --input data/mineduc/raw/alumnos
-    python csv_normalizer.py --input data/mineduc/raw/alumnos --no-rar --verbose
-    python csv_normalizer.py --input data/mineduc/raw/alumnos \\
-        --output data/mineduc/silver/sep_alumnos.csv
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -51,20 +14,11 @@ from charset_normalizer import from_bytes  # incluido vía httpx
 log = logging.getLogger(__name__)
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Contrato base (stub hasta que normalizers/base.py esté implementado)
-# ─────────────────────────────────────────────────────────────────────────────
-
 class BaseNormalizer:
-    """Stub mínimo. Reemplazar con la clase definitiva de normalizers/base.py."""
 
     def normalize(self, source_dir: Path, **kwargs) -> pd.DataFrame:
         raise NotImplementedError
 
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Constantes
-# ─────────────────────────────────────────────────────────────────────────────
 
 # Tamaño de chunk para leer CSVs grandes (filas por chunk).
 # A ~150 bytes/fila promedio: 100_000 filas ≈ 15 MB de RAM por chunk.
@@ -167,17 +121,8 @@ _SEPARATORS: list[str] = [",", ";", "\t", "|"]
 _YEAR_RE = re.compile(r"(?<!\d)(20\d{2})(?!\d)")
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Normalización de FEC_NAC_ALU
-# ─────────────────────────────────────────────────────────────────────────────
-
 def _normalize_fec_nac(series: pd.Series) -> pd.Series:
-    """
-    Unifica el formato de fecha de nacimiento:
-      - 8 dígitos  (YYYYMMDD, 2008-2013) → 'YYYY-MM-DD'
-      - 6 dígitos  (YYYYMM,   2014+)     → 'YYYY-MM'
-      - cualquier otra cosa              → se deja tal cual
-    """
+
     def _convert(val: str) -> str:
         v = str(val).strip()
         if len(v) == 8 and v.isdigit():
@@ -188,25 +133,7 @@ def _normalize_fec_nac(series: pd.Series) -> pd.Series:
     return series.astype(str).map(_convert)
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# SepAlumnosNormalizer
-# ─────────────────────────────────────────────────────────────────────────────
-
 class SepAlumnosNormalizer(BaseNormalizer):
-    """
-    Consolida los CSVs anuales de Alumnos SEP en un DataFrame limpio y uniforme.
-
-    Diseñado para ser agnóstico a:
-    - Años presentes (2008–∞)
-    - Separadores (,  ;  \\t  |)
-    - Encodings y BOM (latin-1, utf-8, utf-8-sig, cp1252…)
-    - Columnas legacy (LET_RBD, NUM_RBD en 2008-2009)
-    - Columnas nuevas (FEC_DEFUN_ALU, NOM_REG_RBD_A, NOMBRE_SLEP desde 2024)
-    - Formato de FEC_NAC_ALU (YYYYMMDD vs YYYYMM)
-    - Filas con comas sin quoting en campos de texto (se omiten con advertencia)
-    - Archivos de >3M filas (lectura por chunks para control de RAM)
-    """
-
     def __init__(
         self,
         extract_dir: Optional[Path] = None,
@@ -218,28 +145,43 @@ class SepAlumnosNormalizer(BaseNormalizer):
         self._chunk_size = chunk_size
         self._tmp_ctx: Optional[tempfile.TemporaryDirectory] = None  # type: ignore[type-arg]
 
-    # ── Public API ────────────────────────────────────────────────────────────
 
     def normalize(self, source_dir: Path, no_rar: bool = False) -> pd.DataFrame:
-        """
-        Lee todos los CSVs de *source_dir* (extrayendo RARs si no se indica
-        --no-rar) y devuelve un DataFrame consolidado.
-        """
         csv_files = self._collect_csvs(source_dir, no_rar=no_rar)
         if not csv_files:
             raise FileNotFoundError(f"No se encontraron CSVs en {source_dir}")
 
+        # Umbral de filas antes de hacer un concat parcial y liberar memoria ~150 bytes/fila en string: 5 M filas ≈ 750 MB RAM máx por lote (esto no tiene logica)
+        PARTIAL_FLUSH_ROWS = 1_000_000
+
         frames: list[pd.DataFrame] = []
         skipped: list[Path] = []
+        accumulated_rows = 0
+        partial_results: list[pd.DataFrame] = []
 
         for path in csv_files:
             df = self._process_single(path)
-            if df is not None:
-                frames.append(df)
-            else:
+            if df is None:
                 skipped.append(path)
+                continue
 
-        if not frames:
+            frames.append(df)
+            accumulated_rows += len(df)
+
+            if accumulated_rows >= PARTIAL_FLUSH_ROWS:
+                log.debug(
+                    "  flush parcial: %d filas acumuladas → consolidando lote",
+                    accumulated_rows,
+                )
+                partial_results.append(self._align_and_concat(frames))
+                frames.clear()
+                accumulated_rows = 0
+
+        if frames:
+            partial_results.append(self._align_and_concat(frames))
+            frames.clear()
+
+        if not partial_results:
             raise RuntimeError("Ningún CSV pudo procesarse correctamente.")
 
         if skipped:
@@ -247,7 +189,12 @@ class SepAlumnosNormalizer(BaseNormalizer):
             for p in skipped:
                 log.warning("  ✗ %s", p.name)
 
-        unified = self._align_and_concat(frames)
+        log.info("Concat final de %d lote(s)...", len(partial_results))
+        unified = self._align_and_concat(partial_results)
+
+        if "agno" in unified.columns:
+            unified = unified.sort_values("agno", kind="stable").reset_index(drop=True)
+
         log.info(
             "Consolidación completada: %d filas × %d columnas | años: %s",
             len(unified), len(unified.columns),
@@ -255,13 +202,12 @@ class SepAlumnosNormalizer(BaseNormalizer):
         )
         return unified
 
+
     def to_csv(self, df: pd.DataFrame, output_path: Path) -> None:
-        """Escribe el DataFrame a CSV (utf-8-sig para compatibilidad con Excel)."""
         output_path.parent.mkdir(parents=True, exist_ok=True)
         df.to_csv(output_path, index=False, encoding="utf-8-sig")
         log.info("CSV exportado → %s  (%d filas)", output_path, len(df))
 
-    # ── RAR / CSV discovery ───────────────────────────────────────────────────
 
     def _collect_csvs(self, source_dir: Path, no_rar: bool) -> list[Path]:
         if no_rar:
@@ -282,6 +228,7 @@ class SepAlumnosNormalizer(BaseNormalizer):
             csv_paths.extend(extracted)
         return sorted(csv_paths)
 
+
     def _ensure_extract_dir(self) -> Path:
         if self._extract_dir:
             self._extract_dir.mkdir(parents=True, exist_ok=True)
@@ -289,18 +236,20 @@ class SepAlumnosNormalizer(BaseNormalizer):
         self._tmp_ctx = tempfile.TemporaryDirectory(prefix="sep_alumnos_")
         return Path(self._tmp_ctx.name)
 
+
     def cleanup(self) -> None:
         if self._tmp_ctx:
             self._tmp_ctx.cleanup()
             self._tmp_ctx = None
 
+
     def __enter__(self) -> "SepAlumnosNormalizer":
         return self
+
 
     def __exit__(self, *_) -> None:
         self.cleanup()
 
-    # ── RAR extraction ────────────────────────────────────────────────────────
 
     @staticmethod
     def _extract_rar(rar_path: Path, dest: Path) -> list[Path]:
@@ -316,7 +265,6 @@ class SepAlumnosNormalizer(BaseNormalizer):
             log.error("  Error abriendo %s: %s", rar_path.name, exc)
         return extracted
 
-    # ── Single-file processing ────────────────────────────────────────────────
 
     def _process_single(self, path: Path) -> Optional[pd.DataFrame]:
         log.info("Leyendo: %s", path.name)
@@ -327,6 +275,18 @@ class SepAlumnosNormalizer(BaseNormalizer):
             return None
 
         df = self._read_chunked(path, enc, sep)
+
+        # Si falla el encoding detectado (p.ej. falso positivo utf-8 con chars multibyte en posición de corte de muestra), reintentamos con fallbacks para archivos mas viejos que matusalem
+        if df is None and enc not in ("latin-1", "cp1252"):
+            for fallback_enc in ("latin-1", "cp1252"):
+                log.info(
+                    "  Reintentando con encoding=%s para %s", fallback_enc, path.name
+                )
+                df = self._read_chunked(path, fallback_enc, sep)
+                if df is not None:
+                    enc = fallback_enc
+                    break
+
         if df is None:
             return None
 
@@ -352,21 +312,15 @@ class SepAlumnosNormalizer(BaseNormalizer):
         log.info("  ✓ %d filas × %d cols", len(df), len(df.columns))
         return df
 
-    # ── Encoding/separator detection (sniffer sobre las primeras N líneas) ────
 
     def _sniff(self, path: Path) -> tuple[Optional[str], Optional[str]]:
-        """
-        Lee solo el header (primera línea) para determinar separador y encoding
-        sin cargar el archivo completo.
-        Devuelve (encoding, separador) o (None, None) si falla todo.
-        """
         encodings = (
             [self._forced_encoding]
             if self._forced_encoding
             else ["utf-8-sig", "utf-8", "latin-1", self._detect_encoding(path)]
         )
-
-        for enc in dict.fromkeys(encodings):  # deduplica preservando orden
+        encodings_with_fallback = list(encodings) + ["latin-1", "cp1252"]
+        for enc in dict.fromkeys(encodings_with_fallback):  # deduplica preservando orden
             for sep in _SEPARATORS:
                 try:
                     # Leer solo 5 filas para validar que el separador da ≥2 columnas
@@ -386,22 +340,14 @@ class SepAlumnosNormalizer(BaseNormalizer):
 
         return None, None
 
-    # ── Chunked CSV reading ───────────────────────────────────────────────────
 
     def _read_chunked(
         self, path: Path, enc: str, sep: str
     ) -> Optional[pd.DataFrame]:
-        """
-        Lee el CSV en chunks para controlar el uso de RAM.
-        Usa on_bad_lines='skip' para tolerar filas con comas sin quoting
-        en campos de texto (NOM_RBD principalmente).
-        Las líneas omitidas se reportan al final como advertencia de conteo.
-        """
         chunks: list[pd.DataFrame] = []
         skipped_rows = 0
 
-        # Capturamos las advertencias de pandas para contarlas en lugar de
-        # imprimirlas una por una (pueden ser miles de líneas en stderr)
+        # Capturamos las advertencias de pandas para contarlas en lugar de imprimirlas una por una (pueden ser miles de líneas en stderr)
         import warnings
 
         try:
@@ -440,8 +386,6 @@ class SepAlumnosNormalizer(BaseNormalizer):
 
         return pd.concat(chunks, ignore_index=True)
 
-    # ── Alignment + concat ────────────────────────────────────────────────────
-
     @staticmethod
     def _align_and_concat(frames: list[pd.DataFrame]) -> pd.DataFrame:
         # Unión ordenada de todas las columnas encontradas entre todos los años
@@ -459,14 +403,7 @@ class SepAlumnosNormalizer(BaseNormalizer):
         final_cols = priority + extra
 
         aligned = [df.reindex(columns=final_cols) for df in frames]
-        unified = pd.concat(aligned, ignore_index=True, sort=False)
-
-        if "agno" in unified.columns:
-            unified = unified.sort_values("agno", kind="stable").reset_index(drop=True)
-
-        return unified
-
-    # ── Helpers ───────────────────────────────────────────────────────────────
+        return pd.concat(aligned, ignore_index=True, sort=False)
 
     @staticmethod
     def _normalize_col(name: str) -> str:
@@ -482,24 +419,24 @@ class SepAlumnosNormalizer(BaseNormalizer):
         return None
 
     @staticmethod
-    def _detect_encoding(path: Path, sample_bytes: int = 65_536) -> str:
+    def _detect_encoding(path: Path, sample_bytes: int = 131_072) -> str:
         raw = path.read_bytes()[:sample_bytes]
+        # Truncar en el último \n para no cortar en medio de un char multibyte
+        last_nl = raw.rfind(b"\n")
+        if last_nl > 0:
+            raw = raw[:last_nl]
         result = from_bytes(raw).best()
         enc = str(result.encoding) if result else "latin-1"
         log.debug("  encoding detectado: %s", enc)
         return enc
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# CLI standalone
-# ─────────────────────────────────────────────────────────────────────────────
-
 def _parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
         description="Normaliza CSVs de Alumnos SEP en un único archivo unificado."
     )
     p.add_argument("--input",       default="data/mineduc/raw/alumnos",                   metavar="DIR")
-    p.add_argument("--output",      default="data/mineduc/silver/sep_alumnos_unified.csv", metavar="FILE")
+    p.add_argument("--output",      default="data/mineduc/processed/mineduc_alumnos.csv", metavar="FILE")
     p.add_argument("--extract-dir", default=None,                                          metavar="DIR")
     p.add_argument("--chunk-size",  default=CHUNK_SIZE, type=int,                         metavar="N",
                    help=f"Filas por chunk al leer CSVs grandes (default: {CHUNK_SIZE:,})")

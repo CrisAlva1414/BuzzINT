@@ -5,6 +5,7 @@ import json
 import logging
 import sys
 import tempfile
+import zipfile
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
@@ -117,16 +118,33 @@ def count_rows(path: Path, encoding: str) -> int | str:
         return "?"
 
 
-def extract_csvs_from_rar(rar_path: Path, dest: Path) -> list[Path]:
+def extract_csvs_from_archive(archive_path: Path, dest: Path) -> list[Path]:
     out: list[Path] = []
+
     try:
-        with rarfile.RarFile(rar_path) as rf:
-            for m in rf.infolist():
-                if m.filename.lower().endswith(".csv"):
-                    rf.extract(m, dest)
-                    out.append(dest / m.filename)
+        suffix = archive_path.suffix.lower()
+
+        if suffix == ".rar":
+            with rarfile.RarFile(archive_path) as arc:
+                for member in arc.infolist():
+                    if member.filename.lower().endswith(".csv"):
+                        arc.extract(member, dest)
+                        out.append(dest / member.filename)
+
+        elif suffix == ".zip":
+            with zipfile.ZipFile(archive_path) as arc:
+                for member in arc.infolist():
+                    if member.filename.lower().endswith(".csv"):
+                        arc.extract(member, dest)
+                        out.append(dest / member.filename)
+
     except Exception as exc:
-        log.warning("No se pudo abrir %s: %s", rar_path.name, exc)
+        log.warning(
+            "No se pudo abrir %s: %s",
+            archive_path.name,
+            exc,
+        )
+
     return out
 
 
@@ -226,12 +244,24 @@ def inspect(
         csv_files = sorted(source_dir.rglob("*.csv"))
         tmp_ctx   = None
     else:
-        rar_files = sorted(source_dir.rglob("*.rar"))
-        tmp_ctx   = tempfile.TemporaryDirectory(prefix="sep_inspect_")
+        archives = (
+            sorted(source_dir.rglob("*.rar"))
+            + sorted(source_dir.rglob("*.zip"))
+        )
+
+        tmp_ctx = tempfile.TemporaryDirectory(prefix="sep_inspect_")
         extract_root = Path(tmp_ctx.name)
-        csv_files    = []
-        for rar in rar_files:
-            csv_files.extend(extract_csvs_from_rar(rar, extract_root))
+
+        csv_files = []
+
+        for archive in archives:
+            csv_files.extend(
+                extract_csvs_from_archive(
+                    archive,
+                    extract_root
+                )
+            )
+
         csv_files.sort()
 
     if not csv_files:

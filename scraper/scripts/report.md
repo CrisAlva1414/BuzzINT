@@ -1,1480 +1,28 @@
 # SEP CSV INSPECTION REPORT
-generated: 2026-06-06T17:24:17
-source_dir: /home/pc01/Proyectos/BuzzINT/data/mineduc/raw/cargos
-files_found: 23
+generated: 2026-06-06T21:00:45
+source_dir: /home/pc01/Proyectos/BuzzINT/data/mineduc/raw/establecimientos
+files_found: 13
 preview_rows: 5
 
 ---
-## FILE 1/23: 20130904_Docentes_2013_20130709_PUBL.csv
-source: /tmp/sep_inspect_yoqma06w/20130904_Docentes_2013_20130709_PUBL.csv
+## FILE 1/13: 20220914_Directorio_Oficial_EE_2022_20220430_WEB.csv
+source: /tmp/sep_inspect_dv4cfvhw/20220914_Directorio_Oficial_EE_2022_20220430_WEB.csv
 encoding: utf-8-sig
 separator: semicolon
-rows_total: 226,878
-cols_count: 141
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPE', 'RURAL_RBD', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'MEN_ED_PARV_1', 'MEN_ED_AD_1', 'MEN_DES_COM_1', 'MEN_DIS_INT_1', 'MEN_ORIENTACION_1', 'MEN_INT_ESC_1', 'MEN_PSICO_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'MEN_ED_PARV_2', 'MEN_ED_AD_2', 'MEN_DES_COM_2', 'MEN_DIS_INT_2', 'MEN_ORIENTACION_2', 'MEN_INT_ESC_2', 'MEN_PSICO_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_IFS', 'ID_ITC', 'ID_ITC_CORR', 'HORAS_CONTRATO', 'HORAS_DIRECT', 'HORAS_TEC_PED', 'HORAS_AULA', 'IDO_MORAL', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'GRADO.8_1', 'GRADO.9_1', 'GRADO.10_1', 'GRADO.11_1', 'GRADO.12_1', 'GRADO.13_1', 'GRADO.14_1', 'GRADO.15_1', 'GRADO.16_1', 'GRADO.17_1', 'GRADO.18_1', 'GRADO.19_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'GRADO.8_2', 'GRADO.9_2', 'GRADO.10_2', 'GRADO.11_2', 'GRADO.12_2', 'GRADO.13_2', 'GRADO.14_2', 'GRADO.15_2', 'GRADO.16_2', 'GRADO.17_2', 'GRADO.18_2', 'GRADO.19_2', 'PERSONAS']
-
-### COLUMN PROFILE
-col | type | null_pct | cardinality | sample_values
---- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2013, 2013, 2013
-RBD | numeric | 0.0% | 5 | 12747, 2945, 2973
-DGV_RBD | numeric | 0.0% | 4 | 7, 9, 4
-NOM_RBD | string | 0.0% | 5 | COLEGIO RUPANIC SCHOOL, ESCUELA PROSPERIDAD, LICEO ABATE MOLINA
-COD_REG_RBD | numeric | 0.0% | 3 | 1, 7, 7
-COD_PRO_RBD | numeric | 0.0% | 3 | 11, 71, 71
-COD_COM_RBD | numeric | 0.0% | 4 | 1107, 7101, 7101
-NOM_COM_RBD | string | 0.0% | 4 | ALTO HOSPICIO, TALCA, TALCA
-COD_DEPE | numeric | 0.0% | 2 | 3, 2, 2
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-CLAVE | string | 0.0% | 4 | AA1000002721, AA1000005721, AA1000005721
-MRUN | numeric | 0.0% | 4 | 10237, 285455, 285455
-DOC_GENERO | numeric | 0.0% | 2 | 2, 2, 2
-DOC_FEC_NAC | numeric | 0.0% | 4 | 19730531, 19550823, 19550823
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 3 | 13, 12, 12
-ESP_ID_1 | numeric | 0.0% | 4 | 1626, 121, 121
-MEN_SIN_MENCION_1 | numeric | 80.0% | 1 | 0
-MEN_PLATICA_1 | numeric | 80.0% | 1 | 0
-MEN_NATURALES_1 | numeric | 80.0% | 1 | 0
-MEN_SOCIALES_1 | numeric | 80.0% | 1 | 0
-MEN_COMPUTACION_1 | numeric | 80.0% | 1 | 1
-MEN_ED_FISICA_1 | numeric | 80.0% | 1 | 0
-MEN_ED_MUSICA_1 | numeric | 80.0% | 1 | 0
-MEN_ED_TECNO_1 | numeric | 80.0% | 1 | 0
-MEN_LENGUAJE_1 | numeric | 80.0% | 1 | 0
-MEN_MATE_1 | numeric | 80.0% | 1 | 0
-MEN_RELIGION_1 | numeric | 80.0% | 1 | 0
-MEN_TRASTORNOS_1 | numeric | 80.0% | 1 | 0
-MEN_INGLES_1 | numeric | 80.0% | 1 | 0
-MEN_FRANCES_1 | numeric | 80.0% | 1 | 0
-MEN_ALEMAN_1 | numeric | 80.0% | 1 | 0
-MEN_OTRO_IDIOMA_1 | numeric | 80.0% | 1 | 0
-MEN_INTERCULTURAL_1 | numeric | 80.0% | 1 | 0
-MEN_ADMINISTRACION_1 | numeric | 80.0% | 1 | 0
-MEN_CURRICULUM_1 | numeric | 80.0% | 1 | 0
-MEN_ED_PARV_1 | numeric | 80.0% | 1 | 0
-MEN_ED_AD_1 | numeric | 80.0% | 1 | 0
-MEN_DES_COM_1 | numeric | 80.0% | 1 | 0
-MEN_DIS_INT_1 | numeric | 80.0% | 1 | 0
-MEN_ORIENTACION_1 | numeric | 80.0% | 1 | 0
-MEN_INT_ESC_1 | numeric | 80.0% | 1 | 0
-MEN_PSICO_1 | numeric | 80.0% | 1 | 0
-TIP_INSTI_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 4 | 1999, 1978, 1978
-DURACION_CARRERA_1 | numeric | 0.0% | 2 | 8, 8, 8
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-MEN_ED_PARV_2 | empty | 100.0% | 0 | 
-MEN_ED_AD_2 | empty | 100.0% | 0 | 
-MEN_DES_COM_2 | empty | 100.0% | 0 | 
-MEN_DIS_INT_2 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_2 | empty | 100.0% | 0 | 
-MEN_INT_ESC_2 | empty | 100.0% | 0 | 
-MEN_PSICO_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_IFS | numeric | 0.0% | 2 | 0, 0, 0
-ID_ITC | numeric | 0.0% | 3 | 7, 1, 1
-ID_ITC_CORR | numeric | 0.0% | 3 | 304, 101, 101
-HORAS_CONTRATO | numeric | 0.0% | 4 | 40, 8, 30
-HORAS_DIRECT | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_TEC_PED | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_AULA | numeric | 0.0% | 3 | 30, 8, 30
-IDO_MORAL | numeric | 0.0% | 1 | 1, 1, 1
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 4 | 0, 35, 35
-ANO_SERVICIO_EE | numeric | 0.0% | 3 | 0, 0, 9
-ID_ICH | numeric | 0.0% | 4 | 110, 10, 310
-NIVEL1 | numeric | 0.0% | 4 | 2, 1, 4
-SECTOR1 | numeric | 0.0% | 5 | 190, 10, 395
-SUBSECTOR1 | numeric | 0.0% | 5 | 19001, -1, 39501
-HORAS1 | numeric | 0.0% | 4 | 30, 8, 30
-COD_ENS_1 | numeric | 0.0% | 4 | 110, 10, 310
-GRADO.1_1 | numeric | 0.0% | 3 | 1, 5, 1
-GRADO.2_1 | numeric | 0.0% | 3 | 6, 0, 2
-GRADO.3_1 | numeric | 0.0% | 2 | 0, 0, 3
-GRADO.4_1 | numeric | 0.0% | 2 | 0, 0, 4
-GRADO.5_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.6_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.7_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.8_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.9_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.10_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.11_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.12_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.13_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.14_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.15_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.16_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.17_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.18_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.19_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | empty | 100.0% | 0 | 
-SECTOR2 | empty | 100.0% | 0 | 
-SUBSECTOR2 | empty | 100.0% | 0 | 
-HORAS2 | empty | 100.0% | 0 | 
-COD_ENS_2 | empty | 100.0% | 0 | 
-GRADO.1_2 | empty | 100.0% | 0 | 
-GRADO.2_2 | empty | 100.0% | 0 | 
-GRADO.3_2 | empty | 100.0% | 0 | 
-GRADO.4_2 | empty | 100.0% | 0 | 
-GRADO.5_2 | empty | 100.0% | 0 | 
-GRADO.6_2 | empty | 100.0% | 0 | 
-GRADO.7_2 | empty | 100.0% | 0 | 
-GRADO.8_2 | empty | 100.0% | 0 | 
-GRADO.9_2 | empty | 100.0% | 0 | 
-GRADO.10_2 | empty | 100.0% | 0 | 
-GRADO.11_2 | empty | 100.0% | 0 | 
-GRADO.12_2 | empty | 100.0% | 0 | 
-GRADO.13_2 | empty | 100.0% | 0 | 
-GRADO.14_2 | empty | 100.0% | 0 | 
-GRADO.15_2 | empty | 100.0% | 0 | 
-GRADO.16_2 | empty | 100.0% | 0 | 
-GRADO.17_2 | empty | 100.0% | 0 | 
-GRADO.18_2 | empty | 100.0% | 0 | 
-GRADO.19_2 | empty | 100.0% | 0 | 
-PERSONAS | numeric | 0.0% | 2 | 1, 0, 1
-
-### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2013","RBD":"12747","DGV_RBD":"7","NOM_RBD":"COLEGIO RUPANIC SCHOOL","COD_REG_RBD":"1","COD_PRO_RBD":"11","COD_COM_RBD":"1107","NOM_COM_RBD":"ALTO HOSPICIO","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000002721","MRUN":"10237","DOC_GENERO":"2","DOC_FEC_NAC":"19730531","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"1626","MEN_SIN_MENCION_1":"0","MEN_PLATICA_1":"0","MEN_NATURALES_1":"0","MEN_SOCIALES_1":"0","MEN_COMPUTACION_1":"1","MEN_ED_FISICA_1":"0","MEN_ED_MUSICA_1":"0","MEN_ED_TECNO_1":"0","MEN_LENGUAJE_1":"0","MEN_MATE_1":"0","MEN_RELIGION_1":"0","MEN_TRASTORNOS_1":"0","MEN_INGLES_1":"0","MEN_FRANCES_1":"0","MEN_ALEMAN_1":"0","MEN_OTRO_IDIOMA_1":"0","MEN_INTERCULTURAL_1":"0","MEN_ADMINISTRACION_1":"0","MEN_CURRICULUM_1":"0","MEN_ED_PARV_1":"0","MEN_ED_AD_1":"0","MEN_DES_COM_1":"0","MEN_DIS_INT_1":"0","MEN_ORIENTACION_1":"0","MEN_INT_ESC_1":"0","MEN_PSICO_1":"0","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1999","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","ID_ITC":"7","ID_ITC_CORR":"304","HORAS_CONTRATO":"40","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"0","ANO_SERVICIO_EE":"0","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"30","COD_ENS_1":"110","GRADO.1_1":"1","GRADO.2_1":"6","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-{"AGNO":"2013","RBD":"2945","DGV_RBD":"9","NOM_RBD":"ESCUELA PROSPERIDAD","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"121","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1978","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"8","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"8","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"35","ANO_SERVICIO_EE":"0","ID_ICH":"10","NIVEL1":"1","SECTOR1":"10","SUBSECTOR1":"-1","HORAS1":"8","COD_ENS_1":"10","GRADO.1_1":"5","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"0"}
-{"AGNO":"2013","RBD":"2973","DGV_RBD":"4","NOM_RBD":"LICEO ABATE MOLINA","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"121","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1978","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"35","ANO_SERVICIO_EE":"9","ID_ICH":"310","NIVEL1":"4","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"30","COD_ENS_1":"310","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-{"AGNO":"2013","RBD":"25304","DGV_RBD":"9","NOM_RBD":"COLEGIO PAUL HARRIS SCHOOL","COD_REG_RBD":"13","COD_PRO_RBD":"131","COD_COM_RBD":"13105","NOM_COM_RBD":"EL BOSQUE","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000022111","MRUN":"18204895","DOC_GENERO":"1","DOC_FEC_NAC":"19740928","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1419","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"2004","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","ID_ITC":"4","ID_ITC_CORR":"301","HORAS_CONTRATO":"44","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"44","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"9","ANO_SERVICIO_EE":"9","ID_ICH":"310","NIVEL1":"4","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"44","COD_ENS_1":"310","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-{"AGNO":"2013","RBD":"9760","DGV_RBD":"8","NOM_RBD":"ESCUELA ESPECIAL PARTICULAR YUNGAY","COD_REG_RBD":"13","COD_PRO_RBD":"131","COD_COM_RBD":"13109","NOM_COM_RBD":"LA CISTERNA","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000048321","MRUN":"2643353","DOC_GENERO":"2","DOC_FEC_NAC":"19771028","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"122","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"2001","DURACION_CARRERA_1":"9","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"5","ID_ITC":"4","ID_ITC_CORR":"301","HORAS_CONTRATO":"44","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"44","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"13","ANO_SERVICIO_EE":"8","ID_ICH":"212","NIVEL1":"3","SECTOR1":"200","SUBSECTOR1":"-2","HORAS1":"38","COD_ENS_1":"212","GRADO.1_1":"13","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-
-## FILE 2/23: 20140819_Docentes_2014_20140704_PUBL.csv
-source: /tmp/sep_inspect_yoqma06w/20140819_Docentes_2014_20140704_PUBL.csv
-encoding: utf-8-sig
-separator: semicolon
-rows_total: 234,168
-cols_count: 141
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'MEN_ED_PARV_1', 'MEN_ED_AD_1', 'MEN_DES_COM_1', 'MEN_DIS_INT_1', 'MEN_ORIENTACION_1', 'MEN_INT_ESC_1', 'MEN_PSICO_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'MEN_ED_PARV_2', 'MEN_ED_AD_2', 'MEN_DES_COM_2', 'MEN_DIS_INT_2', 'MEN_ORIENTACION_2', 'MEN_INT_ESC_2', 'MEN_PSICO_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_IFS', 'ID_ITC', 'ID_ITC_CORR', 'HORAS_CONTRATO', 'HORAS_DIRECT', 'HORAS_TEC_PED', 'HORAS_AULA', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'GRADO.8_1', 'GRADO.9_1', 'GRADO.10_1', 'GRADO.11_1', 'GRADO.12_1', 'GRADO.13_1', 'GRADO.14_1', 'GRADO.15_1', 'GRADO.16_1', 'GRADO.17_1', 'GRADO.18_1', 'GRADO.19_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'GRADO.8_2', 'GRADO.9_2', 'GRADO.10_2', 'GRADO.11_2', 'GRADO.12_2', 'GRADO.13_2', 'GRADO.14_2', 'GRADO.15_2', 'GRADO.16_2', 'GRADO.17_2', 'GRADO.18_2', 'GRADO.19_2', 'PERSONAS']
-
-### COLUMN PROFILE
-col | type | null_pct | cardinality | sample_values
---- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2014, 2014, 2014
-RBD | numeric | 0.0% | 5 | 112, 2945, 2973
-DGV_RBD | numeric | 0.0% | 4 | 0, 9, 4
-NOM_RBD | string | 0.0% | 5 | ESCUELA EDUARDO LLANOS, ESCUELA PROSPERIDAD, LICEO ABATE MOLINA
-COD_REG_RBD | numeric | 0.0% | 3 | 1, 7, 7
-COD_PRO_RBD | numeric | 0.0% | 3 | 11, 71, 71
-COD_COM_RBD | numeric | 0.0% | 4 | 1101, 7101, 7101
-NOM_COM_RBD | string | 0.0% | 4 | IQUIQUE, TALCA, TALCA
-COD_DEPE | numeric | 0.0% | 3 | 1, 2, 2
-COD_DEPE2 | numeric | 0.0% | 2 | 1, 1, 1
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-CLAVE | string | 0.0% | 4 | AA1000002721, AA1000005721, AA1000005721
-MRUN | numeric | 0.0% | 4 | 10237, 285455, 285455
-DOC_GENERO | numeric | 0.0% | 2 | 2, 2, 2
-DOC_FEC_NAC | numeric | 0.0% | 4 | 19730531, 19550823, 19550823
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 3 | 13, 12, 12
-ESP_ID_1 | numeric | 0.0% | 4 | 1626, 121, 121
-MEN_SIN_MENCION_1 | numeric | 80.0% | 1 | 0
-MEN_PLATICA_1 | numeric | 80.0% | 1 | 0
-MEN_NATURALES_1 | numeric | 80.0% | 1 | 0
-MEN_SOCIALES_1 | numeric | 80.0% | 1 | 0
-MEN_COMPUTACION_1 | numeric | 80.0% | 1 | 0
-MEN_ED_FISICA_1 | numeric | 80.0% | 1 | 0
-MEN_ED_MUSICA_1 | numeric | 80.0% | 1 | 0
-MEN_ED_TECNO_1 | numeric | 80.0% | 1 | 0
-MEN_LENGUAJE_1 | numeric | 80.0% | 1 | 1
-MEN_MATE_1 | numeric | 80.0% | 1 | 0
-MEN_RELIGION_1 | numeric | 80.0% | 1 | 0
-MEN_TRASTORNOS_1 | numeric | 80.0% | 1 | 0
-MEN_INGLES_1 | numeric | 80.0% | 1 | 0
-MEN_FRANCES_1 | numeric | 80.0% | 1 | 0
-MEN_ALEMAN_1 | numeric | 80.0% | 1 | 0
-MEN_OTRO_IDIOMA_1 | numeric | 80.0% | 1 | 0
-MEN_INTERCULTURAL_1 | numeric | 80.0% | 1 | 0
-MEN_ADMINISTRACION_1 | numeric | 80.0% | 1 | 0
-MEN_CURRICULUM_1 | numeric | 80.0% | 1 | 0
-MEN_ED_PARV_1 | numeric | 80.0% | 1 | 0
-MEN_ED_AD_1 | numeric | 80.0% | 1 | 0
-MEN_DES_COM_1 | numeric | 80.0% | 1 | 0
-MEN_DIS_INT_1 | numeric | 80.0% | 1 | 0
-MEN_ORIENTACION_1 | numeric | 80.0% | 1 | 0
-MEN_INT_ESC_1 | numeric | 80.0% | 1 | 0
-MEN_PSICO_1 | numeric | 80.0% | 1 | 0
-TIP_INSTI_ID_1 | numeric | 0.0% | 2 | 3, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 4 | 1999, 1978, 1978
-DURACION_CARRERA_1 | numeric | 0.0% | 2 | 10, 8, 8
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-MEN_ED_PARV_2 | empty | 100.0% | 0 | 
-MEN_ED_AD_2 | empty | 100.0% | 0 | 
-MEN_DES_COM_2 | empty | 100.0% | 0 | 
-MEN_DIS_INT_2 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_2 | empty | 100.0% | 0 | 
-MEN_INT_ESC_2 | empty | 100.0% | 0 | 
-MEN_PSICO_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 2 | 1, 1, 1
-ID_IFS | numeric | 0.0% | 1 | 0, 0, 0
-ID_ITC | numeric | 0.0% | 4 | 2, 1, 1
-ID_ITC_CORR | numeric | 0.0% | 4 | 102, 101, 101
-HORAS_CONTRATO | numeric | 0.0% | 4 | 34, 10, 30
-HORAS_DIRECT | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_TEC_PED | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_AULA | numeric | 0.0% | 5 | 34, 10, 30
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 5 | 16, 37, 36
-ANO_SERVICIO_EE | numeric | 0.0% | 4 | 0, 2, 10
-ID_ICH | numeric | 0.0% | 2 | 110, 110, 310
-NIVEL1 | numeric | 0.0% | 2 | 2, 2, 4
-SECTOR1 | numeric | 0.0% | 4 | 110, 190, 395
-SUBSECTOR1 | numeric | 0.0% | 4 | 11001, 19001, 39501
-HORAS1 | numeric | 0.0% | 4 | 30, 10, 30
-COD_ENS_1 | numeric | 0.0% | 2 | 110, 110, 310
-GRADO.1_1 | numeric | 0.0% | 2 | 6, 1, 1
-GRADO.2_1 | numeric | 0.0% | 3 | 7, 0, 2
-GRADO.3_1 | numeric | 0.0% | 3 | 8, 0, 3
-GRADO.4_1 | numeric | 0.0% | 2 | 0, 0, 4
-GRADO.5_1 | numeric | 0.0% | 2 | 0, 0, 0
-GRADO.6_1 | numeric | 0.0% | 2 | 0, 0, 0
-GRADO.7_1 | numeric | 0.0% | 2 | 0, 0, 0
-GRADO.8_1 | numeric | 0.0% | 2 | 0, 0, 0
-GRADO.9_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.10_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.11_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.12_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.13_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.14_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.15_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.16_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.17_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.18_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.19_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | empty | 100.0% | 0 | 
-SECTOR2 | empty | 100.0% | 0 | 
-SUBSECTOR2 | empty | 100.0% | 0 | 
-HORAS2 | empty | 100.0% | 0 | 
-COD_ENS_2 | empty | 100.0% | 0 | 
-GRADO.1_2 | empty | 100.0% | 0 | 
-GRADO.2_2 | empty | 100.0% | 0 | 
-GRADO.3_2 | empty | 100.0% | 0 | 
-GRADO.4_2 | empty | 100.0% | 0 | 
-GRADO.5_2 | empty | 100.0% | 0 | 
-GRADO.6_2 | empty | 100.0% | 0 | 
-GRADO.7_2 | empty | 100.0% | 0 | 
-GRADO.8_2 | empty | 100.0% | 0 | 
-GRADO.9_2 | empty | 100.0% | 0 | 
-GRADO.10_2 | empty | 100.0% | 0 | 
-GRADO.11_2 | empty | 100.0% | 0 | 
-GRADO.12_2 | empty | 100.0% | 0 | 
-GRADO.13_2 | empty | 100.0% | 0 | 
-GRADO.14_2 | empty | 100.0% | 0 | 
-GRADO.15_2 | empty | 100.0% | 0 | 
-GRADO.16_2 | empty | 100.0% | 0 | 
-GRADO.17_2 | empty | 100.0% | 0 | 
-GRADO.18_2 | empty | 100.0% | 0 | 
-GRADO.19_2 | empty | 100.0% | 0 | 
-PERSONAS | numeric | 0.0% | 2 | 1, 0, 1
-
-### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2014","RBD":"112","DGV_RBD":"0","NOM_RBD":"ESCUELA EDUARDO LLANOS","COD_REG_RBD":"1","COD_PRO_RBD":"11","COD_COM_RBD":"1101","NOM_COM_RBD":"IQUIQUE","COD_DEPE":"1","COD_DEPE2":"1","RURAL_RBD":"0","CLAVE":"AA1000002721","MRUN":"10237","DOC_GENERO":"2","DOC_FEC_NAC":"19730531","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"1626","MEN_SIN_MENCION_1":"0","MEN_PLATICA_1":"0","MEN_NATURALES_1":"0","MEN_SOCIALES_1":"0","MEN_COMPUTACION_1":"0","MEN_ED_FISICA_1":"0","MEN_ED_MUSICA_1":"0","MEN_ED_TECNO_1":"0","MEN_LENGUAJE_1":"1","MEN_MATE_1":"0","MEN_RELIGION_1":"0","MEN_TRASTORNOS_1":"0","MEN_INGLES_1":"0","MEN_FRANCES_1":"0","MEN_ALEMAN_1":"0","MEN_OTRO_IDIOMA_1":"0","MEN_INTERCULTURAL_1":"0","MEN_ADMINISTRACION_1":"0","MEN_CURRICULUM_1":"0","MEN_ED_PARV_1":"0","MEN_ED_AD_1":"0","MEN_DES_COM_1":"0","MEN_DIS_INT_1":"0","MEN_ORIENTACION_1":"0","MEN_INT_ESC_1":"0","MEN_PSICO_1":"0","TIP_INSTI_ID_1":"3","ANO_TITULACION_1":"1999","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","ID_ITC":"2","ID_ITC_CORR":"102","HORAS_CONTRATO":"34","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"34","ANO_SERVICIO_SISTEMA":"16","ANO_SERVICIO_EE":"0","ID_ICH":"110","NIVEL1":"2","SECTOR1":"110","SUBSECTOR1":"11001","HORAS1":"30","COD_ENS_1":"110","GRADO.1_1":"6","GRADO.2_1":"7","GRADO.3_1":"8","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-{"AGNO":"2014","RBD":"2945","DGV_RBD":"9","NOM_RBD":"ESCUELA PROSPERIDAD","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"121","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1978","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"10","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"10","ANO_SERVICIO_SISTEMA":"37","ANO_SERVICIO_EE":"2","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"10","COD_ENS_1":"110","GRADO.1_1":"1","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"0"}
-{"AGNO":"2014","RBD":"2973","DGV_RBD":"4","NOM_RBD":"LICEO ABATE MOLINA","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"121","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1978","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","ANO_SERVICIO_SISTEMA":"36","ANO_SERVICIO_EE":"10","ID_ICH":"310","NIVEL1":"4","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"30","COD_ENS_1":"310","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-{"AGNO":"2014","RBD":"25304","DGV_RBD":"9","NOM_RBD":"COLEGIO PAUL HARRIS SCHOOL","COD_REG_RBD":"13","COD_PRO_RBD":"131","COD_COM_RBD":"13105","NOM_COM_RBD":"EL BOSQUE","COD_DEPE":"3","COD_DEPE2":"2","RURAL_RBD":"0","CLAVE":"AA1000022111","MRUN":"18204895","DOC_GENERO":"1","DOC_FEC_NAC":"19740928","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1419","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"2004","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","ID_ITC":"4","ID_ITC_CORR":"301","HORAS_CONTRATO":"44","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"44","ANO_SERVICIO_SISTEMA":"10","ANO_SERVICIO_EE":"10","ID_ICH":"310","NIVEL1":"4","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"44","COD_ENS_1":"310","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-{"AGNO":"2014","RBD":"9853","DGV_RBD":"1","NOM_RBD":"COLEGIO POLIV. SAINT TRINITY COLLEGE","COD_REG_RBD":"13","COD_PRO_RBD":"131","COD_COM_RBD":"13116","NOM_COM_RBD":"LO ESPEJO","COD_DEPE":"3","COD_DEPE2":"2","RURAL_RBD":"0","CLAVE":"AA1000048321","MRUN":"2643353","DOC_GENERO":"2","DOC_FEC_NAC":"19771028","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"122","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"2001","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"5","ID_IFS":"0","ID_ITC":"5","ID_ITC_CORR":"302","HORAS_CONTRATO":"44","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"40","ANO_SERVICIO_SISTEMA":"12","ANO_SERVICIO_EE":"1","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"40","COD_ENS_1":"110","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"5","GRADO.6_1":"6","GRADO.7_1":"7","GRADO.8_1":"8","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-
-## FILE 3/23: 20160727_Docentes_2015_20150707_PUBL.csv
-source: /tmp/sep_inspect_yoqma06w/20160727_Docentes_2015_20150707_PUBL.csv
-encoding: utf-8-sig
-separator: semicolon
-rows_total: 242,973
-cols_count: 149
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'ESTADO_ESTAB', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'MEN_ED_PARV_1', 'MEN_ED_AD_1', 'MEN_DES_COM_1', 'MEN_DIS_INT_1', 'MEN_ORIENTACION_1', 'MEN_INT_ESC_1', 'MEN_PSICO_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'MEN_ED_PARV_2', 'MEN_ED_AD_2', 'MEN_DES_COM_2', 'MEN_DIS_INT_2', 'MEN_ORIENTACION_2', 'MEN_INT_ESC_2', 'MEN_PSICO_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_IFS', 'SUBROGANTE', 'MES_NOMBRAMIENTO', 'AGNO_NOMBRAMIENTO', 'ID_ITC', 'ID_ITC_CORR', 'HORAS_CONTRATO', 'HORAS_DIRECT', 'HORAS_TEC_PED', 'HORAS_AULA', 'HORAS_DENTRO_ESTAB', 'HORAS_FUERA_ESTAB', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'GRADO.8_1', 'GRADO.9_1', 'GRADO.10_1', 'GRADO.11_1', 'GRADO.12_1', 'GRADO.13_1', 'GRADO.14_1', 'GRADO.15_1', 'GRADO.16_1', 'GRADO.17_1', 'GRADO.18_1', 'GRADO.19_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'GRADO.8_2', 'GRADO.9_2', 'GRADO.10_2', 'GRADO.11_2', 'GRADO.12_2', 'GRADO.13_2', 'GRADO.14_2', 'GRADO.15_2', 'GRADO.16_2', 'GRADO.17_2', 'GRADO.18_2', 'GRADO.19_2', 'PERSONAS']
-
-### COLUMN PROFILE
-col | type | null_pct | cardinality | sample_values
---- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2015, 2015, 2015
-RBD | numeric | 0.0% | 5 | 112, 2945, 2973
-DGV_RBD | numeric | 0.0% | 4 | 0, 9, 4
-NOM_RBD | string | 0.0% | 5 | ESCUELA EDUARDO LLANOS, ESCUELA PROSPERIDAD, LICEO ABATE MOLINA
-COD_REG_RBD | numeric | 0.0% | 3 | 1, 7, 7
-COD_PRO_RBD | numeric | 0.0% | 3 | 11, 71, 71
-COD_COM_RBD | numeric | 0.0% | 4 | 1101, 7101, 7101
-NOM_COM_RBD | string | 0.0% | 4 | IQUIQUE, TALCA, TALCA
-COD_DEPROV_RBD | numeric | 0.0% | 3 | 11, 72, 72
-NOM_DEPROV_RBD | string | 0.0% | 3 | IQUIQUE, TALCA, TALCA
-COD_DEPE | numeric | 0.0% | 3 | 1, 2, 2
-COD_DEPE2 | numeric | 0.0% | 2 | 1, 1, 1
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
-CLAVE | string | 0.0% | 4 | AA1000002721, AA1000005721, AA1000005721
-MRUN | numeric | 0.0% | 4 | 10237, 285455, 285455
-DOC_GENERO | numeric | 0.0% | 2 | 2, 2, 2
-DOC_FEC_NAC | numeric | 0.0% | 4 | 197305, 195508, 195508
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 3 | 13, 12, 12
-ESP_ID_1 | numeric | 0.0% | 4 | 1625, 121, 121
-MEN_SIN_MENCION_1 | numeric | 80.0% | 1 | 0
-MEN_PLATICA_1 | numeric | 80.0% | 1 | 0
-MEN_NATURALES_1 | numeric | 80.0% | 1 | 0
-MEN_SOCIALES_1 | numeric | 80.0% | 1 | 0
-MEN_COMPUTACION_1 | numeric | 80.0% | 1 | 0
-MEN_ED_FISICA_1 | numeric | 80.0% | 1 | 0
-MEN_ED_MUSICA_1 | numeric | 80.0% | 1 | 0
-MEN_ED_TECNO_1 | numeric | 80.0% | 1 | 0
-MEN_LENGUAJE_1 | numeric | 80.0% | 1 | 1
-MEN_MATE_1 | numeric | 80.0% | 1 | 0
-MEN_RELIGION_1 | numeric | 80.0% | 1 | 0
-MEN_TRASTORNOS_1 | numeric | 80.0% | 1 | 0
-MEN_INGLES_1 | numeric | 80.0% | 1 | 0
-MEN_FRANCES_1 | numeric | 80.0% | 1 | 0
-MEN_ALEMAN_1 | numeric | 80.0% | 1 | 0
-MEN_OTRO_IDIOMA_1 | numeric | 80.0% | 1 | 0
-MEN_INTERCULTURAL_1 | numeric | 80.0% | 1 | 0
-MEN_ADMINISTRACION_1 | numeric | 80.0% | 1 | 0
-MEN_CURRICULUM_1 | numeric | 80.0% | 1 | 0
-MEN_ED_PARV_1 | numeric | 80.0% | 1 | 0
-MEN_ED_AD_1 | numeric | 80.0% | 1 | 0
-MEN_DES_COM_1 | numeric | 80.0% | 1 | 0
-MEN_DIS_INT_1 | numeric | 80.0% | 1 | 0
-MEN_ORIENTACION_1 | numeric | 80.0% | 1 | 0
-MEN_INT_ESC_1 | numeric | 80.0% | 1 | 0
-MEN_PSICO_1 | numeric | 80.0% | 1 | 0
-TIP_INSTI_ID_1 | numeric | 0.0% | 2 | 3, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 4 | 1998, 1978, 1978
-DURACION_CARRERA_1 | numeric | 0.0% | 2 | 10, 8, 8
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-MEN_ED_PARV_2 | empty | 100.0% | 0 | 
-MEN_ED_AD_2 | empty | 100.0% | 0 | 
-MEN_DES_COM_2 | empty | 100.0% | 0 | 
-MEN_DIS_INT_2 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_2 | empty | 100.0% | 0 | 
-MEN_INT_ESC_2 | empty | 100.0% | 0 | 
-MEN_PSICO_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 2 | 1, 1, 1
-ID_IFS | numeric | 0.0% | 1 | 0, 0, 0
-SUBROGANTE | numeric | 0.0% | 1 | -1, -1, -1
-MES_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-AGNO_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-ID_ITC | numeric | 0.0% | 4 | 2, 1, 1
-ID_ITC_CORR | numeric | 0.0% | 4 | 102, 101, 101
-HORAS_CONTRATO | numeric | 0.0% | 4 | 35, 10, 30
-HORAS_DIRECT | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_TEC_PED | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_AULA | numeric | 0.0% | 5 | 35, 10, 30
-HORAS_DENTRO_ESTAB | numeric | 0.0% | 2 | 0, 0, 0
-HORAS_FUERA_ESTAB | numeric | 0.0% | 1 | 0, 0, 0
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 4 | 17, 37, 37
-ANO_SERVICIO_EE | numeric | 0.0% | 4 | 1, 3, 11
-ID_ICH | numeric | 0.0% | 2 | 110, 110, 310
-NIVEL1 | numeric | 0.0% | 2 | 2, 2, 4
-SECTOR1 | numeric | 0.0% | 3 | 190, 190, 395
-SUBSECTOR1 | numeric | 0.0% | 3 | 19001, 19001, 39501
-HORAS1 | numeric | 0.0% | 5 | 35, 10, 30
-COD_ENS_1 | numeric | 0.0% | 2 | 110, 110, 310
-GRADO.1_1 | numeric | 0.0% | 3 | 4, 2, 1
-GRADO.2_1 | numeric | 0.0% | 2 | 0, 0, 2
-GRADO.3_1 | numeric | 0.0% | 2 | 0, 0, 3
-GRADO.4_1 | numeric | 0.0% | 2 | 0, 0, 4
-GRADO.5_1 | numeric | 0.0% | 2 | 0, 0, 0
-GRADO.6_1 | numeric | 0.0% | 2 | 0, 0, 0
-GRADO.7_1 | numeric | 0.0% | 2 | 0, 0, 0
-GRADO.8_1 | numeric | 0.0% | 2 | 0, 0, 0
-GRADO.9_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.10_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.11_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.12_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.13_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.14_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.15_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.16_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.17_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.18_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.19_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | empty | 100.0% | 0 | 
-SECTOR2 | empty | 100.0% | 0 | 
-SUBSECTOR2 | empty | 100.0% | 0 | 
-HORAS2 | empty | 100.0% | 0 | 
-COD_ENS_2 | empty | 100.0% | 0 | 
-GRADO.1_2 | empty | 100.0% | 0 | 
-GRADO.2_2 | empty | 100.0% | 0 | 
-GRADO.3_2 | empty | 100.0% | 0 | 
-GRADO.4_2 | empty | 100.0% | 0 | 
-GRADO.5_2 | empty | 100.0% | 0 | 
-GRADO.6_2 | empty | 100.0% | 0 | 
-GRADO.7_2 | empty | 100.0% | 0 | 
-GRADO.8_2 | empty | 100.0% | 0 | 
-GRADO.9_2 | empty | 100.0% | 0 | 
-GRADO.10_2 | empty | 100.0% | 0 | 
-GRADO.11_2 | empty | 100.0% | 0 | 
-GRADO.12_2 | empty | 100.0% | 0 | 
-GRADO.13_2 | empty | 100.0% | 0 | 
-GRADO.14_2 | empty | 100.0% | 0 | 
-GRADO.15_2 | empty | 100.0% | 0 | 
-GRADO.16_2 | empty | 100.0% | 0 | 
-GRADO.17_2 | empty | 100.0% | 0 | 
-GRADO.18_2 | empty | 100.0% | 0 | 
-GRADO.19_2 | empty | 100.0% | 0 | 
-PERSONAS | numeric | 0.0% | 2 | 1, 0, 1
-
-### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2015","RBD":"112","DGV_RBD":"0","NOM_RBD":"ESCUELA EDUARDO LLANOS","COD_REG_RBD":"1","COD_PRO_RBD":"11","COD_COM_RBD":"1101","NOM_COM_RBD":"IQUIQUE","COD_DEPROV_RBD":"11","NOM_DEPROV_RBD":"IQUIQUE","COD_DEPE":"1","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AA1000002721","MRUN":"10237","DOC_GENERO":"2","DOC_FEC_NAC":"197305","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"1625","MEN_SIN_MENCION_1":"0","MEN_PLATICA_1":"0","MEN_NATURALES_1":"0","MEN_SOCIALES_1":"0","MEN_COMPUTACION_1":"0","MEN_ED_FISICA_1":"0","MEN_ED_MUSICA_1":"0","MEN_ED_TECNO_1":"0","MEN_LENGUAJE_1":"1","MEN_MATE_1":"0","MEN_RELIGION_1":"0","MEN_TRASTORNOS_1":"0","MEN_INGLES_1":"0","MEN_FRANCES_1":"0","MEN_ALEMAN_1":"0","MEN_OTRO_IDIOMA_1":"0","MEN_INTERCULTURAL_1":"0","MEN_ADMINISTRACION_1":"0","MEN_CURRICULUM_1":"0","MEN_ED_PARV_1":"0","MEN_ED_AD_1":"0","MEN_DES_COM_1":"0","MEN_DIS_INT_1":"0","MEN_ORIENTACION_1":"0","MEN_INT_ESC_1":"0","MEN_PSICO_1":"0","TIP_INSTI_ID_1":"3","ANO_TITULACION_1":"1998","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"2","ID_ITC_CORR":"102","HORAS_CONTRATO":"35","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"35","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"17","ANO_SERVICIO_EE":"1","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"35","COD_ENS_1":"110","GRADO.1_1":"4","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-{"AGNO":"2015","RBD":"2945","DGV_RBD":"9","NOM_RBD":"ESCUELA PROSPERIDAD","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPROV_RBD":"72","NOM_DEPROV_RBD":"TALCA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"195508","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"121","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1978","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"10","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"10","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"37","ANO_SERVICIO_EE":"3","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"10","COD_ENS_1":"110","GRADO.1_1":"2","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"0"}
-{"AGNO":"2015","RBD":"2973","DGV_RBD":"4","NOM_RBD":"LICEO ABATE MOLINA","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPROV_RBD":"72","NOM_DEPROV_RBD":"TALCA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"195508","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"121","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1978","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"37","ANO_SERVICIO_EE":"11","ID_ICH":"310","NIVEL1":"4","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"30","COD_ENS_1":"310","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-{"AGNO":"2015","RBD":"25304","DGV_RBD":"9","NOM_RBD":"COLEGIO PAUL HARRIS SCHOOL","COD_REG_RBD":"13","COD_PRO_RBD":"131","COD_COM_RBD":"13105","NOM_COM_RBD":"EL BOSQUE","COD_DEPROV_RBD":"132","NOM_DEPROV_RBD":"SUR","COD_DEPE":"3","COD_DEPE2":"2","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AA1000022111","MRUN":"18204895","DOC_GENERO":"1","DOC_FEC_NAC":"197409","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"142","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"2014","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"4","ID_ITC_CORR":"301","HORAS_CONTRATO":"44","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"44","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"11","ANO_SERVICIO_EE":"11","ID_ICH":"310","NIVEL1":"4","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"44","COD_ENS_1":"310","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-{"AGNO":"2015","RBD":"9853","DGV_RBD":"1","NOM_RBD":"COLEGIO POLIV. SAINT TRINITY COLLEGE","COD_REG_RBD":"13","COD_PRO_RBD":"131","COD_COM_RBD":"13116","NOM_COM_RBD":"LO ESPEJO","COD_DEPROV_RBD":"132","NOM_DEPROV_RBD":"SUR","COD_DEPE":"3","COD_DEPE2":"2","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AA1000048321","MRUN":"2643353","DOC_GENERO":"2","DOC_FEC_NAC":"197710","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"122","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"2001","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"5","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"5","ID_ITC_CORR":"302","HORAS_CONTRATO":"44","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"40","HORAS_DENTRO_ESTAB":"4","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"13","ANO_SERVICIO_EE":"2","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"40","COD_ENS_1":"110","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"5","GRADO.6_1":"6","GRADO.7_1":"7","GRADO.8_1":"8","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-
-## FILE 4/23: 20160809_Docentes_2016_20160630_PUBL.csv
-source: /tmp/sep_inspect_yoqma06w/20160809_Docentes_2016_20160630_PUBL.csv
-encoding: utf-8
-separator: semicolon
-rows_total: 248,804
-cols_count: 149
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'ESTADO_ESTAB', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'MEN_ED_PARV_1', 'MEN_ED_AD_1', 'MEN_DES_COM_1', 'MEN_DIS_INT_1', 'MEN_ORIENTACION_1', 'MEN_INT_ESC_1', 'MEN_PSICO_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'MEN_ED_PARV_2', 'MEN_ED_AD_2', 'MEN_DES_COM_2', 'MEN_DIS_INT_2', 'MEN_ORIENTACION_2', 'MEN_INT_ESC_2', 'MEN_PSICO_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_IFS', 'SUBROGANTE', 'MES_NOMBRAMIENTO', 'AGNO_NOMBRAMIENTO', 'ID_ITC', 'ID_ITC_CORR', 'HORAS_CONTRATO', 'HORAS_DIRECT', 'HORAS_TEC_PED', 'HORAS_AULA', 'HORAS_DENTRO_ESTAB', 'HORAS_FUERA_ESTAB', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'GRADO.8_1', 'GRADO.9_1', 'GRADO.10_1', 'GRADO.11_1', 'GRADO.12_1', 'GRADO.13_1', 'GRADO.14_1', 'GRADO.15_1', 'GRADO.16_1', 'GRADO.17_1', 'GRADO.18_1', 'GRADO.19_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'GRADO.8_2', 'GRADO.9_2', 'GRADO.10_2', 'GRADO.11_2', 'GRADO.12_2', 'GRADO.13_2', 'GRADO.14_2', 'GRADO.15_2', 'GRADO.16_2', 'GRADO.17_2', 'GRADO.18_2', 'GRADO.19_2', 'PERSONAS']
-
-### COLUMN PROFILE
-col | type | null_pct | cardinality | sample_values
---- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2016, 2016, 2016
-RBD | numeric | 0.0% | 1 | 1, 1, 1
-DGV_RBD | numeric | 0.0% | 1 | 9, 9, 9
-NOM_RBD | string | 0.0% | 1 | LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA
-COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
-COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
-COD_COM_RBD | numeric | 0.0% | 1 | 15101, 15101, 15101
-NOM_COM_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
-COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
-NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
-COD_DEPE | numeric | 0.0% | 1 | 2, 2, 2
-COD_DEPE2 | numeric | 0.0% | 1 | 1, 1, 1
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
-CLAVE | string | 0.0% | 5 | AA1071642321, AA1090281821, AB1000927321
-MRUN | numeric | 0.0% | 5 | 17385447, 10747952, 5205805
-DOC_GENERO | numeric | 0.0% | 2 | 2, 2, 2
-DOC_FEC_NAC | numeric | 0.0% | 5 | 196409, 195706, 197105
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 1 | 14, 14, 14
-ESP_ID_1 | numeric | 0.0% | 4 | 149, 1413, 1412
-MEN_SIN_MENCION_1 | empty | 100.0% | 0 | 
-MEN_PLATICA_1 | empty | 100.0% | 0 | 
-MEN_NATURALES_1 | empty | 100.0% | 0 | 
-MEN_SOCIALES_1 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_1 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_1 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_1 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_1 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_1 | empty | 100.0% | 0 | 
-MEN_MATE_1 | empty | 100.0% | 0 | 
-MEN_RELIGION_1 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_1 | empty | 100.0% | 0 | 
-MEN_INGLES_1 | empty | 100.0% | 0 | 
-MEN_FRANCES_1 | empty | 100.0% | 0 | 
-MEN_ALEMAN_1 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_1 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_1 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_1 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_1 | empty | 100.0% | 0 | 
-MEN_ED_PARV_1 | empty | 100.0% | 0 | 
-MEN_ED_AD_1 | empty | 100.0% | 0 | 
-MEN_DES_COM_1 | empty | 100.0% | 0 | 
-MEN_DIS_INT_1 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_1 | empty | 100.0% | 0 | 
-MEN_INT_ESC_1 | empty | 100.0% | 0 | 
-MEN_PSICO_1 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 5 | 1989, 1985, 2008
-DURACION_CARRERA_1 | numeric | 0.0% | 2 | 10, 10, 8
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-MEN_ED_PARV_2 | empty | 100.0% | 0 | 
-MEN_ED_AD_2 | empty | 100.0% | 0 | 
-MEN_DES_COM_2 | empty | 100.0% | 0 | 
-MEN_DIS_INT_2 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_2 | empty | 100.0% | 0 | 
-MEN_INT_ESC_2 | empty | 100.0% | 0 | 
-MEN_PSICO_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_IFS | numeric | 0.0% | 1 | 0, 0, 0
-SUBROGANTE | numeric | 0.0% | 1 | -1, -1, -1
-MES_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-AGNO_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-ID_ITC | numeric | 0.0% | 2 | 2, 1, 1
-ID_ITC_CORR | numeric | 0.0% | 2 | 102, 101, 101
-HORAS_CONTRATO | numeric | 0.0% | 4 | 15, 34, 30
-HORAS_DIRECT | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_TEC_PED | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_AULA | numeric | 0.0% | 4 | 15, 34, 30
-HORAS_DENTRO_ESTAB | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_FUERA_ESTAB | numeric | 0.0% | 1 | 0, 0, 0
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 5 | 22, 31, 21
-ANO_SERVICIO_EE | numeric | 0.0% | 5 | 0, 2, 1
-ID_ICH | numeric | 0.0% | 3 | 463, 510, 510
-NIVEL1 | numeric | 0.0% | 2 | 8, 5, 5
-SECTOR1 | numeric | 0.0% | 4 | 380, 395, 360
-SUBSECTOR1 | numeric | 0.0% | 4 | 38001, 39501, 36001
-HORAS1 | numeric | 0.0% | 4 | 15, 34, 30
-COD_ENS_1 | numeric | 0.0% | 3 | 463, 510, 510
-GRADO.1_1 | numeric | 0.0% | 1 | 1, 1, 1
-GRADO.2_1 | numeric | 0.0% | 3 | 0, 2, 2
-GRADO.3_1 | numeric | 0.0% | 2 | 0, 0, 0
-GRADO.4_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.5_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.6_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.7_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.8_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.9_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.10_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.11_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.12_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.13_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.14_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.15_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.16_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.17_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.18_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.19_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | numeric | 0.0% | 1 | 0, 0, 0
-SECTOR2 | numeric | 0.0% | 1 | 0, 0, 0
-SUBSECTOR2 | numeric | 0.0% | 1 | 0, 0, 0
-HORAS2 | numeric | 0.0% | 1 | 0, 0, 0
-COD_ENS_2 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.1_2 | empty | 100.0% | 0 | 
-GRADO.2_2 | empty | 100.0% | 0 | 
-GRADO.3_2 | empty | 100.0% | 0 | 
-GRADO.4_2 | empty | 100.0% | 0 | 
-GRADO.5_2 | empty | 100.0% | 0 | 
-GRADO.6_2 | empty | 100.0% | 0 | 
-GRADO.7_2 | empty | 100.0% | 0 | 
-GRADO.8_2 | empty | 100.0% | 0 | 
-GRADO.9_2 | empty | 100.0% | 0 | 
-GRADO.10_2 | empty | 100.0% | 0 | 
-GRADO.11_2 | empty | 100.0% | 0 | 
-GRADO.12_2 | empty | 100.0% | 0 | 
-GRADO.13_2 | empty | 100.0% | 0 | 
-GRADO.14_2 | empty | 100.0% | 0 | 
-GRADO.15_2 | empty | 100.0% | 0 | 
-GRADO.16_2 | empty | 100.0% | 0 | 
-GRADO.17_2 | empty | 100.0% | 0 | 
-GRADO.18_2 | empty | 100.0% | 0 | 
-GRADO.19_2 | empty | 100.0% | 0 | 
-PERSONAS | numeric | 0.0% | 1 | 1, 1, 1
-
-### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2016","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AA1071642321","MRUN":"17385447","DOC_GENERO":"2","DOC_FEC_NAC":"196409","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"149","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1989","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"2","ID_ITC_CORR":"102","HORAS_CONTRATO":"15","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"15","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"22","ANO_SERVICIO_EE":"0","ID_ICH":"463","NIVEL1":"8","SECTOR1":"380","SUBSECTOR1":"38001","HORAS1":"15","COD_ENS_1":"463","GRADO.1_1":"1","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2016","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AA1090281821","MRUN":"10747952","DOC_GENERO":"2","DOC_FEC_NAC":"195706","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1413","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1985","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"34","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"34","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"31","ANO_SERVICIO_EE":"2","ID_ICH":"510","NIVEL1":"5","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"34","COD_ENS_1":"510","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2016","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AB1000927321","MRUN":"5205805","DOC_GENERO":"2","DOC_FEC_NAC":"197105","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1412","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"2008","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"21","ANO_SERVICIO_EE":"1","ID_ICH":"510","NIVEL1":"5","SECTOR1":"360","SUBSECTOR1":"36001","HORAS1":"30","COD_ENS_1":"510","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2016","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AB1003246311","MRUN":"13181394","DOC_GENERO":"1","DOC_FEC_NAC":"195303","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"141","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1980","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"42","ANO_SERVICIO_EE":"41","ID_ICH":"563","NIVEL1":"8","SECTOR1":"310","SUBSECTOR1":"31001","HORAS1":"30","COD_ENS_1":"563","GRADO.1_1":"1","GRADO.2_1":"3","GRADO.3_1":"4","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2016","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AB1005905711","MRUN":"12989133","DOC_GENERO":"1","DOC_FEC_NAC":"194611","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1413","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1973","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"22","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"22","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"46","ANO_SERVICIO_EE":"35","ID_ICH":"563","NIVEL1":"8","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"22","COD_ENS_1":"563","GRADO.1_1":"1","GRADO.2_1":"3","GRADO.3_1":"4","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-
-## FILE 5/23: 20170720_Docentes_2017_20170630_PUBL.csv
-source: /tmp/sep_inspect_yoqma06w/20170720_Docentes_2017_20170630_PUBL.csv
-encoding: utf-8
-separator: semicolon
-rows_total: 253,729
-cols_count: 149
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'ESTADO_ESTAB', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'MEN_ED_PARV_1', 'MEN_ED_AD_1', 'MEN_DES_COM_1', 'MEN_DIS_INT_1', 'MEN_ORIENTACION_1', 'MEN_INT_ESC_1', 'MEN_PSICO_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'MEN_ED_PARV_2', 'MEN_ED_AD_2', 'MEN_DES_COM_2', 'MEN_DIS_INT_2', 'MEN_ORIENTACION_2', 'MEN_INT_ESC_2', 'MEN_PSICO_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_IFS', 'SUBROGANTE', 'MES_NOMBRAMIENTO', 'AGNO_NOMBRAMIENTO', 'ID_ITC', 'ID_ITC_CORR', 'HORAS_CONTRATO', 'HORAS_DIRECT', 'HORAS_TEC_PED', 'HORAS_AULA', 'HORAS_DENTRO_ESTAB', 'HORAS_FUERA_ESTAB', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'GRADO.8_1', 'GRADO.9_1', 'GRADO.10_1', 'GRADO.11_1', 'GRADO.12_1', 'GRADO.13_1', 'GRADO.14_1', 'GRADO.15_1', 'GRADO.16_1', 'GRADO.17_1', 'GRADO.18_1', 'GRADO.19_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'GRADO.8_2', 'GRADO.9_2', 'GRADO.10_2', 'GRADO.11_2', 'GRADO.12_2', 'GRADO.13_2', 'GRADO.14_2', 'GRADO.15_2', 'GRADO.16_2', 'GRADO.17_2', 'GRADO.18_2', 'GRADO.19_2', 'PERSONAS']
-
-### COLUMN PROFILE
-col | type | null_pct | cardinality | sample_values
---- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2017, 2017, 2017
-RBD | numeric | 0.0% | 1 | 1, 1, 1
-DGV_RBD | numeric | 0.0% | 1 | 9, 9, 9
-NOM_RBD | string | 0.0% | 1 | LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA
-COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
-COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
-COD_COM_RBD | numeric | 0.0% | 1 | 15101, 15101, 15101
-NOM_COM_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
-COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
-NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
-COD_DEPE | numeric | 0.0% | 1 | 2, 2, 2
-COD_DEPE2 | numeric | 0.0% | 1 | 1, 1, 1
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
-CLAVE | string | 0.0% | 5 | AA1071642321, AA1090281821, AB1000927321
-MRUN | numeric | 0.0% | 5 | 17385447, 10747952, 5205805
-DOC_GENERO | numeric | 0.0% | 2 | 2, 2, 2
-DOC_FEC_NAC | numeric | 0.0% | 5 | 196409, 195706, 197105
-TIT_ID_1 | numeric | 0.0% | 2 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 2 | 14, 14, 14
-ESP_ID_1 | numeric | 0.0% | 5 | 149, 1413, 1412
-MEN_SIN_MENCION_1 | empty | 100.0% | 0 | 
-MEN_PLATICA_1 | empty | 100.0% | 0 | 
-MEN_NATURALES_1 | empty | 100.0% | 0 | 
-MEN_SOCIALES_1 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_1 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_1 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_1 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_1 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_1 | empty | 100.0% | 0 | 
-MEN_MATE_1 | empty | 100.0% | 0 | 
-MEN_RELIGION_1 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_1 | empty | 100.0% | 0 | 
-MEN_INGLES_1 | empty | 100.0% | 0 | 
-MEN_FRANCES_1 | empty | 100.0% | 0 | 
-MEN_ALEMAN_1 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_1 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_1 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_1 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_1 | empty | 100.0% | 0 | 
-MEN_ED_PARV_1 | empty | 100.0% | 0 | 
-MEN_ED_AD_1 | empty | 100.0% | 0 | 
-MEN_DES_COM_1 | empty | 100.0% | 0 | 
-MEN_DIS_INT_1 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_1 | empty | 100.0% | 0 | 
-MEN_INT_ESC_1 | empty | 100.0% | 0 | 
-MEN_PSICO_1 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 5 | 1989, 1985, 2008
-DURACION_CARRERA_1 | numeric | 0.0% | 2 | 10, 10, 8
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-MEN_ED_PARV_2 | empty | 100.0% | 0 | 
-MEN_ED_AD_2 | empty | 100.0% | 0 | 
-MEN_DES_COM_2 | empty | 100.0% | 0 | 
-MEN_DIS_INT_2 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_2 | empty | 100.0% | 0 | 
-MEN_INT_ESC_2 | empty | 100.0% | 0 | 
-MEN_PSICO_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_IFS | numeric | 0.0% | 1 | 0, 0, 0
-SUBROGANTE | numeric | 0.0% | 1 | -1, -1, -1
-MES_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-AGNO_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-ID_ITC | numeric | 0.0% | 2 | 2, 1, 1
-ID_ITC_CORR | numeric | 0.0% | 2 | 102, 101, 101
-HORAS_CONTRATO | numeric | 0.0% | 4 | 15, 30, 36
-HORAS_DIRECT | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_TEC_PED | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_AULA | numeric | 0.0% | 4 | 15, 30, 36
-HORAS_DENTRO_ESTAB | numeric | 0.0% | 2 | 0, 0, 0
-HORAS_FUERA_ESTAB | numeric | 0.0% | 1 | 0, 0, 0
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 5 | 23, 32, 22
-ANO_SERVICIO_EE | numeric | 0.0% | 5 | 1, 3, 2
-ID_ICH | numeric | 0.0% | 4 | 463, 510, 510
-NIVEL1 | numeric | 0.0% | 2 | 8, 5, 5
-SECTOR1 | numeric | 0.0% | 5 | 380, 395, 360
-SUBSECTOR1 | numeric | 0.0% | 5 | 38001, 39501, 36001
-HORAS1 | numeric | 0.0% | 4 | 15, 30, 36
-COD_ENS_1 | numeric | 0.0% | 4 | 463, 510, 510
-GRADO.1_1 | numeric | 0.0% | 2 | 1, 1, 3
-GRADO.2_1 | numeric | 0.0% | 4 | 0, 2, 4
-GRADO.3_1 | numeric | 0.0% | 2 | 0, 0, 0
-GRADO.4_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.5_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.6_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.7_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.8_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.9_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.10_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.11_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.12_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.13_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.14_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.15_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.16_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.17_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.18_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.19_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | numeric | 0.0% | 1 | 0, 0, 0
-SECTOR2 | numeric | 0.0% | 1 | 0, 0, 0
-SUBSECTOR2 | numeric | 0.0% | 1 | 0, 0, 0
-HORAS2 | numeric | 0.0% | 1 | 0, 0, 0
-COD_ENS_2 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.1_2 | empty | 100.0% | 0 | 
-GRADO.2_2 | empty | 100.0% | 0 | 
-GRADO.3_2 | empty | 100.0% | 0 | 
-GRADO.4_2 | empty | 100.0% | 0 | 
-GRADO.5_2 | empty | 100.0% | 0 | 
-GRADO.6_2 | empty | 100.0% | 0 | 
-GRADO.7_2 | empty | 100.0% | 0 | 
-GRADO.8_2 | empty | 100.0% | 0 | 
-GRADO.9_2 | empty | 100.0% | 0 | 
-GRADO.10_2 | empty | 100.0% | 0 | 
-GRADO.11_2 | empty | 100.0% | 0 | 
-GRADO.12_2 | empty | 100.0% | 0 | 
-GRADO.13_2 | empty | 100.0% | 0 | 
-GRADO.14_2 | empty | 100.0% | 0 | 
-GRADO.15_2 | empty | 100.0% | 0 | 
-GRADO.16_2 | empty | 100.0% | 0 | 
-GRADO.17_2 | empty | 100.0% | 0 | 
-GRADO.18_2 | empty | 100.0% | 0 | 
-GRADO.19_2 | empty | 100.0% | 0 | 
-PERSONAS | numeric | 0.0% | 1 | 1, 1, 1
-
-### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2017","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AA1071642321","MRUN":"17385447","DOC_GENERO":"2","DOC_FEC_NAC":"196409","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"149","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1989","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"2","ID_ITC_CORR":"102","HORAS_CONTRATO":"15","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"15","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"23","ANO_SERVICIO_EE":"1","ID_ICH":"463","NIVEL1":"8","SECTOR1":"380","SUBSECTOR1":"38001","HORAS1":"15","COD_ENS_1":"463","GRADO.1_1":"1","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2017","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AA1090281821","MRUN":"10747952","DOC_GENERO":"2","DOC_FEC_NAC":"195706","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1413","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1985","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"32","ANO_SERVICIO_EE":"3","ID_ICH":"510","NIVEL1":"5","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"30","COD_ENS_1":"510","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2017","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AB1000927321","MRUN":"5205805","DOC_GENERO":"2","DOC_FEC_NAC":"197105","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1412","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"2008","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"36","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"36","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"22","ANO_SERVICIO_EE":"2","ID_ICH":"510","NIVEL1":"5","SECTOR1":"360","SUBSECTOR1":"36001","HORAS1":"36","COD_ENS_1":"510","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2017","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AB1003246311","MRUN":"13181394","DOC_GENERO":"1","DOC_FEC_NAC":"195303","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"141","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1980","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"43","ANO_SERVICIO_EE":"42","ID_ICH":"563","NIVEL1":"8","SECTOR1":"310","SUBSECTOR1":"31001","HORAS1":"30","COD_ENS_1":"563","GRADO.1_1":"1","GRADO.2_1":"3","GRADO.3_1":"4","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2017","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AB1055741621","MRUN":"22401015","DOC_GENERO":"2","DOC_FEC_NAC":"196012","TIT_ID_1":"2","TIP_TIT_ID_1":"23","ESP_ID_1":"230","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1984","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"34","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"31","HORAS_DENTRO_ESTAB":"3","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"31","ANO_SERVICIO_EE":"28","ID_ICH":"610","NIVEL1":"5","SECTOR1":"620","SUBSECTOR1":"62004","HORAS1":"31","COD_ENS_1":"610","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-
-## FILE 6/23: 20180807_Docentes_2018_20180630_WEB.csv
-source: /tmp/sep_inspect_yoqma06w/20180807_Docentes_2018_20180630_WEB.csv
-encoding: utf-8-sig
-separator: semicolon
-rows_total: 259,817
-cols_count: 149
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'ESTADO_ESTAB', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'MEN_ED_PARV_1', 'MEN_ED_AD_1', 'MEN_DES_COM_1', 'MEN_DIS_INT_1', 'MEN_ORIENTACION_1', 'MEN_INT_ESC_1', 'MEN_PSICO_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'MEN_ED_PARV_2', 'MEN_ED_AD_2', 'MEN_DES_COM_2', 'MEN_DIS_INT_2', 'MEN_ORIENTACION_2', 'MEN_INT_ESC_2', 'MEN_PSICO_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_IFS', 'SUBROGANTE', 'MES_NOMBRAMIENTO', 'AGNO_NOMBRAMIENTO', 'ID_ITC', 'ID_ITC_CORR', 'HORAS_CONTRATO', 'HORAS_DIRECT', 'HORAS_TEC_PED', 'HORAS_AULA', 'HORAS_DENTRO_ESTAB', 'HORAS_FUERA_ESTAB', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'GRADO.8_1', 'GRADO.9_1', 'GRADO.10_1', 'GRADO.11_1', 'GRADO.12_1', 'GRADO.13_1', 'GRADO.14_1', 'GRADO.15_1', 'GRADO.16_1', 'GRADO.17_1', 'GRADO.18_1', 'GRADO.19_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'GRADO.8_2', 'GRADO.9_2', 'GRADO.10_2', 'GRADO.11_2', 'GRADO.12_2', 'GRADO.13_2', 'GRADO.14_2', 'GRADO.15_2', 'GRADO.16_2', 'GRADO.17_2', 'GRADO.18_2', 'GRADO.19_2', 'PERSONAS']
-
-### COLUMN PROFILE
-col | type | null_pct | cardinality | sample_values
---- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2018, 2018, 2018
-RBD | numeric | 0.0% | 1 | 1, 1, 1
-DGV_RBD | numeric | 0.0% | 1 | 9, 9, 9
-NOM_RBD | string | 0.0% | 1 | LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA
-COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
-COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
-COD_COM_RBD | numeric | 0.0% | 1 | 15101, 15101, 15101
-NOM_COM_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
-COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
-NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
-COD_DEPE | numeric | 0.0% | 1 | 2, 2, 2
-COD_DEPE2 | numeric | 0.0% | 1 | 1, 1, 1
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
-CLAVE | string | 0.0% | 5 | AA1071642321, AA1090281821, AB1000927321
-MRUN | numeric | 0.0% | 5 | 17385447, 10747952, 5205805
-DOC_GENERO | numeric | 0.0% | 2 | 2, 2, 2
-DOC_FEC_NAC | numeric | 0.0% | 5 | 196409, 195706, 197105
-TIT_ID_1 | numeric | 0.0% | 2 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 2 | 14, 14, 14
-ESP_ID_1 | numeric | 0.0% | 5 | 149, 1413, 1412
-MEN_SIN_MENCION_1 | empty | 100.0% | 0 | 
-MEN_PLATICA_1 | empty | 100.0% | 0 | 
-MEN_NATURALES_1 | empty | 100.0% | 0 | 
-MEN_SOCIALES_1 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_1 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_1 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_1 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_1 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_1 | empty | 100.0% | 0 | 
-MEN_MATE_1 | empty | 100.0% | 0 | 
-MEN_RELIGION_1 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_1 | empty | 100.0% | 0 | 
-MEN_INGLES_1 | empty | 100.0% | 0 | 
-MEN_FRANCES_1 | empty | 100.0% | 0 | 
-MEN_ALEMAN_1 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_1 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_1 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_1 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_1 | empty | 100.0% | 0 | 
-MEN_ED_PARV_1 | empty | 100.0% | 0 | 
-MEN_ED_AD_1 | empty | 100.0% | 0 | 
-MEN_DES_COM_1 | empty | 100.0% | 0 | 
-MEN_DIS_INT_1 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_1 | empty | 100.0% | 0 | 
-MEN_INT_ESC_1 | empty | 100.0% | 0 | 
-MEN_PSICO_1 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 5 | 1989, 1985, 2008
-DURACION_CARRERA_1 | numeric | 0.0% | 2 | 10, 10, 8
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-MEN_ED_PARV_2 | empty | 100.0% | 0 | 
-MEN_ED_AD_2 | empty | 100.0% | 0 | 
-MEN_DES_COM_2 | empty | 100.0% | 0 | 
-MEN_DIS_INT_2 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_2 | empty | 100.0% | 0 | 
-MEN_INT_ESC_2 | empty | 100.0% | 0 | 
-MEN_PSICO_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_IFS | numeric | 0.0% | 1 | 0, 0, 0
-SUBROGANTE | numeric | 0.0% | 1 | -1, -1, -1
-MES_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-AGNO_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-ID_ITC | numeric | 0.0% | 2 | 2, 1, 1
-ID_ITC_CORR | numeric | 0.0% | 2 | 102, 101, 101
-HORAS_CONTRATO | numeric | 0.0% | 4 | 15, 30, 44
-HORAS_DIRECT | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_TEC_PED | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_AULA | numeric | 0.0% | 4 | 15, 30, 44
-HORAS_DENTRO_ESTAB | numeric | 0.0% | 2 | 0, 0, 0
-HORAS_FUERA_ESTAB | numeric | 0.0% | 1 | 0, 0, 0
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 5 | 24, 33, 23
-ANO_SERVICIO_EE | numeric | 0.0% | 5 | 2, 4, 3
-ID_ICH | numeric | 0.0% | 4 | 463, 510, 510
-NIVEL1 | numeric | 0.0% | 2 | 8, 5, 5
-SECTOR1 | numeric | 0.0% | 5 | 380, 395, 360
-SUBSECTOR1 | numeric | 0.0% | 5 | 38001, 39501, 36001
-HORAS1 | numeric | 0.0% | 4 | 15, 30, 44
-COD_ENS_1 | numeric | 0.0% | 4 | 463, 510, 510
-GRADO.1_1 | numeric | 0.0% | 2 | 1, 1, 3
-GRADO.2_1 | numeric | 0.0% | 4 | 0, 2, 4
-GRADO.3_1 | numeric | 0.0% | 2 | 0, 0, 0
-GRADO.4_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.5_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.6_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.7_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.8_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.9_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.10_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.11_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.12_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.13_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.14_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.15_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.16_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.17_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.18_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.19_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | numeric | 0.0% | 1 | 0, 0, 0
-SECTOR2 | numeric | 0.0% | 1 | 0, 0, 0
-SUBSECTOR2 | numeric | 0.0% | 1 | 0, 0, 0
-HORAS2 | numeric | 0.0% | 1 | 0, 0, 0
-COD_ENS_2 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.1_2 | empty | 100.0% | 0 | 
-GRADO.2_2 | empty | 100.0% | 0 | 
-GRADO.3_2 | empty | 100.0% | 0 | 
-GRADO.4_2 | empty | 100.0% | 0 | 
-GRADO.5_2 | empty | 100.0% | 0 | 
-GRADO.6_2 | empty | 100.0% | 0 | 
-GRADO.7_2 | empty | 100.0% | 0 | 
-GRADO.8_2 | empty | 100.0% | 0 | 
-GRADO.9_2 | empty | 100.0% | 0 | 
-GRADO.10_2 | empty | 100.0% | 0 | 
-GRADO.11_2 | empty | 100.0% | 0 | 
-GRADO.12_2 | empty | 100.0% | 0 | 
-GRADO.13_2 | empty | 100.0% | 0 | 
-GRADO.14_2 | empty | 100.0% | 0 | 
-GRADO.15_2 | empty | 100.0% | 0 | 
-GRADO.16_2 | empty | 100.0% | 0 | 
-GRADO.17_2 | empty | 100.0% | 0 | 
-GRADO.18_2 | empty | 100.0% | 0 | 
-GRADO.19_2 | empty | 100.0% | 0 | 
-PERSONAS | numeric | 0.0% | 1 | 1, 1, 1
-
-### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2018","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AA1071642321","MRUN":"17385447","DOC_GENERO":"2","DOC_FEC_NAC":"196409","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"149","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1989","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"2","ID_ITC_CORR":"102","HORAS_CONTRATO":"15","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"15","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"24","ANO_SERVICIO_EE":"2","ID_ICH":"463","NIVEL1":"8","SECTOR1":"380","SUBSECTOR1":"38001","HORAS1":"15","COD_ENS_1":"463","GRADO.1_1":"1","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2018","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AA1090281821","MRUN":"10747952","DOC_GENERO":"2","DOC_FEC_NAC":"195706","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1413","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1985","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"33","ANO_SERVICIO_EE":"4","ID_ICH":"510","NIVEL1":"5","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"30","COD_ENS_1":"510","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2018","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AB1000927321","MRUN":"5205805","DOC_GENERO":"2","DOC_FEC_NAC":"197105","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1412","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"2008","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"44","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"44","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"23","ANO_SERVICIO_EE":"3","ID_ICH":"510","NIVEL1":"5","SECTOR1":"360","SUBSECTOR1":"36001","HORAS1":"44","COD_ENS_1":"510","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2018","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AB1003246311","MRUN":"13181394","DOC_GENERO":"1","DOC_FEC_NAC":"195303","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"141","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1980","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"44","ANO_SERVICIO_EE":"43","ID_ICH":"563","NIVEL1":"8","SECTOR1":"310","SUBSECTOR1":"31001","HORAS1":"30","COD_ENS_1":"563","GRADO.1_1":"1","GRADO.2_1":"3","GRADO.3_1":"4","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2018","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AB1055741621","MRUN":"22401015","DOC_GENERO":"2","DOC_FEC_NAC":"196012","TIT_ID_1":"2","TIP_TIT_ID_1":"23","ESP_ID_1":"230","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1984","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"39","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"36","HORAS_DENTRO_ESTAB":"3","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"32","ANO_SERVICIO_EE":"29","ID_ICH":"610","NIVEL1":"5","SECTOR1":"620","SUBSECTOR1":"62004","HORAS1":"36","COD_ENS_1":"610","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-
-## FILE 7/23: 20191009_Docentes_2019_20190630_PUBL.csv
-source: /tmp/sep_inspect_yoqma06w/20191009_Docentes_2019_20190630_PUBL.csv
-encoding: utf-8-sig
-separator: semicolon
-rows_total: 267,379
-cols_count: 136
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'NOM_REG_RBD_A', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'ESTADO_ESTAB', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'MEN_ED_PARV_1', 'MEN_ED_AD_1', 'MEN_DES_COM_1', 'MEN_DIS_INT_1', 'MEN_ORIENTACION_1', 'MEN_INT_ESC_1', 'MEN_PSICO_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'MEN_ED_PARV_2', 'MEN_ED_AD_2', 'MEN_DES_COM_2', 'MEN_DIS_INT_2', 'MEN_ORIENTACION_2', 'MEN_INT_ESC_2', 'MEN_PSICO_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_IFS', 'SUBROGANTE', 'MES_NOMBRAMIENTO', 'AGNO_NOMBRAMIENTO', 'ID_ITC', 'ID_ITC_CORR', 'HORAS_CONTRATO', 'HORAS_DIRECT', 'HORAS_TEC_PED', 'HORAS_AULA', 'HORAS_DENTRO_ESTAB', 'HORAS_FUERA_ESTAB', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'GRADO.8_1', 'GRADO.9_1', 'GRADO.10_1', 'GRADO.11_1', 'GRADO.12_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'GRADO.8_2', 'GRADO.9_2', 'GRADO.10_2', 'GRADO.11_2', 'GRADO.12_2', 'PERSONAS']
-
-### COLUMN PROFILE
-col | type | null_pct | cardinality | sample_values
---- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2019, 2019, 2019
-RBD | numeric | 0.0% | 1 | 1, 1, 1
-DGV_RBD | numeric | 0.0% | 1 | 9, 9, 9
-NOM_RBD | string | 0.0% | 1 | LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA
-COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
-NOM_REG_RBD_A | string | 0.0% | 1 | AYP, AYP, AYP
-COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
-COD_COM_RBD | numeric | 0.0% | 1 | 15101, 15101, 15101
-NOM_COM_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
-COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
-NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
-COD_DEPE | numeric | 0.0% | 1 | 2, 2, 2
-COD_DEPE2 | numeric | 0.0% | 1 | 1, 1, 1
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
-CLAVE | string | 0.0% | 5 | AA1090281821, AB1000927321, AB1003246311
-MRUN | numeric | 0.0% | 5 | 10747952, 5205805, 13181394
-DOC_GENERO | numeric | 0.0% | 2 | 2, 2, 1
-DOC_FEC_NAC | numeric | 0.0% | 5 | 195706, 197105, 195303
-TIT_ID_1 | numeric | 0.0% | 2 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 3 | 14, 14, 14
-ESP_ID_1 | numeric | 0.0% | 5 | 1413, 1412, 141
-MEN_SIN_MENCION_1 | empty | 100.0% | 0 | 
-MEN_PLATICA_1 | empty | 100.0% | 0 | 
-MEN_NATURALES_1 | empty | 100.0% | 0 | 
-MEN_SOCIALES_1 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_1 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_1 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_1 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_1 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_1 | empty | 100.0% | 0 | 
-MEN_MATE_1 | empty | 100.0% | 0 | 
-MEN_RELIGION_1 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_1 | empty | 100.0% | 0 | 
-MEN_INGLES_1 | empty | 100.0% | 0 | 
-MEN_FRANCES_1 | empty | 100.0% | 0 | 
-MEN_ALEMAN_1 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_1 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_1 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_1 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_1 | empty | 100.0% | 0 | 
-MEN_ED_PARV_1 | empty | 100.0% | 0 | 
-MEN_ED_AD_1 | empty | 100.0% | 0 | 
-MEN_DES_COM_1 | empty | 100.0% | 0 | 
-MEN_DIS_INT_1 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_1 | empty | 100.0% | 0 | 
-MEN_INT_ESC_1 | empty | 100.0% | 0 | 
-MEN_PSICO_1 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 5 | 1985, 2008, 1980
-DURACION_CARRERA_1 | numeric | 0.0% | 2 | 10, 8, 10
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-MEN_ED_PARV_2 | empty | 100.0% | 0 | 
-MEN_ED_AD_2 | empty | 100.0% | 0 | 
-MEN_DES_COM_2 | empty | 100.0% | 0 | 
-MEN_DIS_INT_2 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_2 | empty | 100.0% | 0 | 
-MEN_INT_ESC_2 | empty | 100.0% | 0 | 
-MEN_PSICO_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_IFS | numeric | 0.0% | 1 | 0, 0, 0
-SUBROGANTE | numeric | 0.0% | 1 | -1, -1, -1
-MES_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-AGNO_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-ID_ITC | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC_CORR | numeric | 0.0% | 1 | 101, 101, 101
-HORAS_CONTRATO | numeric | 0.0% | 2 | 30, 30, 30
-HORAS_DIRECT | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_TEC_PED | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_AULA | numeric | 0.0% | 2 | 30, 30, 30
-HORAS_DENTRO_ESTAB | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_FUERA_ESTAB | numeric | 0.0% | 1 | 0, 0, 0
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 5 | 34, 24, 45
-ANO_SERVICIO_EE | numeric | 0.0% | 1 | 0, 0, 0
-ID_ICH | numeric | 0.0% | 3 | 510, 510, 563
-NIVEL1 | numeric | 0.0% | 2 | 5, 5, 8
-SECTOR1 | numeric | 0.0% | 5 | 395, 360, 310
-SUBSECTOR1 | numeric | 0.0% | 5 | 39501, 36001, 31001
-HORAS1 | numeric | 0.0% | 3 | 30, 30, 30
-COD_ENS_1 | numeric | 0.0% | 3 | 510, 510, 563
-GRADO.1_1 | numeric | 0.0% | 2 | 1, 3, 1
-GRADO.2_1 | numeric | 0.0% | 4 | 2, 4, 3
-GRADO.3_1 | numeric | 0.0% | 2 | 0, 0, 4
-GRADO.4_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.5_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.6_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.7_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.8_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.9_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.10_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.11_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.12_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | numeric | 0.0% | 2 | 0, 0, 0
-SECTOR2 | numeric | 0.0% | 2 | 0, 0, 0
-SUBSECTOR2 | numeric | 0.0% | 2 | 0, 0, 0
-HORAS2 | numeric | 0.0% | 2 | 0, 0, 0
-COD_ENS_2 | numeric | 0.0% | 2 | 0, 0, 0
-GRADO.1_2 | numeric | 80.0% | 1 | 4
-GRADO.2_2 | numeric | 80.0% | 1 | 0
-GRADO.3_2 | numeric | 80.0% | 1 | 0
-GRADO.4_2 | numeric | 80.0% | 1 | 0
-GRADO.5_2 | numeric | 80.0% | 1 | 0
-GRADO.6_2 | numeric | 80.0% | 1 | 0
-GRADO.7_2 | numeric | 80.0% | 1 | 0
-GRADO.8_2 | numeric | 80.0% | 1 | 0
-GRADO.9_2 | numeric | 80.0% | 1 | 0
-GRADO.10_2 | numeric | 80.0% | 1 | 0
-GRADO.11_2 | numeric | 80.0% | 1 | 0
-GRADO.12_2 | numeric | 80.0% | 1 | 0
-PERSONAS | numeric | 0.0% | 1 | 1, 1, 1
-
-### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2019","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AA1090281821","MRUN":"10747952","DOC_GENERO":"2","DOC_FEC_NAC":"195706","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1413","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1985","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"34","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"30","COD_ENS_1":"510","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2019","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AB1000927321","MRUN":"5205805","DOC_GENERO":"2","DOC_FEC_NAC":"197105","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1412","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"2008","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"24","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"360","SUBSECTOR1":"36001","HORAS1":"30","COD_ENS_1":"510","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2019","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AB1003246311","MRUN":"13181394","DOC_GENERO":"1","DOC_FEC_NAC":"195303","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"141","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1980","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"45","ANO_SERVICIO_EE":"0","ID_ICH":"563","NIVEL1":"8","SECTOR1":"310","SUBSECTOR1":"31001","HORAS1":"30","COD_ENS_1":"563","GRADO.1_1":"1","GRADO.2_1":"3","GRADO.3_1":"4","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2019","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AB1055741621","MRUN":"22401015","DOC_GENERO":"2","DOC_FEC_NAC":"196012","TIT_ID_1":"2","TIP_TIT_ID_1":"23","ESP_ID_1":"230","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1984","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"37","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"37","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"33","ANO_SERVICIO_EE":"0","ID_ICH":"610","NIVEL1":"5","SECTOR1":"620","SUBSECTOR1":"62004","HORAS1":"37","COD_ENS_1":"610","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2019","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","ESTADO_ESTAB":"1","CLAVE":"AB1073128711","MRUN":"4678628","DOC_GENERO":"1","DOC_FEC_NAC":"195107","TIT_ID_1":"2","TIP_TIT_ID_1":"21","ESP_ID_1":"210","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1977","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"44","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"530","SUBSECTOR1":"53014","HORAS1":"20","COD_ENS_1":"510","GRADO.1_1":"3","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"5","SECTOR2":"530","SUBSECTOR2":"53015","HORAS2":"10","COD_ENS_2":"510","GRADO.1_2":"4","GRADO.2_2":"0","GRADO.3_2":"0","GRADO.4_2":"0","GRADO.5_2":"0","GRADO.6_2":"0","GRADO.7_2":"0","GRADO.8_2":"0","GRADO.9_2":"0","GRADO.10_2":"0","GRADO.11_2":"0","GRADO.12_2":"0","PERSONAS":"1"}
-
-## FILE 8/23: 20200727_Docentes_2020_20200630_PUBL.csv
-source: /tmp/sep_inspect_yoqma06w/20200727_Docentes_2020_20200630_PUBL.csv
-encoding: utf-8-sig
-separator: semicolon
-rows_total: 263,281
-cols_count: 135
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'NOM_REG_RBD_A', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'ESTADO_ESTAB', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'MEN_ED_PARV_1', 'MEN_ED_AD_1', 'MEN_DES_COM_1', 'MEN_DIS_INT_1', 'MEN_ORIENTACION_1', 'MEN_INT_ESC_1', 'MEN_PSICO_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'MEN_ED_PARV_2', 'MEN_ED_AD_2', 'MEN_DES_COM_2', 'MEN_DIS_INT_2', 'MEN_ORIENTACION_2', 'MEN_INT_ESC_2', 'MEN_PSICO_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_IFS', 'SUBROGANTE', 'MES_NOMBRAMIENTO', 'AGNO_NOMBRAMIENTO', 'ID_ITC', 'ID_ITC_CORR', 'HORAS_CONTRATO', 'HORAS_DIRECT', 'HORAS_TEC_PED', 'HORAS_AULA', 'HORAS_DENTRO_ESTAB', 'HORAS_FUERA_ESTAB', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'GRADO.8_1', 'GRADO.9_1', 'GRADO.10_1', 'GRADO.11_1', 'GRADO.12_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'GRADO.8_2', 'GRADO.9_2', 'GRADO.10_2', 'GRADO.11_2', 'GRADO.12_2', 'PERSONAS']
-
-### COLUMN PROFILE
-col | type | null_pct | cardinality | sample_values
---- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2020, 2020, 2020
-RBD | numeric | 0.0% | 1 | 1, 1, 1
-DGV_RBD | numeric | 0.0% | 1 | 9, 9, 9
-NOM_RBD | string | 0.0% | 1 | LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA
-COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
-NOM_REG_RBD_A | string | 0.0% | 1 | AYP, AYP, AYP
-COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
-COD_COM_RBD | numeric | 0.0% | 1 | 15101, 15101, 15101
-NOM_COM_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
-COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
-NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
-COD_DEPE | numeric | 0.0% | 1 | 6, 6, 6
-COD_DEPE2 | numeric | 0.0% | 1 | 5, 5, 5
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
-MRUN | numeric | 0.0% | 5 | 10747952, 5205805, 13181394
-DOC_GENERO | numeric | 0.0% | 2 | 2, 2, 1
-DOC_FEC_NAC | numeric | 0.0% | 5 | 195706, 197105, 195303
-TIT_ID_1 | numeric | 0.0% | 2 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 3 | 14, 14, 14
-ESP_ID_1 | numeric | 0.0% | 5 | 1413, 1412, 141
-MEN_SIN_MENCION_1 | empty | 100.0% | 0 | 
-MEN_PLATICA_1 | empty | 100.0% | 0 | 
-MEN_NATURALES_1 | empty | 100.0% | 0 | 
-MEN_SOCIALES_1 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_1 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_1 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_1 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_1 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_1 | empty | 100.0% | 0 | 
-MEN_MATE_1 | empty | 100.0% | 0 | 
-MEN_RELIGION_1 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_1 | empty | 100.0% | 0 | 
-MEN_INGLES_1 | empty | 100.0% | 0 | 
-MEN_FRANCES_1 | empty | 100.0% | 0 | 
-MEN_ALEMAN_1 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_1 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_1 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_1 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_1 | empty | 100.0% | 0 | 
-MEN_ED_PARV_1 | empty | 100.0% | 0 | 
-MEN_ED_AD_1 | empty | 100.0% | 0 | 
-MEN_DES_COM_1 | empty | 100.0% | 0 | 
-MEN_DIS_INT_1 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_1 | empty | 100.0% | 0 | 
-MEN_INT_ESC_1 | empty | 100.0% | 0 | 
-MEN_PSICO_1 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 5 | 1985, 2008, 1980
-DURACION_CARRERA_1 | numeric | 0.0% | 2 | 10, 8, 10
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-MEN_ED_PARV_2 | empty | 100.0% | 0 | 
-MEN_ED_AD_2 | empty | 100.0% | 0 | 
-MEN_DES_COM_2 | empty | 100.0% | 0 | 
-MEN_DIS_INT_2 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_2 | empty | 100.0% | 0 | 
-MEN_INT_ESC_2 | empty | 100.0% | 0 | 
-MEN_PSICO_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_IFS | numeric | 0.0% | 1 | 0, 0, 0
-SUBROGANTE | numeric | 0.0% | 1 | -1, -1, -1
-MES_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-AGNO_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-ID_ITC | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC_CORR | numeric | 0.0% | 1 | 101, 101, 101
-HORAS_CONTRATO | numeric | 0.0% | 3 | 30, 38, 30
-HORAS_DIRECT | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_TEC_PED | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_AULA | numeric | 0.0% | 2 | 30, 38, 30
-HORAS_DENTRO_ESTAB | numeric | 0.0% | 2 | 0, 0, 0
-HORAS_FUERA_ESTAB | numeric | 0.0% | 1 | 0, 0, 0
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 5 | 35, 25, 46
-ANO_SERVICIO_EE | numeric | 0.0% | 1 | 0, 0, 0
-ID_ICH | numeric | 0.0% | 3 | 510, 510, 563
-NIVEL1 | numeric | 0.0% | 2 | 5, 5, 8
-SECTOR1 | numeric | 0.0% | 4 | 395, 395, 310
-SUBSECTOR1 | numeric | 0.0% | 4 | 39501, 39501, 31001
-HORAS1 | numeric | 0.0% | 4 | 30, 38, 30
-COD_ENS_1 | numeric | 0.0% | 3 | 510, 510, 563
-GRADO.1_1 | numeric | 0.0% | 2 | 1, 3, 1
-GRADO.2_1 | numeric | 0.0% | 4 | 2, 4, 3
-GRADO.3_1 | numeric | 0.0% | 2 | 0, 0, 4
-GRADO.4_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.5_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.6_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.7_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.8_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.9_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.10_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.11_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.12_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | numeric | 0.0% | 3 | 0, 0, 0
-SECTOR2 | numeric | 0.0% | 3 | 0, 0, 0
-SUBSECTOR2 | numeric | 0.0% | 3 | 0, 0, 0
-HORAS2 | numeric | 0.0% | 3 | 0, 0, 0
-COD_ENS_2 | numeric | 0.0% | 3 | 0, 0, 0
-GRADO.1_2 | numeric | 60.0% | 2 | 3, 4
-GRADO.2_2 | numeric | 60.0% | 2 | 4, 0
-GRADO.3_2 | numeric | 60.0% | 1 | 0, 0
-GRADO.4_2 | numeric | 60.0% | 1 | 0, 0
-GRADO.5_2 | numeric | 60.0% | 1 | 0, 0
-GRADO.6_2 | numeric | 60.0% | 1 | 0, 0
-GRADO.7_2 | numeric | 60.0% | 1 | 0, 0
-GRADO.8_2 | numeric | 60.0% | 1 | 0, 0
-GRADO.9_2 | numeric | 60.0% | 1 | 0, 0
-GRADO.10_2 | numeric | 60.0% | 1 | 0, 0
-GRADO.11_2 | numeric | 60.0% | 1 | 0, 0
-GRADO.12_2 | numeric | 60.0% | 1 | 0, 0
-PERSONAS | numeric | 0.0% | 1 | 1, 1, 1
-
-### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2020","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"10747952","DOC_GENERO":"2","DOC_FEC_NAC":"195706","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1413","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1985","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"35","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"30","COD_ENS_1":"510","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2020","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"5205805","DOC_GENERO":"2","DOC_FEC_NAC":"197105","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1412","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"2008","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"38","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"38","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"25","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"38","COD_ENS_1":"510","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2020","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"13181394","DOC_GENERO":"1","DOC_FEC_NAC":"195303","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"141","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1980","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"46","ANO_SERVICIO_EE":"0","ID_ICH":"563","NIVEL1":"8","SECTOR1":"310","SUBSECTOR1":"31001","HORAS1":"30","COD_ENS_1":"563","GRADO.1_1":"1","GRADO.2_1":"3","GRADO.3_1":"4","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2020","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"22401015","DOC_GENERO":"2","DOC_FEC_NAC":"196012","TIT_ID_1":"2","TIP_TIT_ID_1":"23","ESP_ID_1":"230","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1984","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"44","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"38","HORAS_DENTRO_ESTAB":"6","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"34","ANO_SERVICIO_EE":"0","ID_ICH":"610","NIVEL1":"5","SECTOR1":"620","SUBSECTOR1":"62004","HORAS1":"34","COD_ENS_1":"610","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"8","SECTOR2":"395","SUBSECTOR2":"39501","HORAS2":"4","COD_ENS_2":"563","GRADO.1_2":"3","GRADO.2_2":"4","GRADO.3_2":"0","GRADO.4_2":"0","GRADO.5_2":"0","GRADO.6_2":"0","GRADO.7_2":"0","GRADO.8_2":"0","GRADO.9_2":"0","GRADO.10_2":"0","GRADO.11_2":"0","GRADO.12_2":"0","PERSONAS":"1"}
-{"AGNO":"2020","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"4678628","DOC_GENERO":"1","DOC_FEC_NAC":"195107","TIT_ID_1":"2","TIP_TIT_ID_1":"21","ESP_ID_1":"210","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1977","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"45","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"530","SUBSECTOR1":"53014","HORAS1":"20","COD_ENS_1":"510","GRADO.1_1":"3","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"5","SECTOR2":"530","SUBSECTOR2":"53015","HORAS2":"10","COD_ENS_2":"510","GRADO.1_2":"4","GRADO.2_2":"0","GRADO.3_2":"0","GRADO.4_2":"0","GRADO.5_2":"0","GRADO.6_2":"0","GRADO.7_2":"0","GRADO.8_2":"0","GRADO.9_2":"0","GRADO.10_2":"0","GRADO.11_2":"0","GRADO.12_2":"0","PERSONAS":"1"}
-
-## FILE 9/23: 20210727_Docentes_2021_20210630_PUBL.csv
-source: /tmp/sep_inspect_yoqma06w/20210727_Docentes_2021_20210630_PUBL.csv
-encoding: utf-8-sig
-separator: semicolon
-rows_total: 267,015
-cols_count: 135
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'NOM_REG_RBD_A', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'ESTADO_ESTAB', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'MEN_ED_PARV_1', 'MEN_ED_AD_1', 'MEN_DES_COM_1', 'MEN_DIS_INT_1', 'MEN_ORIENTACION_1', 'MEN_INT_ESC_1', 'MEN_PSICO_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'MEN_ED_PARV_2', 'MEN_ED_AD_2', 'MEN_DES_COM_2', 'MEN_DIS_INT_2', 'MEN_ORIENTACION_2', 'MEN_INT_ESC_2', 'MEN_PSICO_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_IFS', 'SUBROGANTE', 'MES_NOMBRAMIENTO', 'AGNO_NOMBRAMIENTO', 'ID_ITC', 'ID_ITC_CORR', 'HORAS_CONTRATO', 'HORAS_DIRECT', 'HORAS_TEC_PED', 'HORAS_AULA', 'HORAS_DENTRO_ESTAB', 'HORAS_FUERA_ESTAB', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'GRADO.8_1', 'GRADO.9_1', 'GRADO.10_1', 'GRADO.11_1', 'GRADO.12_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'GRADO.8_2', 'GRADO.9_2', 'GRADO.10_2', 'GRADO.11_2', 'GRADO.12_2', 'PERSONAS']
-
-### COLUMN PROFILE
-col | type | null_pct | cardinality | sample_values
---- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2021, 2021, 2021
-RBD | numeric | 0.0% | 1 | 1, 1, 1
-DGV_RBD | numeric | 0.0% | 1 | 9, 9, 9
-NOM_RBD | string | 0.0% | 1 | LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA
-COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
-NOM_REG_RBD_A | string | 0.0% | 1 | AYP, AYP, AYP
-COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
-COD_COM_RBD | numeric | 0.0% | 1 | 15101, 15101, 15101
-NOM_COM_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
-COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
-NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
-COD_DEPE | numeric | 0.0% | 1 | 6, 6, 6
-COD_DEPE2 | numeric | 0.0% | 1 | 5, 5, 5
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
-MRUN | numeric | 0.0% | 5 | 20346737, 20077360, 16497832
-DOC_GENERO | numeric | 0.0% | 1 | 1, 1, 1
-DOC_FEC_NAC | numeric | 0.0% | 4 | 195303, 195107, 195205
-TIT_ID_1 | numeric | 0.0% | 2 | 1, 1, 2
-TIP_TIT_ID_1 | numeric | 0.0% | 4 | 13, 16, 22
-ESP_ID_1 | numeric | 0.0% | 5 | 1305, 161, 220
-MEN_SIN_MENCION_1 | numeric | 80.0% | 1 | 0
-MEN_PLATICA_1 | numeric | 80.0% | 1 | 0
-MEN_NATURALES_1 | numeric | 80.0% | 1 | 0
-MEN_SOCIALES_1 | numeric | 80.0% | 1 | 0
-MEN_COMPUTACION_1 | numeric | 80.0% | 1 | 0
-MEN_ED_FISICA_1 | numeric | 80.0% | 1 | 0
-MEN_ED_MUSICA_1 | numeric | 80.0% | 1 | 0
-MEN_ED_TECNO_1 | numeric | 80.0% | 1 | 0
-MEN_LENGUAJE_1 | numeric | 80.0% | 1 | 0
-MEN_MATE_1 | numeric | 80.0% | 1 | 0
-MEN_RELIGION_1 | numeric | 80.0% | 1 | 0
-MEN_TRASTORNOS_1 | numeric | 80.0% | 1 | 0
-MEN_INGLES_1 | numeric | 80.0% | 1 | 1
-MEN_FRANCES_1 | numeric | 80.0% | 1 | 0
-MEN_ALEMAN_1 | numeric | 80.0% | 1 | 0
-MEN_OTRO_IDIOMA_1 | numeric | 80.0% | 1 | 0
-MEN_INTERCULTURAL_1 | numeric | 80.0% | 1 | 0
-MEN_ADMINISTRACION_1 | numeric | 80.0% | 1 | 0
-MEN_CURRICULUM_1 | numeric | 80.0% | 1 | 0
-MEN_ED_PARV_1 | numeric | 80.0% | 1 | 0
-MEN_ED_AD_1 | numeric | 80.0% | 1 | 0
-MEN_DES_COM_1 | numeric | 80.0% | 1 | 0
-MEN_DIS_INT_1 | numeric | 80.0% | 1 | 0
-MEN_ORIENTACION_1 | numeric | 80.0% | 1 | 0
-MEN_INT_ESC_1 | numeric | 80.0% | 1 | 0
-MEN_PSICO_1 | numeric | 80.0% | 1 | 0
-TIP_INSTI_ID_1 | numeric | 0.0% | 2 | 4, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 4 | 1974, 1979, 1984
-DURACION_CARRERA_1 | numeric | 0.0% | 2 | 8, 10, 8
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-MEN_ED_PARV_2 | empty | 100.0% | 0 | 
-MEN_ED_AD_2 | empty | 100.0% | 0 | 
-MEN_DES_COM_2 | empty | 100.0% | 0 | 
-MEN_DIS_INT_2 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_2 | empty | 100.0% | 0 | 
-MEN_INT_ESC_2 | empty | 100.0% | 0 | 
-MEN_PSICO_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 3 | 5, 8, 1
-ID_IFS | numeric | 0.0% | 2 | 0, 0, 1
-SUBROGANTE | numeric | 0.0% | 1 | -1, -1, -1
-MES_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-AGNO_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-ID_ITC | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC_CORR | numeric | 0.0% | 1 | 101, 101, 101
-HORAS_CONTRATO | numeric | 0.0% | 3 | 30, 44, 30
-HORAS_DIRECT | numeric | 0.0% | 2 | 0, 44, 0
-HORAS_TEC_PED | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_AULA | numeric | 0.0% | 3 | 0, 0, 30
-HORAS_DENTRO_ESTAB | numeric | 0.0% | 3 | 30, 0, 0
-HORAS_FUERA_ESTAB | numeric | 0.0% | 1 | 0, 0, 0
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 4 | 36, 41, 34
-ANO_SERVICIO_EE | numeric | 0.0% | 1 | 0, 0, 0
-ID_ICH | numeric | 0.0% | 2 | 563, 510, 510
-NIVEL1 | numeric | 0.0% | 3 | 0, 0, 5
-SECTOR1 | numeric | 0.0% | 4 | 0, 0, 520
-SUBSECTOR1 | numeric | 0.0% | 4 | 0, 0, 52010
-HORAS1 | numeric | 0.0% | 3 | 0, 0, 30
-COD_ENS_1 | numeric | 0.0% | 3 | 0, 0, 510
-GRADO.1_1 | numeric | 0.0% | 3 | 0, 0, 3
-GRADO.2_1 | numeric | 0.0% | 3 | 0, 0, 4
-GRADO.3_1 | numeric | 0.0% | 2 | 0, 0, 0
-GRADO.4_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.5_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.6_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.7_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.8_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.9_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.10_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.11_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.12_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | numeric | 40.0% | 1 | 0, 0, 0
-SECTOR2 | numeric | 40.0% | 1 | 0, 0, 0
-SUBSECTOR2 | numeric | 40.0% | 1 | 0, 0, 0
-HORAS2 | numeric | 40.0% | 1 | 0, 0, 0
-COD_ENS_2 | numeric | 40.0% | 1 | 0, 0, 0
-GRADO.1_2 | empty | 100.0% | 0 | 
-GRADO.2_2 | empty | 100.0% | 0 | 
-GRADO.3_2 | empty | 100.0% | 0 | 
-GRADO.4_2 | empty | 100.0% | 0 | 
-GRADO.5_2 | empty | 100.0% | 0 | 
-GRADO.6_2 | empty | 100.0% | 0 | 
-GRADO.7_2 | empty | 100.0% | 0 | 
-GRADO.8_2 | empty | 100.0% | 0 | 
-GRADO.9_2 | empty | 100.0% | 0 | 
-GRADO.10_2 | empty | 100.0% | 0 | 
-GRADO.11_2 | empty | 100.0% | 0 | 
-GRADO.12_2 | empty | 100.0% | 0 | 
-PERSONAS | numeric | 0.0% | 1 | 1, 1, 1
-
-### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2021","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"20346737","DOC_GENERO":"1","DOC_FEC_NAC":"195303","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"1305","MEN_SIN_MENCION_1":"0","MEN_PLATICA_1":"0","MEN_NATURALES_1":"0","MEN_SOCIALES_1":"0","MEN_COMPUTACION_1":"0","MEN_ED_FISICA_1":"0","MEN_ED_MUSICA_1":"0","MEN_ED_TECNO_1":"0","MEN_LENGUAJE_1":"0","MEN_MATE_1":"0","MEN_RELIGION_1":"0","MEN_TRASTORNOS_1":"0","MEN_INGLES_1":"1","MEN_FRANCES_1":"0","MEN_ALEMAN_1":"0","MEN_OTRO_IDIOMA_1":"0","MEN_INTERCULTURAL_1":"0","MEN_ADMINISTRACION_1":"0","MEN_CURRICULUM_1":"0","MEN_ED_PARV_1":"0","MEN_ED_AD_1":"0","MEN_DES_COM_1":"0","MEN_DIS_INT_1":"0","MEN_ORIENTACION_1":"0","MEN_INT_ESC_1":"0","MEN_PSICO_1":"0","TIP_INSTI_ID_1":"4","ANO_TITULACION_1":"1974","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"5","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"0","HORAS_DENTRO_ESTAB":"30","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"36","ANO_SERVICIO_EE":"0","ID_ICH":"563","NIVEL1":"0","SECTOR1":"0","SUBSECTOR1":"0","HORAS1":"0","COD_ENS_1":"0","GRADO.1_1":"0","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","PERSONAS":"1"}
-{"AGNO":"2021","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"20077360","DOC_GENERO":"1","DOC_FEC_NAC":"195107","TIT_ID_1":"1","TIP_TIT_ID_1":"16","ESP_ID_1":"161","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1979","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"8","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"44","HORAS_DIRECT":"44","HORAS_TEC_PED":"0","HORAS_AULA":"0","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"41","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"0","SECTOR1":"0","SUBSECTOR1":"0","HORAS1":"0","COD_ENS_1":"0","GRADO.1_1":"0","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","PERSONAS":"1"}
-{"AGNO":"2021","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"16497832","DOC_GENERO":"1","DOC_FEC_NAC":"195205","TIT_ID_1":"2","TIP_TIT_ID_1":"22","ESP_ID_1":"220","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1984","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"1","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"34","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"520","SUBSECTOR1":"52010","HORAS1":"30","COD_ENS_1":"510","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2021","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"13181394","DOC_GENERO":"1","DOC_FEC_NAC":"195303","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"141","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1980","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"47","ANO_SERVICIO_EE":"0","ID_ICH":"563","NIVEL1":"8","SECTOR1":"310","SUBSECTOR1":"31001","HORAS1":"30","COD_ENS_1":"563","GRADO.1_1":"1","GRADO.2_1":"3","GRADO.3_1":"4","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2021","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"23132728","DOC_GENERO":"1","DOC_FEC_NAC":"195102","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"142","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1979","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"1","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"37","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"32","HORAS_DENTRO_ESTAB":"5","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"41","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"32","COD_ENS_1":"510","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-
-## FILE 10/23: 20220829_Docentes_2022_20220630_PUBL.csv
-source: /tmp/sep_inspect_yoqma06w/20220829_Docentes_2022_20220630_PUBL.csv
-encoding: utf-8-sig
-separator: semicolon
-rows_total: 274,313
-cols_count: 135
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'NOM_REG_RBD_A', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'ESTADO_ESTAB', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'MEN_ED_PARV_1', 'MEN_ED_AD_1', 'MEN_DES_COM_1', 'MEN_DIS_INT_1', 'MEN_ORIENTACION_1', 'MEN_INT_ESC_1', 'MEN_PSICO_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'MEN_ED_PARV_2', 'MEN_ED_AD_2', 'MEN_DES_COM_2', 'MEN_DIS_INT_2', 'MEN_ORIENTACION_2', 'MEN_INT_ESC_2', 'MEN_PSICO_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_IFS', 'SUBROGANTE', 'MES_NOMBRAMIENTO', 'AGNO_NOMBRAMIENTO', 'ID_ITC', 'ID_ITC_CORR', 'HORAS_CONTRATO', 'HORAS_DIRECT', 'HORAS_TEC_PED', 'HORAS_AULA', 'HORAS_DENTRO_ESTAB', 'HORAS_FUERA_ESTAB', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'GRADO.8_1', 'GRADO.9_1', 'GRADO.10_1', 'GRADO.11_1', 'GRADO.12_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'GRADO.8_2', 'GRADO.9_2', 'GRADO.10_2', 'GRADO.11_2', 'GRADO.12_2', 'PERSONAS']
+rows_total: 16,601
+cols_count: 39
+cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'MRUN', 'RUT_SOSTENEDOR', 'P_JURIDICA', 'COD_REG_RBD', 'NOM_REG_RBD_A', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'LATITUD', 'LONGITUD', 'CONVENIO_PIE', 'PACE', 'ENS_01', 'ENS_02', 'ENS_03', 'ENS_04', 'ENS_05', 'ENS_06', 'ENS_07', 'ENS_08', 'ENS_09', 'ENS_10', 'ENS_11', 'MAT_TOTAL', 'MATRICULA', 'ESTADO_ESTAB', 'ORI_RELIGIOSA', 'ORI_OTRO_GLOSA', 'PAGO_MATRICULA', 'PAGO_MENSUAL']
 
 ### COLUMN PROFILE
 col | type | null_pct | cardinality | sample_values
 --- | ---- | -------- | ----------- | -------------
 AGNO | numeric | 0.0% | 1 | 2022, 2022, 2022
-RBD | numeric | 0.0% | 1 | 1, 1, 1
-DGV_RBD | numeric | 0.0% | 1 | 9, 9, 9
-NOM_RBD | string | 0.0% | 1 | LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA
+RBD | numeric | 0.0% | 5 | 1, 2, 3
+DGV_RBD | numeric | 0.0% | 5 | 9, 7, 5
+NOM_RBD | string | 0.0% | 5 | LICEO POLITECNICO ARICA, PARVULARIO LAS ESPIGUITAS, ESC. PEDRO VICENTE GUTIERREZ TORRES
+MRUN | empty | 100.0% | 0 | 
+RUT_SOSTENEDOR | numeric | 0.0% | 1 | 62000660, 62000660, 62000660
+P_JURIDICA | numeric | 0.0% | 1 | 1, 1, 1
 COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
 NOM_REG_RBD_A | string | 0.0% | 1 | AYP, AYP, AYP
 COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
@@ -1484,151 +32,55 @@ COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
 NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
 COD_DEPE | numeric | 0.0% | 1 | 6, 6, 6
 COD_DEPE2 | numeric | 0.0% | 1 | 5, 5, 5
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
+RURAL_RBD | numeric | 0.0% | 2 | 0, 0, 1
+LATITUD | string | 0.0% | 5 | -18,487200000000000, -18,469861980000000, -18,503580090000000
+LONGITUD | string | 0.0% | 5 | -70,29521200000001, -70,30275726000001, -70,26082611000000
+CONVENIO_PIE | numeric | 0.0% | 2 | 1, 1, 0
+PACE | numeric | 0.0% | 2 | 1, 0, 0
+ENS_01 | numeric | 0.0% | 5 | 463, 10, 165
+ENS_02 | numeric | 0.0% | 4 | 510, 0, 167
+ENS_03 | numeric | 0.0% | 3 | 563, 0, 0
+ENS_04 | numeric | 0.0% | 2 | 610, 0, 0
+ENS_05 | numeric | 0.0% | 2 | 663, 0, 0
+ENS_06 | numeric | 0.0% | 2 | 863, 0, 0
+ENS_07 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_08 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_09 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_10 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_11 | numeric | 0.0% | 1 | 0, 0, 0
+MAT_TOTAL | numeric | 0.0% | 5 | 667, 166, 376
+MATRICULA | numeric | 0.0% | 1 | 1, 1, 1
 ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
-MRUN | numeric | 0.0% | 5 | 20077360, 23132728, 5192235
-DOC_GENERO | numeric | 0.0% | 1 | 1, 1, 1
-DOC_FEC_NAC | numeric | 0.0% | 5 | 195107, 195102, 195806
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 2 | 16, 14, 14
-ESP_ID_1 | numeric | 0.0% | 4 | 161, 142, 149
-MEN_SIN_MENCION_1 | empty | 100.0% | 0 | 
-MEN_PLATICA_1 | empty | 100.0% | 0 | 
-MEN_NATURALES_1 | empty | 100.0% | 0 | 
-MEN_SOCIALES_1 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_1 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_1 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_1 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_1 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_1 | empty | 100.0% | 0 | 
-MEN_MATE_1 | empty | 100.0% | 0 | 
-MEN_RELIGION_1 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_1 | empty | 100.0% | 0 | 
-MEN_INGLES_1 | empty | 100.0% | 0 | 
-MEN_FRANCES_1 | empty | 100.0% | 0 | 
-MEN_ALEMAN_1 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_1 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_1 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_1 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_1 | empty | 100.0% | 0 | 
-MEN_ED_PARV_1 | empty | 100.0% | 0 | 
-MEN_ED_AD_1 | empty | 100.0% | 0 | 
-MEN_DES_COM_1 | empty | 100.0% | 0 | 
-MEN_DIS_INT_1 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_1 | empty | 100.0% | 0 | 
-MEN_INT_ESC_1 | empty | 100.0% | 0 | 
-MEN_PSICO_1 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 4 | 1979, 1979, 1983
-DURACION_CARRERA_1 | numeric | 0.0% | 2 | 10, 8, 8
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-MEN_ED_PARV_2 | empty | 100.0% | 0 | 
-MEN_ED_AD_2 | empty | 100.0% | 0 | 
-MEN_DES_COM_2 | empty | 100.0% | 0 | 
-MEN_DIS_INT_2 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_2 | empty | 100.0% | 0 | 
-MEN_INT_ESC_2 | empty | 100.0% | 0 | 
-MEN_PSICO_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 2 | 8, 1, 1
-ID_IFS | numeric | 0.0% | 2 | 0, 0, 0
-SUBROGANTE | numeric | 0.0% | 1 | -1, -1, -1
-MES_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-AGNO_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-ID_ITC | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC_CORR | numeric | 0.0% | 1 | 101, 101, 101
-HORAS_CONTRATO | numeric | 0.0% | 4 | 44, 37, 35
-HORAS_DIRECT | numeric | 0.0% | 2 | 44, 0, 0
-HORAS_TEC_PED | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_AULA | numeric | 0.0% | 5 | 0, 32, 35
-HORAS_DENTRO_ESTAB | numeric | 0.0% | 3 | 0, 5, 0
-HORAS_FUERA_ESTAB | numeric | 0.0% | 1 | 0, 0, 0
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 4 | 42, 42, 39
-ANO_SERVICIO_EE | numeric | 0.0% | 1 | 0, 0, 0
-ID_ICH | numeric | 0.0% | 2 | 510, 510, 510
-NIVEL1 | numeric | 0.0% | 3 | 0, 5, 5
-SECTOR1 | numeric | 0.0% | 4 | 0, 320, 380
-SUBSECTOR1 | numeric | 0.0% | 4 | 0, 32001, 38001
-HORAS1 | numeric | 0.0% | 5 | 0, 32, 35
-COD_ENS_1 | numeric | 0.0% | 3 | 0, 510, 510
-GRADO.1_1 | numeric | 0.0% | 3 | 0, 3, 1
-GRADO.2_1 | numeric | 0.0% | 4 | 0, 4, 2
-GRADO.3_1 | numeric | 0.0% | 3 | 0, 0, 3
-GRADO.4_1 | numeric | 0.0% | 2 | 0, 0, 4
-GRADO.5_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.6_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.7_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.8_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.9_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.10_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.11_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.12_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | numeric | 20.0% | 1 | 0, 0, 0
-SECTOR2 | numeric | 20.0% | 1 | 0, 0, 0
-SUBSECTOR2 | numeric | 20.0% | 1 | 0, 0, 0
-HORAS2 | numeric | 20.0% | 1 | 0, 0, 0
-COD_ENS_2 | numeric | 20.0% | 1 | 0, 0, 0
-GRADO.1_2 | empty | 100.0% | 0 | 
-GRADO.2_2 | empty | 100.0% | 0 | 
-GRADO.3_2 | empty | 100.0% | 0 | 
-GRADO.4_2 | empty | 100.0% | 0 | 
-GRADO.5_2 | empty | 100.0% | 0 | 
-GRADO.6_2 | empty | 100.0% | 0 | 
-GRADO.7_2 | empty | 100.0% | 0 | 
-GRADO.8_2 | empty | 100.0% | 0 | 
-GRADO.9_2 | empty | 100.0% | 0 | 
-GRADO.10_2 | empty | 100.0% | 0 | 
-GRADO.11_2 | empty | 100.0% | 0 | 
-GRADO.12_2 | empty | 100.0% | 0 | 
-PERSONAS | numeric | 0.0% | 1 | 1, 1, 1
+ORI_RELIGIOSA | numeric | 0.0% | 3 | 2, 2, 1
+ORI_OTRO_GLOSA | string | 80.0% | 1 | PLURALISTA
+PAGO_MATRICULA | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
+PAGO_MENSUAL | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
 
 ### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2022","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"20077360","DOC_GENERO":"1","DOC_FEC_NAC":"195107","TIT_ID_1":"1","TIP_TIT_ID_1":"16","ESP_ID_1":"161","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1979","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"8","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"44","HORAS_DIRECT":"44","HORAS_TEC_PED":"0","HORAS_AULA":"0","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"42","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"0","SECTOR1":"0","SUBSECTOR1":"0","HORAS1":"0","COD_ENS_1":"0","GRADO.1_1":"0","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","PERSONAS":"1"}
-{"AGNO":"2022","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"23132728","DOC_GENERO":"1","DOC_FEC_NAC":"195102","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"142","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1979","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"37","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"32","HORAS_DENTRO_ESTAB":"5","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"42","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"32","COD_ENS_1":"510","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2022","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"5192235","DOC_GENERO":"1","DOC_FEC_NAC":"195806","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"149","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1983","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"35","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"35","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"39","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"380","SUBSECTOR1":"38001","HORAS1":"35","COD_ENS_1":"510","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2022","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"11483812","DOC_GENERO":"1","DOC_FEC_NAC":"195005","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1418","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1985","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"44","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"41","HORAS_DENTRO_ESTAB":"3","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"50","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"530","SUBSECTOR1":"53014","HORAS1":"41","COD_ENS_1":"510","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2022","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"13462227","DOC_GENERO":"1","DOC_FEC_NAC":"195603","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"142","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1981","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"5","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"35","ANO_SERVICIO_EE":"0","ID_ICH":"563","NIVEL1":"8","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"30","COD_ENS_1":"563","GRADO.1_1":"1","GRADO.2_1":"3","GRADO.3_1":"4","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
+{"AGNO":"2022","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,487200000000000","LONGITUD":"-70,29521200000001","CONVENIO_PIE":"1","PACE":"1","ENS_01":"463","ENS_02":"510","ENS_03":"563","ENS_04":"610","ENS_05":"663","ENS_06":"863","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"667","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2022","RBD":"2","DGV_RBD":"7","NOM_RBD":"PARVULARIO LAS ESPIGUITAS","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,469861980000000","LONGITUD":"-70,30275726000001","CONVENIO_PIE":"1","PACE":"0","ENS_01":"10","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"166","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2022","RBD":"3","DGV_RBD":"5","NOM_RBD":"ESC. PEDRO VICENTE GUTIERREZ TORRES","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"1","LATITUD":"-18,503580090000000","LONGITUD":"-70,26082611000000","CONVENIO_PIE":"0","PACE":"0","ENS_01":"165","ENS_02":"167","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"376","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2022","RBD":"4","DGV_RBD":"3","NOM_RBD":"LICEO OCTAVIO PALMA PEREZ","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,474239000000000","LONGITUD":"-70,30827300000000","CONVENIO_PIE":"1","PACE":"1","ENS_01":"310","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"1014","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2022","RBD":"5","DGV_RBD":"1","NOM_RBD":"JOVINA NARANJO FERNANDEZ","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,476900000000000","LONGITUD":"-70,31345399999999","CONVENIO_PIE":"1","PACE":"0","ENS_01":"110","ENS_02":"310","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"771","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"7","ORI_OTRO_GLOSA":"PLURALISTA","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
 
-## FILE 11/23: 20230804_Docentes_2023_20230630_PUBL.csv
-source: /tmp/sep_inspect_yoqma06w/20230804_Docentes_2023_20230630_PUBL.csv
+## FILE 2/13: 20230912_Directorio_Oficial_EE_2023_20230430_WEB.csv
+source: /tmp/sep_inspect_dv4cfvhw/20230912_Directorio_Oficial_EE_2023_20230430_WEB.csv
 encoding: utf-8-sig
 separator: semicolon
-rows_total: 278,898
-cols_count: 125
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'NOM_REG_RBD_A', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'ESTADO_ESTAB', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'MEN_ED_PARV_1', 'MEN_ED_AD_1', 'MEN_DES_COM_1', 'MEN_DIS_INT_1', 'MEN_ORIENTACION_1', 'MEN_INT_ESC_1', 'MEN_PSICO_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'MEN_ED_PARV_2', 'MEN_ED_AD_2', 'MEN_DES_COM_2', 'MEN_DIS_INT_2', 'MEN_ORIENTACION_2', 'MEN_INT_ESC_2', 'MEN_PSICO_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_IFS', 'SUBROGANTE', 'MES_NOMBRAMIENTO', 'AGNO_NOMBRAMIENTO', 'ID_ITC', 'ID_ITC_CORR', 'HORAS_CONTRATO', 'HORAS_DIRECT', 'HORAS_TEC_PED', 'HORAS_AULA', 'HORAS_DENTRO_ESTAB', 'HORAS_FUERA_ESTAB', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'PERSONAS']
+rows_total: 16,659
+cols_count: 50
+cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'MRUN', 'RUT_SOSTENEDOR', 'P_JURIDICA', 'COD_REG_RBD', 'NOM_REG_RBD_A', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'LATITUD', 'LONGITUD', 'CONVENIO_PIE', 'PACE', 'ENS_01', 'ENS_02', 'ENS_03', 'ENS_04', 'ENS_05', 'ENS_06', 'ENS_07', 'ENS_08', 'ENS_09', 'ENS_10', 'ENS_11', 'MAT_TOTAL', 'MATRICULA', 'ESTADO_ESTAB', 'ORI_RELIGIOSA', 'ORI_OTRO_GLOSA', 'PAGO_MATRICULA', 'PAGO_MENSUAL', 'ESPE_01', 'ESPE_02', 'ESPE_03', 'ESPE_04', 'ESPE_05', 'ESPE_06', 'ESPE_07', 'ESPE_08', 'ESPE_09', 'ESPE_10', 'ESPE_11']
 
 ### COLUMN PROFILE
 col | type | null_pct | cardinality | sample_values
 --- | ---- | -------- | ----------- | -------------
 AGNO | numeric | 0.0% | 1 | 2023, 2023, 2023
-RBD | numeric | 0.0% | 1 | 1, 1, 1
-DGV_RBD | numeric | 0.0% | 1 | 9, 9, 9
-NOM_RBD | string | 0.0% | 1 | LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA
+RBD | numeric | 0.0% | 5 | 1, 2, 3
+DGV_RBD | numeric | 0.0% | 5 | 9, 7, 5
+NOM_RBD | string | 0.0% | 5 | LICEO POLITECNICO ARICA, PARVULARIO LAS ESPIGUITAS, ESC. PEDRO VICENTE GUTIERREZ TORRES
+MRUN | empty | 100.0% | 0 | 
+RUT_SOSTENEDOR | numeric | 0.0% | 1 | 62000660, 62000660, 62000660
+P_JURIDICA | numeric | 0.0% | 1 | 1, 1, 1
 COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
 NOM_REG_RBD_A | string | 0.0% | 1 | AYP, AYP, AYP
 COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
@@ -1638,141 +90,66 @@ COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
 NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
 COD_DEPE | numeric | 0.0% | 1 | 6, 6, 6
 COD_DEPE2 | numeric | 0.0% | 1 | 5, 5, 5
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
+RURAL_RBD | numeric | 0.0% | 2 | 0, 0, 1
+LATITUD | string | 0.0% | 5 | -18,487200000000000, -18,469861980000000, -18,503580090000000
+LONGITUD | string | 0.0% | 5 | -70,29521200000001, -70,30275726000001, -70,26082611000000
+CONVENIO_PIE | numeric | 0.0% | 2 | 1, 1, 0
+PACE | numeric | 0.0% | 2 | 1, 0, 0
+ENS_01 | numeric | 0.0% | 5 | 463, 10, 165
+ENS_02 | numeric | 0.0% | 4 | 510, 0, 167
+ENS_03 | numeric | 0.0% | 3 | 563, 0, 363
+ENS_04 | numeric | 0.0% | 2 | 610, 0, 0
+ENS_05 | numeric | 0.0% | 2 | 663, 0, 0
+ENS_06 | numeric | 0.0% | 2 | 863, 0, 0
+ENS_07 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_08 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_09 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_10 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_11 | numeric | 0.0% | 1 | 0, 0, 0
+MAT_TOTAL | numeric | 0.0% | 5 | 787, 133, 461
+MATRICULA | numeric | 0.0% | 1 | 1, 1, 1
 ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
-MRUN | numeric | 0.0% | 5 | 5192235, 11483812, 13462227
-DOC_GENERO | numeric | 0.0% | 2 | 1, 1, 1
-DOC_FEC_NAC | numeric | 0.0% | 5 | 195806, 195005, 195603
-TIT_ID_1 | numeric | 0.0% | 2 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 2 | 14, 14, 14
-ESP_ID_1 | numeric | 0.0% | 4 | 149, 1418, 142
-MEN_SIN_MENCION_1 | empty | 100.0% | 0 | 
-MEN_PLATICA_1 | empty | 100.0% | 0 | 
-MEN_NATURALES_1 | empty | 100.0% | 0 | 
-MEN_SOCIALES_1 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_1 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_1 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_1 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_1 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_1 | empty | 100.0% | 0 | 
-MEN_MATE_1 | empty | 100.0% | 0 | 
-MEN_RELIGION_1 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_1 | empty | 100.0% | 0 | 
-MEN_INGLES_1 | empty | 100.0% | 0 | 
-MEN_FRANCES_1 | empty | 100.0% | 0 | 
-MEN_ALEMAN_1 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_1 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_1 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_1 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_1 | empty | 100.0% | 0 | 
-MEN_ED_PARV_1 | empty | 100.0% | 0 | 
-MEN_ED_AD_1 | empty | 100.0% | 0 | 
-MEN_DES_COM_1 | empty | 100.0% | 0 | 
-MEN_DIS_INT_1 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_1 | empty | 100.0% | 0 | 
-MEN_INT_ESC_1 | empty | 100.0% | 0 | 
-MEN_PSICO_1 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 5 | 1983, 1985, 1981
-DURACION_CARRERA_1 | numeric | 0.0% | 2 | 8, 10, 10
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-MEN_ED_PARV_2 | empty | 100.0% | 0 | 
-MEN_ED_AD_2 | empty | 100.0% | 0 | 
-MEN_DES_COM_2 | empty | 100.0% | 0 | 
-MEN_DIS_INT_2 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_2 | empty | 100.0% | 0 | 
-MEN_INT_ESC_2 | empty | 100.0% | 0 | 
-MEN_PSICO_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_IFS | numeric | 0.0% | 2 | 0, 0, 5
-SUBROGANTE | numeric | 0.0% | 1 | -1, -1, -1
-MES_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-AGNO_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-ID_ITC | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC_CORR | numeric | 0.0% | 1 | 101, 101, 101
-HORAS_CONTRATO | numeric | 0.0% | 4 | 42, 44, 30
-HORAS_DIRECT | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_TEC_PED | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_AULA | numeric | 0.0% | 4 | 42, 41, 30
-HORAS_DENTRO_ESTAB | numeric | 0.0% | 2 | 0, 3, 0
-HORAS_FUERA_ESTAB | numeric | 0.0% | 1 | 0, 0, 0
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 5 | 40, 51, 36
-ANO_SERVICIO_EE | numeric | 0.0% | 1 | 0, 0, 0
-ID_ICH | numeric | 0.0% | 3 | 510, 510, 563
-NIVEL1 | numeric | 0.0% | 2 | 5, 5, 8
-SECTOR1 | numeric | 0.0% | 4 | 380, 530, 320
-SUBSECTOR1 | numeric | 0.0% | 4 | 38001, 53014, 32001
-HORAS1 | numeric | 0.0% | 3 | 30, 41, 30
-COD_ENS_1 | numeric | 0.0% | 3 | 510, 510, 563
-GRADO.1_1 | numeric | 0.0% | 2 | 1, 3, 1
-GRADO.2_1 | numeric | 0.0% | 3 | 2, 4, 3
-GRADO.3_1 | numeric | 0.0% | 3 | 3, 0, 4
-GRADO.4_1 | numeric | 0.0% | 2 | 4, 0, 0
-GRADO.5_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.6_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.7_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | numeric | 0.0% | 1 | 0, 0, 0
-SECTOR2 | numeric | 0.0% | 1 | 0, 0, 0
-SUBSECTOR2 | numeric | 0.0% | 1 | 0, 0, 0
-HORAS2 | numeric | 0.0% | 1 | 0, 0, 0
-COD_ENS_2 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.1_2 | empty | 100.0% | 0 | 
-GRADO.2_2 | empty | 100.0% | 0 | 
-GRADO.3_2 | empty | 100.0% | 0 | 
-GRADO.4_2 | empty | 100.0% | 0 | 
-GRADO.5_2 | empty | 100.0% | 0 | 
-GRADO.6_2 | empty | 100.0% | 0 | 
-GRADO.7_2 | empty | 100.0% | 0 | 
-PERSONAS | numeric | 0.0% | 1 | 1, 1, 1
+ORI_RELIGIOSA | numeric | 0.0% | 3 | 2, 2, 1
+ORI_OTRO_GLOSA | string | 80.0% | 1 | PLURALISTA
+PAGO_MATRICULA | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
+PAGO_MENSUAL | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
+ESPE_01 | numeric | 0.0% | 2 | 41001, 0, 0
+ESPE_02 | numeric | 0.0% | 2 | 52009, 0, 0
+ESPE_03 | numeric | 0.0% | 2 | 52010, 0, 0
+ESPE_04 | numeric | 0.0% | 2 | 52013, 0, 0
+ESPE_05 | numeric | 0.0% | 2 | 53014, 0, 0
+ESPE_06 | numeric | 0.0% | 2 | 53015, 0, 0
+ESPE_07 | numeric | 0.0% | 2 | 61002, 0, 0
+ESPE_08 | numeric | 0.0% | 2 | 61003, 0, 0
+ESPE_09 | numeric | 0.0% | 2 | 62004, 0, 0
+ESPE_10 | numeric | 0.0% | 2 | 64001, 0, 0
+ESPE_11 | numeric | 0.0% | 2 | 81004, 0, 0
 
 ### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2023","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"5192235","DOC_GENERO":"1","DOC_FEC_NAC":"195806","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"149","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1983","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"42","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"42","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"40","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"380","SUBSECTOR1":"38001","HORAS1":"30","COD_ENS_1":"510","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2023","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"11483812","DOC_GENERO":"1","DOC_FEC_NAC":"195005","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1418","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1985","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"44","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"41","HORAS_DENTRO_ESTAB":"3","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"51","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"530","SUBSECTOR1":"53014","HORAS1":"41","COD_ENS_1":"510","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2023","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"13462227","DOC_GENERO":"1","DOC_FEC_NAC":"195603","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"142","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1981","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"5","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"36","ANO_SERVICIO_EE":"0","ID_ICH":"563","NIVEL1":"8","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"30","COD_ENS_1":"563","GRADO.1_1":"1","GRADO.2_1":"3","GRADO.3_1":"4","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2023","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"23528565","DOC_GENERO":"1","DOC_FEC_NAC":"195307","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"142","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1979","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"44","ANO_SERVICIO_EE":"0","ID_ICH":"563","NIVEL1":"8","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"30","COD_ENS_1":"563","GRADO.1_1":"1","GRADO.2_1":"3","GRADO.3_1":"4","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2023","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"21173278","DOC_GENERO":"2","DOC_FEC_NAC":"195106","TIT_ID_1":"2","TIP_TIT_ID_1":"22","ESP_ID_1":"220","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1998","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"31","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"31","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"22","ANO_SERVICIO_EE":"0","ID_ICH":"463","NIVEL1":"8","SECTOR1":"410","SUBSECTOR1":"41001","HORAS1":"31","COD_ENS_1":"463","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
+{"AGNO":"2023","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,487200000000000","LONGITUD":"-70,29521200000001","CONVENIO_PIE":"1","PACE":"1","ENS_01":"463","ENS_02":"510","ENS_03":"563","ENS_04":"610","ENS_05":"663","ENS_06":"863","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"787","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"41001","ESPE_02":"52009","ESPE_03":"52010","ESPE_04":"52013","ESPE_05":"53014","ESPE_06":"53015","ESPE_07":"61002","ESPE_08":"61003","ESPE_09":"62004","ESPE_10":"64001","ESPE_11":"81004"}
+{"AGNO":"2023","RBD":"2","DGV_RBD":"7","NOM_RBD":"PARVULARIO LAS ESPIGUITAS","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,469861980000000","LONGITUD":"-70,30275726000001","CONVENIO_PIE":"1","PACE":"0","ENS_01":"10","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"133","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"0","ESPE_02":"0","ESPE_03":"0","ESPE_04":"0","ESPE_05":"0","ESPE_06":"0","ESPE_07":"0","ESPE_08":"0","ESPE_09":"0","ESPE_10":"0","ESPE_11":"0"}
+{"AGNO":"2023","RBD":"3","DGV_RBD":"5","NOM_RBD":"ESC. PEDRO VICENTE GUTIERREZ TORRES","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"1","LATITUD":"-18,503580090000000","LONGITUD":"-70,26082611000000","CONVENIO_PIE":"0","PACE":"0","ENS_01":"165","ENS_02":"167","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"461","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"0","ESPE_02":"0","ESPE_03":"0","ESPE_04":"0","ESPE_05":"0","ESPE_06":"0","ESPE_07":"0","ESPE_08":"0","ESPE_09":"0","ESPE_10":"0","ESPE_11":"0"}
+{"AGNO":"2023","RBD":"4","DGV_RBD":"3","NOM_RBD":"LICEO OCTAVIO PALMA PEREZ","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,474239000000000","LONGITUD":"-70,30827300000000","CONVENIO_PIE":"1","PACE":"1","ENS_01":"310","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"1151","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"0","ESPE_02":"0","ESPE_03":"0","ESPE_04":"0","ESPE_05":"0","ESPE_06":"0","ESPE_07":"0","ESPE_08":"0","ESPE_09":"0","ESPE_10":"0","ESPE_11":"0"}
+{"AGNO":"2023","RBD":"5","DGV_RBD":"1","NOM_RBD":"JOVINA NARANJO FERNANDEZ","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,476900000000000","LONGITUD":"-70,31345399999999","CONVENIO_PIE":"1","PACE":"1","ENS_01":"110","ENS_02":"310","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"816","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"7","ORI_OTRO_GLOSA":"PLURALISTA","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"0","ESPE_02":"0","ESPE_03":"0","ESPE_04":"0","ESPE_05":"0","ESPE_06":"0","ESPE_07":"0","ESPE_08":"0","ESPE_09":"0","ESPE_10":"0","ESPE_11":"0"}
 
-## FILE 12/23: 20240723_Docentes_2024_20240630_PUBL.csv
-source: /tmp/sep_inspect_yoqma06w/20240723_Docentes_2024_20240630_PUBL.csv
+## FILE 3/13: 20240912_Directorio_Oficial_EE_2024_20240430_WEB.csv
+source: /tmp/sep_inspect_dv4cfvhw/20240912_Directorio_Oficial_EE_2024_20240430_WEB.csv
 encoding: utf-8-sig
 separator: semicolon
-rows_total: 280,468
-cols_count: 127
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'NOM_REG_RBD_A', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'ESTADO_ESTAB', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TRAMO_CARR_DOCENTE', 'BIENIOS_CARR_DOCENTE', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'MEN_ED_PARV_1', 'MEN_ED_AD_1', 'MEN_DES_COM_1', 'MEN_DIS_INT_1', 'MEN_ORIENTACION_1', 'MEN_INT_ESC_1', 'MEN_PSICO_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'MEN_ED_PARV_2', 'MEN_ED_AD_2', 'MEN_DES_COM_2', 'MEN_DIS_INT_2', 'MEN_ORIENTACION_2', 'MEN_INT_ESC_2', 'MEN_PSICO_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_IFS', 'SUBROGANTE', 'MES_NOMBRAMIENTO', 'AGNO_NOMBRAMIENTO', 'ID_ITC', 'ID_ITC_CORR', 'HORAS_CONTRATO', 'HORAS_DIRECT', 'HORAS_TEC_PED', 'HORAS_AULA', 'HORAS_DENTRO_ESTAB', 'HORAS_FUERA_ESTAB', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'PERSONAS']
+rows_total: 16,694
+cols_count: 50
+cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'MRUN', 'RUT_SOSTENEDOR', 'P_JURIDICA', 'COD_REG_RBD', 'NOM_REG_RBD_A', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'LATITUD', 'LONGITUD', 'CONVENIO_PIE', 'PACE', 'ENS_01', 'ENS_02', 'ENS_03', 'ENS_04', 'ENS_05', 'ENS_06', 'ENS_07', 'ENS_08', 'ENS_09', 'ENS_10', 'ENS_11', 'MAT_TOTAL', 'MATRICULA', 'ESTADO_ESTAB', 'ORI_RELIGIOSA', 'ORI_OTRO_GLOSA', 'PAGO_MATRICULA', 'PAGO_MENSUAL', 'ESPE_01', 'ESPE_02', 'ESPE_03', 'ESPE_04', 'ESPE_05', 'ESPE_06', 'ESPE_07', 'ESPE_08', 'ESPE_09', 'ESPE_10', 'ESPE_11']
 
 ### COLUMN PROFILE
 col | type | null_pct | cardinality | sample_values
 --- | ---- | -------- | ----------- | -------------
 AGNO | numeric | 0.0% | 1 | 2024, 2024, 2024
-RBD | numeric | 0.0% | 1 | 1, 1, 1
-DGV_RBD | numeric | 0.0% | 1 | 9, 9, 9
-NOM_RBD | string | 0.0% | 1 | LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA
+RBD | numeric | 0.0% | 5 | 1, 2, 3
+DGV_RBD | numeric | 0.0% | 5 | 9, 7, 5
+NOM_RBD | string | 0.0% | 5 | LICEO POLITECNICO ARICA, PARVULARIO LAS ESPIGUITAS, ESC. PEDRO VICENTE GUTIERREZ TORRES
+MRUN | empty | 100.0% | 0 | 
+RUT_SOSTENEDOR | numeric | 0.0% | 1 | 62000660, 62000660, 62000660
+P_JURIDICA | numeric | 0.0% | 1 | 1, 1, 1
 COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
 NOM_REG_RBD_A | string | 0.0% | 1 | AYP, AYP, AYP
 COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
@@ -1782,143 +159,66 @@ COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
 NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
 COD_DEPE | numeric | 0.0% | 1 | 6, 6, 6
 COD_DEPE2 | numeric | 0.0% | 1 | 5, 5, 5
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
+RURAL_RBD | numeric | 0.0% | 2 | 0, 0, 1
+LATITUD | string | 0.0% | 5 | -18,487200000000000, -18,469861980000000, -18,503580090000000
+LONGITUD | string | 0.0% | 5 | -70,29521200000001, -70,30275726000001, -70,26082611000000
+CONVENIO_PIE | numeric | 0.0% | 2 | 1, 1, 0
+PACE | numeric | 0.0% | 2 | 1, 0, 0
+ENS_01 | numeric | 0.0% | 5 | 463, 10, 165
+ENS_02 | numeric | 0.0% | 4 | 510, 0, 167
+ENS_03 | numeric | 0.0% | 3 | 563, 0, 363
+ENS_04 | numeric | 0.0% | 2 | 610, 0, 0
+ENS_05 | numeric | 0.0% | 2 | 663, 0, 0
+ENS_06 | numeric | 0.0% | 2 | 863, 0, 0
+ENS_07 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_08 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_09 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_10 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_11 | numeric | 0.0% | 1 | 0, 0, 0
+MAT_TOTAL | numeric | 0.0% | 5 | 840, 121, 588
+MATRICULA | numeric | 0.0% | 1 | 1, 1, 1
 ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
-MRUN | numeric | 0.0% | 5 | 5192235, 11483812, 13462227
-DOC_GENERO | numeric | 0.0% | 2 | 1, 1, 1
-DOC_FEC_NAC | numeric | 0.0% | 5 | 195806, 195005, 195603
-TRAMO_CARR_DOCENTE | numeric | 0.0% | 3 | 3, 1, 5
-BIENIOS_CARR_DOCENTE | numeric | 0.0% | 3 | 15, 15, 14
-TIT_ID_1 | numeric | 0.0% | 2 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 2 | 14, 14, 14
-ESP_ID_1 | numeric | 0.0% | 4 | 149, 1418, 142
-MEN_SIN_MENCION_1 | empty | 100.0% | 0 | 
-MEN_PLATICA_1 | empty | 100.0% | 0 | 
-MEN_NATURALES_1 | empty | 100.0% | 0 | 
-MEN_SOCIALES_1 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_1 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_1 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_1 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_1 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_1 | empty | 100.0% | 0 | 
-MEN_MATE_1 | empty | 100.0% | 0 | 
-MEN_RELIGION_1 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_1 | empty | 100.0% | 0 | 
-MEN_INGLES_1 | empty | 100.0% | 0 | 
-MEN_FRANCES_1 | empty | 100.0% | 0 | 
-MEN_ALEMAN_1 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_1 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_1 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_1 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_1 | empty | 100.0% | 0 | 
-MEN_ED_PARV_1 | empty | 100.0% | 0 | 
-MEN_ED_AD_1 | empty | 100.0% | 0 | 
-MEN_DES_COM_1 | empty | 100.0% | 0 | 
-MEN_DIS_INT_1 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_1 | empty | 100.0% | 0 | 
-MEN_INT_ESC_1 | empty | 100.0% | 0 | 
-MEN_PSICO_1 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 5 | 1983, 1985, 1981
-DURACION_CARRERA_1 | numeric | 0.0% | 2 | 8, 10, 10
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-MEN_ED_PARV_2 | empty | 100.0% | 0 | 
-MEN_ED_AD_2 | empty | 100.0% | 0 | 
-MEN_DES_COM_2 | empty | 100.0% | 0 | 
-MEN_DIS_INT_2 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_2 | empty | 100.0% | 0 | 
-MEN_INT_ESC_2 | empty | 100.0% | 0 | 
-MEN_PSICO_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_IFS | numeric | 0.0% | 2 | 0, 0, 5
-SUBROGANTE | numeric | 0.0% | 1 | -1, -1, -1
-MES_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-AGNO_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-ID_ITC | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC_CORR | numeric | 0.0% | 1 | 101, 101, 101
-HORAS_CONTRATO | numeric | 0.0% | 4 | 42, 44, 30
-HORAS_DIRECT | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_TEC_PED | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_AULA | numeric | 0.0% | 4 | 42, 41, 30
-HORAS_DENTRO_ESTAB | numeric | 0.0% | 2 | 0, 3, 0
-HORAS_FUERA_ESTAB | numeric | 0.0% | 1 | 0, 0, 0
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 5 | 41, 52, 37
-ANO_SERVICIO_EE | numeric | 0.0% | 1 | 0, 0, 0
-ID_ICH | numeric | 0.0% | 3 | 510, 510, 563
-NIVEL1 | numeric | 0.0% | 2 | 5, 5, 8
-SECTOR1 | numeric | 0.0% | 4 | 380, 530, 320
-SUBSECTOR1 | numeric | 0.0% | 4 | 38001, 53014, 32001
-HORAS1 | numeric | 0.0% | 4 | 42, 41, 30
-COD_ENS_1 | numeric | 0.0% | 3 | 510, 510, 563
-GRADO.1_1 | numeric | 0.0% | 2 | 1, 3, 3
-GRADO.2_1 | numeric | 0.0% | 4 | 2, 4, 0
-GRADO.3_1 | numeric | 0.0% | 3 | 3, 0, 0
-GRADO.4_1 | numeric | 0.0% | 2 | 4, 0, 0
-GRADO.5_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.6_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.7_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | numeric | 0.0% | 1 | 0, 0, 0
-SECTOR2 | numeric | 0.0% | 1 | 0, 0, 0
-SUBSECTOR2 | numeric | 0.0% | 1 | 0, 0, 0
-HORAS2 | numeric | 0.0% | 1 | 0, 0, 0
-COD_ENS_2 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.1_2 | empty | 100.0% | 0 | 
-GRADO.2_2 | empty | 100.0% | 0 | 
-GRADO.3_2 | empty | 100.0% | 0 | 
-GRADO.4_2 | empty | 100.0% | 0 | 
-GRADO.5_2 | empty | 100.0% | 0 | 
-GRADO.6_2 | empty | 100.0% | 0 | 
-GRADO.7_2 | empty | 100.0% | 0 | 
-PERSONAS | numeric | 0.0% | 1 | 1, 1, 1
+ORI_RELIGIOSA | numeric | 0.0% | 3 | 2, 1, 1
+ORI_OTRO_GLOSA | string | 80.0% | 1 | PLURALISTA
+PAGO_MATRICULA | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
+PAGO_MENSUAL | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
+ESPE_01 | numeric | 0.0% | 2 | 41001, 0, 0
+ESPE_02 | numeric | 0.0% | 2 | 52009, 0, 0
+ESPE_03 | numeric | 0.0% | 2 | 52010, 0, 0
+ESPE_04 | numeric | 0.0% | 2 | 52013, 0, 0
+ESPE_05 | numeric | 0.0% | 2 | 53014, 0, 0
+ESPE_06 | numeric | 0.0% | 2 | 53015, 0, 0
+ESPE_07 | numeric | 0.0% | 2 | 61002, 0, 0
+ESPE_08 | numeric | 0.0% | 2 | 61003, 0, 0
+ESPE_09 | numeric | 0.0% | 2 | 62004, 0, 0
+ESPE_10 | numeric | 0.0% | 2 | 64001, 0, 0
+ESPE_11 | numeric | 0.0% | 2 | 81004, 0, 0
 
 ### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2024","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"5192235","DOC_GENERO":"1","DOC_FEC_NAC":"195806","TRAMO_CARR_DOCENTE":"3","BIENIOS_CARR_DOCENTE":"15","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"149","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1983","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"42","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"42","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"41","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"380","SUBSECTOR1":"38001","HORAS1":"42","COD_ENS_1":"510","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2024","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"11483812","DOC_GENERO":"1","DOC_FEC_NAC":"195005","TRAMO_CARR_DOCENTE":"1","BIENIOS_CARR_DOCENTE":"15","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1418","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1985","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"44","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"41","HORAS_DENTRO_ESTAB":"3","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"52","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"530","SUBSECTOR1":"53014","HORAS1":"41","COD_ENS_1":"510","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2024","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"13462227","DOC_GENERO":"1","DOC_FEC_NAC":"195603","TRAMO_CARR_DOCENTE":"5","BIENIOS_CARR_DOCENTE":"14","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"142","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1981","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"5","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"37","ANO_SERVICIO_EE":"0","ID_ICH":"563","NIVEL1":"8","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"30","COD_ENS_1":"563","GRADO.1_1":"3","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2024","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"23528565","DOC_GENERO":"1","DOC_FEC_NAC":"195307","TRAMO_CARR_DOCENTE":"3","BIENIOS_CARR_DOCENTE":"15","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"142","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1979","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"45","ANO_SERVICIO_EE":"0","ID_ICH":"563","NIVEL1":"8","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"30","COD_ENS_1":"563","GRADO.1_1":"1","GRADO.2_1":"3","GRADO.3_1":"4","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2024","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","MRUN":"21173278","DOC_GENERO":"2","DOC_FEC_NAC":"195106","TRAMO_CARR_DOCENTE":"1","BIENIOS_CARR_DOCENTE":"7","TIT_ID_1":"2","TIP_TIT_ID_1":"22","ESP_ID_1":"220","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1998","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"31","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"31","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"23","ANO_SERVICIO_EE":"0","ID_ICH":"463","NIVEL1":"8","SECTOR1":"410","SUBSECTOR1":"41001","HORAS1":"31","COD_ENS_1":"463","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
+{"AGNO":"2024","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,487200000000000","LONGITUD":"-70,29521200000001","CONVENIO_PIE":"1","PACE":"1","ENS_01":"463","ENS_02":"510","ENS_03":"563","ENS_04":"610","ENS_05":"663","ENS_06":"863","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"840","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"41001","ESPE_02":"52009","ESPE_03":"52010","ESPE_04":"52013","ESPE_05":"53014","ESPE_06":"53015","ESPE_07":"61002","ESPE_08":"61003","ESPE_09":"62004","ESPE_10":"64001","ESPE_11":"81004"}
+{"AGNO":"2024","RBD":"2","DGV_RBD":"7","NOM_RBD":"PARVULARIO LAS ESPIGUITAS","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,469861980000000","LONGITUD":"-70,30275726000001","CONVENIO_PIE":"1","PACE":"0","ENS_01":"10","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"121","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"0","ESPE_02":"0","ESPE_03":"0","ESPE_04":"0","ESPE_05":"0","ESPE_06":"0","ESPE_07":"0","ESPE_08":"0","ESPE_09":"0","ESPE_10":"0","ESPE_11":"0"}
+{"AGNO":"2024","RBD":"3","DGV_RBD":"5","NOM_RBD":"ESC. PEDRO VICENTE GUTIERREZ TORRES","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"1","LATITUD":"-18,503580090000000","LONGITUD":"-70,26082611000000","CONVENIO_PIE":"0","PACE":"0","ENS_01":"165","ENS_02":"167","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"588","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"0","ESPE_02":"0","ESPE_03":"0","ESPE_04":"0","ESPE_05":"0","ESPE_06":"0","ESPE_07":"0","ESPE_08":"0","ESPE_09":"0","ESPE_10":"0","ESPE_11":"0"}
+{"AGNO":"2024","RBD":"4","DGV_RBD":"3","NOM_RBD":"LICEO OCTAVIO PALMA PEREZ","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,474239000000000","LONGITUD":"-70,30827300000000","CONVENIO_PIE":"1","PACE":"1","ENS_01":"310","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"1203","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"0","ESPE_02":"0","ESPE_03":"0","ESPE_04":"0","ESPE_05":"0","ESPE_06":"0","ESPE_07":"0","ESPE_08":"0","ESPE_09":"0","ESPE_10":"0","ESPE_11":"0"}
+{"AGNO":"2024","RBD":"5","DGV_RBD":"1","NOM_RBD":"JOVINA NARANJO FERNANDEZ","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,476900000000000","LONGITUD":"-70,31345399999999","CONVENIO_PIE":"1","PACE":"1","ENS_01":"110","ENS_02":"310","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_TOTAL":"797","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"7","ORI_OTRO_GLOSA":"PLURALISTA","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"0","ESPE_02":"0","ESPE_03":"0","ESPE_04":"0","ESPE_05":"0","ESPE_06":"0","ESPE_07":"0","ESPE_08":"0","ESPE_09":"0","ESPE_10":"0","ESPE_11":"0"}
 
-## FILE 13/23: 20250723_Docentes_2025_20250630_PUBL.csv
-source: /tmp/sep_inspect_yoqma06w/20250723_Docentes_2025_20250630_PUBL.csv
+## FILE 4/13: 20250926_Directorio_Oficial_EE_2025_20250430_WEB.csv
+source: /tmp/sep_inspect_dv4cfvhw/20250926_Directorio_Oficial_EE_2025_20250430_WEB.csv
 encoding: utf-8-sig
 separator: semicolon
-rows_total: 282,026
-cols_count: 129
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'NOM_REG_RBD_A', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'ESTADO_ESTAB', 'NOMBRE_SLEP', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TRAMO_CARR_DOCENTE', 'BIENIOS_CARR_DOCENTE', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'MEN_ED_PARV_1', 'MEN_ED_AD_1', 'MEN_DES_COM_1', 'MEN_DIS_INT_1', 'MEN_ORIENTACION_1', 'MEN_INT_ESC_1', 'MEN_PSICO_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'MEN_ED_PARV_2', 'MEN_ED_AD_2', 'MEN_DES_COM_2', 'MEN_DIS_INT_2', 'MEN_ORIENTACION_2', 'MEN_INT_ESC_2', 'MEN_PSICO_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_IFP2', 'ID_IFS', 'SUBROGANTE', 'MES_NOMBRAMIENTO', 'AGNO_NOMBRAMIENTO', 'ID_ITC', 'ID_ITC_CORR', 'HORAS_CONTRATO', 'HORAS_DIRECT', 'HORAS_TEC_PED', 'HORAS_AULA', 'HORAS_DENTRO_ESTAB', 'HORAS_FUERA_ESTAB', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'PERSONAS']
+rows_total: 16,768
+cols_count: 58
+cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'MRUN', 'RUT_SOSTENEDOR', 'P_JURIDICA', 'COD_REG_RBD', 'NOM_REG_RBD_A', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'LATITUD', 'LONGITUD', 'CONVENIO_PIE', 'PACE', 'ENS_01', 'ENS_02', 'ENS_03', 'ENS_04', 'ENS_05', 'ENS_06', 'ENS_07', 'ENS_08', 'ENS_09', 'ENS_10', 'ENS_11', 'MAT_ENS_1', 'MAT_ENS_2', 'MAT_ENS_3', 'MAT_ENS_4', 'MAT_ENS_5', 'MAT_ENS_6', 'MAT_ENS_7', 'MAT_ENS_8', 'MAT_TOTAL', 'MATRICULA', 'ESTADO_ESTAB', 'ORI_RELIGIOSA', 'ORI_OTRO_GLOSA', 'PAGO_MATRICULA', 'PAGO_MENSUAL', 'ESPE_01', 'ESPE_02', 'ESPE_03', 'ESPE_04', 'ESPE_05', 'ESPE_06', 'ESPE_07', 'ESPE_08', 'ESPE_09', 'ESPE_10', 'ESPE_11']
 
 ### COLUMN PROFILE
 col | type | null_pct | cardinality | sample_values
 --- | ---- | -------- | ----------- | -------------
 AGNO | numeric | 0.0% | 1 | 2025, 2025, 2025
-RBD | numeric | 0.0% | 1 | 1, 1, 1
-DGV_RBD | numeric | 0.0% | 1 | 9, 9, 9
-NOM_RBD | string | 0.0% | 1 | LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA, LICEO POLITECNICO ARICA
+RBD | numeric | 0.0% | 5 | 1, 2, 3
+DGV_RBD | numeric | 0.0% | 5 | 9, 7, 5
+NOM_RBD | string | 0.0% | 5 | LICEO POLITECNICO ARICA, PARVULARIO LAS ESPIGUITAS, ESC. PEDRO VICENTE GUTIERREZ TORRES
+MRUN | empty | 100.0% | 0 | 
+RUT_SOSTENEDOR | numeric | 0.0% | 1 | 62000660, 62000660, 62000660
+P_JURIDICA | numeric | 0.0% | 1 | 1, 1, 1
 COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
 NOM_REG_RBD_A | string | 0.0% | 1 | AYP, AYP, AYP
 COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
@@ -1928,827 +228,520 @@ COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
 NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
 COD_DEPE | numeric | 0.0% | 1 | 6, 6, 6
 COD_DEPE2 | numeric | 0.0% | 1 | 5, 5, 5
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
+RURAL_RBD | numeric | 0.0% | 2 | 0, 0, 1
+LATITUD | string | 0.0% | 5 | -18,4872, -18,46986198, -18,50358009
+LONGITUD | string | 0.0% | 5 | -70,295212, -70,30275726, -70,26082611
+CONVENIO_PIE | numeric | 0.0% | 2 | 1, 1, 0
+PACE | numeric | 0.0% | 2 | 1, 0, 0
+ENS_01 | numeric | 0.0% | 5 | 463, 10, 165
+ENS_02 | numeric | 0.0% | 4 | 510, 0, 167
+ENS_03 | numeric | 0.0% | 3 | 563, 0, 363
+ENS_04 | numeric | 0.0% | 2 | 610, 0, 0
+ENS_05 | numeric | 0.0% | 2 | 663, 0, 0
+ENS_06 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_07 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_08 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_09 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_10 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_11 | numeric | 0.0% | 1 | 0, 0, 0
+MAT_ENS_1 | numeric | 0.0% | 2 | 0, 112, 0
+MAT_ENS_2 | numeric | 0.0% | 2 | 0, 0, 0
+MAT_ENS_3 | numeric | 0.0% | 2 | 0, 0, 491
+MAT_ENS_4 | numeric | 0.0% | 1 | 0, 0, 0
+MAT_ENS_5 | numeric | 0.0% | 3 | 0, 0, 0
+MAT_ENS_6 | numeric | 0.0% | 3 | 0, 0, 6
+MAT_ENS_7 | numeric | 0.0% | 2 | 862, 0, 0
+MAT_ENS_8 | numeric | 0.0% | 2 | 224, 0, 0
+MAT_TOTAL | numeric | 0.0% | 5 | 1086, 112, 497
+MATRICULA | numeric | 0.0% | 1 | 1, 1, 1
 ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
-NOMBRE_SLEP | string | 0.0% | 1 | CHINCHORRO, CHINCHORRO, CHINCHORRO
-MRUN | numeric | 0.0% | 5 | 5192235, 11483812, 13462227
-DOC_GENERO | numeric | 0.0% | 2 | 1, 1, 1
-DOC_FEC_NAC | numeric | 0.0% | 5 | 195806, 195005, 195603
-TRAMO_CARR_DOCENTE | numeric | 0.0% | 3 | 3, 1, 5
-BIENIOS_CARR_DOCENTE | numeric | 0.0% | 3 | 15, 15, 14
-TIT_ID_1 | numeric | 0.0% | 2 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 2 | 14, 14, 14
-ESP_ID_1 | numeric | 0.0% | 4 | 149, 1418, 142
-MEN_SIN_MENCION_1 | empty | 100.0% | 0 | 
-MEN_PLATICA_1 | empty | 100.0% | 0 | 
-MEN_NATURALES_1 | empty | 100.0% | 0 | 
-MEN_SOCIALES_1 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_1 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_1 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_1 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_1 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_1 | empty | 100.0% | 0 | 
-MEN_MATE_1 | empty | 100.0% | 0 | 
-MEN_RELIGION_1 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_1 | empty | 100.0% | 0 | 
-MEN_INGLES_1 | empty | 100.0% | 0 | 
-MEN_FRANCES_1 | empty | 100.0% | 0 | 
-MEN_ALEMAN_1 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_1 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_1 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_1 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_1 | empty | 100.0% | 0 | 
-MEN_ED_PARV_1 | empty | 100.0% | 0 | 
-MEN_ED_AD_1 | empty | 100.0% | 0 | 
-MEN_DES_COM_1 | empty | 100.0% | 0 | 
-MEN_DIS_INT_1 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_1 | empty | 100.0% | 0 | 
-MEN_INT_ESC_1 | empty | 100.0% | 0 | 
-MEN_PSICO_1 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 5 | 1983, 1985, 1981
-DURACION_CARRERA_1 | numeric | 0.0% | 2 | 8, 10, 10
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-MEN_ED_PARV_2 | empty | 100.0% | 0 | 
-MEN_ED_AD_2 | empty | 100.0% | 0 | 
-MEN_DES_COM_2 | empty | 100.0% | 0 | 
-MEN_DIS_INT_2 | empty | 100.0% | 0 | 
-MEN_ORIENTACION_2 | empty | 100.0% | 0 | 
-MEN_INT_ESC_2 | empty | 100.0% | 0 | 
-MEN_PSICO_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_IFP2 | numeric | 0.0% | 1 | 1, 1, 1
-ID_IFS | numeric | 0.0% | 2 | 0, 0, 5
-SUBROGANTE | numeric | 0.0% | 1 | -1, -1, -1
-MES_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-AGNO_NOMBRAMIENTO | numeric | 0.0% | 1 | 0, 0, 0
-ID_ITC | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC_CORR | numeric | 0.0% | 1 | 101, 101, 101
-HORAS_CONTRATO | numeric | 0.0% | 4 | 42, 44, 30
-HORAS_DIRECT | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_TEC_PED | numeric | 0.0% | 1 | 0, 0, 0
-HORAS_AULA | numeric | 0.0% | 4 | 42, 41, 30
-HORAS_DENTRO_ESTAB | numeric | 0.0% | 2 | 0, 3, 0
-HORAS_FUERA_ESTAB | numeric | 0.0% | 1 | 0, 0, 0
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 5 | 42, 53, 38
-ANO_SERVICIO_EE | numeric | 0.0% | 1 | 0, 0, 0
-ID_ICH | numeric | 0.0% | 3 | 510, 510, 563
-NIVEL1 | numeric | 0.0% | 2 | 5, 5, 8
-SECTOR1 | numeric | 0.0% | 4 | 380, 530, 320
-SUBSECTOR1 | numeric | 0.0% | 4 | 38001, 53014, 32001
-HORAS1 | numeric | 0.0% | 4 | 42, 41, 30
-COD_ENS_1 | numeric | 0.0% | 3 | 510, 510, 563
-GRADO.1_1 | numeric | 0.0% | 2 | 1, 3, 3
-GRADO.2_1 | numeric | 0.0% | 4 | 2, 4, 0
-GRADO.3_1 | numeric | 0.0% | 3 | 3, 0, 0
-GRADO.4_1 | numeric | 0.0% | 2 | 4, 0, 0
-GRADO.5_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.6_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.7_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | numeric | 0.0% | 1 | 0, 0, 0
-SECTOR2 | numeric | 0.0% | 1 | 0, 0, 0
-SUBSECTOR2 | numeric | 0.0% | 1 | 0, 0, 0
-HORAS2 | numeric | 0.0% | 1 | 0, 0, 0
-COD_ENS_2 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.1_2 | empty | 100.0% | 0 | 
-GRADO.2_2 | empty | 100.0% | 0 | 
-GRADO.3_2 | empty | 100.0% | 0 | 
-GRADO.4_2 | empty | 100.0% | 0 | 
-GRADO.5_2 | empty | 100.0% | 0 | 
-GRADO.6_2 | empty | 100.0% | 0 | 
-GRADO.7_2 | empty | 100.0% | 0 | 
-PERSONAS | numeric | 0.0% | 1 | 1, 1, 1
+ORI_RELIGIOSA | numeric | 0.0% | 3 | 2, 1, 1
+ORI_OTRO_GLOSA | string | 80.0% | 1 | PLURALISTA
+PAGO_MATRICULA | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
+PAGO_MENSUAL | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
+ESPE_01 | numeric | 0.0% | 2 | 41001, 0, 0
+ESPE_02 | numeric | 0.0% | 2 | 52009, 0, 0
+ESPE_03 | numeric | 0.0% | 2 | 52010, 0, 0
+ESPE_04 | numeric | 0.0% | 2 | 52013, 0, 0
+ESPE_05 | numeric | 0.0% | 2 | 53014, 0, 0
+ESPE_06 | numeric | 0.0% | 2 | 53015, 0, 0
+ESPE_07 | numeric | 0.0% | 2 | 61002, 0, 0
+ESPE_08 | numeric | 0.0% | 2 | 61003, 0, 0
+ESPE_09 | numeric | 0.0% | 2 | 62004, 0, 0
+ESPE_10 | numeric | 0.0% | 2 | 64001, 0, 0
+ESPE_11 | numeric | 0.0% | 1 | 0, 0, 0
 
 ### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2025","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","NOMBRE_SLEP":"CHINCHORRO","MRUN":"5192235","DOC_GENERO":"1","DOC_FEC_NAC":"195806","TRAMO_CARR_DOCENTE":"3","BIENIOS_CARR_DOCENTE":"15","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"149","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1983","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFP2":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"42","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"42","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"42","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"380","SUBSECTOR1":"38001","HORAS1":"42","COD_ENS_1":"510","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2025","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","NOMBRE_SLEP":"CHINCHORRO","MRUN":"11483812","DOC_GENERO":"1","DOC_FEC_NAC":"195005","TRAMO_CARR_DOCENTE":"1","BIENIOS_CARR_DOCENTE":"15","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1418","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1985","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFP2":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"44","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"41","HORAS_DENTRO_ESTAB":"3","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"53","ANO_SERVICIO_EE":"0","ID_ICH":"510","NIVEL1":"5","SECTOR1":"530","SUBSECTOR1":"53014","HORAS1":"41","COD_ENS_1":"510","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2025","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","NOMBRE_SLEP":"CHINCHORRO","MRUN":"13462227","DOC_GENERO":"1","DOC_FEC_NAC":"195603","TRAMO_CARR_DOCENTE":"5","BIENIOS_CARR_DOCENTE":"14","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"142","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1981","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFP2":"1","ID_IFS":"5","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"38","ANO_SERVICIO_EE":"0","ID_ICH":"563","NIVEL1":"8","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"30","COD_ENS_1":"563","GRADO.1_1":"3","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2025","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","NOMBRE_SLEP":"CHINCHORRO","MRUN":"23528565","DOC_GENERO":"1","DOC_FEC_NAC":"195307","TRAMO_CARR_DOCENTE":"3","BIENIOS_CARR_DOCENTE":"15","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"142","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1979","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFP2":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"30","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"30","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"46","ANO_SERVICIO_EE":"0","ID_ICH":"563","NIVEL1":"8","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"30","COD_ENS_1":"563","GRADO.1_1":"1","GRADO.2_1":"3","GRADO.3_1":"4","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
-{"AGNO":"2025","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","ESTADO_ESTAB":"1","NOMBRE_SLEP":"CHINCHORRO","MRUN":"21173278","DOC_GENERO":"2","DOC_FEC_NAC":"195106","TRAMO_CARR_DOCENTE":"1","BIENIOS_CARR_DOCENTE":"7","TIT_ID_1":"2","TIP_TIT_ID_1":"22","ESP_ID_1":"220","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1998","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_IFP2":"1","ID_IFS":"0","SUBROGANTE":"-1","MES_NOMBRAMIENTO":"0","AGNO_NOMBRAMIENTO":"0","ID_ITC":"1","ID_ITC_CORR":"101","HORAS_CONTRATO":"31","HORAS_DIRECT":"0","HORAS_TEC_PED":"0","HORAS_AULA":"31","HORAS_DENTRO_ESTAB":"0","HORAS_FUERA_ESTAB":"0","ANO_SERVICIO_SISTEMA":"24","ANO_SERVICIO_EE":"0","ID_ICH":"463","NIVEL1":"8","SECTOR1":"410","SUBSECTOR1":"41001","HORAS1":"31","COD_ENS_1":"463","GRADO.1_1":"3","GRADO.2_1":"4","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","NIVEL2":"0","SECTOR2":"0","SUBSECTOR2":"0","HORAS2":"0","COD_ENS_2":"0","PERSONAS":"1"}
+{"AGNO":"2025","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,4872","LONGITUD":"-70,295212","CONVENIO_PIE":"1","PACE":"1","ENS_01":"463","ENS_02":"510","ENS_03":"563","ENS_04":"610","ENS_05":"663","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_ENS_1":"0","MAT_ENS_2":"0","MAT_ENS_3":"0","MAT_ENS_4":"0","MAT_ENS_5":"0","MAT_ENS_6":"0","MAT_ENS_7":"862","MAT_ENS_8":"224","MAT_TOTAL":"1086","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"41001","ESPE_02":"52009","ESPE_03":"52010","ESPE_04":"52013","ESPE_05":"53014","ESPE_06":"53015","ESPE_07":"61002","ESPE_08":"61003","ESPE_09":"62004","ESPE_10":"64001","ESPE_11":"0"}
+{"AGNO":"2025","RBD":"2","DGV_RBD":"7","NOM_RBD":"PARVULARIO LAS ESPIGUITAS","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,46986198","LONGITUD":"-70,30275726","CONVENIO_PIE":"1","PACE":"0","ENS_01":"10","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_ENS_1":"112","MAT_ENS_2":"0","MAT_ENS_3":"0","MAT_ENS_4":"0","MAT_ENS_5":"0","MAT_ENS_6":"0","MAT_ENS_7":"0","MAT_ENS_8":"0","MAT_TOTAL":"112","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"0","ESPE_02":"0","ESPE_03":"0","ESPE_04":"0","ESPE_05":"0","ESPE_06":"0","ESPE_07":"0","ESPE_08":"0","ESPE_09":"0","ESPE_10":"0","ESPE_11":"0"}
+{"AGNO":"2025","RBD":"3","DGV_RBD":"5","NOM_RBD":"ESC. PEDRO VICENTE GUTIERREZ TORRES","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"1","LATITUD":"-18,50358009","LONGITUD":"-70,26082611","CONVENIO_PIE":"0","PACE":"0","ENS_01":"165","ENS_02":"167","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_ENS_1":"0","MAT_ENS_2":"0","MAT_ENS_3":"491","MAT_ENS_4":"0","MAT_ENS_5":"0","MAT_ENS_6":"6","MAT_ENS_7":"0","MAT_ENS_8":"0","MAT_TOTAL":"497","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"0","ESPE_02":"0","ESPE_03":"0","ESPE_04":"0","ESPE_05":"0","ESPE_06":"0","ESPE_07":"0","ESPE_08":"0","ESPE_09":"0","ESPE_10":"0","ESPE_11":"0"}
+{"AGNO":"2025","RBD":"4","DGV_RBD":"3","NOM_RBD":"LICEO OCTAVIO PALMA PEREZ","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,474239","LONGITUD":"-70,308273","CONVENIO_PIE":"1","PACE":"1","ENS_01":"310","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_ENS_1":"0","MAT_ENS_2":"0","MAT_ENS_3":"0","MAT_ENS_4":"0","MAT_ENS_5":"1279","MAT_ENS_6":"0","MAT_ENS_7":"0","MAT_ENS_8":"0","MAT_TOTAL":"1279","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"0","ESPE_02":"0","ESPE_03":"0","ESPE_04":"0","ESPE_05":"0","ESPE_06":"0","ESPE_07":"0","ESPE_08":"0","ESPE_09":"0","ESPE_10":"0","ESPE_11":"0"}
+{"AGNO":"2025","RBD":"5","DGV_RBD":"1","NOM_RBD":"JOVINA NARANJO FERNANDEZ","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,4769","LONGITUD":"-70,313454","CONVENIO_PIE":"1","PACE":"1","ENS_01":"110","ENS_02":"310","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MAT_ENS_1":"0","MAT_ENS_2":"213","MAT_ENS_3":"0","MAT_ENS_4":"0","MAT_ENS_5":"489","MAT_ENS_6":"81","MAT_ENS_7":"0","MAT_ENS_8":"0","MAT_TOTAL":"783","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"7","ORI_OTRO_GLOSA":"PLURALISTA","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO","ESPE_01":"0","ESPE_02":"0","ESPE_03":"0","ESPE_04":"0","ESPE_05":"0","ESPE_06":"0","ESPE_07":"0","ESPE_08":"0","ESPE_09":"0","ESPE_10":"0","ESPE_11":"0"}
 
-## FILE 14/23: Docentes 2003_PUBLICA.csv
-source: /tmp/sep_inspect_yoqma06w/Docentes 2003_PUBLICA.csv
+## FILE 5/13: Directorio_Oficial_EE_2017.csv
+source: /tmp/sep_inspect_dv4cfvhw/Directorio_Oficial_EE_2017.csv
 encoding: utf-8-sig
 separator: semicolon
-rows_total: 164,112
-cols_count: 33
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'LET_RBD', 'NUM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPE', 'RURAL_RBD', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'ID_IFP', 'ID_ITC', 'HORAS_CONTRATO', 'ANO_SERVICIO_SISTEMA', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'PERSONAS']
+rows_total: 16,024
+cols_count: 34
+cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'MRUN', 'RUT_SOSTENEDOR', 'P_JURIDICA', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'LATITUD', 'LONGITUD', 'CONVENIO_PIE', 'ENS_01', 'ENS_02', 'ENS_03', 'ENS_04', 'ENS_05', 'ENS_06', 'ENS_07', 'ENS_08', 'ENS_09', 'MATRICULA', 'ESTADO_ESTAB', 'ORI_RELIGIOSA', 'ORI_OTRO_GLOSA', 'PAGO_MATRICULA', 'PAGO_MENSUAL']
 
 ### COLUMN PROFILE
 col | type | null_pct | cardinality | sample_values
 --- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2003, 2003, 2003
-RBD | numeric | 0.0% | 5 | 12602, 591, 2932
-DGV_RBD | numeric | 0.0% | 5 | 0, 6, 7
-NOM_RBD | string | 0.0% | 5 | ESC  BAS  Y PARV   KRONOS SCHOOL, COLEGIO INGLES CATOLICO, ESC.  ESPA�A
-LET_RBD | string | 80.0% | 1 | F
-NUM_RBD | numeric | 0.0% | 4 | 0, 64, 158
-COD_REG_RBD | numeric | 0.0% | 4 | 1, 4, 7
-COD_PRO_RBD | numeric | 0.0% | 4 | 11, 41, 71
-COD_COM_RBD | numeric | 0.0% | 4 | 1101, 4101, 7101
-NOM_COM_RBD | string | 0.0% | 4 | IQUIQUE, LA SERENA, TALCA
-COD_DEPE | numeric | 0.0% | 3 | 3, 4, 2
-RURAL_RBD | numeric | 0.0% | 2 | 0, 0, 0
-CLAVE | string | 0.0% | 4 | AA1000002721, AA1000004211, AA1000005721
-MRUN | numeric | 0.0% | 4 | 10237, 18577344, 285455
-DOC_GENERO | numeric | 0.0% | 2 | 2, 1, 2
-DOC_FEC_NAC | numeric | 0.0% | 4 | 19730531, 19570703, 19550823
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 3 | 13, 14, 12
-ESP_ID_1 | numeric | 0.0% | 3 | 130, 1411, 120
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC | numeric | 0.0% | 3 | 3, 3, 1
-HORAS_CONTRATO | numeric | 0.0% | 4 | 30, 16, 30
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 4 | 6, 15, 25
-ID_ICH | numeric | 0.0% | 3 | 110, 310, 213
-NIVEL1 | numeric | 0.0% | 3 | 2, 4, 3
-SECTOR1 | numeric | 0.0% | 4 | 190, 360, 200
-SUBSECTOR1 | numeric | 0.0% | 4 | 19001, 36001, -2
-HORAS1 | numeric | 0.0% | 5 | 30, 12, 28
-NIVEL2 | numeric | 80.0% | 1 | 2
-SECTOR2 | numeric | 80.0% | 1 | 130
-SUBSECTOR2 | numeric | 80.0% | 1 | 13002
-HORAS2 | numeric | 80.0% | 1 | 6
-PERSONAS | numeric | 0.0% | 2 | 1, 1, 1
+AGNO | numeric | 0.0% | 1 | 2017, 2017, 2017
+RBD | numeric | 0.0% | 5 | 1, 2, 3
+DGV_RBD | numeric | 0.0% | 5 | 9, 7, 5
+NOM_RBD | string | 0.0% | 5 | LICEO POLITECNICO ARICA, PARVULARIO LAS ESPIGUITAS, ESC. PEDRO VICENTE GUTIERREZ TORRES
+MRUN | empty | 100.0% | 0 | 
+RUT_SOSTENEDOR | numeric | 0.0% | 1 | 69010100, 69010100, 69010100
+P_JURIDICA | numeric | 0.0% | 1 | 1, 1, 1
+COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
+COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
+COD_COM_RBD | numeric | 0.0% | 1 | 15101, 15101, 15101
+NOM_COM_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
+COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
+NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
+COD_DEPE | numeric | 0.0% | 1 | 2, 2, 2
+COD_DEPE2 | numeric | 0.0% | 1 | 1, 1, 1
+RURAL_RBD | numeric | 0.0% | 2 | 0, 0, 1
+LATITUD | string | 0.0% | 5 | -18,48727459, -18,469862, -18,50358
+LONGITUD | string | 0.0% | 5 | -70,29473809, -70,30276, -70,260826
+CONVENIO_PIE | numeric | 0.0% | 2 | 1, 1, 0
+ENS_01 | numeric | 0.0% | 5 | 463, 10, 165
+ENS_02 | numeric | 0.0% | 4 | 510, 0, 167
+ENS_03 | numeric | 0.0% | 3 | 563, 0, 0
+ENS_04 | numeric | 0.0% | 2 | 610, 0, 0
+ENS_05 | numeric | 0.0% | 2 | 663, 0, 0
+ENS_06 | numeric | 0.0% | 2 | 863, 0, 0
+ENS_07 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_08 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_09 | numeric | 0.0% | 1 | 0, 0, 0
+MATRICULA | numeric | 0.0% | 1 | 1, 1, 1
+ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
+ORI_RELIGIOSA | numeric | 0.0% | 3 | 2, 2, 1
+ORI_OTRO_GLOSA | string | 80.0% | 1 | PLURALISTA
+PAGO_MATRICULA | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
+PAGO_MENSUAL | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
 
 ### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2003","RBD":"12602","DGV_RBD":"0","NOM_RBD":"ESC  BAS  Y PARV   KRONOS SCHOOL","NUM_RBD":"0","COD_REG_RBD":"1","COD_PRO_RBD":"11","COD_COM_RBD":"1101","NOM_COM_RBD":"IQUIQUE","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000002721","MRUN":"10237","DOC_GENERO":"2","DOC_FEC_NAC":"19730531","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"130","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"30","ANO_SERVICIO_SISTEMA":"6","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"30","PERSONAS":"1"}
-{"AGNO":"2003","RBD":"591","DGV_RBD":"6","NOM_RBD":"COLEGIO INGLES CATOLICO","NUM_RBD":"64","COD_REG_RBD":"4","COD_PRO_RBD":"41","COD_COM_RBD":"4101","NOM_COM_RBD":"LA SERENA","COD_DEPE":"4","RURAL_RBD":"0","CLAVE":"AA1000004211","MRUN":"18577344","DOC_GENERO":"1","DOC_FEC_NAC":"19570703","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1411","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"16","ANO_SERVICIO_SISTEMA":"15","ID_ICH":"310","NIVEL1":"4","SECTOR1":"360","SUBSECTOR1":"36001","HORAS1":"12","PERSONAS":"1"}
-{"AGNO":"2003","RBD":"2932","DGV_RBD":"7","NOM_RBD":"ESC.  ESPA�A","LET_RBD":"F","NUM_RBD":"158","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"1","HORAS_CONTRATO":"30","ANO_SERVICIO_SISTEMA":"25","ID_ICH":"213","NIVEL1":"3","SECTOR1":"200","SUBSECTOR1":"-2","HORAS1":"28","PERSONAS":"1"}
-{"AGNO":"2003","RBD":"2993","DGV_RBD":"9","NOM_RBD":"COLEGIO MARIA RAQUEL","NUM_RBD":"0","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"4","HORAS_CONTRATO":"20","ANO_SERVICIO_SISTEMA":"25","ID_ICH":"110","NIVEL1":"3","SECTOR1":"200","SUBSECTOR1":"-2","HORAS1":"2","PERSONAS":"0"}
-{"AGNO":"2003","RBD":"6739","DGV_RBD":"3","NOM_RBD":"NILPE","NUM_RBD":"50","COD_REG_RBD":"9","COD_PRO_RBD":"91","COD_COM_RBD":"9106","NOM_COM_RBD":"GALVARINO","COD_DEPE":"2","RURAL_RBD":"1","CLAVE":"AA1000032121","MRUN":"5153386","DOC_GENERO":"2","DOC_FEC_NAC":"19400824","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"130","ID_IFP":"1","ID_ITC":"1","HORAS_CONTRATO":"40","ANO_SERVICIO_SISTEMA":"4","ID_ICH":"110","NIVEL1":"2","SECTOR1":"110","SUBSECTOR1":"11001","HORAS1":"6","NIVEL2":"2","SECTOR2":"130","SUBSECTOR2":"13002","HORAS2":"6","PERSONAS":"1"}
+{"AGNO":"2017","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","LATITUD":"-18,48727459","LONGITUD":"-70,29473809","CONVENIO_PIE":"1","ENS_01":"463","ENS_02":"510","ENS_03":"563","ENS_04":"610","ENS_05":"663","ENS_06":"863","ENS_07":"0","ENS_08":"0","ENS_09":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2017","RBD":"2","DGV_RBD":"7","NOM_RBD":"PARVULARIO LAS ESPIGUITAS","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","LATITUD":"-18,469862","LONGITUD":"-70,30276","CONVENIO_PIE":"1","ENS_01":"10","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2017","RBD":"3","DGV_RBD":"5","NOM_RBD":"ESC. PEDRO VICENTE GUTIERREZ TORRES","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"1","LATITUD":"-18,50358","LONGITUD":"-70,260826","CONVENIO_PIE":"0","ENS_01":"165","ENS_02":"167","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2017","RBD":"4","DGV_RBD":"3","NOM_RBD":"LICEO OCTAVIO PALMA PEREZ","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","LATITUD":"-18,47424251","LONGITUD":"-70,30826388","CONVENIO_PIE":"1","ENS_01":"310","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2017","RBD":"5","DGV_RBD":"1","NOM_RBD":"JOVINA NARANJO FERNANDEZ","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","LATITUD":"-18,47690366","LONGITUD":"-70,31345472","CONVENIO_PIE":"1","ENS_01":"110","ENS_02":"310","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"7","ORI_OTRO_GLOSA":"PLURALISTA","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
 
-## FILE 15/23: Docentes 2004_PUBLICA.csv
-source: /tmp/sep_inspect_yoqma06w/Docentes 2004_PUBLICA.csv
-encoding: utf-8-sig
+## FILE 6/13: Directorio_Oficial_EE_2018.csv
+source: /tmp/sep_inspect_dv4cfvhw/Directorio_Oficial_EE_2018.csv
+encoding: utf-8
 separator: semicolon
-rows_total: 188,632
-cols_count: 33
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'LET_RBD', 'NUM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPE', 'RURAL_RBD', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'ID_IFP', 'ID_ITC', 'HORAS_CONTRATO', 'ANO_SERVICIO_SISTEMA', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'PERSONAS']
+rows_total: 16,044
+cols_count: 34
+cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'MRUN', 'RUT_SOSTENEDOR', 'P_JURIDICA', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'LATITUD', 'LONGITUD', 'CONVENIO_PIE', 'ENS_01', 'ENS_02', 'ENS_03', 'ENS_04', 'ENS_05', 'ENS_06', 'ENS_07', 'ENS_08', 'ENS_09', 'MATRICULA', 'ESTADO_ESTAB', 'ORI_RELIGIOSA', 'ORI_OTRO_GLOSA', 'PAGO_MATRICULA', 'PAGO_MENSUAL']
 
 ### COLUMN PROFILE
 col | type | null_pct | cardinality | sample_values
 --- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2004, 2004, 2004
-RBD | numeric | 0.0% | 5 | 12602, 591, 2932
-DGV_RBD | numeric | 0.0% | 5 | 0, 6, 7
-NOM_RBD | string | 0.0% | 5 | ESC  BAS  Y PARV   KRONOS SCHOOL, COLEGIO INGLES CATOLICO, ESC.  ESPANA
-LET_RBD | string | 80.0% | 1 | F
-NUM_RBD | numeric | 0.0% | 4 | 0, 64, 158
-COD_REG_RBD | numeric | 0.0% | 4 | 1, 4, 7
-COD_PRO_RBD | numeric | 0.0% | 4 | 11, 41, 71
-COD_COM_RBD | numeric | 0.0% | 4 | 1101, 4101, 7101
-NOM_COM_RBD | string | 0.0% | 4 | IQUIQUE, LA SERENA, TALCA
-COD_DEPE | numeric | 0.0% | 3 | 3, 4, 2
-RURAL_RBD | numeric | 0.0% | 2 | 0, 0, 0
-CLAVE | string | 0.0% | 4 | AA1000002721, AA1000004211, AA1000005721
-MRUN | numeric | 0.0% | 4 | 10237, 18577344, 285455
-DOC_GENERO | numeric | 0.0% | 2 | 2, 1, 2
-DOC_FEC_NAC | numeric | 0.0% | 4 | 19730531, 19570703, 19550823
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 3 | 13, 14, 12
-ESP_ID_1 | numeric | 0.0% | 3 | 130, 1411, 120
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC | numeric | 0.0% | 3 | 3, 3, 1
-HORAS_CONTRATO | numeric | 0.0% | 5 | 38, 32, 30
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 4 | 6, 20, 25
-ID_ICH | numeric | 0.0% | 2 | 110, 110, 213
-NIVEL1 | numeric | 0.0% | 2 | 2, 2, 3
-SECTOR1 | numeric | 0.0% | 3 | 190, 140, 200
-SUBSECTOR1 | numeric | 0.0% | 3 | 19001, 14001, -2
-HORAS1 | numeric | 0.0% | 4 | 38, 16, 28
-NIVEL2 | numeric | 60.0% | 2 | 4, 2
-SECTOR2 | numeric | 60.0% | 2 | 360, 190
-SUBSECTOR2 | numeric | 60.0% | 2 | 36001, 19001
-HORAS2 | numeric | 60.0% | 2 | 8, 6
-PERSONAS | numeric | 0.0% | 2 | 1, 1, 1
+AGNO | numeric | 0.0% | 1 | 2018, 2018, 2018
+RBD | numeric | 0.0% | 5 | 1, 2, 3
+DGV_RBD | numeric | 0.0% | 5 | 9, 7, 5
+NOM_RBD | string | 0.0% | 5 | LICEO POLITECNICO ARICA, PARVULARIO LAS ESPIGUITAS, ESC. PEDRO VICENTE GUTIERREZ TORRES
+MRUN | empty | 100.0% | 0 | 
+RUT_SOSTENEDOR | numeric | 0.0% | 1 | 69010100, 69010100, 69010100
+P_JURIDICA | numeric | 0.0% | 1 | 1, 1, 1
+COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
+COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
+COD_COM_RBD | numeric | 0.0% | 1 | 15101, 15101, 15101
+NOM_COM_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
+COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
+NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
+COD_DEPE | numeric | 0.0% | 1 | 2, 2, 2
+COD_DEPE2 | numeric | 0.0% | 1 | 1, 1, 1
+RURAL_RBD | numeric | 0.0% | 2 | 0, 0, 1
+LATITUD | string | 0.0% | 5 | -18,48727417, -18,46986198, -18,50358009
+LONGITUD | string | 0.0% | 5 | -70,29473877, -70,30275726, -70,26082611
+CONVENIO_PIE | numeric | 0.0% | 2 | 1, 1, 0
+ENS_01 | numeric | 0.0% | 5 | 463, 10, 165
+ENS_02 | numeric | 0.0% | 4 | 510, 0, 167
+ENS_03 | numeric | 0.0% | 3 | 563, 0, 363
+ENS_04 | numeric | 0.0% | 2 | 610, 0, 0
+ENS_05 | numeric | 0.0% | 2 | 663, 0, 0
+ENS_06 | numeric | 0.0% | 2 | 863, 0, 0
+ENS_07 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_08 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_09 | numeric | 0.0% | 1 | 0, 0, 0
+MATRICULA | numeric | 0.0% | 1 | 1, 1, 1
+ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
+ORI_RELIGIOSA | numeric | 0.0% | 3 | 2, 2, 1
+ORI_OTRO_GLOSA | string | 80.0% | 1 | PLURALISTA
+PAGO_MATRICULA | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
+PAGO_MENSUAL | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
 
 ### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2004","RBD":"12602","DGV_RBD":"0","NOM_RBD":"ESC  BAS  Y PARV   KRONOS SCHOOL","NUM_RBD":"0","COD_REG_RBD":"1","COD_PRO_RBD":"11","COD_COM_RBD":"1101","NOM_COM_RBD":"IQUIQUE","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000002721","MRUN":"10237","DOC_GENERO":"2","DOC_FEC_NAC":"19730531","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"130","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"38","ANO_SERVICIO_SISTEMA":"6","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"38","PERSONAS":"1"}
-{"AGNO":"2004","RBD":"591","DGV_RBD":"6","NOM_RBD":"COLEGIO INGLES CATOLICO","NUM_RBD":"64","COD_REG_RBD":"4","COD_PRO_RBD":"41","COD_COM_RBD":"4101","NOM_COM_RBD":"LA SERENA","COD_DEPE":"4","RURAL_RBD":"0","CLAVE":"AA1000004211","MRUN":"18577344","DOC_GENERO":"1","DOC_FEC_NAC":"19570703","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1411","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"32","ANO_SERVICIO_SISTEMA":"20","ID_ICH":"110","NIVEL1":"2","SECTOR1":"140","SUBSECTOR1":"14001","HORAS1":"16","NIVEL2":"4","SECTOR2":"360","SUBSECTOR2":"36001","HORAS2":"8","PERSONAS":"1"}
-{"AGNO":"2004","RBD":"2932","DGV_RBD":"7","NOM_RBD":"ESC.  ESPANA","LET_RBD":"F","NUM_RBD":"158","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"1","HORAS_CONTRATO":"30","ANO_SERVICIO_SISTEMA":"25","ID_ICH":"213","NIVEL1":"3","SECTOR1":"200","SUBSECTOR1":"-2","HORAS1":"28","PERSONAS":"1"}
-{"AGNO":"2004","RBD":"2993","DGV_RBD":"9","NOM_RBD":"COLEGIO MARIA RAQUEL","NUM_RBD":"0","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"4","HORAS_CONTRATO":"20","ANO_SERVICIO_SISTEMA":"25","ID_ICH":"110","NIVEL1":"3","SECTOR1":"200","SUBSECTOR1":"-2","HORAS1":"2","PERSONAS":"0"}
-{"AGNO":"2004","RBD":"6739","DGV_RBD":"3","NOM_RBD":"NILPE","NUM_RBD":"50","COD_REG_RBD":"9","COD_PRO_RBD":"91","COD_COM_RBD":"9106","NOM_COM_RBD":"GALVARINO","COD_DEPE":"2","RURAL_RBD":"1","CLAVE":"AA1000032121","MRUN":"5153386","DOC_GENERO":"2","DOC_FEC_NAC":"19400824","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"130","ID_IFP":"1","ID_ITC":"1","HORAS_CONTRATO":"39","ANO_SERVICIO_SISTEMA":"10","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"38","NIVEL2":"2","SECTOR2":"190","SUBSECTOR2":"19001","HORAS2":"6","PERSONAS":"1"}
+{"AGNO":"2018","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","LATITUD":"-18,48727417","LONGITUD":"-70,29473877","CONVENIO_PIE":"1","ENS_01":"463","ENS_02":"510","ENS_03":"563","ENS_04":"610","ENS_05":"663","ENS_06":"863","ENS_07":"0","ENS_08":"0","ENS_09":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2018","RBD":"2","DGV_RBD":"7","NOM_RBD":"PARVULARIO LAS ESPIGUITAS","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","LATITUD":"-18,46986198","LONGITUD":"-70,30275726","CONVENIO_PIE":"1","ENS_01":"10","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2018","RBD":"3","DGV_RBD":"5","NOM_RBD":"ESC. PEDRO VICENTE GUTIERREZ TORRES","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"1","LATITUD":"-18,50358009","LONGITUD":"-70,26082611","CONVENIO_PIE":"0","ENS_01":"165","ENS_02":"167","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2018","RBD":"4","DGV_RBD":"3","NOM_RBD":"LICEO OCTAVIO PALMA PEREZ","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","LATITUD":"-18,47424316","LONGITUD":"-70,30826569","CONVENIO_PIE":"1","ENS_01":"310","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2018","RBD":"5","DGV_RBD":"1","NOM_RBD":"JOVINA NARANJO FERNANDEZ","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","LATITUD":"-18,47690392","LONGITUD":"-70,31345367","CONVENIO_PIE":"1","ENS_01":"110","ENS_02":"310","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"7","ORI_OTRO_GLOSA":"PLURALISTA","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
 
-## FILE 16/23: Docentes 2005_PUBLICA.csv
-source: /tmp/sep_inspect_yoqma06w/Docentes 2005_PUBLICA.csv
+## FILE 7/13: Directorio_Oficial_EE_2019.csv
+source: /tmp/sep_inspect_dv4cfvhw/Directorio_Oficial_EE_2019.csv
 encoding: utf-8-sig
 separator: semicolon
-rows_total: 195,544
-cols_count: 33
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'LET_RBD', 'NUM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPE', 'RURAL_RBD', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'ID_IFP', 'ID_ITC', 'HORAS_CONTRATO', 'ANO_SERVICIO_SISTEMA', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'PERSONAS']
+rows_total: 16,236
+cols_count: 37
+cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'MRUN', 'RUT_SOSTENEDOR', 'P_JURIDICA', 'COD_REG_RBD', 'NOM_REG_RBD_A', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'LATITUD', 'LONGITUD', 'CONVENIO_PIE', 'ENS_01', 'ENS_02', 'ENS_03', 'ENS_04', 'ENS_05', 'ENS_06', 'ENS_07', 'ENS_08', 'ENS_09', 'ENS_10', 'ENS_11', 'MATRICULA', 'ESTADO_ESTAB', 'ORI_RELIGIOSA', 'ORI_OTRO_GLOSA', 'PAGO_MATRICULA', 'PAGO_MENSUAL']
 
 ### COLUMN PROFILE
 col | type | null_pct | cardinality | sample_values
 --- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2005, 2005, 2005
-RBD | numeric | 0.0% | 5 | 12602, 591, 2932
-DGV_RBD | numeric | 0.0% | 5 | 0, 6, 7
-NOM_RBD | string | 0.0% | 5 | ESC  BAS  Y PARV   KRONOS SCHOOL, COLEGIO INGLES CATOLICO, ESC.  ESPANA
-LET_RBD | string | 80.0% | 1 | F
-NUM_RBD | numeric | 0.0% | 3 | 0, 64, 158
-COD_REG_RBD | numeric | 0.0% | 4 | 1, 4, 7
-COD_PRO_RBD | numeric | 0.0% | 4 | 11, 41, 71
-COD_COM_RBD | numeric | 0.0% | 4 | 1107, 4101, 7101
-NOM_COM_RBD | string | 0.0% | 4 | ALTO HOSPICIO, LA SERENA, TALCA
-COD_DEPE | numeric | 0.0% | 3 | 3, 4, 2
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-CLAVE | string | 0.0% | 4 | AA1000002721, AA1000004211, AA1000005721
-MRUN | numeric | 0.0% | 4 | 10237, 18577344, 285455
-DOC_GENERO | numeric | 0.0% | 2 | 2, 1, 2
-DOC_FEC_NAC | numeric | 0.0% | 4 | 19730531, 19570703, 19550823
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 4 | 13, 14, 12
-ESP_ID_1 | numeric | 0.0% | 4 | 130, 1411, 120
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC | numeric | 0.0% | 2 | 3, 3, 1
-HORAS_CONTRATO | numeric | 0.0% | 5 | 38, 32, 30
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 4 | 7, 20, 25
-ID_ICH | numeric | 0.0% | 3 | 110, 110, 213
-NIVEL1 | numeric | 0.0% | 3 | 2, 2, 3
-SECTOR1 | numeric | 0.0% | 4 | 190, 140, 200
-SUBSECTOR1 | numeric | 0.0% | 4 | 19001, 14001, -2
-HORAS1 | numeric | 0.0% | 5 | 38, 16, 28
-NIVEL2 | numeric | 60.0% | 2 | 4, 5
-SECTOR2 | numeric | 60.0% | 2 | 360, 320
-SUBSECTOR2 | numeric | 60.0% | 2 | 36001, 32001
-HORAS2 | numeric | 60.0% | 2 | 8, 12
-PERSONAS | numeric | 0.0% | 2 | 1, 1, 1
+AGNO | numeric | 0.0% | 1 | 2019, 2019, 2019
+RBD | numeric | 0.0% | 5 | 1, 2, 3
+DGV_RBD | numeric | 0.0% | 5 | 9, 7, 5
+NOM_RBD | string | 0.0% | 5 | LICEO POLITECNICO ARICA, PARVULARIO LAS ESPIGUITAS, ESC. PEDRO VICENTE GUTIERREZ TORRES
+MRUN | empty | 100.0% | 0 | 
+RUT_SOSTENEDOR | numeric | 0.0% | 1 | 69010100, 69010100, 69010100
+P_JURIDICA | numeric | 0.0% | 1 | 1, 1, 1
+COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
+NOM_REG_RBD_A | string | 0.0% | 1 | AYP, AYP, AYP
+COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
+COD_COM_RBD | numeric | 0.0% | 1 | 15101, 15101, 15101
+NOM_COM_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
+COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
+NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
+COD_DEPE | numeric | 0.0% | 1 | 2, 2, 2
+COD_DEPE2 | numeric | 0.0% | 1 | 1, 1, 1
+RURAL_RBD | numeric | 0.0% | 2 | 0, 0, 1
+LATITUD | string | 0.0% | 5 | -18,487274170000, -18,469861980000, -18,503580090000
+LONGITUD | string | 0.0% | 5 | -70,294738770000, -70,302757260000, -70,260826110000
+CONVENIO_PIE | numeric | 0.0% | 2 | 1, 1, 0
+ENS_01 | numeric | 0.0% | 5 | 463, 10, 165
+ENS_02 | numeric | 0.0% | 4 | 510, 0, 167
+ENS_03 | numeric | 0.0% | 3 | 563, 0, 363
+ENS_04 | numeric | 0.0% | 2 | 610, 0, 0
+ENS_05 | numeric | 0.0% | 2 | 663, 0, 0
+ENS_06 | numeric | 0.0% | 2 | 863, 0, 0
+ENS_07 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_08 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_09 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_10 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_11 | numeric | 0.0% | 1 | 0, 0, 0
+MATRICULA | numeric | 0.0% | 1 | 1, 1, 1
+ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
+ORI_RELIGIOSA | numeric | 0.0% | 3 | 2, 2, 1
+ORI_OTRO_GLOSA | string | 80.0% | 1 | PLURALISTA
+PAGO_MATRICULA | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
+PAGO_MENSUAL | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
 
 ### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2005","RBD":"12602","DGV_RBD":"0","NOM_RBD":"ESC  BAS  Y PARV   KRONOS SCHOOL","NUM_RBD":"0","COD_REG_RBD":"1","COD_PRO_RBD":"11","COD_COM_RBD":"1107","NOM_COM_RBD":"ALTO HOSPICIO","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000002721","MRUN":"10237","DOC_GENERO":"2","DOC_FEC_NAC":"19730531","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"130","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"38","ANO_SERVICIO_SISTEMA":"7","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"38","PERSONAS":"1"}
-{"AGNO":"2005","RBD":"591","DGV_RBD":"6","NOM_RBD":"COLEGIO INGLES CATOLICO","NUM_RBD":"64","COD_REG_RBD":"4","COD_PRO_RBD":"41","COD_COM_RBD":"4101","NOM_COM_RBD":"LA SERENA","COD_DEPE":"4","RURAL_RBD":"0","CLAVE":"AA1000004211","MRUN":"18577344","DOC_GENERO":"1","DOC_FEC_NAC":"19570703","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1411","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"32","ANO_SERVICIO_SISTEMA":"20","ID_ICH":"110","NIVEL1":"2","SECTOR1":"140","SUBSECTOR1":"14001","HORAS1":"16","NIVEL2":"4","SECTOR2":"360","SUBSECTOR2":"36001","HORAS2":"8","PERSONAS":"1"}
-{"AGNO":"2005","RBD":"2932","DGV_RBD":"7","NOM_RBD":"ESC.  ESPANA","LET_RBD":"F","NUM_RBD":"158","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"1","HORAS_CONTRATO":"30","ANO_SERVICIO_SISTEMA":"25","ID_ICH":"213","NIVEL1":"3","SECTOR1":"200","SUBSECTOR1":"-2","HORAS1":"28","PERSONAS":"1"}
-{"AGNO":"2005","RBD":"11343","DGV_RBD":"3","NOM_RBD":"COLEGIO NUEVA HOLANDA","NUM_RBD":"0","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"2","ANO_SERVICIO_SISTEMA":"25","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"2","PERSONAS":"0"}
-{"AGNO":"2005","RBD":"25304","DGV_RBD":"9","NOM_RBD":"COLEGIO PAUL HARRIS SCHOOL","NUM_RBD":"0","COD_REG_RBD":"13","COD_PRO_RBD":"131","COD_COM_RBD":"13105","NOM_COM_RBD":"EL BOSQUE","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000022111","MRUN":"18204895","DOC_GENERO":"1","DOC_FEC_NAC":"19740928","TIT_ID_1":"1","TIP_TIT_ID_1":"11","ESP_ID_1":"110","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"36","ANO_SERVICIO_SISTEMA":"0","ID_ICH":"310","NIVEL1":"4","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"24","NIVEL2":"5","SECTOR2":"320","SUBSECTOR2":"32001","HORAS2":"12","PERSONAS":"1"}
+{"AGNO":"2019","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","LATITUD":"-18,487274170000","LONGITUD":"-70,294738770000","CONVENIO_PIE":"1","ENS_01":"463","ENS_02":"510","ENS_03":"563","ENS_04":"610","ENS_05":"663","ENS_06":"863","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2019","RBD":"2","DGV_RBD":"7","NOM_RBD":"PARVULARIO LAS ESPIGUITAS","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","LATITUD":"-18,469861980000","LONGITUD":"-70,302757260000","CONVENIO_PIE":"1","ENS_01":"10","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2019","RBD":"3","DGV_RBD":"5","NOM_RBD":"ESC. PEDRO VICENTE GUTIERREZ TORRES","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"1","LATITUD":"-18,503580090000","LONGITUD":"-70,260826110000","CONVENIO_PIE":"0","ENS_01":"165","ENS_02":"167","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2019","RBD":"4","DGV_RBD":"3","NOM_RBD":"LICEO OCTAVIO PALMA PEREZ","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","LATITUD":"-18,474243160000","LONGITUD":"-70,308265690000","CONVENIO_PIE":"1","ENS_01":"310","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2019","RBD":"5","DGV_RBD":"1","NOM_RBD":"JOVINA NARANJO FERNANDEZ","RUT_SOSTENEDOR":"69010100","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"2","COD_DEPE2":"1","RURAL_RBD":"0","LATITUD":"-18,476903920000","LONGITUD":"-70,313453670000","CONVENIO_PIE":"1","ENS_01":"110","ENS_02":"310","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"7","ORI_OTRO_GLOSA":"PLURALISTA","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
 
-## FILE 17/23: Docentes 2006_PUBLICA.csv
-source: /tmp/sep_inspect_yoqma06w/Docentes 2006_PUBLICA.csv
-encoding: utf-8-sig
+## FILE 8/13: Directorio_Oficial_EE_2020.csv
+source: /tmp/sep_inspect_dv4cfvhw/Directorio_Oficial_EE_2020.csv
+encoding: utf-8
 separator: semicolon
-rows_total: 193,506
-cols_count: 33
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'LET_RBD', 'NUM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPE', 'RURAL_RBD', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'ID_IFP', 'ID_ITC', 'HORAS_CONTRATO', 'ANO_SERVICIO_SISTEMA', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'PERSONAS']
+rows_total: 16,398
+cols_count: 37
+cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'MRUN', 'RUT_SOSTENEDOR', 'P_JURIDICA', 'COD_REG_RBD', 'NOM_REG_RBD_A', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'LATITUD', 'LONGITUD', 'CONVENIO_PIE', 'ENS_01', 'ENS_02', 'ENS_03', 'ENS_04', 'ENS_05', 'ENS_06', 'ENS_07', 'ENS_08', 'ENS_09', 'ENS_10', 'ENS_11', 'MATRICULA', 'ESTADO_ESTAB', 'ORI_RELIGIOSA', 'ORI_OTRO_GLOSA', 'PAGO_MATRICULA', 'PAGO_MENSUAL']
 
 ### COLUMN PROFILE
 col | type | null_pct | cardinality | sample_values
 --- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2006, 2006, 2006
-RBD | numeric | 0.0% | 5 | 12602, 591, 2932
-DGV_RBD | numeric | 0.0% | 5 | 0, 6, 7
-NOM_RBD | string | 0.0% | 5 | ESC  BAS  Y PARV   KRONOS SCHOOL, COLEGIO INGLES CATOLICO, ESC.  ESPANA
-LET_RBD | string | 80.0% | 1 | F
-NUM_RBD | numeric | 0.0% | 3 | 0, 64, 158
-COD_REG_RBD | numeric | 0.0% | 4 | 1, 4, 7
-COD_PRO_RBD | numeric | 0.0% | 4 | 11, 41, 71
-COD_COM_RBD | numeric | 0.0% | 4 | 1107, 4101, 7101
-NOM_COM_RBD | string | 0.0% | 4 | ALTO HOSPICIO, LA SERENA, TALCA
-COD_DEPE | numeric | 0.0% | 3 | 3, 4, 2
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-CLAVE | string | 0.0% | 4 | AA1000002721, AA1000004211, AA1000005721
-MRUN | numeric | 0.0% | 4 | 10237, 18577344, 285455
-DOC_GENERO | numeric | 0.0% | 2 | 2, 1, 2
-DOC_FEC_NAC | numeric | 0.0% | 4 | 19730531, 19570703, 19550823
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 4 | 13, 14, 12
-ESP_ID_1 | numeric | 0.0% | 4 | 130, 1411, 120
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC | numeric | 0.0% | 2 | 3, 3, 1
-HORAS_CONTRATO | numeric | 0.0% | 5 | 38, 39, 30
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 4 | 9, 21, 26
-ID_ICH | numeric | 0.0% | 3 | 110, 110, 213
-NIVEL1 | numeric | 0.0% | 3 | 2, 2, 3
-SECTOR1 | numeric | 0.0% | 4 | 190, 140, 200
-SUBSECTOR1 | numeric | 0.0% | 4 | 19001, 14001, -2
-HORAS1 | numeric | 0.0% | 5 | 38, 16, 28
-NIVEL2 | numeric | 60.0% | 2 | 4, 5
-SECTOR2 | numeric | 60.0% | 2 | 360, 320
-SUBSECTOR2 | numeric | 60.0% | 2 | 36001, 32001
-HORAS2 | numeric | 60.0% | 2 | 8, 12
-PERSONAS | numeric | 0.0% | 2 | 1, 1, 1
+AGNO | numeric | 0.0% | 1 | 2020, 2020, 2020
+RBD | numeric | 0.0% | 5 | 1, 2, 3
+DGV_RBD | numeric | 0.0% | 5 | 9, 7, 5
+NOM_RBD | string | 0.0% | 5 | LICEO POLITECNICO ARICA, PARVULARIO LAS ESPIGUITAS, ESC. PEDRO VICENTE GUTIERREZ TORRES
+MRUN | empty | 100.0% | 0 | 
+RUT_SOSTENEDOR | numeric | 0.0% | 1 | 62000660, 62000660, 62000660
+P_JURIDICA | numeric | 0.0% | 1 | 1, 1, 1
+COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
+NOM_REG_RBD_A | string | 0.0% | 1 | AYP, AYP, AYP
+COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
+COD_COM_RBD | numeric | 0.0% | 1 | 15101, 15101, 15101
+NOM_COM_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
+COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
+NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
+COD_DEPE | numeric | 0.0% | 1 | 6, 6, 6
+COD_DEPE2 | numeric | 0.0% | 1 | 5, 5, 5
+RURAL_RBD | numeric | 0.0% | 2 | 0, 0, 1
+LATITUD | numeric | 0.0% | 5 | -18.487200000000000, -18.469861980000000, -18.503580090000000
+LONGITUD | numeric | 0.0% | 5 | -70.29521200000001, -70.30275726000001, -70.26082611000000
+CONVENIO_PIE | numeric | 0.0% | 2 | 1, 1, 0
+ENS_01 | numeric | 0.0% | 5 | 463, 10, 165
+ENS_02 | numeric | 0.0% | 4 | 510, 0, 167
+ENS_03 | numeric | 0.0% | 3 | 563, 0, 363
+ENS_04 | numeric | 0.0% | 2 | 610, 0, 0
+ENS_05 | numeric | 0.0% | 2 | 663, 0, 0
+ENS_06 | numeric | 0.0% | 2 | 863, 0, 0
+ENS_07 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_08 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_09 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_10 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_11 | numeric | 0.0% | 1 | 0, 0, 0
+MATRICULA | numeric | 0.0% | 1 | 1, 1, 1
+ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
+ORI_RELIGIOSA | numeric | 0.0% | 3 | 2, 2, 1
+ORI_OTRO_GLOSA | string | 80.0% | 1 | PLURALISTA
+PAGO_MATRICULA | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
+PAGO_MENSUAL | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
 
 ### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2006","RBD":"12602","DGV_RBD":"0","NOM_RBD":"ESC  BAS  Y PARV   KRONOS SCHOOL","NUM_RBD":"0","COD_REG_RBD":"1","COD_PRO_RBD":"11","COD_COM_RBD":"1107","NOM_COM_RBD":"ALTO HOSPICIO","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000002721","MRUN":"10237","DOC_GENERO":"2","DOC_FEC_NAC":"19730531","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"130","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"38","ANO_SERVICIO_SISTEMA":"9","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"38","PERSONAS":"1"}
-{"AGNO":"2006","RBD":"591","DGV_RBD":"6","NOM_RBD":"COLEGIO INGLES CATOLICO","NUM_RBD":"64","COD_REG_RBD":"4","COD_PRO_RBD":"41","COD_COM_RBD":"4101","NOM_COM_RBD":"LA SERENA","COD_DEPE":"4","RURAL_RBD":"0","CLAVE":"AA1000004211","MRUN":"18577344","DOC_GENERO":"1","DOC_FEC_NAC":"19570703","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1411","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"39","ANO_SERVICIO_SISTEMA":"21","ID_ICH":"110","NIVEL1":"2","SECTOR1":"140","SUBSECTOR1":"14001","HORAS1":"16","NIVEL2":"4","SECTOR2":"360","SUBSECTOR2":"36001","HORAS2":"8","PERSONAS":"1"}
-{"AGNO":"2006","RBD":"2932","DGV_RBD":"7","NOM_RBD":"ESC.  ESPANA","LET_RBD":"F","NUM_RBD":"158","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"1","HORAS_CONTRATO":"30","ANO_SERVICIO_SISTEMA":"26","ID_ICH":"213","NIVEL1":"3","SECTOR1":"200","SUBSECTOR1":"-2","HORAS1":"28","PERSONAS":"1"}
-{"AGNO":"2006","RBD":"11343","DGV_RBD":"3","NOM_RBD":"COLEGIO NUEVA HOLANDA","NUM_RBD":"0","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"2","ANO_SERVICIO_SISTEMA":"26","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"2","PERSONAS":"0"}
-{"AGNO":"2006","RBD":"25304","DGV_RBD":"9","NOM_RBD":"COLEGIO PAUL HARRIS SCHOOL","NUM_RBD":"0","COD_REG_RBD":"13","COD_PRO_RBD":"131","COD_COM_RBD":"13105","NOM_COM_RBD":"EL BOSQUE","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000022111","MRUN":"18204895","DOC_GENERO":"1","DOC_FEC_NAC":"19740928","TIT_ID_1":"1","TIP_TIT_ID_1":"11","ESP_ID_1":"110","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"37","ANO_SERVICIO_SISTEMA":"4","ID_ICH":"310","NIVEL1":"4","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"25","NIVEL2":"5","SECTOR2":"320","SUBSECTOR2":"32001","HORAS2":"12","PERSONAS":"1"}
+{"AGNO":"2020","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18.487200000000000","LONGITUD":"-70.29521200000001","CONVENIO_PIE":"1","ENS_01":"463","ENS_02":"510","ENS_03":"563","ENS_04":"610","ENS_05":"663","ENS_06":"863","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2020","RBD":"2","DGV_RBD":"7","NOM_RBD":"PARVULARIO LAS ESPIGUITAS","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18.469861980000000","LONGITUD":"-70.30275726000001","CONVENIO_PIE":"1","ENS_01":"10","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2020","RBD":"3","DGV_RBD":"5","NOM_RBD":"ESC. PEDRO VICENTE GUTIERREZ TORRES","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"1","LATITUD":"-18.503580090000000","LONGITUD":"-70.26082611000000","CONVENIO_PIE":"0","ENS_01":"165","ENS_02":"167","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2020","RBD":"4","DGV_RBD":"3","NOM_RBD":"LICEO OCTAVIO PALMA PEREZ","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18.474239000000000","LONGITUD":"-70.30827300000000","CONVENIO_PIE":"1","ENS_01":"310","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2020","RBD":"5","DGV_RBD":"1","NOM_RBD":"JOVINA NARANJO FERNANDEZ","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18.476900000000000","LONGITUD":"-70.31345399999999","CONVENIO_PIE":"1","ENS_01":"110","ENS_02":"310","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"7","ORI_OTRO_GLOSA":"PLURALISTA","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
 
-## FILE 18/23: Docentes 2007_PUBLICA.csv
-source: /tmp/sep_inspect_yoqma06w/Docentes 2007_PUBLICA.csv
+## FILE 9/13: Directorio_Oficial_EE_2021.csv
+source: /tmp/sep_inspect_dv4cfvhw/Directorio_Oficial_EE_2021.csv
 encoding: utf-8-sig
 separator: semicolon
-rows_total: 196,063
-cols_count: 33
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'LET_RBD', 'NUM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPE', 'RURAL_RBD', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'ID_IFP', 'ID_ITC', 'HORAS_CONTRATO', 'ANO_SERVICIO_SISTEMA', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'PERSONAS']
+rows_total: 16,498
+cols_count: 37
+cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'MRUN', 'RUT_SOSTENEDOR', 'P_JURIDICA', 'COD_REG_RBD', 'NOM_REG_RBD_A', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPROV_RBD', 'NOM_DEPROV_RBD', 'COD_DEPE', 'COD_DEPE2', 'RURAL_RBD', 'LATITUD', 'LONGITUD', 'CONVENIO_PIE', 'ENS_01', 'ENS_02', 'ENS_03', 'ENS_04', 'ENS_05', 'ENS_06', 'ENS_07', 'ENS_08', 'ENS_09', 'ENS_10', 'ENS_11', 'MATRICULA', 'ESTADO_ESTAB', 'ORI_RELIGIOSA', 'ORI_OTRO_GLOSA', 'PAGO_MATRICULA', 'PAGO_MENSUAL']
 
 ### COLUMN PROFILE
 col | type | null_pct | cardinality | sample_values
 --- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2007, 2007, 2007
-RBD | numeric | 0.0% | 5 | 12602, 591, 2932
-DGV_RBD | numeric | 0.0% | 5 | 0, 6, 7
-NOM_RBD | string | 0.0% | 5 | ESC BAS Y PARV KRONOS SCHOOL, COLEGIO INGLES CATOLICO, ESC. ESPANA
-LET_RBD | string | 60.0% | 2 | F, A
-NUM_RBD | numeric | 0.0% | 4 | 0, 64, 158
-COD_REG_RBD | numeric | 0.0% | 3 | 1, 4, 7
-COD_PRO_RBD | numeric | 0.0% | 3 | 11, 41, 71
-COD_COM_RBD | numeric | 0.0% | 3 | 1107, 4101, 7101
-NOM_COM_RBD | string | 0.0% | 3 | ALTO HOSPICIO, LA SERENA, TALCA
-COD_DEPE | numeric | 0.0% | 3 | 3, 4, 2
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-CLAVE | string | 0.0% | 3 | AA1000002721, AA1000004211, AA1000005721
-MRUN | numeric | 0.0% | 3 | 10237, 18577344, 285455
-DOC_GENERO | numeric | 0.0% | 2 | 2, 1, 2
-DOC_FEC_NAC | numeric | 0.0% | 3 | 19730531, 19570703, 19550823
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 3 | 13, 14, 12
-ESP_ID_1 | numeric | 0.0% | 3 | 130, 1411, 120
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC | numeric | 0.0% | 3 | 3, 3, 1
-HORAS_CONTRATO | numeric | 0.0% | 5 | 38, 39, 30
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 3 | 9, 22, 27
-ID_ICH | numeric | 0.0% | 3 | 110, 110, 213
-NIVEL1 | numeric | 0.0% | 3 | 2, 2, 3
-SECTOR1 | numeric | 0.0% | 4 | 190, 140, 200
-SUBSECTOR1 | numeric | 0.0% | 4 | 19001, 14001, -2
-HORAS1 | numeric | 0.0% | 5 | 38, 16, 28
-NIVEL2 | numeric | 80.0% | 1 | 4
-SECTOR2 | numeric | 80.0% | 1 | 360
-SUBSECTOR2 | numeric | 80.0% | 1 | 36001
-HORAS2 | numeric | 80.0% | 1 | 8
-PERSONAS | numeric | 0.0% | 2 | 1, 1, 1
+AGNO | numeric | 0.0% | 1 | 2021, 2021, 2021
+RBD | numeric | 0.0% | 5 | 1, 2, 3
+DGV_RBD | numeric | 0.0% | 5 | 9, 7, 5
+NOM_RBD | string | 0.0% | 5 | LICEO POLITECNICO ARICA, PARVULARIO LAS ESPIGUITAS, ESC. PEDRO VICENTE GUTIERREZ TORRES
+MRUN | empty | 100.0% | 0 | 
+RUT_SOSTENEDOR | numeric | 0.0% | 1 | 62000660, 62000660, 62000660
+P_JURIDICA | numeric | 0.0% | 1 | 1, 1, 1
+COD_REG_RBD | numeric | 0.0% | 1 | 15, 15, 15
+NOM_REG_RBD_A | string | 0.0% | 1 | AYP, AYP, AYP
+COD_PRO_RBD | numeric | 0.0% | 1 | 151, 151, 151
+COD_COM_RBD | numeric | 0.0% | 1 | 15101, 15101, 15101
+NOM_COM_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
+COD_DEPROV_RBD | numeric | 0.0% | 1 | 151, 151, 151
+NOM_DEPROV_RBD | string | 0.0% | 1 | ARICA, ARICA, ARICA
+COD_DEPE | numeric | 0.0% | 1 | 6, 6, 6
+COD_DEPE2 | numeric | 0.0% | 1 | 5, 5, 5
+RURAL_RBD | numeric | 0.0% | 2 | 0, 0, 1
+LATITUD | string | 0.0% | 5 | -18,487200000000000, -18,469861980000000, -18,503580090000000
+LONGITUD | string | 0.0% | 5 | -70,29521200000001, -70,30275726000001, -70,26082611000000
+CONVENIO_PIE | numeric | 0.0% | 2 | 1, 1, 0
+ENS_01 | numeric | 0.0% | 5 | 463, 10, 165
+ENS_02 | numeric | 0.0% | 4 | 510, 0, 167
+ENS_03 | numeric | 0.0% | 3 | 563, 0, 363
+ENS_04 | numeric | 0.0% | 2 | 610, 0, 0
+ENS_05 | numeric | 0.0% | 2 | 663, 0, 0
+ENS_06 | numeric | 0.0% | 2 | 863, 0, 0
+ENS_07 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_08 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_09 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_10 | numeric | 0.0% | 1 | 0, 0, 0
+ENS_11 | numeric | 0.0% | 1 | 0, 0, 0
+MATRICULA | numeric | 0.0% | 1 | 1, 1, 1
+ESTADO_ESTAB | numeric | 0.0% | 1 | 1, 1, 1
+ORI_RELIGIOSA | numeric | 0.0% | 3 | 2, 2, 1
+ORI_OTRO_GLOSA | string | 80.0% | 1 | PLURALISTA
+PAGO_MATRICULA | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
+PAGO_MENSUAL | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
 
 ### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2007","RBD":"12602","DGV_RBD":"0","NOM_RBD":"ESC BAS Y PARV KRONOS SCHOOL","NUM_RBD":"0","COD_REG_RBD":"1","COD_PRO_RBD":"11","COD_COM_RBD":"1107","NOM_COM_RBD":"ALTO HOSPICIO","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000002721","MRUN":"10237","DOC_GENERO":"2","DOC_FEC_NAC":"19730531","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"130","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"38","ANO_SERVICIO_SISTEMA":"9","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"38","PERSONAS":"1"}
-{"AGNO":"2007","RBD":"591","DGV_RBD":"6","NOM_RBD":"COLEGIO INGLES CATOLICO","NUM_RBD":"64","COD_REG_RBD":"4","COD_PRO_RBD":"41","COD_COM_RBD":"4101","NOM_COM_RBD":"LA SERENA","COD_DEPE":"4","RURAL_RBD":"0","CLAVE":"AA1000004211","MRUN":"18577344","DOC_GENERO":"1","DOC_FEC_NAC":"19570703","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1411","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"39","ANO_SERVICIO_SISTEMA":"22","ID_ICH":"110","NIVEL1":"2","SECTOR1":"140","SUBSECTOR1":"14001","HORAS1":"16","NIVEL2":"4","SECTOR2":"360","SUBSECTOR2":"36001","HORAS2":"8","PERSONAS":"1"}
-{"AGNO":"2007","RBD":"2932","DGV_RBD":"7","NOM_RBD":"ESC. ESPANA","LET_RBD":"F","NUM_RBD":"158","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"1","HORAS_CONTRATO":"30","ANO_SERVICIO_SISTEMA":"27","ID_ICH":"213","NIVEL1":"3","SECTOR1":"200","SUBSECTOR1":"-2","HORAS1":"28","PERSONAS":"1"}
-{"AGNO":"2007","RBD":"2973","DGV_RBD":"4","NOM_RBD":"LICEO ABATE MOLINA","LET_RBD":"A","NUM_RBD":"8","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"2","HORAS_CONTRATO":"4","ANO_SERVICIO_SISTEMA":"27","ID_ICH":"310","NIVEL1":"4","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"4","PERSONAS":"0"}
-{"AGNO":"2007","RBD":"11343","DGV_RBD":"3","NOM_RBD":"COLEGIO NUEVA HOLANDA","NUM_RBD":"0","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"2","ANO_SERVICIO_SISTEMA":"27","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"2","PERSONAS":"0"}
+{"AGNO":"2021","RBD":"1","DGV_RBD":"9","NOM_RBD":"LICEO POLITECNICO ARICA","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,487200000000000","LONGITUD":"-70,29521200000001","CONVENIO_PIE":"1","ENS_01":"463","ENS_02":"510","ENS_03":"563","ENS_04":"610","ENS_05":"663","ENS_06":"863","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2021","RBD":"2","DGV_RBD":"7","NOM_RBD":"PARVULARIO LAS ESPIGUITAS","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,469861980000000","LONGITUD":"-70,30275726000001","CONVENIO_PIE":"1","ENS_01":"10","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"2","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2021","RBD":"3","DGV_RBD":"5","NOM_RBD":"ESC. PEDRO VICENTE GUTIERREZ TORRES","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"1","LATITUD":"-18,503580090000000","LONGITUD":"-70,26082611000000","CONVENIO_PIE":"0","ENS_01":"165","ENS_02":"167","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2021","RBD":"4","DGV_RBD":"3","NOM_RBD":"LICEO OCTAVIO PALMA PEREZ","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,474239000000000","LONGITUD":"-70,30827300000000","CONVENIO_PIE":"1","ENS_01":"310","ENS_02":"0","ENS_03":"0","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"1","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
+{"AGNO":"2021","RBD":"5","DGV_RBD":"1","NOM_RBD":"JOVINA NARANJO FERNANDEZ","RUT_SOSTENEDOR":"62000660","P_JURIDICA":"1","COD_REG_RBD":"15","NOM_REG_RBD_A":"AYP","COD_PRO_RBD":"151","COD_COM_RBD":"15101","NOM_COM_RBD":"ARICA","COD_DEPROV_RBD":"151","NOM_DEPROV_RBD":"ARICA","COD_DEPE":"6","COD_DEPE2":"5","RURAL_RBD":"0","LATITUD":"-18,476900000000000","LONGITUD":"-70,31345399999999","CONVENIO_PIE":"1","ENS_01":"110","ENS_02":"310","ENS_03":"363","ENS_04":"0","ENS_05":"0","ENS_06":"0","ENS_07":"0","ENS_08":"0","ENS_09":"0","ENS_10":"0","ENS_11":"0","MATRICULA":"1","ESTADO_ESTAB":"1","ORI_RELIGIOSA":"7","ORI_OTRO_GLOSA":"PLURALISTA","PAGO_MATRICULA":"GRATUITO","PAGO_MENSUAL":"GRATUITO"}
 
-## FILE 19/23: Docentes 2008_PUBLICA.csv
-source: /tmp/sep_inspect_yoqma06w/Docentes 2008_PUBLICA.csv
+## FILE 10/13: Directorio_oficial_EE_2013.csv
+source: /tmp/sep_inspect_dv4cfvhw/Directorio_oficial_EE_2013.csv
 encoding: utf-8-sig
 separator: semicolon
-rows_total: 197,135
-cols_count: 33
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'LET_RBD', 'NUM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPE', 'RURAL_RBD', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'ID_IFP', 'ID_ITC', 'HORAS_CONTRATO', 'ANO_SERVICIO_SISTEMA', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'PERSONAS']
+rows_total: 12,114
+cols_count: 22
+cols: ['ïagno', 'rbd', 'dgv_rbd', 'nom_rbd', 'cod_reg_rbd', 'cod_pro_rbd', 'cod_com_rbd', 'nom_com_rbd', 'cod_depe', 'rural_rbd', 'pago_matricula', 'pago_mensual', 'ori_religiosa', 'ens_01', 'ens_02', 'ens_03', 'ens_04', 'ens_05', 'ens_06', 'ens_07', 'ens_08', 'ens_09']
 
 ### COLUMN PROFILE
 col | type | null_pct | cardinality | sample_values
 --- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2008, 2008, 2008
-RBD | numeric | 0.0% | 5 | 12602, 591, 2932
-DGV_RBD | numeric | 0.0% | 5 | 0, 6, 7
-NOM_RBD | string | 0.0% | 5 | ESC  BAS  Y PARV   KRONOS SCHOOL, COLEGIO INGLES CATOLICO, ESC.  ESPANA
-LET_RBD | string | 60.0% | 2 | F, A
-NUM_RBD | numeric | 40.0% | 3 | 64, 158, 8
-COD_REG_RBD | numeric | 0.0% | 3 | 1, 4, 7
-COD_PRO_RBD | numeric | 0.0% | 3 | 11, 41, 71
-COD_COM_RBD | numeric | 0.0% | 3 | 1107, 4101, 7101
-NOM_COM_RBD | string | 0.0% | 3 | ALTO HOSPICIO, LA SERENA, TALCA
-COD_DEPE | numeric | 0.0% | 3 | 3, 4, 2
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-CLAVE | string | 0.0% | 3 | AA1000002721, AA1000004211, AA1000005721
-MRUN | numeric | 0.0% | 3 | 10237, 18577344, 285455
-DOC_GENERO | numeric | 0.0% | 2 | 2, 1, 2
-DOC_FEC_NAC | numeric | 0.0% | 3 | 19730531, 19570703, 19550823
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 3 | 13, 14, 12
-ESP_ID_1 | numeric | 0.0% | 3 | 130, 1411, 120
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC | numeric | 0.0% | 3 | 3, 3, 1
-HORAS_CONTRATO | numeric | 0.0% | 4 | 39, 39, 30
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 3 | 11, 23, 29
-ID_ICH | numeric | 0.0% | 3 | 110, 110, 213
-NIVEL1 | numeric | 0.0% | 3 | 2, 2, 3
-SECTOR1 | numeric | 0.0% | 4 | 190, 140, 200
-SUBSECTOR1 | numeric | 0.0% | 4 | 19001, 14001, -2
-HORAS1 | numeric | 0.0% | 5 | 39, 16, 28
-NIVEL2 | numeric | 80.0% | 1 | 4
-SECTOR2 | numeric | 80.0% | 1 | 360
-SUBSECTOR2 | numeric | 80.0% | 1 | 36001
-HORAS2 | numeric | 80.0% | 1 | 8
-PERSONAS | numeric | 0.0% | 2 | 1, 1, 1
+ïagno | numeric | 0.0% | 1 | 2013, 2013, 2013
+rbd | numeric | 0.0% | 5 | 1, 2, 3
+dgv_rbd | numeric | 0.0% | 5 | 9, 7, 5
+nom_rbd | string | 0.0% | 5 | LICEO POLITECNICO ARICA, PARVULARIO LAS ESPIGUITAS, ESC. PEDRO VICENTE GUTIERREZ TORRES
+cod_reg_rbd | numeric | 0.0% | 1 | 15, 15, 15
+cod_pro_rbd | numeric | 0.0% | 1 | 151, 151, 151
+cod_com_rbd | numeric | 0.0% | 1 | 15101, 15101, 15101
+nom_com_rbd | string | 0.0% | 1 | ARICA, ARICA, ARICA
+cod_depe | numeric | 0.0% | 1 | 2, 2, 2
+rural_rbd | numeric | 0.0% | 2 | 0, 0, 1
+pago_matricula | string | 0.0% | 1 | Gratuito, Gratuito, Gratuito
+pago_mensual | string | 0.0% | 1 | Gratuito, Gratuito, Gratuito
+ori_religiosa | numeric | 0.0% | 3 | 2, 2, 2
+ens_01 | numeric | 0.0% | 5 | 463, 10, 165
+ens_02 | numeric | 0.0% | 4 | 510, 0, 167
+ens_03 | numeric | 0.0% | 3 | 563, 0, 0
+ens_04 | numeric | 0.0% | 2 | 610, 0, 0
+ens_05 | numeric | 0.0% | 2 | 663, 0, 0
+ens_06 | numeric | 0.0% | 2 | 863, 0, 0
+ens_07 | numeric | 0.0% | 1 | 0, 0, 0
+ens_08 | numeric | 0.0% | 1 | 0, 0, 0
+ens_09 | numeric | 0.0% | 1 | 0, 0, 0
 
 ### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2008","RBD":"12602","DGV_RBD":"0","NOM_RBD":"ESC  BAS  Y PARV   KRONOS SCHOOL","COD_REG_RBD":"1","COD_PRO_RBD":"11","COD_COM_RBD":"1107","NOM_COM_RBD":"ALTO HOSPICIO","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000002721","MRUN":"10237","DOC_GENERO":"2","DOC_FEC_NAC":"19730531","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"130","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"39","ANO_SERVICIO_SISTEMA":"11","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"39","PERSONAS":"1"}
-{"AGNO":"2008","RBD":"591","DGV_RBD":"6","NOM_RBD":"COLEGIO INGLES CATOLICO","NUM_RBD":"64","COD_REG_RBD":"4","COD_PRO_RBD":"41","COD_COM_RBD":"4101","NOM_COM_RBD":"LA SERENA","COD_DEPE":"4","RURAL_RBD":"0","CLAVE":"AA1000004211","MRUN":"18577344","DOC_GENERO":"1","DOC_FEC_NAC":"19570703","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1411","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"39","ANO_SERVICIO_SISTEMA":"23","ID_ICH":"110","NIVEL1":"2","SECTOR1":"140","SUBSECTOR1":"14001","HORAS1":"16","NIVEL2":"4","SECTOR2":"360","SUBSECTOR2":"36001","HORAS2":"8","PERSONAS":"1"}
-{"AGNO":"2008","RBD":"2932","DGV_RBD":"7","NOM_RBD":"ESC.  ESPANA","LET_RBD":"F","NUM_RBD":"158","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"1","HORAS_CONTRATO":"30","ANO_SERVICIO_SISTEMA":"29","ID_ICH":"213","NIVEL1":"3","SECTOR1":"200","SUBSECTOR1":"-2","HORAS1":"28","PERSONAS":"1"}
-{"AGNO":"2008","RBD":"2973","DGV_RBD":"4","NOM_RBD":"LICEO ABATE MOLINA","LET_RBD":"A","NUM_RBD":"8","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"2","HORAS_CONTRATO":"4","ANO_SERVICIO_SISTEMA":"29","ID_ICH":"310","NIVEL1":"4","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"4","PERSONAS":"0"}
-{"AGNO":"2008","RBD":"11343","DGV_RBD":"3","NOM_RBD":"COLEGIO NUEVA HOLANDA","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"3","ANO_SERVICIO_SISTEMA":"29","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"3","PERSONAS":"0"}
+{"ïagno":"2013","rbd":"1","dgv_rbd":"9","nom_rbd":"LICEO POLITECNICO ARICA","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_depe":"2","rural_rbd":"0","pago_matricula":"Gratuito","pago_mensual":"Gratuito","ori_religiosa":"2","ens_01":"463","ens_02":"510","ens_03":"563","ens_04":"610","ens_05":"663","ens_06":"863","ens_07":"0","ens_08":"0","ens_09":"0"}
+{"ïagno":"2013","rbd":"2","dgv_rbd":"7","nom_rbd":"PARVULARIO LAS ESPIGUITAS","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_depe":"2","rural_rbd":"0","pago_matricula":"Gratuito","pago_mensual":"Gratuito","ori_religiosa":"2","ens_01":"10","ens_02":"0","ens_03":"0","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0"}
+{"ïagno":"2013","rbd":"3","dgv_rbd":"5","nom_rbd":"ESC. PEDRO VICENTE GUTIERREZ TORRES","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_depe":"2","rural_rbd":"1","pago_matricula":"Gratuito","pago_mensual":"Gratuito","ori_religiosa":"2","ens_01":"165","ens_02":"167","ens_03":"0","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0"}
+{"ïagno":"2013","rbd":"4","dgv_rbd":"3","nom_rbd":"LICEO OCTAVIO PALMA PEREZ","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_depe":"2","rural_rbd":"0","pago_matricula":"Gratuito","pago_mensual":"Gratuito","ori_religiosa":"1","ens_01":"310","ens_02":"0","ens_03":"0","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0"}
+{"ïagno":"2013","rbd":"5","dgv_rbd":"1","nom_rbd":"JOVINA NARANJO FERNANDEZ","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_depe":"2","rural_rbd":"0","pago_matricula":"Gratuito","pago_mensual":"Gratuito","ori_religiosa":"7","ens_01":"110","ens_02":"310","ens_03":"363","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0"}
 
-## FILE 20/23: Docentes 2009_PUBLICA.csv
-source: /tmp/sep_inspect_yoqma06w/Docentes 2009_PUBLICA.csv
+## FILE 11/13: Directorio_oficial_EE_2014.csv
+source: /tmp/sep_inspect_dv4cfvhw/Directorio_oficial_EE_2014.csv
 encoding: utf-8-sig
 separator: semicolon
-rows_total: 202,403
-cols_count: 33
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'LET_RBD', 'COD_REG_RBD', 'NUM_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPE', 'RURAL_RBD', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'ANO_SERVICIO_SISTEMA', 'ID_IFP', 'HORAS_CONTRATO', 'ID_ITC', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'PERSONAS']
+rows_total: 12,061
+cols_count: 28
+cols: ['ïagno', 'rbd', 'dgv_rbd', 'nom_rbd', 'cod_reg_rbd', 'cod_pro_rbd', 'cod_com_rbd', 'nom_com_rbd', 'cod_depe', 'cod_depe2', 'rural_rbd', 'latitud', 'longitud', 'convenio_pie', 'ens_01', 'ens_02', 'ens_03', 'ens_04', 'ens_05', 'ens_06', 'ens_07', 'ens_08', 'ens_09', 'ens_10', 'ori_religiosa', 'ori_otro_glosa', 'pago_matricula', 'pago_mensual']
 
 ### COLUMN PROFILE
 col | type | null_pct | cardinality | sample_values
 --- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2009, 2009, 2009
-RBD | numeric | 0.0% | 5 | 12602, 591, 2932
-DGV_RBD | numeric | 0.0% | 5 | 0, 6, 7
-NOM_RBD | string | 0.0% | 5 | ESC  BAS  Y PARV   KRONOS SCHOOL, COLEGIO INGLES CATOLICO, ESC.  ESPANA
-LET_RBD | string | 60.0% | 2 | F, A
-COD_REG_RBD | numeric | 0.0% | 3 | 1, 4, 7
-NUM_RBD | numeric | 0.0% | 4 | 0, 64, 158
-COD_PRO_RBD | numeric | 0.0% | 3 | 11, 41, 71
-COD_COM_RBD | numeric | 0.0% | 3 | 1107, 4101, 7101
-NOM_COM_RBD | string | 0.0% | 3 | "ALTO HOSPICIO, LA SERENA, TALCA
-COD_DEPE | numeric | 0.0% | 3 | 3, 4, 2
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-CLAVE | string | 0.0% | 3 | AA1000002721, AA1000004211, AA1000005721
-MRUN | numeric | 0.0% | 3 | 10237, 18577344, 285455
-DOC_GENERO | numeric | 0.0% | 2 | 2, 1, 2
-DOC_FEC_NAC | numeric | 0.0% | 3 | 19730531, 19570703, 19550823
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 3 | 13, 14, 12
-ESP_ID_1 | numeric | 0.0% | 3 | 130, 1411, 120
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 3 | 12, 24, 30
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-HORAS_CONTRATO | numeric | 0.0% | 4 | 39, 39, 30
-ID_ITC | numeric | 0.0% | 3 | 3, 3, 1
-ID_ICH | numeric | 0.0% | 3 | 110, 110, 213
-NIVEL1 | numeric | 0.0% | 3 | 2, 2, 3
-SECTOR1 | numeric | 0.0% | 4 | 190, 140, 200
-SUBSECTOR1 | numeric | 0.0% | 4 | 19001, 14001, -2
-HORAS1 | numeric | 0.0% | 5 | 39, 16, 28
-NIVEL2 | numeric | 80.0% | 1 | 4
-SECTOR2 | numeric | 80.0% | 1 | 360
-SUBSECTOR2 | numeric | 80.0% | 1 | 36001
-HORAS2 | numeric | 80.0% | 1 | 8
-PERSONAS | numeric | 0.0% | 2 | 1, 1, 1
+ïagno | numeric | 0.0% | 1 | 2014, 2014, 2014
+rbd | numeric | 0.0% | 5 | 1, 2, 3
+dgv_rbd | numeric | 0.0% | 5 | 9, 7, 5
+nom_rbd | string | 0.0% | 5 | LICEO POLITECNICO ARICA, PARVULARIO LAS ESPIGUITAS, ESC. PEDRO VICENTE GUTIERREZ TORRES
+cod_reg_rbd | numeric | 0.0% | 1 | 15, 15, 15
+cod_pro_rbd | numeric | 0.0% | 1 | 151, 151, 151
+cod_com_rbd | numeric | 0.0% | 1 | 15101, 15101, 15101
+nom_com_rbd | string | 0.0% | 1 | ARICA, ARICA, ARICA
+cod_depe | numeric | 0.0% | 1 | 2, 2, 2
+cod_depe2 | numeric | 0.0% | 1 | 1, 1, 1
+rural_rbd | numeric | 0.0% | 2 | 0, 0, 1
+latitud | numeric | 0.0% | 5 | -18.487274, -18.469862, -18.50358
+longitud | numeric | 0.0% | 5 | -70.294739, -70.302757, -70.260826
+convenio_pie | numeric | 0.0% | 2 | 1, 1, 0
+ens_01 | numeric | 0.0% | 5 | 463, 10, 165
+ens_02 | numeric | 0.0% | 4 | 510, 0, 167
+ens_03 | numeric | 0.0% | 3 | 563, 0, 0
+ens_04 | numeric | 0.0% | 2 | 610, 0, 0
+ens_05 | numeric | 0.0% | 2 | 663, 0, 0
+ens_06 | numeric | 0.0% | 2 | 863, 0, 0
+ens_07 | numeric | 0.0% | 1 | 0, 0, 0
+ens_08 | numeric | 0.0% | 1 | 0, 0, 0
+ens_09 | numeric | 0.0% | 1 | 0, 0, 0
+ens_10 | numeric | 0.0% | 1 | 0, 0, 0
+ori_religiosa | numeric | 0.0% | 3 | 2, 2, 2
+ori_otro_glosa | string | 80.0% | 1 | PLURALISTA
+pago_matricula | numeric | 0.0% | 1 | 1, 1, 1
+pago_mensual | numeric | 0.0% | 1 | 1, 1, 1
 
 ### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2009","RBD":"12602","DGV_RBD":"0","NOM_RBD":"ESC  BAS  Y PARV   KRONOS SCHOOL","COD_REG_RBD":"1","NUM_RBD":"0","COD_PRO_RBD":"11","COD_COM_RBD":"1107","NOM_COM_RBD":"\"ALTO HOSPICIO","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000002721","MRUN":"10237","DOC_GENERO":"2","DOC_FEC_NAC":"19730531","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"130","ANO_SERVICIO_SISTEMA":"12","ID_IFP":"1","HORAS_CONTRATO":"39","ID_ITC":"3","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"39","PERSONAS":"1"}
-{"AGNO":"2009","RBD":"591","DGV_RBD":"6","NOM_RBD":"COLEGIO INGLES CATOLICO","COD_REG_RBD":"4","NUM_RBD":"64","COD_PRO_RBD":"41","COD_COM_RBD":"4101","NOM_COM_RBD":"LA SERENA","COD_DEPE":"4","RURAL_RBD":"0","CLAVE":"AA1000004211","MRUN":"18577344","DOC_GENERO":"1","DOC_FEC_NAC":"19570703","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1411","ANO_SERVICIO_SISTEMA":"24","ID_IFP":"1","HORAS_CONTRATO":"39","ID_ITC":"3","ID_ICH":"110","NIVEL1":"2","SECTOR1":"140","SUBSECTOR1":"14001","HORAS1":"16","NIVEL2":"4","SECTOR2":"360","SUBSECTOR2":"36001","HORAS2":"8","PERSONAS":"1"}
-{"AGNO":"2009","RBD":"2932","DGV_RBD":"7","NOM_RBD":"ESC.  ESPANA","LET_RBD":"F","COD_REG_RBD":"7","NUM_RBD":"158","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ANO_SERVICIO_SISTEMA":"30","ID_IFP":"1","HORAS_CONTRATO":"30","ID_ITC":"1","ID_ICH":"213","NIVEL1":"3","SECTOR1":"200","SUBSECTOR1":"-2","HORAS1":"28","PERSONAS":"1"}
-{"AGNO":"2009","RBD":"2973","DGV_RBD":"4","NOM_RBD":"LICEO ABATE MOLINA","LET_RBD":"A","COD_REG_RBD":"7","NUM_RBD":"8","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ANO_SERVICIO_SISTEMA":"30","ID_IFP":"1","HORAS_CONTRATO":"6","ID_ITC":"2","ID_ICH":"310","NIVEL1":"4","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"6","PERSONAS":"0"}
-{"AGNO":"2009","RBD":"11343","DGV_RBD":"3","NOM_RBD":"COLEGIO NUEVA HOLANDA","COD_REG_RBD":"7","NUM_RBD":"0","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ANO_SERVICIO_SISTEMA":"30","ID_IFP":"1","HORAS_CONTRATO":"3","ID_ITC":"3","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"3","PERSONAS":"0"}
+{"ïagno":"2014","rbd":"1","dgv_rbd":"9","nom_rbd":"LICEO POLITECNICO ARICA","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_depe":"2","cod_depe2":"1","rural_rbd":"0","latitud":"-18.487274","longitud":"-70.294739","convenio_pie":"1","ens_01":"463","ens_02":"510","ens_03":"563","ens_04":"610","ens_05":"663","ens_06":"863","ens_07":"0","ens_08":"0","ens_09":"0","ens_10":"0","ori_religiosa":"2","pago_matricula":"1","pago_mensual":"1"}
+{"ïagno":"2014","rbd":"2","dgv_rbd":"7","nom_rbd":"PARVULARIO LAS ESPIGUITAS","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_depe":"2","cod_depe2":"1","rural_rbd":"0","latitud":"-18.469862","longitud":"-70.302757","convenio_pie":"1","ens_01":"10","ens_02":"0","ens_03":"0","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0","ens_10":"0","ori_religiosa":"2","pago_matricula":"1","pago_mensual":"1"}
+{"ïagno":"2014","rbd":"3","dgv_rbd":"5","nom_rbd":"ESC. PEDRO VICENTE GUTIERREZ TORRES","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_depe":"2","cod_depe2":"1","rural_rbd":"1","latitud":"-18.50358","longitud":"-70.260826","convenio_pie":"0","ens_01":"165","ens_02":"167","ens_03":"0","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0","ens_10":"0","ori_religiosa":"2","pago_matricula":"1","pago_mensual":"1"}
+{"ïagno":"2014","rbd":"4","dgv_rbd":"3","nom_rbd":"LICEO OCTAVIO PALMA PEREZ","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_depe":"2","cod_depe2":"1","rural_rbd":"0","latitud":"-18.474243","longitud":"-70.308266","convenio_pie":"1","ens_01":"310","ens_02":"0","ens_03":"0","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0","ens_10":"0","ori_religiosa":"1","pago_matricula":"1","pago_mensual":"1"}
+{"ïagno":"2014","rbd":"5","dgv_rbd":"1","nom_rbd":"JOVINA NARANJO FERNANDEZ","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_depe":"2","cod_depe2":"1","rural_rbd":"0","latitud":"-18.476904","longitud":"-70.313454","convenio_pie":"1","ens_01":"110","ens_02":"310","ens_03":"363","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0","ens_10":"0","ori_religiosa":"7","ori_otro_glosa":"PLURALISTA","pago_matricula":"1","pago_mensual":"1"}
 
-## FILE 21/23: Docentes 2010_PUBLICA.csv
-source: /tmp/sep_inspect_yoqma06w/Docentes 2010_PUBLICA.csv
+## FILE 12/13: Directorio_oficial_EE_2015.csv
+source: /tmp/sep_inspect_dv4cfvhw/Directorio_oficial_EE_2015.csv
 encoding: utf-8-sig
 separator: semicolon
-rows_total: 205,737
-cols_count: 33
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'LET_RBD', 'NUM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPE', 'RURAL_RBD', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'ID_IFP', 'ID_ITC', 'HORAS_CONTRATO', 'ANO_SERVICIO_SISTEMA', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'PERSONAS']
+rows_total: 15,914
+cols_count: 31
+cols: ['ïagno', 'rbd', 'dgv_rbd', 'nom_rbd', 'cod_reg_rbd', 'cod_pro_rbd', 'cod_com_rbd', 'nom_com_rbd', 'cod_deprov_rbd', 'nom_deprov_rbd', 'cod_depe', 'cod_depe2', 'rural_rbd', 'latitud', 'longitud', 'convenio_pie', 'ens_01', 'ens_02', 'ens_03', 'ens_04', 'ens_05', 'ens_06', 'ens_07', 'ens_08', 'ens_09', 'matricula', 'estado_estab', 'ori_religiosa', 'ori_otro_glosa', 'pago_matricula', 'pago_mensual']
 
 ### COLUMN PROFILE
 col | type | null_pct | cardinality | sample_values
 --- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2010, 2010, 2010
-RBD | numeric | 0.0% | 5 | 12602, 2957, 2973
-DGV_RBD | numeric | 0.0% | 5 | 0, 2, 4
-NOM_RBD | string | 0.0% | 5 | ESC BASICA Y PARV KRONOS SCHOOL, ESCUELA UNO SAN AGUSTIN, LICEO ABATE MOLINA
-LET_RBD | string | 60.0% | 2 | E, A
-NUM_RBD | numeric | 0.0% | 3 | 0, 162, 8
-COD_REG_RBD | numeric | 0.0% | 3 | 1, 7, 7
-COD_PRO_RBD | numeric | 0.0% | 3 | 11, 71, 71
-COD_COM_RBD | numeric | 0.0% | 3 | 1107, 7101, 7101
-NOM_COM_RBD | string | 0.0% | 3 | ALTO HOSPICIO, TALCA, TALCA
-COD_DEPE | numeric | 0.0% | 2 | 3, 2, 2
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-CLAVE | string | 0.0% | 3 | AA1000002721, AA1000005721, AA1000005721
-MRUN | numeric | 0.0% | 3 | 10237, 285455, 285455
-DOC_GENERO | numeric | 0.0% | 2 | 2, 2, 2
-DOC_FEC_NAC | numeric | 0.0% | 3 | 19730531, 19550823, 19550823
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 3 | 13, 12, 12
-ESP_ID_1 | numeric | 0.0% | 3 | 130, 120, 120
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC | numeric | 0.0% | 2 | 3, 2, 2
-HORAS_CONTRATO | numeric | 0.0% | 5 | 39, 14, 6
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 3 | 13, 32, 32
-ID_ICH | numeric | 0.0% | 2 | 110, 110, 310
-NIVEL1 | numeric | 0.0% | 2 | 2, 2, 4
-SECTOR1 | numeric | 0.0% | 4 | 190, 110, 395
-SUBSECTOR1 | numeric | 0.0% | 4 | 19001, 11001, 39501
-HORAS1 | numeric | 0.0% | 5 | 39, 13, 6
-NIVEL2 | empty | 100.0% | 0 | 
-SECTOR2 | empty | 100.0% | 0 | 
-SUBSECTOR2 | empty | 100.0% | 0 | 
-HORAS2 | empty | 100.0% | 0 | 
-PERSONAS | numeric | 0.0% | 2 | 1, 1, 0
+ïagno | numeric | 0.0% | 1 | 2015, 2015, 2015
+rbd | numeric | 0.0% | 5 | 21, 47, 65
+dgv_rbd | numeric | 0.0% | 4 | 3, 7, 5
+nom_rbd | string | 0.0% | 5 | ESCUELA CARLOS GUIRAO MASSIF, J.  I. KURUMI, J.  I.  SOLDADITO DE PLOMO
+cod_reg_rbd | numeric | 0.0% | 2 | 15, 15, 15
+cod_pro_rbd | numeric | 0.0% | 2 | 151, 151, 151
+cod_com_rbd | numeric | 0.0% | 2 | 15101, 15101, 15101
+nom_com_rbd | string | 0.0% | 2 | ARICA, ARICA, ARICA
+cod_deprov_rbd | numeric | 0.0% | 2 | 151, 151, 151
+nom_deprov_rbd | string | 0.0% | 2 | ARICA, ARICA, ARICA
+cod_depe | numeric | 0.0% | 4 | 2, 4, 4
+cod_depe2 | numeric | 0.0% | 3 | 1, 3, 3
+rural_rbd | numeric | 0.0% | 1 | 0, 0, 0
+latitud | numeric | 0.0% | 2 | -18.483791, 0, 0
+longitud | numeric | 0.0% | 2 | -70.300079, 0, 0
+convenio_pie | numeric | 0.0% | 1 | 0, 0, 0
+ens_01 | numeric | 0.0% | 1 | 0, 0, 0
+ens_02 | numeric | 0.0% | 1 | 0, 0, 0
+ens_03 | numeric | 0.0% | 1 | 0, 0, 0
+ens_04 | numeric | 0.0% | 1 | 0, 0, 0
+ens_05 | numeric | 0.0% | 1 | 0, 0, 0
+ens_06 | numeric | 0.0% | 1 | 0, 0, 0
+ens_07 | numeric | 0.0% | 1 | 0, 0, 0
+ens_08 | numeric | 0.0% | 1 | 0, 0, 0
+ens_09 | numeric | 0.0% | 1 | 0, 0, 0
+matricula | numeric | 0.0% | 1 | 0, 0, 0
+estado_estab | numeric | 0.0% | 3 | 2, 1, 2
+ori_religiosa | numeric | 0.0% | 2 | 1, 9, 9
+ori_otro_glosa | empty | 100.0% | 0 | 
+pago_matricula | string | 0.0% | 2 | GRATUITO, SIN INFORMACIÃN, SIN INFORMACIÃN
+pago_mensual | string | 0.0% | 2 | GRATUITO, SIN INFORMACIÃN, SIN INFORMACIÃN
 
 ### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2010","RBD":"12602","DGV_RBD":"0","NOM_RBD":"ESC BASICA Y PARV KRONOS SCHOOL","NUM_RBD":"0","COD_REG_RBD":"1","COD_PRO_RBD":"11","COD_COM_RBD":"1107","NOM_COM_RBD":"ALTO HOSPICIO","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000002721","MRUN":"10237","DOC_GENERO":"2","DOC_FEC_NAC":"19730531","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"130","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"39","ANO_SERVICIO_SISTEMA":"13","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"39","PERSONAS":"1"}
-{"AGNO":"2010","RBD":"2957","DGV_RBD":"2","NOM_RBD":"ESCUELA UNO SAN AGUSTIN","LET_RBD":"E","NUM_RBD":"162","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"2","HORAS_CONTRATO":"14","ANO_SERVICIO_SISTEMA":"32","ID_ICH":"110","NIVEL1":"2","SECTOR1":"110","SUBSECTOR1":"11001","HORAS1":"13","PERSONAS":"1"}
-{"AGNO":"2010","RBD":"2973","DGV_RBD":"4","NOM_RBD":"LICEO ABATE MOLINA","LET_RBD":"A","NUM_RBD":"8","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"2","HORAS_CONTRATO":"6","ANO_SERVICIO_SISTEMA":"32","ID_ICH":"310","NIVEL1":"4","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"6","PERSONAS":"0"}
-{"AGNO":"2010","RBD":"11343","DGV_RBD":"3","NOM_RBD":"COLEGIO NUEVA HOLANDA","NUM_RBD":"0","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"120","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"3","ANO_SERVICIO_SISTEMA":"32","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"3","PERSONAS":"0"}
-{"AGNO":"2010","RBD":"25304","DGV_RBD":"9","NOM_RBD":"COLEGIO POLIVALENTE PAUL HARRIS SCHOOL","NUM_RBD":"0","COD_REG_RBD":"13","COD_PRO_RBD":"131","COD_COM_RBD":"13105","NOM_COM_RBD":"EL BOSQUE","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000022111","MRUN":"18204895","DOC_GENERO":"1","DOC_FEC_NAC":"19740928","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1635","ID_IFP":"1","ID_ITC":"3","HORAS_CONTRATO":"44","ANO_SERVICIO_SISTEMA":"8","ID_ICH":"310","NIVEL1":"4","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"44","PERSONAS":"1"}
+{"ïagno":"2015","rbd":"21","dgv_rbd":"3","nom_rbd":"ESCUELA CARLOS GUIRAO MASSIF","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_deprov_rbd":"151","nom_deprov_rbd":"ARICA","cod_depe":"2","cod_depe2":"1","rural_rbd":"0","latitud":"-18.483791","longitud":"-70.300079","convenio_pie":"0","ens_01":"0","ens_02":"0","ens_03":"0","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0","matricula":"0","estado_estab":"2","ori_religiosa":"1","pago_matricula":"GRATUITO","pago_mensual":"GRATUITO"}
+{"ïagno":"2015","rbd":"47","dgv_rbd":"7","nom_rbd":"J.  I. KURUMI","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_deprov_rbd":"151","nom_deprov_rbd":"ARICA","cod_depe":"4","cod_depe2":"3","rural_rbd":"0","latitud":"0","longitud":"0","convenio_pie":"0","ens_01":"0","ens_02":"0","ens_03":"0","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0","matricula":"0","estado_estab":"1","ori_religiosa":"9","pago_matricula":"SIN INFORMACIÃN","pago_mensual":"SIN INFORMACIÃN"}
+{"ïagno":"2015","rbd":"65","dgv_rbd":"5","nom_rbd":"J.  I.  SOLDADITO DE PLOMO","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_deprov_rbd":"151","nom_deprov_rbd":"ARICA","cod_depe":"4","cod_depe2":"3","rural_rbd":"0","latitud":"0","longitud":"0","convenio_pie":"0","ens_01":"0","ens_02":"0","ens_03":"0","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0","matricula":"0","estado_estab":"2","ori_religiosa":"9","pago_matricula":"SIN INFORMACIÃN","pago_mensual":"SIN INFORMACIÃN"}
+{"ïagno":"2015","rbd":"98","dgv_rbd":"1","nom_rbd":"CENTRO DE DIAGNOSTICO","cod_reg_rbd":"1","cod_pro_rbd":"11","cod_com_rbd":"1101","nom_com_rbd":"IQUIQUE","cod_deprov_rbd":"11","nom_deprov_rbd":"IQUIQUE","cod_depe":"3","cod_depe2":"2","rural_rbd":"0","latitud":"0","longitud":"0","convenio_pie":"0","ens_01":"0","ens_02":"0","ens_03":"0","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0","matricula":"0","estado_estab":"3","ori_religiosa":"9","pago_matricula":"SIN INFORMACIÃN","pago_mensual":"SIN INFORMACIÃN"}
+{"ïagno":"2015","rbd":"100","dgv_rbd":"7","nom_rbd":"ESCUELA","cod_reg_rbd":"1","cod_pro_rbd":"11","cod_com_rbd":"1101","nom_com_rbd":"IQUIQUE","cod_deprov_rbd":"11","nom_deprov_rbd":"IQUIQUE","cod_depe":"1","cod_depe2":"1","rural_rbd":"0","latitud":"0","longitud":"0","convenio_pie":"0","ens_01":"0","ens_02":"0","ens_03":"0","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0","matricula":"0","estado_estab":"3","ori_religiosa":"9","pago_matricula":"SIN INFORMACIÃN","pago_mensual":"SIN INFORMACIÃN"}
 
-## FILE 22/23: Docentes 2011_PUBLICA.csv
-source: /tmp/sep_inspect_yoqma06w/Docentes 2011_PUBLICA.csv
+## FILE 13/13: Directorio_oficial_EE_2016.csv
+source: /tmp/sep_inspect_dv4cfvhw/Directorio_oficial_EE_2016.csv
 encoding: utf-8-sig
 separator: semicolon
-rows_total: 213,273
-cols_count: 122
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPE', 'RURAL_RBD', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_ITC', 'HORAS_CONTRATO', 'IDO_MORAL', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'GRADO.8_1', 'GRADO.9_1', 'GRADO.10_1', 'GRADO.11_1', 'GRADO.12_1', 'GRADO.13_1', 'GRADO.14_1', 'GRADO.15_1', 'GRADO.16_1', 'GRADO.17_1', 'GRADO.18_1', 'GRADO.19_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'GRADO.8_2', 'GRADO.9_2', 'GRADO.10_2', 'GRADO.11_2', 'GRADO.12_2', 'GRADO.13_2', 'GRADO.14_2', 'GRADO.15_2', 'GRADO.16_2', 'GRADO.17_2', 'GRADO.18_2', 'GRADO.19_2', 'PERSONAS']
+rows_total: 15,990
+cols_count: 34
+cols: ['ïagno', 'rbd', 'dgv_rbd', 'nom_rbd', 'mrun', 'rut_sostenedor', 'p_juridica', 'cod_reg_rbd', 'cod_pro_rbd', 'cod_com_rbd', 'nom_com_rbd', 'cod_deprov_rbd', 'nom_deprov_rbd', 'cod_depe', 'cod_depe2', 'rural_rbd', 'latitud', 'longitud', 'convenio_pie', 'ens_01', 'ens_02', 'ens_03', 'ens_04', 'ens_05', 'ens_06', 'ens_07', 'ens_08', 'ens_09', 'matricula', 'estado_estab', 'ori_religiosa', 'ori_otro_glosa', 'pago_matricula', 'pago_mensual']
 
 ### COLUMN PROFILE
 col | type | null_pct | cardinality | sample_values
 --- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2011, 2011, 2011
-RBD | numeric | 0.0% | 5 | 12602, 2956, 2973
-DGV_RBD | numeric | 0.0% | 4 | 0, 4, 4
-NOM_RBD | string | 0.0% | 5 | ESC. BASICA Y PARV. KRONOS SCHOOL, ESCUELA AURORA DE CHILE, LICEO ABATE MOLINA
-COD_REG_RBD | numeric | 0.0% | 3 | 1, 7, 7
-COD_PRO_RBD | numeric | 0.0% | 3 | 11, 71, 71
-COD_COM_RBD | numeric | 0.0% | 3 | 1107, 7101, 7101
-NOM_COM_RBD | string | 0.0% | 3 | ALTO HOSPICIO, TALCA, TALCA
-COD_DEPE | numeric | 0.0% | 2 | 3, 2, 2
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-CLAVE | string | 0.0% | 3 | AA1000002721, AA1000005721, AA1000005721
-MRUN | numeric | 0.0% | 3 | 10237, 285455, 285455
-DOC_GENERO | numeric | 0.0% | 2 | 2, 2, 2
-DOC_FEC_NAC | numeric | 0.0% | 3 | 19730531, 19550823, 19550823
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 3 | 13, 12, 12
-ESP_ID_1 | numeric | 0.0% | 3 | 130, 121, 121
-MEN_SIN_MENCION_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_PLATICA_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_NATURALES_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_SOCIALES_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_COMPUTACION_1 | numeric | 0.0% | 2 | 1, 0, 0
-MEN_ED_FISICA_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_ED_MUSICA_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_ED_TECNO_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_LENGUAJE_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_MATE_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_RELIGION_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_TRASTORNOS_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_INGLES_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_FRANCES_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_ALEMAN_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_OTRO_IDIOMA_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_INTERCULTURAL_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_ADMINISTRACION_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_CURRICULUM_1 | numeric | 0.0% | 1 | 0, 0, 0
-TIP_INSTI_ID_1 | numeric | 0.0% | 2 | 3, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 5 | 1999, 1986, 1978
-DURACION_CARRERA_1 | numeric | 0.0% | 3 | 8, 10, 8
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC | numeric | 0.0% | 2 | 4, 1, 1
-HORAS_CONTRATO | numeric | 0.0% | 5 | 39, 12, 30
-IDO_MORAL | numeric | 0.0% | 1 | 1, 1, 1
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 5 | 14, 25, 33
-ANO_SERVICIO_EE | numeric | 0.0% | 4 | 12, 1, 7
-ID_ICH | numeric | 0.0% | 2 | 110, 110, 310
-NIVEL1 | numeric | 0.0% | 2 | 2, 2, 4
-SECTOR1 | numeric | 0.0% | 4 | 140, 190, 395
-SUBSECTOR1 | numeric | 0.0% | 4 | 14001, 19001, 39501
-HORAS1 | numeric | 0.0% | 5 | 38, 12, 30
-COD_ENS_1 | numeric | 0.0% | 2 | 110, 110, 310
-GRADO.1_1 | numeric | 0.0% | 2 | 5, 1, 1
-GRADO.2_1 | numeric | 0.0% | 3 | 6, 2, 2
-GRADO.3_1 | numeric | 0.0% | 3 | 7, 3, 3
-GRADO.4_1 | numeric | 0.0% | 3 | 8, 4, 4
-GRADO.5_1 | numeric | 0.0% | 2 | 0, 5, 0
-GRADO.6_1 | numeric | 0.0% | 2 | 0, 6, 0
-GRADO.7_1 | numeric | 0.0% | 2 | 0, 7, 0
-GRADO.8_1 | numeric | 0.0% | 2 | 0, 8, 0
-GRADO.9_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.10_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.11_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.12_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.13_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.14_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.15_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.16_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.17_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.18_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.19_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | empty | 100.0% | 0 | 
-SECTOR2 | empty | 100.0% | 0 | 
-SUBSECTOR2 | empty | 100.0% | 0 | 
-HORAS2 | empty | 100.0% | 0 | 
-COD_ENS_2 | empty | 100.0% | 0 | 
-GRADO.1_2 | empty | 100.0% | 0 | 
-GRADO.2_2 | empty | 100.0% | 0 | 
-GRADO.3_2 | empty | 100.0% | 0 | 
-GRADO.4_2 | empty | 100.0% | 0 | 
-GRADO.5_2 | empty | 100.0% | 0 | 
-GRADO.6_2 | empty | 100.0% | 0 | 
-GRADO.7_2 | empty | 100.0% | 0 | 
-GRADO.8_2 | empty | 100.0% | 0 | 
-GRADO.9_2 | empty | 100.0% | 0 | 
-GRADO.10_2 | empty | 100.0% | 0 | 
-GRADO.11_2 | empty | 100.0% | 0 | 
-GRADO.12_2 | empty | 100.0% | 0 | 
-GRADO.13_2 | empty | 100.0% | 0 | 
-GRADO.14_2 | empty | 100.0% | 0 | 
-GRADO.15_2 | empty | 100.0% | 0 | 
-GRADO.16_2 | empty | 100.0% | 0 | 
-GRADO.17_2 | empty | 100.0% | 0 | 
-GRADO.18_2 | empty | 100.0% | 0 | 
-GRADO.19_2 | empty | 100.0% | 0 | 
-PERSONAS | numeric | 0.0% | 2 | 1, 0, 1
+ïagno | numeric | 0.0% | 1 | 2016, 2016, 2016
+rbd | numeric | 0.0% | 5 | 1, 2, 3
+dgv_rbd | numeric | 0.0% | 5 | 9, 7, 5
+nom_rbd | string | 0.0% | 5 | LICEO POLITECNICO ARICA, PARVULARIO LAS ESPIGUITAS, ESC. PEDRO VICENTE GUTIERREZ TORRES
+mrun | empty | 100.0% | 0 | 
+rut_sostenedor | numeric | 0.0% | 1 | 69010100, 69010100, 69010100
+p_juridica | numeric | 0.0% | 1 | 1, 1, 1
+cod_reg_rbd | numeric | 0.0% | 1 | 15, 15, 15
+cod_pro_rbd | numeric | 0.0% | 1 | 151, 151, 151
+cod_com_rbd | numeric | 0.0% | 1 | 15101, 15101, 15101
+nom_com_rbd | string | 0.0% | 1 | ARICA, ARICA, ARICA
+cod_deprov_rbd | numeric | 0.0% | 1 | 151, 151, 151
+nom_deprov_rbd | string | 0.0% | 1 | ARICA, ARICA, ARICA
+cod_depe | numeric | 0.0% | 1 | 2, 2, 2
+cod_depe2 | numeric | 0.0% | 1 | 1, 1, 1
+rural_rbd | numeric | 0.0% | 2 | 0, 0, 1
+latitud | numeric | 0.0% | 5 | -18.487274, -18.469862, -18.50358
+longitud | numeric | 0.0% | 5 | -70.294739, -70.302757, -70.260826
+convenio_pie | numeric | 0.0% | 2 | 1, 1, 0
+ens_01 | numeric | 0.0% | 5 | 463, 10, 165
+ens_02 | numeric | 0.0% | 4 | 510, 0, 167
+ens_03 | numeric | 0.0% | 3 | 563, 0, 0
+ens_04 | numeric | 0.0% | 2 | 610, 0, 0
+ens_05 | numeric | 0.0% | 2 | 663, 0, 0
+ens_06 | numeric | 0.0% | 2 | 863, 0, 0
+ens_07 | numeric | 0.0% | 1 | 0, 0, 0
+ens_08 | numeric | 0.0% | 1 | 0, 0, 0
+ens_09 | numeric | 0.0% | 1 | 0, 0, 0
+matricula | numeric | 0.0% | 1 | 1, 1, 1
+estado_estab | numeric | 0.0% | 1 | 1, 1, 1
+ori_religiosa | numeric | 0.0% | 3 | 2, 2, 1
+ori_otro_glosa | string | 80.0% | 1 | PLURALISTA
+pago_matricula | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
+pago_mensual | string | 0.0% | 1 | GRATUITO, GRATUITO, GRATUITO
 
 ### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2011","RBD":"12602","DGV_RBD":"0","NOM_RBD":"ESC. BASICA Y PARV. KRONOS SCHOOL","COD_REG_RBD":"1","COD_PRO_RBD":"11","COD_COM_RBD":"1107","NOM_COM_RBD":"ALTO HOSPICIO","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000002721","MRUN":"10237","DOC_GENERO":"2","DOC_FEC_NAC":"19730531","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"130","MEN_SIN_MENCION_1":"0","MEN_PLATICA_1":"0","MEN_NATURALES_1":"0","MEN_SOCIALES_1":"0","MEN_COMPUTACION_1":"1","MEN_ED_FISICA_1":"0","MEN_ED_MUSICA_1":"0","MEN_ED_TECNO_1":"0","MEN_LENGUAJE_1":"0","MEN_MATE_1":"0","MEN_RELIGION_1":"0","MEN_TRASTORNOS_1":"0","MEN_INGLES_1":"0","MEN_FRANCES_1":"0","MEN_ALEMAN_1":"0","MEN_OTRO_IDIOMA_1":"0","MEN_INTERCULTURAL_1":"0","MEN_ADMINISTRACION_1":"0","MEN_CURRICULUM_1":"0","TIP_INSTI_ID_1":"3","ANO_TITULACION_1":"1999","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_ITC":"4","HORAS_CONTRATO":"39","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"14","ANO_SERVICIO_EE":"12","ID_ICH":"110","NIVEL1":"2","SECTOR1":"140","SUBSECTOR1":"14001","HORAS1":"38","COD_ENS_1":"110","GRADO.1_1":"5","GRADO.2_1":"6","GRADO.3_1":"7","GRADO.4_1":"8","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-{"AGNO":"2011","RBD":"2956","DGV_RBD":"4","NOM_RBD":"ESCUELA AURORA DE CHILE","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"121","MEN_SIN_MENCION_1":"0","MEN_PLATICA_1":"0","MEN_NATURALES_1":"0","MEN_SOCIALES_1":"0","MEN_COMPUTACION_1":"0","MEN_ED_FISICA_1":"0","MEN_ED_MUSICA_1":"0","MEN_ED_TECNO_1":"0","MEN_LENGUAJE_1":"0","MEN_MATE_1":"0","MEN_RELIGION_1":"0","MEN_TRASTORNOS_1":"0","MEN_INGLES_1":"0","MEN_FRANCES_1":"0","MEN_ALEMAN_1":"0","MEN_OTRO_IDIOMA_1":"0","MEN_INTERCULTURAL_1":"0","MEN_ADMINISTRACION_1":"0","MEN_CURRICULUM_1":"0","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1986","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_ITC":"1","HORAS_CONTRATO":"12","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"25","ANO_SERVICIO_EE":"1","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"12","COD_ENS_1":"110","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"5","GRADO.6_1":"6","GRADO.7_1":"7","GRADO.8_1":"8","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"0"}
-{"AGNO":"2011","RBD":"2973","DGV_RBD":"4","NOM_RBD":"LICEO ABATE MOLINA","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"121","MEN_SIN_MENCION_1":"0","MEN_PLATICA_1":"0","MEN_NATURALES_1":"0","MEN_SOCIALES_1":"0","MEN_COMPUTACION_1":"0","MEN_ED_FISICA_1":"0","MEN_ED_MUSICA_1":"0","MEN_ED_TECNO_1":"0","MEN_LENGUAJE_1":"0","MEN_MATE_1":"0","MEN_RELIGION_1":"0","MEN_TRASTORNOS_1":"0","MEN_INGLES_1":"0","MEN_FRANCES_1":"0","MEN_ALEMAN_1":"0","MEN_OTRO_IDIOMA_1":"0","MEN_INTERCULTURAL_1":"0","MEN_ADMINISTRACION_1":"0","MEN_CURRICULUM_1":"0","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1978","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_ITC":"1","HORAS_CONTRATO":"30","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"33","ANO_SERVICIO_EE":"7","ID_ICH":"310","NIVEL1":"4","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"30","COD_ENS_1":"310","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-{"AGNO":"2011","RBD":"11343","DGV_RBD":"3","NOM_RBD":"COLEGIO NUEVA HOLANDA","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"121","MEN_SIN_MENCION_1":"0","MEN_PLATICA_1":"0","MEN_NATURALES_1":"0","MEN_SOCIALES_1":"0","MEN_COMPUTACION_1":"0","MEN_ED_FISICA_1":"0","MEN_ED_MUSICA_1":"0","MEN_ED_TECNO_1":"0","MEN_LENGUAJE_1":"0","MEN_MATE_1":"0","MEN_RELIGION_1":"0","MEN_TRASTORNOS_1":"0","MEN_INGLES_1":"0","MEN_FRANCES_1":"0","MEN_ALEMAN_1":"0","MEN_OTRO_IDIOMA_1":"0","MEN_INTERCULTURAL_1":"0","MEN_ADMINISTRACION_1":"0","MEN_CURRICULUM_1":"0","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1979","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_ITC":"4","HORAS_CONTRATO":"3","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"32","ANO_SERVICIO_EE":"6","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"3","COD_ENS_1":"110","GRADO.1_1":"5","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"0"}
-{"AGNO":"2011","RBD":"25304","DGV_RBD":"9","NOM_RBD":"COLEGIO PAUL HARRIS SCHOOL","COD_REG_RBD":"13","COD_PRO_RBD":"131","COD_COM_RBD":"13105","NOM_COM_RBD":"EL BOSQUE","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000022111","MRUN":"18204895","DOC_GENERO":"1","DOC_FEC_NAC":"19740928","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1419","MEN_SIN_MENCION_1":"0","MEN_PLATICA_1":"0","MEN_NATURALES_1":"0","MEN_SOCIALES_1":"0","MEN_COMPUTACION_1":"0","MEN_ED_FISICA_1":"0","MEN_ED_MUSICA_1":"0","MEN_ED_TECNO_1":"0","MEN_LENGUAJE_1":"0","MEN_MATE_1":"0","MEN_RELIGION_1":"0","MEN_TRASTORNOS_1":"0","MEN_INGLES_1":"0","MEN_FRANCES_1":"0","MEN_ALEMAN_1":"0","MEN_OTRO_IDIOMA_1":"0","MEN_INTERCULTURAL_1":"0","MEN_ADMINISTRACION_1":"0","MEN_CURRICULUM_1":"0","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"2004","DURACION_CARRERA_1":"4","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_ITC":"4","HORAS_CONTRATO":"42","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"6","ANO_SERVICIO_EE":"6","ID_ICH":"310","NIVEL1":"4","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"42","COD_ENS_1":"310","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-
-## FILE 23/23: Docentes 2012_PUBLICA.csv
-source: /tmp/sep_inspect_yoqma06w/Docentes 2012_PUBLICA.csv
-encoding: utf-8-sig
-separator: semicolon
-rows_total: 220,594
-cols_count: 122
-cols: ['AGNO', 'RBD', 'DGV_RBD', 'NOM_RBD', 'COD_REG_RBD', 'COD_PRO_RBD', 'COD_COM_RBD', 'NOM_COM_RBD', 'COD_DEPE', 'RURAL_RBD', 'CLAVE', 'MRUN', 'DOC_GENERO', 'DOC_FEC_NAC', 'TIT_ID_1', 'TIP_TIT_ID_1', 'ESP_ID_1', 'MEN_SIN_MENCION_1', 'MEN_PLATICA_1', 'MEN_NATURALES_1', 'MEN_SOCIALES_1', 'MEN_COMPUTACION_1', 'MEN_ED_FISICA_1', 'MEN_ED_MUSICA_1', 'MEN_ED_TECNO_1', 'MEN_LENGUAJE_1', 'MEN_MATE_1', 'MEN_RELIGION_1', 'MEN_TRASTORNOS_1', 'MEN_INGLES_1', 'MEN_FRANCES_1', 'MEN_ALEMAN_1', 'MEN_OTRO_IDIOMA_1', 'MEN_INTERCULTURAL_1', 'MEN_ADMINISTRACION_1', 'MEN_CURRICULUM_1', 'TIP_INSTI_ID_1', 'ANO_TITULACION_1', 'DURACION_CARRERA_1', 'MODALIDAD_ESTUDIO_1', 'TIT_ID_2', 'TIP_TIT_ID_2', 'ESP_ID_2', 'MEN_SIN_MENCION_2', 'MEN_PLATICA_2', 'MEN_NATURALES_2', 'MEN_SOCIALES_2', 'MEN_COMPUTACION_2', 'MEN_ED_FISICA_2', 'MEN_ED_MUSICA_2', 'MEN_ED_TECNO_2', 'MEN_LENGUAJE_2', 'MEN_MATE_2', 'MEN_RELIGION_2', 'MEN_TRASTORNOS_2', 'MEN_INGLES_2', 'MEN_FRANCES_2', 'MEN_ALEMAN_2', 'MEN_OTRO_IDIOMA_2', 'MEN_INTERCULTURAL_2', 'MEN_ADMINISTRACION_2', 'MEN_CURRICULUM_2', 'TIP_INSTI_ID_2', 'ANO_TITULACION_2', 'DURACION_CARRERA_2', 'MODALIDAD_ESTUDIO_2', 'ID_IFP', 'ID_ITC', 'HORAS_CONTRATO', 'IDO_MORAL', 'ANO_SERVICIO_SISTEMA', 'ANO_SERVICIO_EE', 'ID_ICH', 'NIVEL1', 'SECTOR1', 'SUBSECTOR1', 'HORAS1', 'COD_ENS_1', 'GRADO.1_1', 'GRADO.2_1', 'GRADO.3_1', 'GRADO.4_1', 'GRADO.5_1', 'GRADO.6_1', 'GRADO.7_1', 'GRADO.8_1', 'GRADO.9_1', 'GRADO.10_1', 'GRADO.11_1', 'GRADO.12_1', 'GRADO.13_1', 'GRADO.14_1', 'GRADO.15_1', 'GRADO.16_1', 'GRADO.17_1', 'GRADO.18_1', 'GRADO.19_1', 'NIVEL2', 'SECTOR2', 'SUBSECTOR2', 'HORAS2', 'COD_ENS_2', 'GRADO.1_2', 'GRADO.2_2', 'GRADO.3_2', 'GRADO.4_2', 'GRADO.5_2', 'GRADO.6_2', 'GRADO.7_2', 'GRADO.8_2', 'GRADO.9_2', 'GRADO.10_2', 'GRADO.11_2', 'GRADO.12_2', 'GRADO.13_2', 'GRADO.14_2', 'GRADO.15_2', 'GRADO.16_2', 'GRADO.17_2', 'GRADO.18_2', 'GRADO.19_2', 'PERSONAS']
-
-### COLUMN PROFILE
-col | type | null_pct | cardinality | sample_values
---- | ---- | -------- | ----------- | -------------
-AGNO | numeric | 0.0% | 1 | 2012, 2012, 2012
-RBD | numeric | 0.0% | 5 | 12602, 2956, 2973
-DGV_RBD | numeric | 0.0% | 4 | 0, 4, 4
-NOM_RBD | string | 0.0% | 5 | ESC. BASICA Y PARV. KRONOS SCHOOL, ESCUELA AURORA DE CHILE, LICEO ABATE MOLINA
-COD_REG_RBD | numeric | 0.0% | 3 | 1, 7, 7
-COD_PRO_RBD | numeric | 0.0% | 3 | 11, 71, 71
-COD_COM_RBD | numeric | 0.0% | 4 | 1107, 7101, 7101
-NOM_COM_RBD | string | 0.0% | 4 | ALTO HOSPICIO, TALCA, TALCA
-COD_DEPE | numeric | 0.0% | 2 | 3, 2, 2
-RURAL_RBD | numeric | 0.0% | 1 | 0, 0, 0
-CLAVE | string | 0.0% | 3 | AA1000002721, AA1000005721, AA1000005721
-MRUN | numeric | 0.0% | 3 | 10237, 285455, 285455
-DOC_GENERO | numeric | 0.0% | 2 | 2, 2, 2
-DOC_FEC_NAC | numeric | 0.0% | 3 | 19730531, 19550823, 19550823
-TIT_ID_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIP_TIT_ID_1 | numeric | 0.0% | 3 | 13, 12, 12
-ESP_ID_1 | numeric | 0.0% | 3 | 130, 121, 121
-MEN_SIN_MENCION_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_PLATICA_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_NATURALES_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_SOCIALES_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_COMPUTACION_1 | numeric | 0.0% | 2 | 1, 0, 0
-MEN_ED_FISICA_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_ED_MUSICA_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_ED_TECNO_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_LENGUAJE_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_MATE_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_RELIGION_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_TRASTORNOS_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_INGLES_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_FRANCES_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_ALEMAN_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_OTRO_IDIOMA_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_INTERCULTURAL_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_ADMINISTRACION_1 | numeric | 0.0% | 1 | 0, 0, 0
-MEN_CURRICULUM_1 | numeric | 0.0% | 1 | 0, 0, 0
-TIP_INSTI_ID_1 | numeric | 0.0% | 2 | 3, 1, 1
-ANO_TITULACION_1 | numeric | 0.0% | 5 | 1999, 1986, 1978
-DURACION_CARRERA_1 | numeric | 0.0% | 3 | 8, 10, 8
-MODALIDAD_ESTUDIO_1 | numeric | 0.0% | 1 | 1, 1, 1
-TIT_ID_2 | empty | 100.0% | 0 | 
-TIP_TIT_ID_2 | empty | 100.0% | 0 | 
-ESP_ID_2 | empty | 100.0% | 0 | 
-MEN_SIN_MENCION_2 | empty | 100.0% | 0 | 
-MEN_PLATICA_2 | empty | 100.0% | 0 | 
-MEN_NATURALES_2 | empty | 100.0% | 0 | 
-MEN_SOCIALES_2 | empty | 100.0% | 0 | 
-MEN_COMPUTACION_2 | empty | 100.0% | 0 | 
-MEN_ED_FISICA_2 | empty | 100.0% | 0 | 
-MEN_ED_MUSICA_2 | empty | 100.0% | 0 | 
-MEN_ED_TECNO_2 | empty | 100.0% | 0 | 
-MEN_LENGUAJE_2 | empty | 100.0% | 0 | 
-MEN_MATE_2 | empty | 100.0% | 0 | 
-MEN_RELIGION_2 | empty | 100.0% | 0 | 
-MEN_TRASTORNOS_2 | empty | 100.0% | 0 | 
-MEN_INGLES_2 | empty | 100.0% | 0 | 
-MEN_FRANCES_2 | empty | 100.0% | 0 | 
-MEN_ALEMAN_2 | empty | 100.0% | 0 | 
-MEN_OTRO_IDIOMA_2 | empty | 100.0% | 0 | 
-MEN_INTERCULTURAL_2 | empty | 100.0% | 0 | 
-MEN_ADMINISTRACION_2 | empty | 100.0% | 0 | 
-MEN_CURRICULUM_2 | empty | 100.0% | 0 | 
-TIP_INSTI_ID_2 | empty | 100.0% | 0 | 
-ANO_TITULACION_2 | empty | 100.0% | 0 | 
-DURACION_CARRERA_2 | empty | 100.0% | 0 | 
-MODALIDAD_ESTUDIO_2 | empty | 100.0% | 0 | 
-ID_IFP | numeric | 0.0% | 1 | 1, 1, 1
-ID_ITC | numeric | 0.0% | 2 | 4, 1, 1
-HORAS_CONTRATO | numeric | 0.0% | 5 | 38, 13, 30
-IDO_MORAL | numeric | 0.0% | 1 | 1, 1, 1
-ANO_SERVICIO_SISTEMA | numeric | 0.0% | 5 | 16, 26, 34
-ANO_SERVICIO_EE | numeric | 0.0% | 4 | 14, 2, 8
-ID_ICH | numeric | 0.0% | 2 | 110, 110, 310
-NIVEL1 | numeric | 0.0% | 2 | 2, 2, 4
-SECTOR1 | numeric | 0.0% | 3 | 190, 190, 395
-SUBSECTOR1 | numeric | 0.0% | 3 | 19001, 19001, 39501
-HORAS1 | numeric | 0.0% | 5 | 38, 12, 30
-COD_ENS_1 | numeric | 0.0% | 2 | 110, 110, 310
-GRADO.1_1 | numeric | 0.0% | 3 | 8, 1, 1
-GRADO.2_1 | numeric | 0.0% | 2 | 0, 2, 2
-GRADO.3_1 | numeric | 0.0% | 2 | 0, 3, 3
-GRADO.4_1 | numeric | 0.0% | 2 | 0, 4, 4
-GRADO.5_1 | numeric | 0.0% | 2 | 0, 5, 0
-GRADO.6_1 | numeric | 0.0% | 2 | 0, 6, 0
-GRADO.7_1 | numeric | 0.0% | 2 | 0, 7, 0
-GRADO.8_1 | numeric | 0.0% | 2 | 0, 8, 0
-GRADO.9_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.10_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.11_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.12_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.13_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.14_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.15_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.16_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.17_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.18_1 | numeric | 0.0% | 1 | 0, 0, 0
-GRADO.19_1 | numeric | 0.0% | 1 | 0, 0, 0
-NIVEL2 | empty | 100.0% | 0 | 
-SECTOR2 | empty | 100.0% | 0 | 
-SUBSECTOR2 | empty | 100.0% | 0 | 
-HORAS2 | empty | 100.0% | 0 | 
-COD_ENS_2 | empty | 100.0% | 0 | 
-GRADO.1_2 | empty | 100.0% | 0 | 
-GRADO.2_2 | empty | 100.0% | 0 | 
-GRADO.3_2 | empty | 100.0% | 0 | 
-GRADO.4_2 | empty | 100.0% | 0 | 
-GRADO.5_2 | empty | 100.0% | 0 | 
-GRADO.6_2 | empty | 100.0% | 0 | 
-GRADO.7_2 | empty | 100.0% | 0 | 
-GRADO.8_2 | empty | 100.0% | 0 | 
-GRADO.9_2 | empty | 100.0% | 0 | 
-GRADO.10_2 | empty | 100.0% | 0 | 
-GRADO.11_2 | empty | 100.0% | 0 | 
-GRADO.12_2 | empty | 100.0% | 0 | 
-GRADO.13_2 | empty | 100.0% | 0 | 
-GRADO.14_2 | empty | 100.0% | 0 | 
-GRADO.15_2 | empty | 100.0% | 0 | 
-GRADO.16_2 | empty | 100.0% | 0 | 
-GRADO.17_2 | empty | 100.0% | 0 | 
-GRADO.18_2 | empty | 100.0% | 0 | 
-GRADO.19_2 | empty | 100.0% | 0 | 
-PERSONAS | numeric | 0.0% | 2 | 1, 0, 1
-
-### DATA PREVIEW (5 rows as JSON-lines)
-{"AGNO":"2012","RBD":"12602","DGV_RBD":"0","NOM_RBD":"ESC. BASICA Y PARV. KRONOS SCHOOL","COD_REG_RBD":"1","COD_PRO_RBD":"11","COD_COM_RBD":"1107","NOM_COM_RBD":"ALTO HOSPICIO","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000002721","MRUN":"10237","DOC_GENERO":"2","DOC_FEC_NAC":"19730531","TIT_ID_1":"1","TIP_TIT_ID_1":"13","ESP_ID_1":"130","MEN_SIN_MENCION_1":"0","MEN_PLATICA_1":"0","MEN_NATURALES_1":"0","MEN_SOCIALES_1":"0","MEN_COMPUTACION_1":"1","MEN_ED_FISICA_1":"0","MEN_ED_MUSICA_1":"0","MEN_ED_TECNO_1":"0","MEN_LENGUAJE_1":"0","MEN_MATE_1":"0","MEN_RELIGION_1":"0","MEN_TRASTORNOS_1":"0","MEN_INGLES_1":"0","MEN_FRANCES_1":"0","MEN_ALEMAN_1":"0","MEN_OTRO_IDIOMA_1":"0","MEN_INTERCULTURAL_1":"0","MEN_ADMINISTRACION_1":"0","MEN_CURRICULUM_1":"0","TIP_INSTI_ID_1":"3","ANO_TITULACION_1":"1999","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_ITC":"4","HORAS_CONTRATO":"38","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"16","ANO_SERVICIO_EE":"14","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"38","COD_ENS_1":"110","GRADO.1_1":"8","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-{"AGNO":"2012","RBD":"2956","DGV_RBD":"4","NOM_RBD":"ESCUELA AURORA DE CHILE","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"121","MEN_SIN_MENCION_1":"0","MEN_PLATICA_1":"0","MEN_NATURALES_1":"0","MEN_SOCIALES_1":"0","MEN_COMPUTACION_1":"0","MEN_ED_FISICA_1":"0","MEN_ED_MUSICA_1":"0","MEN_ED_TECNO_1":"0","MEN_LENGUAJE_1":"0","MEN_MATE_1":"0","MEN_RELIGION_1":"0","MEN_TRASTORNOS_1":"0","MEN_INGLES_1":"0","MEN_FRANCES_1":"0","MEN_ALEMAN_1":"0","MEN_OTRO_IDIOMA_1":"0","MEN_INTERCULTURAL_1":"0","MEN_ADMINISTRACION_1":"0","MEN_CURRICULUM_1":"0","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1986","DURACION_CARRERA_1":"10","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_ITC":"1","HORAS_CONTRATO":"13","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"26","ANO_SERVICIO_EE":"2","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"12","COD_ENS_1":"110","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"5","GRADO.6_1":"6","GRADO.7_1":"7","GRADO.8_1":"8","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"0"}
-{"AGNO":"2012","RBD":"2973","DGV_RBD":"4","NOM_RBD":"LICEO ABATE MOLINA","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7101","NOM_COM_RBD":"TALCA","COD_DEPE":"2","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"121","MEN_SIN_MENCION_1":"0","MEN_PLATICA_1":"0","MEN_NATURALES_1":"0","MEN_SOCIALES_1":"0","MEN_COMPUTACION_1":"0","MEN_ED_FISICA_1":"0","MEN_ED_MUSICA_1":"0","MEN_ED_TECNO_1":"0","MEN_LENGUAJE_1":"0","MEN_MATE_1":"0","MEN_RELIGION_1":"0","MEN_TRASTORNOS_1":"0","MEN_INGLES_1":"0","MEN_FRANCES_1":"0","MEN_ALEMAN_1":"0","MEN_OTRO_IDIOMA_1":"0","MEN_INTERCULTURAL_1":"0","MEN_ADMINISTRACION_1":"0","MEN_CURRICULUM_1":"0","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1978","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_ITC":"1","HORAS_CONTRATO":"30","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"34","ANO_SERVICIO_EE":"8","ID_ICH":"310","NIVEL1":"4","SECTOR1":"395","SUBSECTOR1":"39501","HORAS1":"30","COD_ENS_1":"310","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"3","GRADO.4_1":"4","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
-{"AGNO":"2012","RBD":"11343","DGV_RBD":"3","NOM_RBD":"COLEGIO NUEVA HOLANDA","COD_REG_RBD":"7","COD_PRO_RBD":"71","COD_COM_RBD":"7105","NOM_COM_RBD":"MAULE","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000005721","MRUN":"285455","DOC_GENERO":"2","DOC_FEC_NAC":"19550823","TIT_ID_1":"1","TIP_TIT_ID_1":"12","ESP_ID_1":"121","MEN_SIN_MENCION_1":"0","MEN_PLATICA_1":"0","MEN_NATURALES_1":"0","MEN_SOCIALES_1":"0","MEN_COMPUTACION_1":"0","MEN_ED_FISICA_1":"0","MEN_ED_MUSICA_1":"0","MEN_ED_TECNO_1":"0","MEN_LENGUAJE_1":"0","MEN_MATE_1":"0","MEN_RELIGION_1":"0","MEN_TRASTORNOS_1":"0","MEN_INGLES_1":"0","MEN_FRANCES_1":"0","MEN_ALEMAN_1":"0","MEN_OTRO_IDIOMA_1":"0","MEN_INTERCULTURAL_1":"0","MEN_ADMINISTRACION_1":"0","MEN_CURRICULUM_1":"0","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"1979","DURACION_CARRERA_1":"8","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_ITC":"4","HORAS_CONTRATO":"7","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"33","ANO_SERVICIO_EE":"7","ID_ICH":"110","NIVEL1":"2","SECTOR1":"190","SUBSECTOR1":"19001","HORAS1":"7","COD_ENS_1":"110","GRADO.1_1":"6","GRADO.2_1":"0","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"0"}
-{"AGNO":"2012","RBD":"25304","DGV_RBD":"9","NOM_RBD":"COLEGIO PAUL HARRIS SCHOOL","COD_REG_RBD":"13","COD_PRO_RBD":"131","COD_COM_RBD":"13105","NOM_COM_RBD":"EL BOSQUE","COD_DEPE":"3","RURAL_RBD":"0","CLAVE":"AA1000022111","MRUN":"18204895","DOC_GENERO":"1","DOC_FEC_NAC":"19740928","TIT_ID_1":"1","TIP_TIT_ID_1":"14","ESP_ID_1":"1419","MEN_SIN_MENCION_1":"0","MEN_PLATICA_1":"0","MEN_NATURALES_1":"0","MEN_SOCIALES_1":"0","MEN_COMPUTACION_1":"0","MEN_ED_FISICA_1":"0","MEN_ED_MUSICA_1":"0","MEN_ED_TECNO_1":"0","MEN_LENGUAJE_1":"0","MEN_MATE_1":"0","MEN_RELIGION_1":"0","MEN_TRASTORNOS_1":"0","MEN_INGLES_1":"0","MEN_FRANCES_1":"0","MEN_ALEMAN_1":"0","MEN_OTRO_IDIOMA_1":"0","MEN_INTERCULTURAL_1":"0","MEN_ADMINISTRACION_1":"0","MEN_CURRICULUM_1":"0","TIP_INSTI_ID_1":"1","ANO_TITULACION_1":"2004","DURACION_CARRERA_1":"4","MODALIDAD_ESTUDIO_1":"1","ID_IFP":"1","ID_ITC":"4","HORAS_CONTRATO":"42","IDO_MORAL":"1","ANO_SERVICIO_SISTEMA":"8","ANO_SERVICIO_EE":"8","ID_ICH":"310","NIVEL1":"4","SECTOR1":"320","SUBSECTOR1":"32001","HORAS1":"42","COD_ENS_1":"310","GRADO.1_1":"1","GRADO.2_1":"2","GRADO.3_1":"0","GRADO.4_1":"0","GRADO.5_1":"0","GRADO.6_1":"0","GRADO.7_1":"0","GRADO.8_1":"0","GRADO.9_1":"0","GRADO.10_1":"0","GRADO.11_1":"0","GRADO.12_1":"0","GRADO.13_1":"0","GRADO.14_1":"0","GRADO.15_1":"0","GRADO.16_1":"0","GRADO.17_1":"0","GRADO.18_1":"0","GRADO.19_1":"0","PERSONAS":"1"}
+{"ïagno":"2016","rbd":"1","dgv_rbd":"9","nom_rbd":"LICEO POLITECNICO ARICA","rut_sostenedor":"69010100","p_juridica":"1","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_deprov_rbd":"151","nom_deprov_rbd":"ARICA","cod_depe":"2","cod_depe2":"1","rural_rbd":"0","latitud":"-18.487274","longitud":"-70.294739","convenio_pie":"1","ens_01":"463","ens_02":"510","ens_03":"563","ens_04":"610","ens_05":"663","ens_06":"863","ens_07":"0","ens_08":"0","ens_09":"0","matricula":"1","estado_estab":"1","ori_religiosa":"2","pago_matricula":"GRATUITO","pago_mensual":"GRATUITO"}
+{"ïagno":"2016","rbd":"2","dgv_rbd":"7","nom_rbd":"PARVULARIO LAS ESPIGUITAS","rut_sostenedor":"69010100","p_juridica":"1","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_deprov_rbd":"151","nom_deprov_rbd":"ARICA","cod_depe":"2","cod_depe2":"1","rural_rbd":"0","latitud":"-18.469862","longitud":"-70.302757","convenio_pie":"1","ens_01":"10","ens_02":"0","ens_03":"0","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0","matricula":"1","estado_estab":"1","ori_religiosa":"2","pago_matricula":"GRATUITO","pago_mensual":"GRATUITO"}
+{"ïagno":"2016","rbd":"3","dgv_rbd":"5","nom_rbd":"ESC. PEDRO VICENTE GUTIERREZ TORRES","rut_sostenedor":"69010100","p_juridica":"1","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_deprov_rbd":"151","nom_deprov_rbd":"ARICA","cod_depe":"2","cod_depe2":"1","rural_rbd":"1","latitud":"-18.50358","longitud":"-70.260826","convenio_pie":"0","ens_01":"165","ens_02":"167","ens_03":"0","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0","matricula":"1","estado_estab":"1","ori_religiosa":"1","pago_matricula":"GRATUITO","pago_mensual":"GRATUITO"}
+{"ïagno":"2016","rbd":"4","dgv_rbd":"3","nom_rbd":"LICEO OCTAVIO PALMA PEREZ","rut_sostenedor":"69010100","p_juridica":"1","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_deprov_rbd":"151","nom_deprov_rbd":"ARICA","cod_depe":"2","cod_depe2":"1","rural_rbd":"0","latitud":"-18.474243","longitud":"-70.308266","convenio_pie":"1","ens_01":"310","ens_02":"0","ens_03":"0","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0","matricula":"1","estado_estab":"1","ori_religiosa":"1","pago_matricula":"GRATUITO","pago_mensual":"GRATUITO"}
+{"ïagno":"2016","rbd":"5","dgv_rbd":"1","nom_rbd":"JOVINA NARANJO FERNANDEZ","rut_sostenedor":"69010100","p_juridica":"1","cod_reg_rbd":"15","cod_pro_rbd":"151","cod_com_rbd":"15101","nom_com_rbd":"ARICA","cod_deprov_rbd":"151","nom_deprov_rbd":"ARICA","cod_depe":"2","cod_depe2":"1","rural_rbd":"0","latitud":"-18.476904","longitud":"-70.313454","convenio_pie":"1","ens_01":"110","ens_02":"310","ens_03":"363","ens_04":"0","ens_05":"0","ens_06":"0","ens_07":"0","ens_08":"0","ens_09":"0","matricula":"1","estado_estab":"1","ori_religiosa":"7","ori_otro_glosa":"PLURALISTA","pago_matricula":"GRATUITO","pago_mensual":"GRATUITO"}
 
 ## SUMMARY
-total_files: 23
+total_files: 13

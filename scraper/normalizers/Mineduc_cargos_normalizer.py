@@ -1,21 +1,3 @@
-"""
-normalizar_cargos.py
-====================
-Consolida todos los CSV/RAR de data/mineduc/raw/cargos en un único
-data/mineduc/processed/mineduc_cargos.csv
-
-Maneja:
-  - Encodings mixtos (utf-8-sig, utf-8, latin-1, cp1252)
-  - Separadores mixtos (;  ,  TAB  |)
-  - Esquema variable por año (columnas aparecen/desaparecen)
-  - DOC_FEC_NAC en formato AAAAMMDD (8 dígitos) o AAAAMM (6 dígitos)
-  - Archivos RAR con CSVs internos
-  - Procesamiento por chunks → memoria constante
-
-Uso:
-    python normalizar_cargos.py [--chunk-size 20000] [--raw-dir ...] [--out ...]
-"""
-
 import argparse
 import os
 import re
@@ -26,9 +8,6 @@ from pathlib import Path
 
 import pandas as pd
 
-# ──────────────────────────────────────────────
-# CONSTANTES
-# ──────────────────────────────────────────────
 CHUNK_SIZE_DEFAULT   = 20_000
 RAW_DIR_DEFAULT      = "data/mineduc/raw/cargos"
 OUTPUT_DEFAULT       = "data/mineduc/processed/mineduc_cargos.csv"
@@ -56,16 +35,7 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 
-# ──────────────────────────────────────────────
-# DETECCIÓN DE ENCODING / SEPARADOR
-# ──────────────────────────────────────────────
 def detectar_formato(path: str | Path) -> tuple[str, str]:
-    """
-    Devuelve (encoding, separador) que consiguen ≥2 columnas.
-    Lee 200 filas para que caracteres especiales que no están en las
-    primeras filas no engañen al detector (ej: latin-1 detectado como utf-8).
-    Usa charset-normalizer si está disponible para mayor precisión.
-    """
     # Intento rápido con charset-normalizer (más fiable que fuerza bruta)
     try:
         from charset_normalizer import from_path
@@ -94,17 +64,10 @@ def detectar_formato(path: str | Path) -> tuple[str, str]:
     raise ValueError(f"No se pudo detectar formato para: {path}")
 
 
-# ──────────────────────────────────────────────
-# NORMALIZACIÓN DE NOMBRES DE COLUMNAS
-# ──────────────────────────────────────────────
 def normalizar_col(nombre: str) -> str:
-    """AGNO → agno, GRADO.1_1 → grado_1_1"""
     return re.sub(r"[.\s]+", "_", nombre.strip().lower())
 
 
-# ──────────────────────────────────────────────
-# INFERIR AÑO DESDE NOMBRE DE ARCHIVO
-# ──────────────────────────────────────────────
 _YEAR_RE = re.compile(r"(?<!\d)(20\d{2}|19\d{2})(?!\d)")
 
 def inferir_agno(nombre_archivo: str) -> str | None:
@@ -118,15 +81,7 @@ def inferir_agno(nombre_archivo: str) -> str | None:
     return None
 
 
-# ──────────────────────────────────────────────
-# NORMALIZAR DOC_FEC_NAC
-# ──────────────────────────────────────────────
 def normalizar_fec_nac(serie: pd.Series) -> pd.Series:
-    """
-    AAAAMMDD (8 dígitos)  →  AAAA-MM-DD
-    AAAAMM   (6 dígitos)  →  AAAA-MM
-    Cualquier otra cosa   →  vacío
-    """
     def _conv(val):
         if pd.isna(val):
             return ""
@@ -139,14 +94,7 @@ def normalizar_fec_nac(serie: pd.Series) -> pd.Series:
     return serie.map(_conv)
 
 
-# ──────────────────────────────────────────────
-# FASE 1: PRE-SCAN → construir esquema unificado
-# ──────────────────────────────────────────────
 def prescan_columnas(archivos: list[Path]) -> list[str]:
-    """
-    Lee solo el header de cada CSV (incluidos los dentro de RAR).
-    Devuelve la lista ordenada de columnas canónicas.
-    """
     todas: set[str] = set()
 
     for path in archivos:
@@ -206,9 +154,6 @@ def _headers_de_rar(path: Path) -> list[str]:
     return cols
 
 
-# ──────────────────────────────────────────────
-# FASE 2: PROCESAMIENTO REAL
-# ──────────────────────────────────────────────
 def procesar_archivo(
     path: Path,
     esquema_final: list[str],
@@ -216,7 +161,6 @@ def procesar_archivo(
     chunk_size: int,
     primer_archivo: bool,
 ) -> int:
-    """Procesa un CSV suelto. Devuelve filas escritas."""
     total = 0
     try:
         enc, sep = detectar_formato(path)
@@ -331,9 +275,6 @@ def procesar_rar(
     return total
 
 
-# ──────────────────────────────────────────────
-# MAIN
-# ──────────────────────────────────────────────
 def main():
     parser = argparse.ArgumentParser(description="Normaliza CSVs MINEDUC cargos")
     parser.add_argument("--raw-dir",    default=RAW_DIR_DEFAULT)

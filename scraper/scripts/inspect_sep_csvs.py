@@ -294,7 +294,7 @@ def main() -> None:
         """,
     )
     p.add_argument(
-        "--input", default="data/mineduc/raw/cargos", metavar="DIR",
+        "--input", default="data/mineduc/raw/establecimientos", metavar="DIR",
         help="Directorio raíz con RARs/CSVs (default: data/mineduc/raw/cargos)",
     )
     p.add_argument(

@@ -14,7 +14,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from loaders.db import (
+from .db import (
     EtlRun, get_conn, transaction,
     upsert_territorio, upsert_establecimiento,
     _int, _float, _rbd, _str,

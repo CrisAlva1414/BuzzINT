@@ -121,9 +121,11 @@ CREATE TABLE IF NOT EXISTS gold.dim_asignatura (
     cod_ense2       CHAR(2),
     cod_ense3       CHAR(2),
     subsector       VARCHAR(120),
-    nom_ense        VARCHAR(120),
-    UNIQUE (cod_ense, COALESCE(subsector, ''))
+    nom_ense        VARCHAR(120)
 );
+-- Unicidad expresiva: (cod_ense, subsector) tratando NULL como ''
+CREATE UNIQUE INDEX IF NOT EXISTS uq_dim_asignatura_ense_sub
+    ON gold.dim_asignatura (cod_ense, COALESCE(subsector, ''));
 COMMENT ON TABLE gold.dim_asignatura IS
     'Asignaturas/subsectores curriculares MINEDUC.';
 
@@ -290,9 +292,11 @@ CREATE TABLE IF NOT EXISTS gold.fact_calificaciones (
     observaciones       TEXT,
     -- metadatos
     _source_file        VARCHAR(200),
-    _cargado_en         TIMESTAMP NOT NULL DEFAULT now(),
-    UNIQUE (establecimiento_id, tiempo_id, letra, n_orden, COALESCE(asignatura_id, -1))
+    _cargado_en         TIMESTAMP NOT NULL DEFAULT now()
 );
+-- Unicidad expresiva: asignatura_id NULL tratado como -1
+CREATE UNIQUE INDEX IF NOT EXISTS uq_fact_calificaciones
+    ON gold.fact_calificaciones (establecimiento_id, tiempo_id, letra, n_orden, COALESCE(asignatura_id, -1));
 COMMENT ON TABLE gold.fact_calificaciones IS
     'Calificaciones SIGE por alumno, asignatura y acta. Columnas anchas (25 notas).';
 

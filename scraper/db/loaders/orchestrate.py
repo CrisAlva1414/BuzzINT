@@ -42,7 +42,7 @@ class Step:
 
 
 def build_steps(root: Path) -> list[Step]:
-    from loaders import (
+    from . import (
         load_establecimientos,
         load_simce,
         load_alumnos,

@@ -12,7 +12,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from loaders.db import (
+from .db import (
     EtlRun, get_conn, transaction,
     get_establecimiento_id, get_tiempo_id,
     upsert_territorio, upsert_establecimiento,

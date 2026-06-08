@@ -266,7 +266,7 @@ def get_or_create_asignatura(cur, cod_ense: str | None, subsector: str | None) -
         """
         INSERT INTO gold.dim_asignatura (cod_ense, subsector)
         VALUES (%s, %s)
-        ON CONFLICT (cod_ense, COALESCE(subsector, '')) DO NOTHING
+        ON CONFLICT ON CONSTRAINT uq_dim_asignatura_ense_sub DO NOTHING
         RETURNING asignatura_id
         """,
         (cod_ense, sub),

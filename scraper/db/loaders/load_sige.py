@@ -13,7 +13,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from loaders.db import (
+from .db import (
     EtlRun, get_conn, transaction,
     get_or_create_alumno, get_or_create_docente, get_or_create_asignatura,
     get_establecimiento_id, get_tiempo_id,
@@ -121,8 +121,7 @@ def run_calificaciones(source_path: Path) -> None:
                              %s,%s,%s,%s,%s,
                              %s,%s,%s,%s,%s,
                              %s,%s,%s,%s,%s,%s)
-                        ON CONFLICT (establecimiento_id, tiempo_id, letra, n_orden,
-                                     COALESCE(asignatura_id, -1))
+                        ON CONFLICT ON CONSTRAINT uq_fact_calificaciones
                         DO UPDATE SET
                             promedio       = EXCLUDED.promedio,
                             asistencia_pct = EXCLUDED.asistencia_pct,
@@ -231,7 +230,7 @@ def _alumno_from_run(cur, row: dict) -> int | None:
         "gen_alu": row.get("sexo"),       # SIGE usa 'sexo' en lugar de gen_alu
         "fec_nac_alu": row.get("fec_nac"),
     }
-    from loaders.db import get_or_create_alumno
+    from .db import get_or_create_alumno
     return get_or_create_alumno(cur, proxy)
 
 

@@ -1,17 +1,9 @@
-#!/usr/bin/env bash
-# run_etl.sh — Bootstrap completo BuzzINT Gold Layer
-# Uso: ./run_etl.sh [--only simce alumnos] [--dry-run] [--reset]
-#
-# Variables de entorno configurables:
-#   BUZZINT_DATA_ROOT   ruta a la carpeta data/ (default: ../data relativo al script)
-#   PG_PORT             puerto host Postgres (default: 5433)
-
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-COMPOSE_FILE="$SCRIPT_DIR/docker/docker-compose.yml"
-DATA_ROOT="${BUZZINT_DATA_ROOT:-$(realpath "$SCRIPT_DIR/../data")}"
-PG_PORT="${PG_PORT:-5433}"
+COMPOSE_FILE="$SCRIPT_DIR/docker-compose.yml"
+DATA_ROOT="${BUZZINT_DATA_ROOT:-$(realpath "$SCRIPT_DIR/data")}"
+PG_PORT="${PG_PORT:-5432}"
 
 export PG_HOST=localhost
 export PG_PORT
@@ -38,15 +30,15 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-# ── 1. Docker Compose ─────────────────────────────────────────
+# ── 1. docker-compose ─────────────────────────────────────────
 info "Iniciando contenedor Postgres..."
 
 if [[ $RESET -eq 1 ]]; then
     warn "--reset: eliminando volumen anterior"
-    docker compose -f "$COMPOSE_FILE" down -v 2>/dev/null || true
+    docker-compose -f "$COMPOSE_FILE" down -v 2>/dev/null || true
 fi
 
-docker compose -f "$COMPOSE_FILE" up -d
+docker-compose -f "$COMPOSE_FILE" up -d
 
 # ── 2. Esperar a que Postgres esté listo ──────────────────────
 info "Esperando a que Postgres esté listo (puerto $PG_PORT)..."
@@ -57,7 +49,7 @@ until pg_isready -h localhost -p "$PG_PORT" -U buzzint -d buzzint -q 2>/dev/null
     WAITED=$((WAITED + 2))
     if [[ $WAITED -ge $MAX_WAIT ]]; then
         error "Postgres no respondió en ${MAX_WAIT}s"
-        docker compose -f "$COMPOSE_FILE" logs --tail=30 postgres
+        docker-compose -f "$COMPOSE_FILE" logs --tail=30 postgres
         exit 1
     fi
 done
@@ -69,11 +61,11 @@ ok "Postgres listo (${WAITED}s)"
 info "Aplicando DDL y seed (idempotente)..."
 PSQL="psql -h localhost -p $PG_PORT -U buzzint -d buzzint -q"
 
-$PSQL -f "$SCRIPT_DIR/sql/01_schema.sql" \
+$PSQL -f "$SCRIPT_DIR/scraper/db/inits/01_schema.sql" \
     && ok "01_schema.sql aplicado" \
     || { error "Fallo en 01_schema.sql"; exit 1; }
 
-$PSQL -f "$SCRIPT_DIR/sql/02_seed.sql" \
+$PSQL -f "$SCRIPT_DIR/scraper/db/inits/02_seed.sql" \
     && ok "02_seed.sql aplicado" \
     || { error "Fallo en 02_seed.sql"; exit 1; }
 
@@ -87,7 +79,7 @@ info "Iniciando carga Gold Layer..."
 info "Data root: $DATA_ROOT"
 
 cd "$SCRIPT_DIR"
-python -m loaders.orchestrate \
+python -m scraper.db.loaders.orchestrate \
     --data-root "$DATA_ROOT" \
     "${EXTRA_ARGS[@]+"${EXTRA_ARGS[@]}"}"
 

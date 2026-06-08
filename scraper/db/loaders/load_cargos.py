@@ -14,7 +14,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from loaders.db import (
+from .db import (
     EtlRun, get_conn, transaction,
     get_or_create_docente, get_or_create_asignatura,
     get_establecimiento_id, get_tiempo_id,

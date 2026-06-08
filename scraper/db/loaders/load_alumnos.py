@@ -19,7 +19,7 @@ import logging
 import time
 from pathlib import Path
 
-from loaders.db import EtlRun, get_conn, transaction
+from .db import EtlRun, get_conn, transaction
 
 logger = logging.getLogger(__name__)
 

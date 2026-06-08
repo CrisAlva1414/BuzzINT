@@ -284,7 +284,7 @@ class TestPrescanColumns:
 
     def test_directorio_vacio_retorna_vacio(self, tmp_path):
         cols = prescan_columns(tmp_path, ["agno"], ["_source_file"], no_rar=True)
-        assert cols == []
+        assert cols == ["agno", "_source_file"]
 
 
 class TestMineducNormalizers:

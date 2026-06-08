@@ -37,6 +37,8 @@ _UPSERT_KEYS = {
 
 
 def _extract_rar(rar_path: Path, tmpdir: str) -> list[Path]:
+    # Usa unrar CLI (no rarfile) porque los archivos SIMCE son multi-volumen
+    # y rarfile no los maneja correctamente. Requiere: apt install unrar
     result = subprocess.run(
         ["unrar", "x", "-y", str(rar_path), tmpdir],
         capture_output=True, text=True,

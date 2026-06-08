@@ -294,6 +294,14 @@ def load_simce(source_path: Path, granularity: str = "rbd") -> None:
                         run_ctx.skipped += 1
                         continue
 
+                    t_key = (agno, cod_grado)
+                    if t_key not in _tiempo_cache:
+                        _tiempo_cache[t_key] = get_tiempo_id(cur, agno, cod_grado)
+                    tiempo_id = _tiempo_cache[t_key]
+                    if not tiempo_id:
+                        run_ctx.skipped += 1
+                        continue
+
                     if granularity != "rbd":
                         rows_batch.append((
                             tiempo_id,
@@ -316,14 +324,6 @@ def load_simce(source_path: Path, granularity: str = "rbd") -> None:
                         estab_id = upsert_establecimiento(cur, r, ter_id)
                         _estab_cache[rbd_raw] = estab_id
                     if not estab_id:
-                        run_ctx.skipped += 1
-                        continue
-
-                    t_key = (agno, cod_grado)
-                    if t_key not in _tiempo_cache:
-                        _tiempo_cache[t_key] = get_tiempo_id(cur, agno, cod_grado)
-                    tiempo_id = _tiempo_cache[t_key]
-                    if not tiempo_id:
                         run_ctx.skipped += 1
                         continue
 

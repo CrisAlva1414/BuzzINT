@@ -14,6 +14,7 @@ from typing import Any, Generator
 
 import psycopg2
 import psycopg2.extras
+from psycopg2.extras import execute_values
 from psycopg2.extensions import connection as PgConnection
 
 logger = logging.getLogger(__name__)
@@ -364,3 +365,20 @@ def _rbd(v: Any) -> str | None:
     if not digits:
         return None
     return digits.zfill(8)
+
+
+# ──────────────────────────────────────────────────────────────
+# Configuración de loaders
+# ──────────────────────────────────────────────────────────────
+_ENV = os.getenv("BUZZINT_ENV", "dev").lower()
+CHUNK_SIZE = 50_000 if _ENV == "dev" else 500
+POOL_SIZE = 10 if _ENV == "dev" else 2
+USE_COPY = _ENV == "dev"
+
+
+def batch_upsert(cur, sql: str, rows: list) -> int:
+    """Wrapper sobre execute_values. Retorna len(rows) o 0 si vacío."""
+    if not rows:
+        return 0
+    execute_values(cur, sql, rows)
+    return len(rows)

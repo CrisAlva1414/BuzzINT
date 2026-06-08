@@ -102,9 +102,11 @@ class MineducPipeline(BasePipeline):
         if "establecimientos" in name:
             from scraper.db.loaders.load_dev import load_establecimientos
             load_establecimientos(source_path)
+            return {}
 
-        elif "cargos" in name:
+        if "cargos" in name:
             from scraper.db.loaders.load_dev import load_cargos
             load_cargos(source_path)
+            return {}
 
         return {}

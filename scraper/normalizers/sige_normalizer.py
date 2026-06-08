@@ -263,7 +263,7 @@ def _s(v) -> str | None:
     return s if s and s != "None" else None
 
 def _safe_int(v) -> int | None:
-    try: return int(str(v).strip())
+    try: return int(float(str(v).strip()))
     except (ValueError, TypeError, AttributeError): return None
 
 def _nota(v) -> float | None:

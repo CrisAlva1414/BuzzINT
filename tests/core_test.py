@@ -7,6 +7,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import pytest
 from pydantic import ValidationError
+from scraper.pipelines.base import BasePipeline
 
 
 class TestPipelineResult:
@@ -147,8 +148,8 @@ class TestFileRegistry:
         from scraper.pipelines.base import FileRegistry
         f1 = tmp_path / "a.csv"
         f2 = tmp_path / "b.csv"
-        f1.write_text("col\nval")
-        f2.write_text("col\nval")
+        f1.write_text("col\nval1")
+        f2.write_text("col\nval2")
 
         reg = FileRegistry.for_source(tmp_path / "processed")
         reg.mark_done(f1, "job-1")

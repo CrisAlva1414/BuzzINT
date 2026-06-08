@@ -6,12 +6,23 @@ from pathlib import Path
 import httpx
 from playwright.sync_api import sync_playwright
 
-from .downloader_base import (
-    HEADERS, MANIFEST_FILE,
-    already_downloaded, load_manifest, logger, now_iso,
-    safe_filename, save_manifest, sha256_file, verify_manifest,
-    write_file_streaming,
-)
+try:
+    from .downloader_base import (
+        HEADERS, MANIFEST_FILE,
+        already_downloaded, load_manifest, logger, now_iso,
+        safe_filename, save_manifest, sha256_file, verify_manifest,
+        write_file_streaming,
+    )
+except ImportError:
+    import sys
+    from pathlib import Path as _Path
+    sys.path.insert(0, str(_Path(__file__).parent.parent.parent))
+    from scraper.extractors.downloader_base import (
+        HEADERS, MANIFEST_FILE,
+        already_downloaded, load_manifest, logger, now_iso,
+        safe_filename, save_manifest, sha256_file, verify_manifest,
+        write_file_streaming,
+    )
 
 REQUEST_DELAY  = 1.0
 FETCH_TIMEOUT  = 60

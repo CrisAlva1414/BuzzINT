@@ -10,11 +10,20 @@ import httpx
 from dotenv import load_dotenv
 from playwright.sync_api import sync_playwright
 
-from .downloader_base import (
-    HEADERS,
-    already_downloaded, load_manifest, logger, now_iso,
-    save_manifest, sha256_file, verify_manifest,
-)
+try:
+    from .downloader_base import (
+        HEADERS,
+        already_downloaded, load_manifest, logger, now_iso,
+        save_manifest, sha256_file, verify_manifest,
+    )
+except ImportError:
+    from pathlib import Path as _Path
+    sys.path.insert(0, str(_Path(__file__).parent.parent.parent))
+    from scraper.extractors.downloader_base import (
+        HEADERS,
+        already_downloaded, load_manifest, logger, now_iso,
+        save_manifest, sha256_file, verify_manifest,
+    )
 
 load_dotenv()
 

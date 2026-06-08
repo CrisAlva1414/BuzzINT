@@ -5,11 +5,21 @@ from pathlib import Path
 
 import httpx
 
-from .downloader_base import (
-    HEADERS,
-    already_downloaded, load_manifest, logger, now_iso,
-    safe_filename, save_manifest, sha256_file, verify_manifest,
-)
+try:
+    from .downloader_base import (
+        HEADERS,
+        already_downloaded, load_manifest, logger, now_iso,
+        safe_filename, save_manifest, sha256_file, verify_manifest,
+    )
+except ImportError:
+    import sys
+    from pathlib import Path as _Path
+    sys.path.insert(0, str(_Path(__file__).parent.parent.parent))
+    from scraper.extractors.downloader_base import (
+        HEADERS,
+        already_downloaded, load_manifest, logger, now_iso,
+        safe_filename, save_manifest, sha256_file, verify_manifest,
+    )
 
 BASE_URL      = "https://informacionestadistica.agenciaeducacion.cl"
 LIST_URL      = BASE_URL + "/rest/archivo/getAllByCategoriaVistaPublica/{cat_id}/0"

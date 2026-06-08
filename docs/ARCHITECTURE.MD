@@ -1,7 +1,7 @@
 # BuzzINT — Arquitectura del Sistema
 
 > **Audiencia:** Equipo de desarrollo, revisores académicos  
-> **Estado:** MVP en construcción — capa de datos completa, API pendiente  
+> **Estado:** MVP funcional — capa de datos completa, API pendiente  
 > **Última actualización:** 2025-06
 
 ---
@@ -26,29 +26,35 @@ BuzzINT es una plataforma de inteligencia educativa que integra fuentes OSINT p�
 └───────────────────┬─────────────────────────────────┘
                     │ HTTP
 ┌───────────────────▼─────────────────────────────────┐
-│                  API FastAPI                          │
+│                  API FastAPI        (pendiente)       │
 │  /pipelines  /jobs  /upload  /data                   │
 └───────────────────┬─────────────────────────────────┘
                     │
 ┌───────────────────▼─────────────────────────────────┐
-│               CORE COMPARTIDO                        │
-│  config · logging · schemas (Pydantic) · db session  │
+│               PIPELINES                              │
+│  MineducPipeline · SimcePipeline · SigePipeline      │
+│  BasePipeline ABC · FileRegistry                     │
 └──────┬──────────────┬──────────────────┬────────────┘
        │              │                  │
 ┌──────▼──────┐ ┌─────▼──────┐ ┌────────▼───────┐
-│  Pipeline   │ │  Pipeline  │ │   Pipeline     │
-│  MINEDUC    │ │   SIMCE    │ │    SIGE        │
-│  (cron)     │ │  (cron)    │ │ (upload/sync)  │
-│ Downloader  │ │ Downloader │ │  Normalizer    │
-│ Normalizer  │ │ Normalizer │ │  (PDF→CSV)     │
-│  Loader     │ │  Loader    │ │   Loader       │
-└──────┬──────┘ └─────┬──────┘ └────────┬───────┘
-       │              │                  │
-┌──────▼──────────────▼──────────────────▼───────────┐
+│  Extractors │ │ Normalizers│ │    Loaders     │
+│  (download) │ │ (RAR→CSV)  │ │  (CSV→DB)      │
+│  manifest   │ │  manifest  │ │ load_dev.py    │
+│  .json      │ │  .json     │ │ load_alumnos   │
+└─────────────┘ └────────────┘ │ load_sige.py   │
+                                └────────┬───────┘
+                                         │
+┌────────────────────────────────────────▼───────────┐
+│              CORE COMPARTIDO                         │
+│  config · logging · schemas (Pydantic) · db session  │
+└──────────────────────────────────────┬─────────────┘
+                                       │
+┌──────────────────────────────────────▼─────────────┐
 │              INFRAESTRUCTURA                         │
 │  PostgreSQL Gold Layer  │  File storage (raw/proc)  │
 │  dim_* · fact_*         │  manifest.json por fuente │
-│  etl_control            │                           │
+│  etl_control            │  normalizer_manifest.json │
+│  env_profile            │  pipeline_registry.json   │
 └─────────────────────────────────────────────────────┘
 ```
 
@@ -61,41 +67,46 @@ buzzint/
 ├── scraper/
 │   ├── core/
 │   │   ├── config.py          # Settings (pydantic-settings), único .env reader
-│   │   ├── logging.py         # get_logger() factory — NO basicConfig aquí
-│   │   ├── schemas.py         # PipelineResult, JobStatus, etc. (Pydantic v2)
-│   │   └── db.py              # SQLAlchemy engine + session factory
+│   │   ├── logging.py         # get_logger() factory + configure()
+│   │   ├── schemas.py         # PipelineResult, JobStatus, RunRequest, etc.
+│   │   ├── crypto.py          # Fernet — CONGELADO
+│   │   └── hashing.py         # SHA-256 — CONGELADO
 │   │
-│   ├── pipelines/             # PENDIENTE — reescritura Sprint 2
+│   ├── pipelines/
 │   │   ├── base.py            # BasePipeline ABC + FileRegistry
-│   │   ├── mineduc.py
-│   │   ├── simce.py
-│   │   └── sige.py
+│   │   ├── mineduc.py         # MineducPipeline
+│   │   ├── simce.py           # SimcePipeline
+│   │   └── sige.py            # SigePipeline (solo en OrangePi)
 │   │
-│   ├── extractors/            # EXISTENTE — funcional, interfaz a limpiar
+│   ├── extractors/
+│   │   ├── downloader_base.py # sha256, manifest helpers, streaming
 │   │   ├── mineduc_downloader.py
 │   │   ├── simce_downloader.py
 │   │   └── sige_downloader.py
 │   │
-│   ├── normalizers/           # EXISTENTE — funcional, interfaz a limpiar
-│   │   ├── Ingestor.py
-│   │   ├── Mineduc_alumnos_normalizer.py
-│   │   ├── Mineduc_cargos_normalizer.py
-│   │   ├── Mineduc_establecimientos_normalizer.py
-│   │   ├── Sige_normalizer.py
-│   │   └── Simce_normalizer.py
+│   ├── normalizers/
+│   │   ├── normalizer_base.py              # sniff, prescan, iter_sources, NormalizerManifest
+│   │   ├── mineduc_alumnos_normalizer.py
+│   │   ├── mineduc_cargos_normalizer.py
+│   │   ├── mineduc_establecimientos_normalizer.py
+│   │   ├── sige_normalizer.py
+│   │   └── simce_normalizer.py
 │   │
 │   ├── db/
 │   │   ├── inits/
-│   │   │   ├── 01_schema.sql  # COMPLETO — Gold Layer schema
-│   │   │   └── 02_seed.sql    # COMPLETO — dimensiones sintéticas
-│   │   └── loaders/           # EXISTENTE — funcional, loops a refactorizar
-│   │       ├── db.py
-│   │       ├── load_alumnos.py
-│   │       ├── load_cargos.py
-│   │       ├── load_establecimientos.py
-│   │       ├── load_sige.py
-│   │       ├── load_simce.py
-│   │       └── orchestrate.py
+│   │   │   ├── 01_schema.sql  # CONGELADO — Gold Layer schema
+│   │   │   ├── 02_seed.sql    # CONGELADO — dimensiones sintéticas
+│   │   │   └── 03_patches.sql # constraint traslados, índices, vistas OrangePi
+│   │   └── loaders/
+│   │       ├── db.py          # get_conn, EtlRun, batch_upsert, coerciones, env profile
+│   │       ├── load_alumnos.py  # COPY masivo ~40M filas (dev)
+│   │       ├── load_dev.py      # establecimientos + cargos + simce (dev)
+│   │       └── load_sige.py     # calificaciones + profesores (prod/OrangePi)
+│   │
+│   ├── scripts/
+│   │   ├── inspect_cod_csvs.py
+│   │   ├── inspect_integrity_csvs.py
+│   │   └── inspect_sep_csvs.py
 │   │
 │   └── api/                   # PENDIENTE — Sprint 3
 │       ├── main.py
@@ -106,20 +117,26 @@ buzzint/
 │           ├── upload.py
 │           └── data.py
 │
+├── tests/
+│   ├── conftest.py
+│   ├── core_test_.py          # schemas · logging · FileRegistry · BasePipeline
+│   ├── downloaders_test_.py   # 3 downloaders paralelos
+│   ├── normalizers_test_.py   # 5 normalizers + NormalizerManifest
+│   └── db_test_.py            # loaders + coerciones + detección entorno
+│
+├── docs/
+│   ├── ARCHITECTURE.md        # este archivo
+│   ├── CONVENTIONS.md
+│   ├── DECISIONS.md
+│   ├── AGENT_SPEC.md
+│   ├── CONTEXT_PRIMER.md
+│   ├── SPRINTS.md
+│   └── CODEBASE_STATE.md
+│
 ├── data/
-│   ├── mineduc/
-│   │   ├── raw/               # Descargado por extractors
-│   │   │   ├── alumnos/
-│   │   │   ├── establecimientos/
-│   │   │   ├── cargos/
-│   │   │   └── evaluacion/
-│   │   └── processed/         # Normalizado por normalizers
-│   ├── simce/
-│   │   ├── raw/
-│   │   └── processed/
-│   └── sige/
-│       ├── raw/
-│       └── processed/
+│   ├── mineduc/raw/  · processed/
+│   ├── simce/raw/    · processed/
+│   └── sige/raw/     · processed/
 │
 ├── docker-compose.yml
 ├── .env.example
@@ -143,127 +160,84 @@ buzzint/
 
 ### Facts
 
-| Tabla | Granularidad | Volumen estimado | Estrategia de carga |
-|-------|-------------|------------------|---------------------|
-| `fact_simce` | (rbd, agno, cod_grado) | ~200K filas/año | COPY staging → upsert |
-| `fact_establecimiento_anual` | (rbd, agno) | ~50K filas/año | chunk upsert |
-| `fact_docentes` | (rbd, agno, mrun_doc, cod_ense) | ~500K filas/año | chunk upsert |
-| `fact_matricula` | (mrun_alu, rbd, agno, cod_grado) | ~40M filas/año | COPY masivo |
-| `fact_calificaciones` | (rbd, agno, cod_grado, letra, n_orden, asig_id) | ~10M filas/año | COPY staging |
+| Tabla | Granularidad | Volumen est. | Estrategia | Corre en |
+|-------|-------------|-------------|------------|---------|
+| `fact_simce` | (rbd, agno, grado) | ~200K/año | execute_values | dev |
+| `fact_establecimiento_anual` | (rbd, agno) | ~50K/año | execute_values | dev |
+| `fact_docentes` | (rbd, agno, mrun_doc) | ~500K/año | execute_values | dev |
+| `fact_matricula` | (mrun, rbd, agno, grado, ense) | ~40M/año | COPY masivo | dev |
+| `fact_calificaciones` | (rbd, agno, grado, letra, orden, asig) | ~50K/sync | execute_values | OrangePi |
 
-### Control ETL
+### Vistas
 
-```sql
-gold.etl_control   -- registro de cada ejecución de pipeline
-  run_id, loader, source_file, status, rows_*, error_msg, started_at, finished_at
-```
+| Vista | Propósito |
+|-------|-----------|
+| `v_simce_completo` | SIMCE con contexto geográfico y escolar |
+| `v_simce_serie_rbd` | Serie histórica por establecimiento |
+| `v_calificaciones_completo` | Calificaciones con alumno y asignatura |
+| `v_notas_long` | Unpivot de las 25 notas (formato long para analytics) |
+| `v_sige_resumen` | Resumen por curso — **liviano para OrangePi 4GB** |
 
 ---
 
-## 5. Flujo de datos por fuente
+## 5. Flujo de datos
 
-### MINEDUC (cron job, sin auth)
+### MINEDUC (cron job, PC dev, sin auth)
 ```
-cron trigger
-  → mineduc_downloader.py   (Playwright → httpx, manifest.json)
-  → Mineduc_*_normalizer.py (RAR/CSV → CSV unificado, UTF-8-sig)
-  → load_establecimientos / load_alumnos / load_cargos
+cron → MineducPipeline.run(step="all")
+  → mineduc_downloader  (Playwright + httpx → raw/, manifest.json)
+  → mineduc_*_normalizer (RAR → CSV, NormalizerManifest)
+  → load_dev / load_alumnos (COPY masivo o execute_values)
   → PostgreSQL Gold Layer
 ```
 
-### SIMCE (cron job, sin auth)
+### SIMCE (cron job, PC dev, sin auth)
 ```
-cron trigger
-  → simce_downloader.py     (httpx API REST, manifest.json)
-  → Simce_normalizer.py     (RAR → CSV por granularidad: rbd/comuna/region)
-  → load_simce.py
+cron → SimcePipeline.run(step="all")
+  → simce_downloader   (httpx API REST → raw/*.rar, manifest.json)
+  → simce_normalizer   (unrar → simce__rbd/comuna/region.csv)
+  → load_dev simce     (execute_values por granularidad)
   → PostgreSQL Gold Layer
 ```
 
-### SIGE (manual / sincronización por usuario)
+### SIGE (manual, OrangePi, requiere auth)
 ```
-usuario sube PDFs o ejecuta sync
-  → sige_downloader.py      (Playwright login + httpx PDFs)
-  → Sige_normalizer.py      (PDF → sige_calificaciones.csv + sige_profesores.csv)
-  → load_sige.py
+usuario → POST /upload/sige (PDFs) o sige_downloader (Playwright login)
+  → SigePipeline.run_from_upload()
+  → sige_normalizer    (pdfplumber → sige_calificaciones.csv)
+  → load_sige          (execute_values, chunks 500, pool 2)
   → PostgreSQL Gold Layer
 ```
 
 ---
 
-## 6. Contratos de interfaz (estado objetivo)
+## 6. Adaptación por entorno
 
-### PipelineResult (Pydantic)
-```python
-class PipelineResult(BaseModel):
-    job_id: str
-    status: Literal["ok", "error", "partial"]
-    source: str                    # "mineduc" | "simce" | "sige"
-    pipeline: str                  # nombre del sub-pipeline
-    rows_read: int
-    rows_inserted: int
-    rows_updated: int
-    rows_skipped: int
-    error: str | None
-    started_at: datetime
-    finished_at: datetime
+```bash
+BUZZINT_ENV=dev   # PC desarrollo (2× X5680)
+BUZZINT_ENV=prod  # OrangePi 4GB
 ```
 
-### BasePipeline (ABC)
-```python
-class BasePipeline(ABC):
-    @abstractmethod
-    def run(self, source_path: Path, **kwargs) -> PipelineResult: ...
-    
-    @abstractmethod
-    def discover(self, source_dir: Path) -> list[Path]:
-        """Retorna archivos pendientes de procesar (no en FileRegistry)."""
-        ...
-```
-
-### Endpoints API (diseño)
-
-| Método | Ruta | Descripción |
-|--------|------|-------------|
-| `POST` | `/pipelines/{source}/run` | Dispara pipeline completo (download + normalize + load) |
-| `POST` | `/pipelines/{source}/run?step=normalize` | Dispara solo un paso |
-| `GET` | `/pipelines/{source}/status` | Estado actual del pipeline |
-| `GET` | `/jobs` | Historial de jobs (desde etl_control) |
-| `GET` | `/jobs/{job_id}` | Detalle de un job |
-| `POST` | `/upload/sige` | Sube archivos PDF SIGE para normalizar y cargar |
-| `GET` | `/data/simce` | Query datos SIMCE con filtros |
-| `GET` | `/data/establecimientos` | Query establecimientos |
+| Parámetro | dev | prod |
+|-----------|-----|------|
+| CHUNK_SIZE | 50 000 | 500 |
+| POOL_SIZE | 10 | 2 |
+| USE_COPY | True | False |
+| Loaders que corren | todos | solo load_sige |
 
 ---
 
-## 7. Decisiones de diseño
+## 7. Estado del proyecto
 
-**¿Por qué Galaxy Schema y no modelo relacional simple?**  
-Las preguntas analíticas del dominio requieren joins multi-dimensionales (¿cómo evolucionó el SIMCE de 4° básico de un establecimiento específico comparado con su GSE regional entre 2018 y 2023?). Un modelo estrella/galaxy permite estas queries sin subconsultas anidadas.
+| Componente | Estado |
+|-----------|--------|
+| SQL Schema + patches | ✅ Completo |
+| Extractors (3) | ✅ Completo |
+| Normalizers (5 + base) | ✅ Completo |
+| Loaders (3 archivos) | ✅ Completo |
+| Core (config · schemas · logging) | ✅ Completo |
+| Pipelines (Base + 3) | ✅ Completo |
+| Tests (4 archivos, ~112 tests) | ✅ Completo |
+| API FastAPI | ⏳ Sprint 3 |
 
-**¿Por qué COPY masivo en fact_matricula?**  
-Con ~40M filas/año, los loops Python fila a fila toman horas. `COPY FROM STDIN` con tabla staging temporal (sin índices, UNLOGGED) + resolución FK en SQL puro es 10-50x más rápido.
-
-**¿Por qué SIGE es el único pipeline manual?**  
-SIGE requiere credenciales del establecimiento y contiene datos sensibles (calificaciones individuales con MRUN). No debe automatizarse sin consentimiento explícito del usuario en cada ejecución.
-
-**¿Por qué manifest.json por fuente?**  
-Permite deduplicación por hash SHA-256 sin consultar la base de datos. El FileRegistry futuro lo envuelve pero el formato raw es legible y recuperable independientemente.
-
----
-
-## 8. Estado actual y próximos sprints
-
-| Componente | Estado | Sprint |
-|-----------|--------|--------|
-| SQL Schema (01_schema.sql) | ✅ Completo | — |
-| SQL Seed (02_seed.sql) | ✅ Completo | — |
-| Extractors (3 downloaders) | ✅ Funcional | Sprint 1: limpiar interfaz |
-| Normalizers (5 módulos) | ✅ Funcional | Sprint 1: limpiar interfaz |
-| Loaders (5 módulos + orchestrate) | ✅ Funcional | Sprint 1: eliminar loops fila a fila |
-| core/schemas.py | ❌ Pendiente | Sprint 1 |
-| core/logging.py | ❌ Pendiente | Sprint 1 |
-| pipelines/ (ABC + 3 pipelines) | ❌ Pendiente | Sprint 2 |
-| API FastAPI | ❌ Pendiente | Sprint 3 |
-
-Ver `SPRINTS.md` para el detalle de cada sprint.
+Ver `docs/SPRINTS.md` para el detalle del siguiente sprint.

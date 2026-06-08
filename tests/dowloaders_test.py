@@ -1,17 +1,3 @@
-"""
-Tests de los 3 downloaders en modo dry-run.
-
-Ejecuta los 3 en paralelo con ThreadPoolExecutor y verifica:
-- Que cada downloader crea su manifest.json
-- Que el manifest tiene la estructura correcta
-- Que los helpers compartidos (sha256, load/save manifest, etc.) funcionan
-- Que already_downloaded() detecta correctamente duplicados
-- Que verify_manifest() reporta correctamente
-
-Uso:
-    pytest tests/downloaders_test_.py -v
-    pytest tests/downloaders_test_.py -v -s   # ver logs en tiempo real
-"""
 import sys
 import json
 import logging
@@ -42,10 +28,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-# ─────────────────────────────────────────────
-# Fixtures
-# ─────────────────────────────────────────────
-
 @pytest.fixture
 def tmp_dir(tmp_path):
     return tmp_path
@@ -53,15 +35,10 @@ def tmp_dir(tmp_path):
 
 @pytest.fixture
 def sample_file(tmp_path):
-    """Crea un archivo real en disco para testear sha256 y manifest."""
     f = tmp_path / "sample.csv"
     f.write_text("agno,rbd,nom_rbd\n2023,00001234,Escuela Test\n")
     return f
 
-
-# ─────────────────────────────────────────────
-# Tests de downloader_base
-# ─────────────────────────────────────────────
 
 class TestDownloaderBase:
 
@@ -164,10 +141,6 @@ class TestDownloaderBase:
         assert counts["corrupt"] == 1
 
 
-# ─────────────────────────────────────────────
-# Tests dry-run de cada downloader
-# ─────────────────────────────────────────────
-
 def _run_mineduc_dry(output_dir: Path) -> dict:
     from scraper.extractors.mineduc_downloader import run_source, SOURCES
 
@@ -188,11 +161,6 @@ def _run_simce_dry(output_dir: Path) -> dict:
 
 
 def _run_sige_dry(output_dir: Path) -> dict:
-    """
-    SIGE requiere credenciales y browser. En CI/test sin credenciales,
-    verificamos que el módulo importa y que el manifest se inicializa bien.
-    No ejecutamos el login.
-    """
     logger.info("[SIGE] verificando imports y manifest (sin login)")
     from scraper.extractors.sige_downloader import run  # noqa: F401
 
@@ -212,10 +180,6 @@ def _run_sige_dry(output_dir: Path) -> dict:
 class TestDownloadersDryRun:
 
     def test_todos_en_paralelo(self, tmp_path):
-        """
-        Ejecuta los 3 downloaders en paralelo con dry-run.
-        Verifica que cada uno crea su manifest.json con la estructura correcta.
-        """
         mineduc_dir = tmp_path / "mineduc"
         simce_dir   = tmp_path / "simce"
         sige_dir    = tmp_path / "sige"
@@ -252,7 +216,6 @@ class TestDownloadersDryRun:
         self._verificar_manifest_sige(resultados["sige"]["output_dir"])
 
     def _verificar_manifest_mineduc(self, output_dir: Path):
-        """El manifest de mineduc debe existir y tener keys de URL."""
         manifest_path = output_dir / "manifest.json"
 
         if not manifest_path.exists():
@@ -274,7 +237,6 @@ class TestDownloadersDryRun:
             logger.info("  MINEDUC manifest: %d entradas", len(m["files"]))
 
     def _verificar_manifest_simce(self, output_dir: Path):
-        """El manifest de simce debe tener keys de UUID."""
         manifest_path = output_dir / "manifest.json"
 
         if not manifest_path.exists():
@@ -292,7 +254,6 @@ class TestDownloadersDryRun:
             break  # revisar solo la primera
 
     def _verificar_manifest_sige(self, output_dir: Path):
-        """SIGE siempre debe dejar el manifest inicializado."""
         manifest_path = output_dir / "manifest.json"
         assert manifest_path.exists(), "SIGE: manifest.json no fue creado"
 
@@ -302,14 +263,9 @@ class TestDownloadersDryRun:
         logger.info("  SIGE manifest: OK (sin entradas, requiere auth)")
 
 
-# ─────────────────────────────────────────────
-# Tests de estructura del manifest
-# ─────────────────────────────────────────────
-
 class TestManifestEstructura:
 
     def test_manifest_keys_mineduc(self, tmp_path):
-        """Simula entradas de manifest de MINEDUC y verifica estructura."""
         m = load_manifest(tmp_path)
         url = "https://datosabiertos.mineduc.cl/files/alumnos_2023.csv"
         m["files"][url] = {
@@ -327,7 +283,6 @@ class TestManifestEstructura:
         assert entry["downloaded"] is False
 
     def test_manifest_keys_simce(self, tmp_path):
-        """Simula entradas de manifest de SIMCE (key = UUID) y verifica estructura."""
         m = load_manifest(tmp_path)
         uuid = "abc123-def456-789"
         m["files"][uuid] = {
@@ -344,7 +299,6 @@ class TestManifestEstructura:
         assert m2["files"][uuid]["extension"] == "rar"
 
     def test_manifest_keys_sige(self, tmp_path):
-        """Simula entradas de manifest de SIGE (key = URL PDF) y verifica estructura."""
         m = load_manifest(tmp_path)
         url = "http://wwwfs.mineduc.cl/actas/00001234_23_4_A_15032023_120000.pdf"
         m["files"][url] = {
@@ -357,10 +311,6 @@ class TestManifestEstructura:
         m2 = load_manifest(tmp_path)
         assert url in m2["files"]
 
-
-# ─────────────────────────────────────────────
-# Reporte final al ejecutar directamente
-# ─────────────────────────────────────────────
 
 if __name__ == "__main__":
     import sys

@@ -71,6 +71,14 @@ def run(source_path: Path) -> None:
 
                     ens_vals = {col: _int(row.get(col)) for col in _ENS_COLS}
 
+                    lat = _float(row.get("latitud"))
+                    lon = _float(row.get("longitud"))
+
+                    if lat is not None and not (-90 <= lat <= 90):
+                        lat = None
+                    if lon is not None and not (-180 <= lon <= 180):
+                        lon = None
+
                     cur.execute(
                         """
                         INSERT INTO gold.fact_establecimiento_anual
@@ -107,8 +115,8 @@ def run(source_path: Path) -> None:
                             estab_id=estab_id,
                             agno=agno,
                             mat_total=_int(row.get("mat_total") or row.get("matricula")),
-                            lat=_float(row.get("latitud")),
-                            lon=_float(row.get("longitud")),
+                            lat=lat,
+                            lon=lon,
                             conv_pie=_int(row.get("convenio_pie")),
                             pace=_int(row.get("pace")),
                             p_mat=_float(row.get("pago_matricula")),

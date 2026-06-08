@@ -21,14 +21,14 @@ logger = logging.getLogger(__name__)
 # ──────────────────────────────────────────────────────────────
 # DSN desde variables de entorno (valores defecto = docker-compose)
 # ──────────────────────────────────────────────────────────────
-def _dsn() -> str:
-    return (
-        f"host={os.getenv('PG_HOST', 'localhost')} "
-        f"port={os.getenv('PG_PORT', '5432')} "
-        f"dbname={os.getenv('PG_DB', 'buzzint')} "
-        f"user={os.getenv('PG_USER', 'buzzint')} "
-        f"password={os.getenv('PG_PASSWORD', 'buzzint')} "
-        f"options=-c search_path=gold,public"
+def _conn_kwargs() -> dict:
+    return dict(
+        host=os.getenv("PG_HOST", "localhost"),
+        port=int(os.getenv("PG_PORT", "5432")),
+        dbname=os.getenv("PG_DB", "buzzint"),
+        user=os.getenv("PG_USER", "buzzint"),
+        password=os.getenv("PG_PASSWORD", "buzzint"),
+        options="-c search_path=gold,public",
     )
 
 
@@ -37,7 +37,7 @@ def get_conn(retries: int = 5, delay: float = 3.0) -> PgConnection:
     last_exc: Exception | None = None
     for attempt in range(1, retries + 1):
         try:
-            conn = psycopg2.connect(_dsn())
+            conn = psycopg2.connect(**_conn_kwargs())
             conn.autocommit = False
             logger.debug("Conexión PostgreSQL establecida (intento %d)", attempt)
             return conn
@@ -47,7 +47,6 @@ def get_conn(retries: int = 5, delay: float = 3.0) -> PgConnection:
             if attempt < retries:
                 time.sleep(delay)
     raise RuntimeError(f"No se pudo conectar a PostgreSQL tras {retries} intentos") from last_exc
-
 
 @contextmanager
 def transaction(conn: PgConnection) -> Generator[psycopg2.extras.DictCursor, None, None]:
@@ -329,8 +328,14 @@ def _float(v: Any) -> float | None:
     s = _str(v)
     if s is None:
         return None
+    # Normalizar separador decimal: coma → punto
+    s = s.replace(",", ".")
+    # Eliminar puntos de miles si hay más de uno (ej: "1.234.567" → "1234567")
+    if s.count(".") > 1:
+        parts = s.rsplit(".", 1)
+        s = parts[0].replace(".", "") + "." + parts[1]
     try:
-        return float(s.replace(",", "."))
+        return float(s)
     except (ValueError, TypeError):
         return None
 

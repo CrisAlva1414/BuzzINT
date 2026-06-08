@@ -177,8 +177,8 @@ CREATE TABLE IF NOT EXISTS gold.fact_establecimiento_anual (
     agno                SMALLINT NOT NULL,
     -- medidas
     mat_total           INT,
-    latitud             NUMERIC(10,6),
-    longitud            NUMERIC(10,6),
+    latitud             NUMERIC(12,6),
+    longitud            NUMERIC(12,6),
     convenio_pie        SMALLINT,
     pace                SMALLINT,
     pago_matricula      NUMERIC(10,2),

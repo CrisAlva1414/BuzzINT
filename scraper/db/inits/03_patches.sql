@@ -14,6 +14,11 @@ SET search_path TO gold, public;
 
 ALTER TABLE gold.fact_matricula DROP CONSTRAINT IF EXISTS fact_matricula_alumno_id_establecimiento_id_tiempo_id_key;
 
+-- Columna cod_ense que faltaba para diferenciar traslados entre niveles
+-- NOTA: Agregar ANTES del constraint que la usa
+ALTER TABLE gold.fact_matricula
+    ADD COLUMN IF NOT EXISTS cod_ense CHAR(2);
+
 -- Nueva constraint que sí permite traslados
 DO $$
 BEGIN
@@ -27,10 +32,6 @@ BEGIN
             UNIQUE (alumno_id, establecimiento_id, tiempo_id, cod_ense);
     END IF;
 END $$;
-
--- Columna cod_ense que faltaba para diferenciar traslados entre niveles
-ALTER TABLE gold.fact_matricula
-    ADD COLUMN IF NOT EXISTS cod_ense CHAR(2);
 
 
 -- ── PATCH 2: etl_control — índices para queries de monitoreo ─────────────────

@@ -1,0 +1,98 @@
+================================================================================
+BUZZINT - BUG FIXES LOG
+================================================================================
+
+Date: 2026-06-09
+Context: Pipeline testing suite development + Docker initialization
+
+================================================================================
+BUG #4: SQL Ordering Issue in Database Initialization
+================================================================================
+
+Severity: CRITICAL
+Status: ✓ FIXED
+
+Location:
+  File: scraper/db/inits/03_patches.sql
+  Lines: 10-34 (PATCH 1: fact_matricula)
+
+Problem:
+  The SQL patch was trying to create a UNIQUE constraint that includes the
+  column 'cod_ense' BEFORE the column was added to the table.
+
+  Error Message:
+    ERROR: column "cod_ense" named in key does not exist
+
+  Sequence of Operations (WRONG):
+    1. Drop existing constraint ✓
+    2. Create new constraint with cod_ense ✗ (column doesn't exist yet)
+    3. Add cod_ense column (never reached)
+
+Root Cause:
+  PostgreSQL processes DDL statements sequentially. When it reached the
+  ADD CONSTRAINT statement, the cod_ense column didn't exist yet because
+  the ADD COLUMN statement came after it.
+
+Solution:
+  Reorder the operations so the column is added BEFORE the constraint:
+  1. Drop existing constraint ✓
+  2. Add cod_ense column ✓
+  3. Create new constraint with cod_ense ✓
+
+Code Changes:
+  BEFORE (lines 17-33):
+    ```
+    -- Nueva constraint que sí permite traslados
+    DO $$ ... ADD CONSTRAINT ... UNIQUE (..., cod_ense) ... END $$;
+
+    -- Columna cod_ense que faltaba...
+    ALTER TABLE gold.fact_matricula
+        ADD COLUMN IF NOT EXISTS cod_ense CHAR(2);
+    ```
+
+  AFTER (lines 17-34):
+    ```
+    -- Columna cod_ense que faltaba...
+    -- NOTA: Agregar ANTES del constraint que la usa
+    ALTER TABLE gold.fact_matricula
+        ADD COLUMN IF NOT EXISTS cod_ense CHAR(2);
+
+    -- Nueva constraint que sí permite traslados
+    DO $$ ... ADD CONSTRAINT ... UNIQUE (..., cod_ense) ... END $$;
+    ```
+
+Impact:
+  - Affects all fresh database initializations
+  - Database would fail to initialize completely
+  - All subsequent tables and views would not be created
+  - Prevents any pipeline from running
+
+Testing:
+  The fix has been validated to work correctly with the Docker initialization
+  process. The column is now created before the constraint that uses it.
+
+================================================================================
+SUMMARY OF ALL BUGS FOUND IN THIS SESSION
+================================================================================
+
+Bug #1: MINEDUC Pipeline Discovery (FIXED)
+  File: scraper/pipelines/mineduc.py:26
+  Issue: Looking in 'processed' directory instead of 'raw'
+  Fix: self._proc → self._raw
+
+Bug #2: MINEDUC Discovery Pattern (FIXED)
+  File: scraper/pipelines/mineduc.py:26
+  Issue: Pattern "*.csv" doesn't find files in subdirectories
+  Fix: "*.csv" → "**/*.csv"
+
+Bug #3: SIMCE Discovery Pattern (FIXED)
+  File: scraper/pipelines/simce.py:28
+  Issue: Pattern "*.rar" doesn't find files in subdirectories
+  Fix: "*.rar" → "**/*.rar"
+
+Bug #4: SQL Initialization Order (FIXED)
+  File: scraper/db/inits/03_patches.sql:10-34
+  Issue: Creating constraint before column exists
+  Fix: Reordered ADD COLUMN before ADD CONSTRAINT
+
+================================================================================

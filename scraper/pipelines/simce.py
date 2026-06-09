@@ -25,7 +25,7 @@ class SimcePipeline(BasePipeline):
     def discover(self, source_dir: Path | None = None) -> list[Path]:
         directory = Path(source_dir) if source_dir else self._raw
         try:
-            return self._registry.pending(directory, pattern="*.rar")
+            return self._registry.pending(directory, pattern="**/*.rar")
         except Exception as exc:
             logger.error("[simce] discover falló: %s", exc)
             return []

@@ -21,9 +21,9 @@ class MineducPipeline(BasePipeline):
 
 
     def discover(self, source_dir: Path | None = None) -> list[Path]:
-        directory = Path(source_dir) if source_dir else self._proc
+        directory = Path(source_dir) if source_dir else self._raw
         try:
-            return self._registry.pending(directory, pattern="*.csv")
+            return self._registry.pending(directory, pattern="**/*.csv")
         except Exception as exc:
             logger.error("[mineduc] discover falló: %s", exc)
             return []

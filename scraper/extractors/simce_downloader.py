@@ -25,7 +25,7 @@ BASE_URL      = "https://informacionestadistica.agenciaeducacion.cl"
 LIST_URL      = BASE_URL + "/rest/archivo/getAllByCategoriaVistaPublica/{cat_id}/0"
 DOWNLOAD_URL  = BASE_URL + "/rest/archivo/obtener?uuid={uuid}"
 CAT_ID_MIN    = 2
-CAT_ID_MAX    = 60
+CAT_ID_MAX    = 120  # Actualizado para incluir SIMCE 2025 (cat 112-114)
 REQUEST_DELAY = 0.6
 TIMEOUT       = 60
 

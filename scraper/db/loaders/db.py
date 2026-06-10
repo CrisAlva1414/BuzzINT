@@ -263,12 +263,7 @@ def get_or_create_asignatura(cur, cod_ense: str | None, subsector: str | None) -
     sub = (subsector or "").strip() or None
 
     cur.execute(
-        """
-        INSERT INTO gold.dim_asignatura (cod_ense, subsector)
-        VALUES (%s, %s)
-        ON CONFLICT ON CONSTRAINT uq_dim_asignatura_ense_sub DO NOTHING
-        RETURNING asignatura_id
-        """,
+        "SELECT asignatura_id FROM gold.dim_asignatura WHERE cod_ense=%s AND COALESCE(subsector,'')=COALESCE(%s,'')",
         (cod_ense, sub),
     )
     row = cur.fetchone()
@@ -276,11 +271,14 @@ def get_or_create_asignatura(cur, cod_ense: str | None, subsector: str | None) -
         return row[0]
 
     cur.execute(
-        "SELECT asignatura_id FROM gold.dim_asignatura WHERE cod_ense=%s AND COALESCE(subsector,'')=COALESCE(%s,'')",
+        """
+        INSERT INTO gold.dim_asignatura (cod_ense, subsector)
+        VALUES (%s, %s)
+        RETURNING asignatura_id
+        """,
         (cod_ense, sub),
     )
-    r = cur.fetchone()
-    return r[0] if r else None
+    return cur.fetchone()[0]
 
 
 def get_tiempo_id(cur, agno: int, cod_grado: int) -> int | None:

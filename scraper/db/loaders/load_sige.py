@@ -35,7 +35,7 @@ INSERT INTO gold.fact_calificaciones
      nota_21,nota_22,nota_23,nota_24,nota_25,
      promedio, prom_literario, asistencia_pct, situacion_final, observaciones, _source_file)
 VALUES %s
-ON CONFLICT ON CONSTRAINT uq_fact_calificaciones DO UPDATE SET
+ON CONFLICT (establecimiento_id, tiempo_id, letra, n_orden, (COALESCE(asignatura_id, -1))) DO UPDATE SET
     promedio        = EXCLUDED.promedio,
     asistencia_pct  = EXCLUDED.asistencia_pct,
     situacion_final = EXCLUDED.situacion_final,

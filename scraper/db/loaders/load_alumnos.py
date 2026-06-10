@@ -1,4 +1,5 @@
 import argparse
+import csv
 import logging
 import sys
 import time
@@ -14,44 +15,25 @@ logger = logging.getLogger(__name__)
 
 _INPUT_DEFAULT = "data/mineduc/processed/mineduc_alumnos.csv"
 
-# Columnas que el staging espera — subset del CSV real
+# Columnas que los upserts necesitan del CSV real
 _STAGING_COLS = [
     "agno", "mrun", "gen_alu", "fec_nac_alu",
     "criterio_sep", "prioritario_alu", "preferente_alu", "ben_sep",
     "rbd", "cod_grado", "cod_ense", "let_cur", "cod_jor", "_source_file",
 ]
 
-_DDL_STAGING = """
-CREATE UNLOGGED TABLE IF NOT EXISTS gold.stg_alumnos_raw (
-    agno            TEXT,
-    mrun            TEXT,
-    gen_alu         TEXT,
-    fec_nac_alu     TEXT,
-    criterio_sep    TEXT,
-    prioritario_alu TEXT,
-    preferente_alu  TEXT,
-    ben_sep         TEXT,
-    rbd             TEXT,
-    cod_grado       TEXT,
-    cod_ense        TEXT,
-    let_cur         TEXT,
-    cod_jor         TEXT,
-    _source_file    TEXT
-);
-"""
-
 _UPSERT_DIM_ALUMNO = """
 INSERT INTO gold.dim_alumno (mrun, gen_alu, fec_nac)
 SELECT DISTINCT
-    mrun::BIGINT,
-    NULLIF(gen_alu, '')::SMALLINT,
+    BTRIM(mrun)::BIGINT,
+    NULLIF(BTRIM(gen_alu), '')::SMALLINT,
     CASE
-        WHEN fec_nac_alu ~ '^\\d{4}-\\d{2}-\\d{2}$' THEN fec_nac_alu::DATE
-        WHEN fec_nac_alu ~ '^\\d{8}$' THEN to_date(fec_nac_alu, 'YYYYMMDD')
+        WHEN BTRIM(fec_nac_alu) ~ '^\\d{4}-\\d{2}-\\d{2}$' THEN BTRIM(fec_nac_alu)::DATE
+        WHEN BTRIM(fec_nac_alu) ~ '^\\d{8}$' THEN to_date(BTRIM(fec_nac_alu), 'YYYYMMDD')
         ELSE NULL
     END
 FROM gold.stg_alumnos_raw
-WHERE mrun ~ '^\\d+$'
+WHERE BTRIM(mrun) ~ '^\\d+$'
 ON CONFLICT (mrun) DO UPDATE SET
     gen_alu = COALESCE(EXCLUDED.gen_alu, gold.dim_alumno.gen_alu),
     fec_nac = COALESCE(EXCLUDED.fec_nac, gold.dim_alumno.fec_nac),
@@ -69,23 +51,23 @@ SELECT
     a.alumno_id,
     e.establecimiento_id,
     t.tiempo_id,
-    NULLIF(s.cod_ense,        '')::CHAR(2),
-    NULLIF(s.let_cur,         '')::CHAR(2),
-    NULLIF(s.cod_jor,         '')::SMALLINT,
-    NULLIF(s.criterio_sep,    '')::SMALLINT,
-    NULLIF(s.prioritario_alu, '')::SMALLINT,
-    NULLIF(s.preferente_alu,  '')::SMALLINT,
-    NULLIF(s.ben_sep,         '')::SMALLINT,
+    NULLIF(BTRIM(s.cod_ense),        '')::CHAR(2),
+    NULLIF(BTRIM(s.let_cur),         '')::CHAR(2),
+    NULLIF(BTRIM(s.cod_jor),         '')::SMALLINT,
+    NULLIF(BTRIM(s.criterio_sep),    '')::SMALLINT,
+    NULLIF(BTRIM(s.prioritario_alu), '')::SMALLINT,
+    NULLIF(BTRIM(s.preferente_alu),  '')::SMALLINT,
+    NULLIF(BTRIM(s.ben_sep),         '')::SMALLINT,
     s._source_file
 FROM gold.stg_alumnos_raw s
-JOIN gold.dim_alumno          a ON a.mrun      = s.mrun::BIGINT
-JOIN gold.dim_establecimiento e ON e.rbd        = LPAD(REGEXP_REPLACE(s.rbd, '[^0-9]', '', 'g'), 8, '0')
-JOIN gold.dim_tiempo_escolar  t ON t.agno       = s.agno::SMALLINT
-                               AND t.cod_grado  = s.cod_grado::SMALLINT
-WHERE s.mrun      ~ '^\\d+$'
-  AND s.rbd       ~ '^\\d+$'
-  AND s.agno      ~ '^\\d{4}$'
-  AND s.cod_grado ~ '^\\d+$'
+JOIN gold.dim_alumno          a ON a.mrun      = BTRIM(s.mrun)::BIGINT
+JOIN gold.dim_establecimiento e ON e.rbd        = LPAD(REGEXP_REPLACE(BTRIM(s.rbd), '[^0-9]', '', 'g'), 8, '0')
+JOIN gold.dim_tiempo_escolar  t ON t.agno       = BTRIM(s.agno)::SMALLINT
+                               AND t.cod_grado  = BTRIM(s.cod_grado)::SMALLINT
+WHERE BTRIM(s.mrun)      ~ '^\\d+$'
+  AND BTRIM(s.rbd)       ~ '^\\d+$'
+  AND BTRIM(s.agno)      ~ '^\\d{4}$'
+  AND BTRIM(s.cod_grado) ~ '^\\d+$'
 ON CONFLICT ON CONSTRAINT uq_fact_matricula DO UPDATE SET
     let_cur         = EXCLUDED.let_cur,
     cod_jor         = EXCLUDED.cod_jor,
@@ -109,8 +91,7 @@ def run(source_path: Path, dry_run: bool = False) -> dict:
     try:
         _phase("Preparando staging", run_ctx)
         with transaction(conn) as cur:
-            cur.execute(_DDL_STAGING)
-            cur.execute("TRUNCATE gold.stg_alumnos_raw;")
+            _create_staging(cur, source_path)
 
         if not dry_run:
             _phase("COPY CSV → staging", run_ctx)
@@ -163,12 +144,11 @@ def run(source_path: Path, dry_run: bool = False) -> dict:
 
 def _copy_to_staging(conn, source_path: Path) -> int:
     csv_cols  = _get_csv_columns(source_path)
-    copy_cols = [c for c in _STAGING_COLS if c in csv_cols]
     missing   = [c for c in _STAGING_COLS if c not in csv_cols]
     if missing:
         logger.warning("Columnas ausentes en CSV (se omiten): %s", missing)
 
-    cols_sql = ", ".join(copy_cols)
+    cols_sql = ", ".join(_quote_ident(c) for c in csv_cols)
     copy_sql = (
         f"COPY gold.stg_alumnos_raw ({cols_sql}) "
         f"FROM STDIN WITH (FORMAT CSV, HEADER TRUE, NULL '', ENCODING 'UTF8')"
@@ -181,10 +161,33 @@ def _copy_to_staging(conn, source_path: Path) -> int:
         return cur.fetchone()[0]
 
 
-def _get_csv_columns(source_path: Path) -> set[str]:
+def _create_staging(cur, source_path: Path) -> None:
+    csv_cols = _get_csv_columns(source_path)
+    missing = [c for c in _STAGING_COLS if c not in csv_cols]
+    if missing:
+        raise ValueError(f"Columnas requeridas ausentes en CSV: {missing}")
+
+    cols_sql = ",\n    ".join(f"{_quote_ident(c)} TEXT" for c in csv_cols)
+    cur.execute("DROP TABLE IF EXISTS gold.stg_alumnos_raw;")
+    cur.execute(f"CREATE UNLOGGED TABLE gold.stg_alumnos_raw (\n    {cols_sql}\n);")
+
+
+def _get_csv_columns(source_path: Path) -> list[str]:
     with open(source_path, "r", encoding="utf-8-sig", errors="replace") as fh:
-        header = fh.readline().strip()
-    return {c.strip().lower() for c in header.split(",")}
+        row = next(csv.reader(fh))
+
+    seen: dict[str, int] = {}
+    cols: list[str] = []
+    for idx, raw in enumerate(row, start=1):
+        col = raw.strip().lower() or f"col_{idx}"
+        count = seen.get(col, 0) + 1
+        seen[col] = count
+        cols.append(col if count == 1 else f"{col}__{count}")
+    return cols
+
+
+def _quote_ident(identifier: str) -> str:
+    return '"' + identifier.replace('"', '""') + '"'
 
 
 def _phase(msg: str, ctx: EtlRun) -> None:
